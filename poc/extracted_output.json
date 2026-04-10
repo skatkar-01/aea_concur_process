@@ -1,0 +1,84 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "txn_1",
+      "transaction_date": "01/22/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Sweetgreen",
+      "payment_type": "American Express Corporate Card (CBCP)",
+      "amount": 20.46,
+      "cost_center": "VAIP",
+      "project": "Team Industrial Prod",
+      "attendees": [
+        "Alexander Bales",
+        "Employee"
+      ]
+    },
+    {
+      "transaction_id": "txn_2",
+      "transaction_date": "01/05/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Pret A Manger",
+      "payment_type": "American Express Corporate Card (CBCP)",
+      "amount": 23.89,
+      "cost_center": "VAIP",
+      "project": "Team Industrial Prod",
+      "attendees": [
+        "Alexander Bales",
+        "Employee"
+      ]
+    }
+  ],
+  "employee_report": {
+    "employee_name": "Alexander Bales",
+    "employee_id": "A06Y",
+    "report_id": "D4249ABF377341B98495",
+    "report_date": "02/10/2026",
+    "approval_status": "Approved",
+    "payment_status": "Paid",
+    "currency": "USD",
+    "report_total": 44.35,
+    "personal_expenses": 0.0,
+    "total_amount_claimed": 44.35,
+    "amount_approved": 44.35,
+    "amount_due_employee": 0.0,
+    "amount_due_company_card": 44.35,
+    "total_paid_by_company": 44.35,
+    "amount_due_from_employee": 0.0,
+    "total_paid_by_employee": 0.0
+  },
+  "receipts": [
+    {
+      "receipt_id": "rcp_1",
+      "order_id": "CHK 173589",
+      "description": "Pret A Manger - Chicken & Avo Wrap, Turmeric Chicken & Farro Soup (LG), Bag Charge, Tax",
+      "date": "01/05/2026",
+      "vendor": "Pret A Manger",
+      "amount": 23.89
+    },
+    {
+      "receipt_id": "rcp_2",
+      "order_id": "AAAFKNFNAEAL",
+      "description": "Sweetgreen - 1 Harvest Bowl, 1 Open Bottled Water, Sales Tax, Tip",
+      "date": "01/22/2026",
+      "vendor": "Sweetgreen",
+      "amount": 20.46
+    }
+  ],
+  "reconciliation": [
+    {
+      "transaction_id": "txn_1",
+      "receipt_id": "rcp_2",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_2",
+      "receipt_id": "rcp_1",
+      "match_status": "matched",
+      "confidence": "high"
+    }
+  ]
+}

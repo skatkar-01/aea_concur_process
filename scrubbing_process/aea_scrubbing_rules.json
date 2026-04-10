@@ -1,0 +1,82 @@
+{
+  "text_cleaning": [
+    {
+      "rule_id": "REPLACE_BUSINESS",
+      "condition": "description contains 'Business'",
+      "action": "replace 'Business' with 'Bus.'"
+    },
+    {
+      "rule_id": "REMOVE_TRANSPORTATION",
+      "condition": "expense_type == 'Car Service'",
+      "action": "remove 'Transportation'"
+    },
+    {
+      "rule_id": "REPLACE_TO_DASH",
+      "condition": "expense_type == 'Car Service'",
+      "action": "replace ' to ' with '-'"
+    },
+    {
+      "rule_id": "STANDARDIZE_WIFI",
+      "condition": "expense_type == 'Info Services'",
+      "action": "set description='Inflight Wifi'"
+    },
+    {
+      "rule_id": "PERSONAL_DESCRIPTION",
+      "condition": "expense_type == 'Personal'",
+      "action": "set description='Personal'"
+    },
+    {
+      "rule_id": "REMOVE_BUS_LODGING",
+      "condition": "expense_type == 'Lodging'",
+      "action": "remove 'Bus.'"
+    }
+  ],
+  "validation": [
+    {
+      "rule_id": "CHAR_LIMIT",
+      "condition": "len(description+vendor+12)>70",
+      "action": "flag"
+    },
+    {
+      "rule_id": "WIFI_CODE",
+      "condition": "description contains 'Wifi'",
+      "action": "set expense_code='Info Services'"
+    },
+    {
+      "rule_id": "MEAL_CODE",
+      "condition": "description contains 'Lunch' or 'Dinner'",
+      "action": "set expense_code='Meals'"
+    }
+  ],
+  "policy": [
+    {
+      "rule_id": "CAR_TIME",
+      "condition": "Car Service and (time<7 or time>19:30)",
+      "action": "valid else personal"
+    },
+    {
+      "rule_id": "MEAL_LIMIT",
+      "condition": "Lunch>25 or Dinner>35",
+      "action": "split personal"
+    }
+  ],
+  "enrichment": [
+    {
+      "rule_id": "ADD_PURPOSE",
+      "condition": "missing purpose",
+      "action": "LLM generate"
+    },
+    {
+      "rule_id": "ADD_COMPANY",
+      "condition": "missing company",
+      "action": "extract from receipt"
+    }
+  ],
+  "final": [
+    {
+      "rule_id": "FINAL_CHECK",
+      "condition": "missing/invalid",
+      "action": "flag"
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+Employee First Name,Employee Middle Name,Employee Last Name,Blank/Placeholder,Report Entry Transaction Date,Report Entry Description,Journal Amount,Report Entry Payment Type Name,Report Entry Expense Type Name,Report Entry Vendor Name,Project,Cost Center,Report Purpose,Employee ID
+Deborah,Marie,Ackerman,,2026-02-18,Refund/RT:ORD-SLC/AEA Strategy Mtg,-2097.29,American Express,Airline,United,1035,AMA,,A0CP
+Randy,,Aung,,2026-02-13,Tip for the ride on 2/13/2026,4.51,American Express,Car Service,Uber,1001,IT,,A09Y
+Randy,,Aung,,2026-02-13,Work Late/Office-Home,45.16,American Express,Car Service,Uber,1001,IT,,A09Y
+Randy,,Aung,,2026-02-26,Microsoft license renewal for SBF,52.26,American Express,Software,Microsoft,1008,IT,,A09Y
+Randy,,Aung,,2026-03-05,Backoffice outing (MSG)-home,173.98,American Express,Car Service,Uber,1001,IT,,A09Y
+Alexander,Clayton,Bales,,2026-02-11,Refund/RT:JFK-SLC/Strategy,-4027.97,American Express,Airline,Delta,1035,VAIP,,A06Y
+Steven,Andrew,Botnick,,2026-02-21,Refund/Strategy Mtg,-293.09,American Express,Airline,JetBlue,1035,MGMT,,A0DI
+Steven,Andrew,Botnick,,2026-02-22,Refund/Strategy Mtg,-1638.49,American Express,Airline,Delta,1035,MGMT,,A0DI
+Steven,Andrew,Botnick,,2026-02-24,Refund/Strategy Mtg,-83.0,American Express,Airline,JetBlue,1035,MGMT,,A0DI
+Mohammad,Rizwan,Chand,,2026-02-04,Dinner/Riz Chand & Kate Smith,124.51,American Express,Meals,Santi,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-05,Refund/DFW-SLC/Strategy,-1176.96,American Express,Airline,American,1035,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-06,DFW-Home/AEA Internal Mtgs,103.99,American Express,Car Service,Uber,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-06,Refreshments,41.93,American Express,Meals,Omni,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-06,Lodging/AEA Internal Mtgs,482.15,American Express,Lodging,Omni,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-12,Tkt/Human Capital Forum 2026/Kate Smith,2420.0,American Express,Seminars/Conferens,PEI Media,6001,VAIP,,A09K
+James,Brian,Coleman,,2026-02-05,Lodging/D.Kilimnik/BOD Mtg/Huge/Hero Digitial,291.23,American Express,Lodging,Hotel Giraffe,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-05,Lodging/BOD Mtg/Huge/Hero Digital,1216.36,American Express,Lodging,Hotel Giraffe,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-05,Lodging/A.Szafran/BOD Mtg/Huge/Hero Digital,291.23,American Express,Lodging,Hotel Giraffe,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-06,ORD-HOME/BOD Mtg/Huge/Hero Digital,50.97,American Express,Car Service,Uber,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-06,Huge Office-LGA/BOD Mtg/Huge/Hero Digital,104.07,American Express,Car Service,Uber,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10,Tkt Fee/SLC-ORD/2026 Strategy Mtg,30.0,American Express,Airline,Frosch,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10,Tkt Fee/ORD-LGA/BOD Mtg/AmeriVet,30.0,American Express,Airline,Frosch,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10,Exch Tkt:SLC-ORD/2026 Strategy Mtg,1518.68,American Express,Airline,United,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10,ORD-LGA/BOD Mtg/AmeriVet,878.37,American Express,Airline,United,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10,LGA-SAV/BOD Mtg/AmeriVet,238.25,American Express,Airline,Delta,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10,LGA-SAV/Gen Pact Event/Digital Offsite,713.85,American Express,Airline,Delta,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10,Tkt Fee/LGA-SAV-VPS/BOD Mtg AmeriVet,7.5,American Express,Airline,Frosch,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10,Tkt Fee/LGA-SAV-VPS/Gen Pact Executive Event,22.5,American Express,Airline,Frosch,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-22,Bus.Dinner w/M.Slattery/4ppl/Xenon Arc,435.3,American Express,Meals,Yuki Yama,6001,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-23,Hotel-Hotel/2026 Strategy Mtg,26.98,American Express,Car Service,Uber,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-23,Travel Meal/2026 Strategy Mtg,27.08,American Express,Meals,Silver Lake Restaurant,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-24,Tkt Fee/SLC-ORD/2026 Strategy Mtg,30.0,American Express,Airline,Frosch,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-25,Tkt Fee/Exch Tkt:ORD-LGA/BOD Mtg/AmeriVet,30.0,American Express,Airline,Frosch,4246,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-25,Refund/LGA-ORD/BOD Mtg/AmeriVet,-50.6,American Express,Airline,United,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-26,ORD-Home/2026 Strategy Mtg,38.98,American Express,Car Service,Uber,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-26,Inflight Wifi,8.0,American Express,Info Services,United,6001,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-02,Personal,19.08,American Express,Other Travel,Spothero,1008,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-03,LGA-Hotel/BOD Mtg/AmeriVet,88.17,American Express,Car Service,Uber,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-03-03,Home-ORD/BOD Mtg/AmeriVet,50.99,American Express,Car Service,Uber,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-03-04,Lodging/BOD Mtg/AmeriVet,744.5,American Express,Lodging,The Luxury Collection Hotel,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-03-04,Bus.Dinner-Hotel/BOD Mtg/AmeriVet,48.94,American Express,Car Service,Uber,4246,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04,BBY-NYP/West Monroe Offsite/Digital Offsite,151.5,American Express,Other Travel,Amtrak,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04,BBY-NYP/BOD Mtg/Huge/Hero Digital,151.5,American Express,Other Travel,Amtrak,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04,Refund/BBY-NYP/West Monroe Offsite/Digital Offsite,-19.5,American Express,Other Travel,Amtrak,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04,Refund/BBY-NYP/BOD Mtg/Huge/Hero Digital,-19.5,American Express,Other Travel,Amtrak,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04,Tkt Fee/BBY-NYP/West Monroe Offsite/Digital Offsite,15.0,American Express,Airline,Frosch,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04,Tkt Fee/BBY-NYP/BOD Mtg/Huge/Hero Digital,15.0,American Express,Airline,Frosch,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-05,Hotel-LGA/BOD Mtg/AmeriVet,83.9,American Express,Car Service,Uber,4246,CONS,,A0DJ
+Derek,,Darves-Bornoz,,2026-02-05,Refund/EWR-SLC/D.Fernholz/2026 Strategy Mtg,-1043.48,American Express,Airline,Delta,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-05,Refund/SLC-EWR/D.Fernholz/2026 Strategy Mtg,-1652.16,American Express,Airline,United,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-05,Personal,2.37,American Express,Meals,Grubhub,1008,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-06,Personal,7.06,American Express,Meals,Grubhub,1008,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-14,Data Subscription/JetBrains,10.89,American Express,Info Services,Jetbrains,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-18,Data Subscription/JetBrains,43.55,American Express,Info Services,Jetbrains,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-19,Data Subscription/JetBrains,21.78,American Express,Info Services,Jetbrains,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-22,Tkt Fee/RT:EWR-SLC/D.Fernholz/2026 Strategy Mtg,30.0,American Express,Airline,Frosch,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-23,Refund/JFK-SLC/J.Lee/2026 Strategy,-1908.49,American Express,Airline,Delta,1035,VAIP,,A0BI
+Steven,Edward,Decillis,,2026-02-04,Lodging/Global Fund Finance Symposium,2119.26,American Express,Lodging,Fontainebleau,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-05,Work Late/Office-Home,254.52,American Express,Car Service,Uber,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-08,Home-EWR/Global Fund Finance Symposium,150.08,American Express,Car Service,Summit Elite,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-08,EWR-Home/Global Fund Finance Symposium,150.08,American Express,Car Service,Summit Elite,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-10,Refund/Strategy Mtg,-2892.37,American Express,Airline,United,1035,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-10,Work Late/Office-Home,249.57,American Express,Car Service,Uber,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-18,Work Event/Office-Eisner Amper Event,71.31,American Express,Car Service,Uber,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-18,Work Event/Eisner Amper Event-Home,233.96,American Express,Car Service,Uber,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-03-03,Work Late/Office-Home,279.21,American Express,Car Service,Uber,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-03-04,Work Late/Office-Home,269.58,American Express,Car Service,Uber,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-03-06,Work Late/Office-Home,248.8,American Express,Car Service,Uber,1001,MGMT,,A08E
+Heidi,Schwenzfeier,Dubois,,2026-02-09,Tkt Fee/Paris-London/Comms/Biz Dev Trip,45.0,American Express,Airline,Frosch,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-09,Train/Paris-London/Comms/Biz Dev Trip,496.1,American Express,Other Travel,Eurostar International,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-22,Inflight Wifi,8.0,American Express,Info Services,United,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-22,Travel Meal/AEA Strategy,13.06,American Express,Meals,Burgers And Bourbon,1035,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-28,Personal,14.95,American Express,Other,Audible,1008,VAIP,,A0C7
+Ryan,Michael,Glazer,,2026-02-05,HPN-Home/BOD Mtg/Excelitas,150.98,American Express,Car Service,Uber,6396,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-06,Working Late/Office-Home,47.58,American Express,Car Service,Uber,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-11,Working Late/Office-Home,46.99,American Express,Car Service,Uber,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-12,Working Late/Office-Home,46.59,American Express,Car Service,Uber,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-13,Working Late/Office-Home,79.65,American Express,Car Service,Uber,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-20,Home-JFK/Strategy,147.86,American Express,Car Service,Uber,1035,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-20,Working Late/Office-Home,45.79,American Express,Car Service,Uber,6001,VAIP,,A0GB
+Adam,Frederick,Goetsch,,2026-02-22,SLC-GEG,984.41,American Express,Airline,Delta,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-22,Tkt Fee/SLC-GEG,8.0,American Express,Airline,Frosch,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-23,Travel Meal,19.74,American Express,Meals,Geg Greedy Burger,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-25,Refund/SLC-GEG,-984.41,American Express,Airline,Delta,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26,EWR-SLC-GEG/BOD Mtg/TileBar,1469.2,American Express,Airline,Delta,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26,GEG-MSP-EWR/BOD Mtg/TileBar,1059.2,American Express,Airline,Delta,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26,Travel Meal,14.93,American Express,Meals,Jimmy Johns,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26,Tkt Fee/GEG-MSP-EWR/BOD Mtg/TileBar,8.0,American Express,Airline,Frosch,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26,Airport Parking,62.0,American Express,Other Travel,Spokane Airport Parking,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26,Tkt Fee/EWR-SLC-GEG/BOD Mtg/TileBar,23.0,American Express,Airline,Frosch,4253,CONS,,A0CU
+Frank,,Herr,,2026-02-02,Travel Meal/Site Visit/VCC,36.36,American Express,Meals,Marriott,6371,VAIP,,A0AJ
+Frank,,Herr,,2026-02-02,Laundry/Site Visit/VCC,5.95,American Express,Other,Marriott,6371,VAIP,,A0AJ
+Frank,,Herr,,2026-02-03,Laundry/Site Visit/VCC,5.95,American Express,Other,Marriott,6371,VAIP,,A0AJ
+Frank,,Herr,,2026-02-04,Lodging/Site Visit/VCC,580.05,American Express,Lodging,Marriott,6371,VAIP,,A0AJ
+Frank,,Herr,,2026-02-05,Bus.B'fast/Site Visit/4 ppl/BPG,124.78,American Express,Meals,Shangri-La Hotel,6450,VAIP,,A0AJ
+Frank,,Herr,,2026-02-06,Hotel-BPG Office/Site Visit/BPG,22.58,American Express,Car Service,Grab Taxi,6450,VAIP,,A0AJ
+Frank,,Herr,,2026-02-06,Bus.B'fast/Site Visit/2 ppl/BPG,41.59,American Express,Meals,Shangri-La Hotel,6450,VAIP,,A0AJ
+Frank,,Herr,,2026-02-07,Travel Meal/Site Visit/BPG,8.61,American Express,Meals,LeMa Dumpling,6450,VAIP,,A0AJ
+Frank,,Herr,,2026-02-07,BPG Office-Hotel/Site Visit/BPG,22.35,American Express,Car Service,Grab Taxi,6450,VAIP,,A0AJ
+Frank,,Herr,,2026-02-07,Hotel-Airport/Site Visit/BPG,32.23,American Express,Car Service,Grab Taxi,6450,VAIP,,A0AJ
+Frank,,Herr,,2026-02-08,Rfnd/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Mtg,230.0,American Express,Airline,United,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-08,Rfnd/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Mtg,-851.3,American Express,Airline,United,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-10,Lodging/Site Visit/VCC,144.08,American Express,Lodging,Sheraton,6371,VAIP,,A0AJ
+Frank,,Herr,,2026-02-12,Working Lunch/2 ppl/AEA,35.31,American Express,Meals,Wei Xin,6001,VAIP,,A0AJ
+Frank,,Herr,,2026-02-18,Airport-Home/AEA Strategy Mtg,164.09,American Express,Car Service,Uber,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-18,Airport-Home/AEA Strategy Mtg,10.0,American Express,Car Service,Uber,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-22,Home-Airport/AEA Strategy Mtg,10.0,American Express,Car Service,Uber,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-22,Home-Airport/AEA Strategy Mtg,110.99,American Express,Car Service,Uber,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-23,Travel Meal/AEA Strategy Mtg,37.13,American Express,Meals,Lark Creek Grill,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-26,Travel Meal/AEA Strategy Mtg,3.28,American Express,Meals,Thirst,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-26,Travel Meal/AEA Strategy Mtg,19.54,American Express,Meals,Panda Express,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-27,Airport-Home/AEA Strategy Mtg,131.49,American Express,Car Service,Uber,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-27,Airport-Home/AEA Strategy Mtg,10.0,American Express,Car Service,Uber,1035,VAIP,,A0AJ
+Osasogie,Vivian,Ighodaro,,2026-02-06,Tip/Work Late/Office-Home,8.79,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-06,Work Late/Office-Home,43.99,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-06,Data Subscription/ENR's Unlimited/Lonevolt/Lonestar Electric Sup,8.99,American Express,Info Services,BNP Media,6487,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-09,Work Late/Office-Home,53.96,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-11,Work Late/Office-Home,49.97,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-11,Work Late/Office-Home,7.49,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-12,Work Late/Office-Home,71.81,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-12,Tip/Work Late/Office-Home,7.18,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-13,Work Late/Office-Home,44.36,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-19,Work Late/Office-Home,43.2,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-19,Tip/Work Late/Office-Home,8.64,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-19,Work Late/Office-Home,58.57,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-20,Home-JFK/2026 Strategy Mtg,166.35,American Express,Car Service,Uber,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-20,Travel Meal/2026 Strategy Mtg,22.65,American Express,Meals,Shake Shack,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26,EWR-Home/2026 Strategy Mtg,84.35,American Express,Car Service,Uber,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26,Travel Meal/2026 Strategy Mtg,16.17,American Express,Meals,Pick Up Stix,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26,Inflight Wifi,10.0,American Express,Info Services,United,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26,Inflight Wifi,8.0,American Express,Info Services,United,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-03,Work Late/Office-Home,39.05,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-03,Tip/Work Late/Office-Home,7.81,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-03,Work Late/Office-Home,67.21,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-04,Work Late/Office-Home,62.01,American Express,Car Service,Uber,6001,VAIP,,A0FK
+Collis,Locke,Klarberg,,2026-02-04,Hotel-Airport/Pension Bridge Private Credit,143.98,American Express,Car Service,Uber,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-04,Inflight Wifi/Pension Bridge Private Credit,8.0,American Express,Info Services,United,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-04,Lodging/Pension Bridge Private Credit,1082.66,American Express,Lodging,Grand Del Mar,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-06,EWR-DCA/Elevate Roadshow,556.36,American Express,Airline,United,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-06,Tkt Fee/EWR-DCA/Elevate Roadshow,30.0,American Express,Airline,Frosch,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-06,BAL-NJ PENN/Elevate Roadshow,259.0,American Express,Other Travel,Amtrak,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-06,Tkt Fee/BAL-NJ PENN/Elevate Roadshow,30.0,American Express,Airline,Frosch,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-12,EWR-DCA/Elevate Roadshow,138.0,American Express,Airline,United,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-12,Tkt Fee/EWR-DCA/Elevate Roadshow,30.0,American Express,Airline,Frosch,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-17,Airport-Accommodation/Elevate Roadshow,29.98,American Express,Car Service,Uber,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-17,Pointfield Partners Mtg-Accomodations/Elevate Roadshow,44.97,American Express,Car Service,Uber,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-17,Home-Airport/Elevate Roadshow,50.99,American Express,Car Service,Uber,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-18,Travel Meal/Elevate Roadshow,23.44,American Express,Meals,Tatte Bakery,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-18,Travel Meal/Elevate Roadshow,55.58,American Express,Meals,Kimpton Hotel,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-19,Amtrak Station-Home/Elevate Roadshow,63.98,American Express,Car Service,Uber,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-19,BF&P Mtg-Amtrak/Elevate Roadshow,40.26,American Express,Car Service,Uber,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-03-02,RT:EWR-SRQ-PBI/IR Florida Trip,1799.72,American Express,Airline,United,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-03-02,Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip,30.0,American Express,Airline,Frosch,1016,IR,,A0FQ
+Michelle,Yang,Liu,,2026-02-05,Work Late/Office-Home,27.98,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-06,Subscription/Pave America document signing,16.34,American Express,Info Services,Docusign,4263,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-09,Mentor Mtg/J. Sang,16.1,American Express,Meals,Arabica,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-10,Work Late/Office-Home,35.14,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11,SLC-EWR/AEA Strategy Mtg,2236.27,American Express,Airline,United,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11,Work Late/Office-Home,30.43,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11,Refund/JFK-SLC/AEA Strategy Mtg,-2108.56,American Express,Airline,Delta,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11,Tkt Fee/AEA Strategy,30.0,American Express,Airline,Frosch,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11,Tkt Fee/JFK-SLC/AEA Strategy,30.0,American Express,Airline,Frosch,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-12,Work Late/Office-Home,37.32,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-12,Mentor Mtg/N.Mamane,19.09,American Express,Meals,Blu,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-13,Work Late/Office-Home,38.44,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-18,Work Late/Office-Home,67.93,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-19,Work Late/Office-Home,51.39,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-20,Work Late/Office-Home,24.63,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-21,Home-JFK/AEA Strategy Mtg,160.87,American Express,Car Service,Uber,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-25,Strategy Activity/AEA Strategy Mtg,311.1,American Express,Other,Spa Montage,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-26,Travel Meal/AEA Strategy Mtg,17.82,American Express,Meals,Travel Right,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-26,Inflight Wifi,8.0,American Express,Info Services,United,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-27,EWR-Home/AEA Strategy Mtg,83.56,American Express,Car Service,Uber,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-27,Travel Meal/AEA Strategy Mtg,26.99,American Express,Meals,Uber,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-03,Work Late/Office-Home,26.25,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-03,Refund/Personal,-153.4,American Express,Other,American Express,1008,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-04,Dinner-Home/AmeriVet BOD Dinner,68.02,American Express,Car Service,Uber,4246,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-04,Office-Dinner/AmeriVet BOD Dinner,52.73,American Express,Car Service,Uber,4246,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-05,Work Late/Office-Home,43.58,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-05,Work Late/Office-Home,56.09,American Express,Car Service,Uber,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-06,Subscription/AmeriVet Documents signing,16.34,American Express,Info Services,Docusign,4246,CONS,,A0GC
+Noah,Moshe Shalom,Mamane,,2026-02-05,Work Late/Office-Home,22.12,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-06,Work Late/Office-Home,65.98,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-10,Work Late/Office-Home,40.98,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-10,Refund/Tkt Exch/SLC-BOS,-519.17,American Express,Airline,Delta,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-10,Tkt Fee/Tkt Exch/SLC-BOS,30.0,American Express,Airline,Frosch,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-11,Work Late/Office-Home,44.97,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-12,Work Late/Office-Home,80.99,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-13,Work Late/Office-Home,43.98,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-18,Work Late/Office-Home,39.54,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-19,Work Late/Office-Home,41.97,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-19,Coffee Mtg/Mentoring/J. Yzanga and K. Schott,17.97,American Express,Meals,Devocion,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-20,Home-JFK,158.38,American Express,Car Service,Uber,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-20,Work Late/Office-Home,40.97,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-23,Travel Meal,13.82,American Express,Meals,Burgers And Bourbon,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-23,Travel Meal,136.97,American Express,Meals,Burgers And Bourbon,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-03,Work Late/Office-Home,61.98,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-04,Dinner-Home/BOD Mtg/Amerivet,62.97,American Express,Car Service,Uber,4246,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-04,Coffee Mtg/Mentoring/L. Adi,14.24,American Express,Meals,Watchhouse,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-05,Work Late/Office-Home,42.78,American Express,Car Service,Uber,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-06,Work Late/Office-Home,47.28,American Express,Car Service,Uber,4001,CONS,,A0HL
+Ali,Allexandre,Mehfar,,2026-02-03,Refund/JFK-SLC/AEA Strategy Mtg,-1445.08,American Express,Airline,Delta,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-03,Dinner/Pave America BOD Dinner,3461.31,American Express,Meals,Angus Barn,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-04,Inflight Wifi,8.0,American Express,Info Services,United,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-04,Travel Meal/Pave America BOD Mtg,95.02,American Express,Meals,Umstead,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-04,Lodging/Pave America BOD Mtg,1255.94,American Express,Lodging,Umstead,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-06,Dinner-Home/F.Braun,255.13,American Express,Car Service,DTS NY,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-06,Personal,278.13,American Express,Car Service,DTS NY,1008,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-06,Office-LGA/Pave America BOD Mtg,201.08,American Express,Car Service,DTS NY,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-09,Tkt Fee/Harris Williams Ski Outing,30.0,American Express,Airline,Frosch,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-09,SLC-JFK/Harris Williams Ski Outing,2108.4,American Express,Airline,Delta,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-09,Conference Room Rental/Pave America Mtgs,1276.67,American Express,Lodging,Umstead,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-10,Home-JFK/Harris Williams Ski Outing,248.6,American Express,Car Service,DTS NY,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-10,Refund/SLC-JFK/Harris Williams Ski Outing,-324.29,American Express,Airline,JetBlue,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-11,Dinner/Pave Masters dinner,5106.83,American Express,Meals,Carbone,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-12,Travel Meal/Harris Williams Ski Outing,70.25,American Express,Meals,St. Regis Deer Valley,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-12,Deposit/PaveAmerica+Nations Roof working dinner,816.56,American Express,Meals,La Baia,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-12,Deposit/PaveAmerica+Nations Roof working dinner,816.57,American Express,Meals,La Baia,6470,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-13,Tkt Fee/J. Grapski Interview travel,30.0,American Express,Airline,Frosch,1020,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-13,BOS-LGA-BOS/J. Grapski interview travel,1386.81,American Express,Airline,Delta,1020,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-17,Subscription,42.45,American Express,Info Services,Dow Jones,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-18,Birthday treats/Consumer Team celebration,45.0,American Express,Meals,Grubhub,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Dinner/Consumer Partner Dinner,914.37,American Express,Meals,Nobu,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Office-Dinner-Home/PaveMasters Dinner,577.13,American Express,Car Service,DTS NY,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Home-JFK/Harris Williams Ski Outing,248.6,American Express,Car Service,DTS NY,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Home-Office/Breakfast Mtg D. Gibbs,255.13,American Express,Car Service,DTS NY,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Office-Conference-Office/Baird Conference,278.99,American Express,Car Service,DTS NY,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Refund/JFK-SLC/AEA Strategy Mtg,-1668.4,American Express,Airline,Delta,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Deposit/AmeriVet BOD Mtg,6830.84,American Express,Lodging,Omni,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19,Breakfast-Mtgs-Dinner-Home/Various Mtgs,1083.13,American Express,Car Service,DTS NY,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-23,Lunch Mtg/AEA Strategy Mtg,476.14,American Express,Meals,Stein Eriksen,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-24,Inflight Wifi,14.99,American Express,Info Services,Boingo Wireless,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-27,Lunch Catering/Amerivet BOD Mtg,763.83,American Express,Meals,Naya,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-27,Breakfast Catering/Amerivet BOD Mtg,987.43,American Express,Meals,Cater Lady,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-03-01,Personal,237.44,American Express,Car Service,DTS NY,1008,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-03-04,Dinner/AmeriVet BOD Dinner,7833.32,American Express,Meals,Cafe Boulud,4246,CONS,,A08W
+Jeffrey,Alois,Nagel,,2026-02-04,EWR-FRA-DRS-FRA-EWR/SCIO Workshop,17726.63,American Express,Airline,Lufthansa,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-04,Tkt fee/EWR-FRA-DRS-FRA-EWR/SCIO Workshop,45.0,American Express,Airline,Frosch,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-10,Hotel-Office/Internal Mtgs/Window Nation,25.99,American Express,Car Service,Uber,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-11,Dinner-Hotel/Internal Mtgs/Window Nation,23.72,American Express,Car Service,Uber,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-11,Hotel-Office/Internal Mtgs/Window Nation,20.7,American Express,Car Service,Uber,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-11,Travel Meal/Internal Mtgs/Window Nation,8.2,American Express,Meals,Panera Bread,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-12,Office-Train Station/Internal Mtgs/Window Nation,68.98,American Express,Car Service,Uber,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-12,Hotel-Office/Internal Mtgs/Window Nation,26.94,American Express,Car Service,Uber,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-12,Lodging/Internal Mtgs/Window Nation,637.32,American Express,Lodging,Hilton,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-12,Travel Coffee/Internal Mtgs/Window Nation,13.49,American Express,Meals,Decadent,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-17,Travel Meal/Workshop/SCIO,19.44,American Express,Meals,Marriott,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-17,Lodging/Workshop/SCIO,225.93,American Express,Lodging,Marriott,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-22,Travel Meal/Strategy,11.82,American Express,Meals,Protein Bar,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-23,Traveal Meal/Strategy,28.19,American Express,Meals,Silver Lake Restaurant,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-26,ASE-DFW-LGA/Strategy,0.02,American Express,Airline,American,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-26,Tkt fee/JFK-SLC-LGA/Strategy,30.0,American Express,Airline,Frosch,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-26,Travel Meal/Strategy,7.41,American Express,Meals,Maverik,6001,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-03,Refund/ASE-DFW/Strategy,-2185.2,American Express,Airline,American,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-03,ASE-ORD-LGA/Strategy,956.41,American Express,Airline,United,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-03,Tkt fee/ASE-ORD-LGA/Strategy,30.0,American Express,Airline,Frosch,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-05,Tkt fee/RSW-BWI/Internal Mtgs/Window Nation,30.0,American Express,Airline,Frosch,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-05,Personal,30.0,American Express,Airline,Frosch,1008,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-05,RSW-BWI/Internal Mtgs/Window Nation,591.4,American Express,Airline,Southwest,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-05,Personal,293.4,American Express,Airline,United,1008,VAIP,,A08A
+Edward,Walter,Newhouse,,2026-02-12,Travel Meal/Tuck PE Conference,2.84,American Express,Meals,Dunkin Donuts,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-12,Travel Meal/Tuck PE Conference,37.25,American Express,Meals,Hanover Inn,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-12,Bus.Parking/Tuck PE Conference,34.0,American Express,Other Travel,Hanover Inn,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-13,Travel Meal/Tuck PE Conference,11.11,American Express,Meals,Circle K,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-13,Bus.Parking/Tuck PE Conference,15.0,American Express,Other Travel,DC Cecs Parking,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-19,Subscription/Professional Svcs,75.85,American Express,Info Services,LinkedIn,1001,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-21,Trip Insurance/AEA Strategy Trip,31.55,American Express,Other Travel,Allianz,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-21,JFK-SLC/AEA Strategy Trip,467.41,American Express,Airline,JetBlue,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-22,Travel Meal/AEA Strategy Trip,3.8,American Express,Meals,Essen,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-22,Travel Meal/AEA Strategy Trip,42.38,American Express,Meals,Jacob's Pickles,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-22,Travel Meal/AEA Strategy Trip,14.06,American Express,Meals,Burgers And Bourbon,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-23,Airport-Hotel/AEA Strategy Trip,161.98,American Express,Car Service,Uber,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-23,Tkt Refund/AEA Strategy Trip,-1308.49,American Express,Airline,Delta,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-23,Travel Meal/AEA Strategy Trip,35.1,American Express,Meals,Silver Lake Restaurant,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-24,Travel Meal/AEA Strategy Trip,14.0,American Express,Meals,Gateretail,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-26,Travel Meal/AEA Strategy Trip,3.8,American Express,Meals,Trip Advisor,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-26,Travel Meal/AEA Strategy Trip,3.34,American Express,Meals,Beans & Brews Coffee,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-26,Travel Meal/AEA Strategy Trip,21.35,American Express,Meals,Market Street Grill,1001,IR,,A0CN
+Edward,Walter,Newhouse,,2026-03-02,Bus.Lunch w/ Pedram Shayegan/BCI,210.29,American Express,Meals,Il Mulino,1016,IR,,A0CN
+Hannah,Beth,Norowitz,,2026-02-05,JFK-LAX-JFK/Chemical Guys BOD Mtg,6696.8,American Express,Airline,Delta,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-05,Work Late/Office-Home,4.91,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-05,Work Late/Office-Home,49.18,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-05,Tkt Fee/Hotel Booking,8.0,American Express,Airline,Frosch,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-06,Work Late/Office-Home,6.39,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-06,Work Late/Office-Home,63.99,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-08,Lodging/Chemical Guys BOD Mtg,1578.86,American Express,Lodging,Proper Hotel,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-09,Hotel-Mtg/Chemical Guys,129.74,American Express,Car Service,Uber,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-09,LAX-Hotel/Chemical Guys BOD Mtg,82.98,American Express,Car Service,Uber,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-09,Home-JFK/Chemical Guys BOD Mtg,106.55,American Express,Car Service,Uber,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-10,Hotel-BOD Mtg/Chemical Guys,129.98,American Express,Car Service,Uber,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-10,Travel Meals/Chemical Guys BOD Mtg,87.25,American Express,Meals,Proper Hotel,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-11,Tip/JFK-Home/Chemical Guys BOD Mtg,11.17,American Express,Car Service,Uber,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-11,JFK-Home/Chemical Guys BOD Mtg,111.76,American Express,Car Service,Uber,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-12,Work Late/Office-Home,50.57,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-12,Work Late/Office-Home,44.98,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-13,Work Late/Office-Home,25.73,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-17,Refund/LAX-JFK/Chemical Guys Fast Five Mtg,-4793.4,American Express,Airline,American,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-17,Refund/JFK-LAX/Chemical Guys Fast Five Mtg,-3498.49,American Express,Airline,Delta,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-17,"Mentor Mtg/M.Liu, R.Marsh",27.85,American Express,Meals,Blu,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-18,Work Late/Office-Home,39.44,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-19,Work Late/Office-Home,53.17,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-20,Work Late/Office-Home,36.97,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-21,Home-JFK/AEA Strategy Mtg,192.12,American Express,Car Service,Uber,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-01,Hotel-SLC/AEA Strategy Mtg,50.69,American Express,Car Service,Uber,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-01,EWR-Home/AEA Strategy Mtg,125.35,American Express,Car Service,Uber,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-02,Inflight Wifi,5.0,American Express,Info Services,Delta,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-03,Work Late/Office-Home,38.52,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-04,Work Late/Office-Home,37.99,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-04,Work Late/Office-Home,37.98,American Express,Car Service,Uber,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-06,Work Late/Office-Home,67.05,American Express,Car Service,Uber,4001,CONS,,A0GD
+James,Vallis,Powers,,2026-03-01,Refund/JFK-SLC-MCO/AEA Strategy,-3346.8,American Express,Airline,Delta,2275-M,PWK,,A08X
+James,Vallis,Powers,,2026-03-01,Refund/JFK-SLC-MCO/AEA Strategy,-560.0,American Express,Airline,Delta,2275-M,PWK,,A08X
+Thomas,Joseph,Pryma,,2026-02-05,NYC-Home/BOD Dinner/HUGE,214.12,American Express,Car Service,Summit Express,6454,VAIP,,A080
+Thomas,Joseph,Pryma,,2026-02-12,NYC-Home/BOD Dinner/Redwood,214.12,American Express,Car Service,Summit Express,6456,VAIP,,A080
+Thomas,Joseph,Pryma,,2026-02-12,Bus Dinner/Management Team/NES,640.41,American Express,Meals,Il Gattopardo,6961,VAIP,,A080
+Thomas,Joseph,Pryma,,2026-02-13,NYC-Home/Management Dinner/NES,214.12,American Express,Car Service,Summit Express,6961,VAIP,,A080
+Thomas,Joseph,Pryma,,2026-02-24,Hotel-lunch/Strategy,41.97,American Express,Car Service,Uber,1035,VAIP,,A080
+Thomas,Joseph,Pryma,,2026-02-24,Lunch/Strategy,828.28,American Express,Meals,501 On Main,1035,VAIP,,A080
+Kyle,James,Schott,,2026-02-05,Work Late/Office-Home,51.11,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-08,Travel Meal/BOD Mtg/Chemical Guys,39.3,American Express,Meals,Stone Arch,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-08,Inflight Wifi/BOD Mtg/Chemical Guys,4.95,American Express,Info Services,Intelsat,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-09,LAX-Hotel/BOD Mtg/Chemical Guys,91.98,American Express,Car Service,Uber,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-10,Travel Meal/BOD Mtg/Chemical Guys,41.38,American Express,Meals,Grubhub,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-10,Travel Meal/BOD Mtg/Chemical Guys,46.78,American Express,Meals,Proper Hotel,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-10,Travel Meals/BOD Mtg/Chemical Guys,32.9,American Express,Meals,CHAYA,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-10,Lodging/BOD Mtg/Chemical Guys,1757.41,American Express,Lodging,Proper Hotel,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-11,JFK-Home/BOD Mtg/Chemical Guys,130.88,American Express,Car Service,Uber,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-12,Work Late/Office-Home,55.98,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-13,Work Late/Office-Home,35.1,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-18,Work Late/Office-Home,36.97,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-18,Work Late/Office-Home,33.98,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-20,Home-JFK,215.83,American Express,Car Service,Uber,1035,CONS,,A0HM
+Kyle,James,Schott,,2026-02-20,Travel Meal/BOD Mtg/Chemical Guys,30.82,American Express,Meals,Shake Shack,4239,CONS,,A0HM
+Kyle,James,Schott,,2026-02-26,Event-Hotel,26.99,American Express,Car Service,Uber,1035,CONS,,A0HM
+Kyle,James,Schott,,2026-03-02,JFK-Home,159.61,American Express,Car Service,Uber,1035,CONS,,A0HM
+Kyle,James,Schott,,2026-03-03,Work Late/Office-Home,60.98,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-04,Work Late/Office-Home,83.83,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-05,Work Late/Office-Home,69.98,American Express,Car Service,Uber,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-06,Work Late/Office-Home,59.85,American Express,Car Service,Uber,4001,CONS,,A0HM
+James,Louis,Sharpe,,2026-02-02,Refund/LGA-RDU/BOD Mtg/Pave America,-414.1,American Express,Airline,American,4263,CONS,,A07Y
+James,Louis,Sharpe,,2026-02-04,Travel Meal/BOD Mtg/Pave America,8.58,American Express,Meals,Umstead,4263,CONS,,A07Y
+James,Louis,Sharpe,,2026-02-04,Travel Meal/BOD Mtg/Numotion,64.67,American Express,Meals,Umstead,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-04,Travel Meal/BOD Mtg/Numotion,59.38,American Express,Meals,Umstead,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-04,Lodging/BOD Mtg/BOD Mtg/Numotion,583.16,American Express,Lodging,Umstead,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-04,Lodging/BOD Mtg/Pave America,1749.45,American Express,Lodging,Umstead,4263,CONS,,A07Y
+James,Louis,Sharpe,,2026-02-10,Refund/EWR-SLC/2026 Strategy Mtg,-1186.84,American Express,Airline,United,1035,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-10,Refund/SLC-JFK/2026,-853.49,American Express,Airline,Delta,1035,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-26,Deposit/BOD Dinner/Nations Roof,1375.0,American Express,Meals,Milos,6470,VAIP,,A07Y
+James,Louis,Sharpe,,2026-03-04,RT:LGA-ORD/Mgmt Mtg/Tangent,1056.52,American Express,Airline,United,6645,VAIP,,A07Y
+James,Louis,Sharpe,,2026-03-04,Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent,30.0,American Express,Airline,Frosch,6645,VAIP,,A07Y
+Jacob,Aaron,Spigelman,,2026-02-06,Work Late/Office-Home,56.16,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-10,Office-Event/Read Ahead Event,73.29,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-10,Work Late/Office-Home,39.21,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-11,Event-Office/Read Ahead Event,65.68,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-13,Work Late/Office-Home,44.99,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-13,Amex Rewards Fee,1.8,American Express,Other,American Express,1008,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-13,Amex Rewards Fee,7.8,American Express,Other,American Express,1008,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-18,Associate Dinner,814.92,American Express,Meals,Este Pizza,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-19,Work Late/Office-Home,35.01,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-20,Home-JFK,108.74,American Express,Car Service,Uber,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-20,Event Materials,145.58,American Express,Other,Walmart,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-20,Event Materials,380.93,American Express,Other,37 Liquor Store,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-21,Supply Store-Hotel,23.28,American Express,Car Service,Uber,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-21,Hotel-Supply Store,21.96,American Express,Car Service,Uber,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-23,Travel Meal,35.95,American Express,Meals,Burgers And Bourbon,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-23,Travel Meal,30.74,American Express,Meals,Burgers And Bourbon,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-01,LGA-Home,66.44,American Express,Car Service,Uber,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-02,Work Late/Office-Home,35.99,American Express,Car Service,Uber,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-04,Working Lunch,17.31,American Express,Meals,Chipotle,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-05,Office-Mtg/Mgmt Mtg/TileBar,26.46,American Express,Car Service,Uber,4253,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-06,Work Late/Office-Home,47.35,American Express,Car Service,Uber,4001,CONS,,A0GE
+Juliet,A,Yznaga,,2026-02-05,Work Late/Office-Home,39.73,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-09,Office-Read Ahead/in person volunteer event,65.49,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10,Refund/JFK-SLC,-2015.09,American Express,Airline,Delta,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10,Tkt Fee/AEA Strategy,30.0,American Express,Airline,Frosch,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10,Tkt Fee/AEA Strategy,30.0,American Express,Airline,Frosch,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10,Work Late/Office-Home,40.08,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-11,Seat Assignment/JFK-SLC/AEA Strategy Mtg,74.0,American Express,Airline,JetBlue,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-11,Work Late/Office-Home,39.91,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-12,Work Late/Office-Home,39.43,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-13,Work Late/Office-Home,58.98,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-18,Work Late/Office-Home,38.31,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-19,Mentor Mtg/K.Schott,6.4,American Express,Meals,Devocion,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-19,Work Late/Office-Home,98.98,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20,Travel Meal/AEA Strategy Mtg,11.47,American Express,Meals,4035 Market,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20,SLC-Hotel/AEA Strategy Mtg,25.95,American Express,Car Service,Uber,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20,Home-EWR/AEA Strategy Mtg,106.93,American Express,Car Service,Uber,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20,Work Late/Office-Home,45.56,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-23,Travel Meal/AEA Strategy Mtg,5.15,American Express,Meals,Burgers And Bourbon,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-26,Travel Meal/AEA Strategy Mtg,24.5,American Express,Meals,Travel Right,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-26,Checked Bag Fee/JFK-SLC/AEA Strategy Mtg,45.0,American Express,Airline,JetBlue,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-27,JFK-Home/AEA Strategy Mtg,94.48,American Express,Car Service,Uber,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-03-03,Work Late/Office-Home,25.99,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-03-04,Work Late/Office-Home,42.7,American Express,Car Service,Uber,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-03-05,Work Late/Office-Home,44.83,American Express,Car Service,Uber,4001,CONS,,A0GV

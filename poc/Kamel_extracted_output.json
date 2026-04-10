@@ -1,0 +1,638 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "txn_1",
+      "transaction_date": "02/02/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Inflight WiFi / MD&M West Conference",
+      "vendor_description": "United Airlines",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 10.0,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_2",
+      "transaction_date": "01/21/2026",
+      "expense_type": "Airline",
+      "business_purpose": "JFK / Harris Williams - Ski Trip",
+      "vendor_description": "Delta Air Lines",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 639.99,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_3",
+      "transaction_date": "01/21/2026",
+      "expense_type": "Airline Fee",
+      "business_purpose": "Tkt Fee: EWR-SLC",
+      "vendor_description": "Travel Agency",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 30.0,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_4",
+      "transaction_date": "01/21/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Refund: RT/JFK-SLC / Strategy",
+      "vendor_description": "Delta Air Lines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -1110.01,
+      "cost_center": "1035-",
+      "project": "AEA Strategy Meeting",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_5",
+      "transaction_date": "01/21/2026",
+      "expense_type": "Airline Fee",
+      "business_purpose": "SLC / Strategy fee",
+      "vendor_description": "Travel Agency",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 30.0,
+      "cost_center": "1035-",
+      "project": "AEA Strategy Meeting",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_6",
+      "transaction_date": "01/14/2026",
+      "expense_type": "Airline",
+      "business_purpose": "JFK / Harris Williams - Ski Trip",
+      "vendor_description": "Delta Air Lines",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 3147.0,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_7",
+      "transaction_date": "01/14/2026",
+      "expense_type": "Airline Fee",
+      "business_purpose": "Tkt Fee: EWR-SLC",
+      "vendor_description": "Travel Agency",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 30.0,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_8",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Airline Fee",
+      "business_purpose": "Tkt Fee: RT:JFK-SLC",
+      "vendor_description": "Travel Agency",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 30.0,
+      "cost_center": "1035-",
+      "project": "AEA Strategy Meeting",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_9",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RT: JFK-SLC / Strategy",
+      "vendor_description": "Delta Air Lines",
+      "payment_type": "Express Corporate Card",
+      "amount": 2295.04,
+      "cost_center": "1035-",
+      "project": "AEA Strategy Meeting",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_10",
+      "transaction_date": "02/04/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Dinner / MD&M West Conference",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 45.99,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_11",
+      "transaction_date": "02/03/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "West Conference transport",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 55.18,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_12",
+      "transaction_date": "02/02/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "West Conference transport",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 37.59,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_13",
+      "transaction_date": "01/30/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Office-Home / Event travel",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 48.77,
+      "cost_center": "1018-W-",
+      "project": "VAIP Women",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_14",
+      "transaction_date": "02/03/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal / MD&M West Conference",
+      "vendor_description": "Blossom Cafe & Marketplace",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 16.35,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_15",
+      "transaction_date": "02/03/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Breakfast meeting w/ Biomerics (MD&M West Conference)",
+      "vendor_description": "Westin Anaheim Resort",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 240.68,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee; Samantha Rodriguez; Rahul Goyal; Gaurav Kapoor; A Mohan; Gietha Murugiah; Stephen Marshall"
+    },
+    {
+      "transaction_id": "txn_16",
+      "transaction_date": "02/03/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal / MD&M West Conference",
+      "vendor_description": "Blossom Cafe & Marketplace",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 7.5,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_17",
+      "transaction_date": "02/02/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal / MD&M West Conference",
+      "vendor_description": "Vanguard Market",
+      "payment_type": "Corporate Card CBCP",
+      "amount": 5.15,
+      "cost_center": "6001-",
+      "project": "MKT",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_18",
+      "transaction_date": "01/22/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch overage / Personal",
+      "vendor_description": "Grubhub",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 3.96,
+      "cost_center": "1008- Personal",
+      "project": null,
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_19",
+      "transaction_date": "01/18/2026",
+      "expense_type": "Meals / Lodging charge",
+      "business_purpose": "Lodging / MD&M West Conference (advance deposit/folio)",
+      "vendor_description": "Hilton Anaheim",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 443.96,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_20",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Coffee chat w/ Jordan Jett",
+      "vendor_description": "Gregorys Coffee",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 13.41,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_21",
+      "transaction_date": "01/14/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Blake & Todd",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 24.73,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_22",
+      "transaction_date": "01/13/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Sweetgreen",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 16.82,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_23",
+      "transaction_date": "01/12/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Blake & Todd",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 26.02,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_24",
+      "transaction_date": "01/12/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Blake & Todd",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 25.0,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_25",
+      "transaction_date": "01/12/2026",
+      "expense_type": "Meals (Personal Overage)",
+      "business_purpose": "Working Lunch Overage / Personal",
+      "vendor_description": "Blake & Todd",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 1.02,
+      "cost_center": "1008- Personal",
+      "project": null,
+      "attendees": "Anneka Kamel, Employee"
+    },
+    {
+      "transaction_id": "txn_26",
+      "transaction_date": "01/06/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Working Lunch",
+      "vendor_description": "Grubhub",
+      "payment_type": "Express Corporate Card CBCP",
+      "amount": 22.55,
+      "cost_center": "6001-",
+      "project": "Value-added Industrial Prod",
+      "attendees": "Anneka Kamel, Employee"
+    }
+  ],
+  "employee_report": {
+    "employee_name": "Anneka Kamel",
+    "employee_id": "A090",
+    "report_id": "F6476F47765D4E09A4AB",
+    "report_date": "02/09/2026",
+    "approval_status": "Approved",
+    "payment_status": "Paid",
+    "currency": "USD",
+    "report_total": 6110.68,
+    "personal_expenses": 0.0,
+    "total_amount_claimed": 6110.68,
+    "amount_approved": 6110.68,
+    "amount_due_employee": 0.0,
+    "amount_due_company_card": 6110.68,
+    "total_paid_by_company": 6110.68,
+    "amount_due_from_employee": 0.0,
+    "total_paid_by_employee": 0.0
+  },
+  "receipts": [
+    {
+      "receipt_id": "rcp_1",
+      "order_id": null,
+      "description": "Uber trip - Business Comfort (1.81 miles)",
+      "date": "01/30/2026",
+      "vendor": "Uber",
+      "amount": 48.77
+    },
+    {
+      "receipt_id": "rcp_2",
+      "order_id": null,
+      "description": "Uber trip - Business Comfort",
+      "date": "02/02/2026",
+      "vendor": "Uber",
+      "amount": 37.59
+    },
+    {
+      "receipt_id": "rcp_3",
+      "order_id": null,
+      "description": "Uber trip - Business Comfort",
+      "date": "02/03/2026",
+      "vendor": "Uber",
+      "amount": 55.18
+    },
+    {
+      "receipt_id": "rcp_4",
+      "order_id": null,
+      "description": "Uber trip - Black SUV",
+      "date": "02/03/2026",
+      "vendor": "Uber",
+      "amount": 45.99
+    },
+    {
+      "receipt_id": "rcp_5",
+      "order_id": "bfnX",
+      "description": "Blossom Cafe & Marketplace - purchase (Drip coffee + smoothie)",
+      "date": "02/03/2026",
+      "vendor": "Blossom Cafe & Marketplace",
+      "amount": 16.35
+    },
+    {
+      "receipt_id": "rcp_6",
+      "order_id": "biCV",
+      "description": "Blossom Cafe & Marketplace - Iced Latte",
+      "date": "02/03/2026",
+      "vendor": "Blossom Cafe & Marketplace",
+      "amount": 7.5
+    },
+    {
+      "receipt_id": "rcp_7",
+      "order_id": "0067362624302",
+      "description": "Delta Air Lines - Ticket (KAMEL/ANNEKA ANAND)",
+      "date": "01/21/2026",
+      "vendor": "Delta Air Lines",
+      "amount": 639.99
+    },
+    {
+      "receipt_id": "rcp_8",
+      "order_id": null,
+      "description": "Blake & Todd - Check #367 (items + tax)",
+      "date": "01/12/2026",
+      "vendor": "Blake & Todd",
+      "amount": 26.02
+    },
+    {
+      "receipt_id": "rcp_9",
+      "order_id": null,
+      "description": "Blake & Todd - Check #469 (items + tax)",
+      "date": "01/14/2026",
+      "vendor": "Blake & Todd",
+      "amount": 24.73
+    },
+    {
+      "receipt_id": "rcp_10",
+      "order_id": null,
+      "description": "Gregorys Coffee - Iced Latte",
+      "date": "01/14/2026",
+      "vendor": "Gregorys Coffee",
+      "amount": 13.41
+    },
+    {
+      "receipt_id": "rcp_11",
+      "order_id": "2602020534471500",
+      "description": "Vanguard Market (OTG) - HABITAS ARTESIAN WATER 20OZ",
+      "date": "02/02/2026",
+      "vendor": "Vanguard Market",
+      "amount": 5.15
+    },
+    {
+      "receipt_id": "rcp_12",
+      "order_id": null,
+      "description": "Sweetgreen order - Custom Chicken Pesto Parm",
+      "date": "01/13/2026",
+      "vendor": "Sweetgreen",
+      "amount": 16.82
+    },
+    {
+      "receipt_id": "rcp_13",
+      "order_id": null,
+      "description": "Hilton Anaheim folio / advance deposit",
+      "date": "01/18/2026",
+      "vendor": "Hilton Anaheim",
+      "amount": 443.96
+    },
+    {
+      "receipt_id": "rcp_14",
+      "order_id": "0164366919312",
+      "description": "United Airlines - Inflight Wi\u2011Fi Premium Full Flight",
+      "date": "02/02/2026",
+      "vendor": "United Airlines",
+      "amount": 10.0
+    },
+    {
+      "receipt_id": "rcp_15",
+      "order_id": "DL-0067358577508",
+      "description": "Delta Air Lines - Ticket / Invoice (Total Tickets 2,295.04)",
+      "date": "01/07/2026",
+      "vendor": "Delta Air Lines",
+      "amount": 2295.04
+    },
+    {
+      "receipt_id": "rcp_16",
+      "order_id": "DL-0067360437883",
+      "description": "Delta Air Lines - Ticket / Invoice (Total Tickets 3,147.00)",
+      "date": "01/14/2026",
+      "vendor": "Delta Air Lines",
+      "amount": 3147.0
+    },
+    {
+      "receipt_id": "rcp_17",
+      "order_id": null,
+      "description": "Grubhub order - Kale Caesar / working lunch",
+      "date": "01/06/2026",
+      "vendor": "Grubhub",
+      "amount": 22.55
+    },
+    {
+      "receipt_id": "rcp_18",
+      "order_id": null,
+      "description": "Westin Anaheim Resort - Tangerine Room (breakfast meeting folio)",
+      "date": "02/03/2026",
+      "vendor": "Westin Anaheim Resort",
+      "amount": 240.68
+    }
+  ],
+  "reconciliation": [
+    {
+      "transaction_id": "txn_1",
+      "receipt_id": "rcp_14",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_2",
+      "receipt_id": "rcp_7",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_3",
+      "receipt_id": "rcp_7",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_4",
+      "receipt_id": null,
+      "match_status": "unmatched",
+      "confidence": "low"
+    },
+    {
+      "transaction_id": "txn_5",
+      "receipt_id": "rcp_7",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_6",
+      "receipt_id": "rcp_16",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_7",
+      "receipt_id": "rcp_16",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_8",
+      "receipt_id": "rcp_15",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_9",
+      "receipt_id": "rcp_15",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_10",
+      "receipt_id": "rcp_4",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_11",
+      "receipt_id": "rcp_3",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_12",
+      "receipt_id": "rcp_2",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_13",
+      "receipt_id": "rcp_1",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_14",
+      "receipt_id": "rcp_5",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_15",
+      "receipt_id": "rcp_18",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_16",
+      "receipt_id": "rcp_6",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_17",
+      "receipt_id": "rcp_11",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_18",
+      "receipt_id": null,
+      "match_status": "unmatched",
+      "confidence": "low"
+    },
+    {
+      "transaction_id": "txn_19",
+      "receipt_id": "rcp_13",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_20",
+      "receipt_id": "rcp_10",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_21",
+      "receipt_id": "rcp_9",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_22",
+      "receipt_id": "rcp_12",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_23",
+      "receipt_id": "rcp_8",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_24",
+      "receipt_id": "rcp_8",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_25",
+      "receipt_id": null,
+      "match_status": "unmatched",
+      "confidence": "low"
+    },
+    {
+      "transaction_id": "txn_26",
+      "receipt_id": "rcp_17",
+      "match_status": "matched",
+      "confidence": "high"
+    }
+  ]
+}

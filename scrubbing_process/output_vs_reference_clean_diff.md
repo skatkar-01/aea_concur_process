@@ -1,0 +1,212 @@
+# Current Output vs Reference Diff
+
+- Output: `scrubbing_process\scrubbed_output.xlsx`
+- Reference: `scrubbing_process\Batch # 1 - $119,802.46 - AEA - Completed.xlsm`
+
+## AmEx Load Raw
+
+- rows only in output: 0
+- rows only in reference: 5
+  - ref row 565: ('', '', '', '', 'Check: Entities vs AmEx All', '=G563-G562', '', '', '')
+  - ref row 564: ('', '', '', '', 'Check: RAW vs AmEx All', '=G561-G562', '', '', '')
+  - ref row 562: ('', '', '', '', 'TOTAL - AmEx All', "='[1]AmEx All'!G560", '', '', '')
+  - ref row 563: ('', '', '', '', 'TOTAL - Entities (calc)', 119802.46, '', '', '')
+  - ref row 561: ('', '', '', '', 'TOTAL - RAW', '=SUM(G2:G559)', '', '', '')
+- value mismatches on exact-key matched rows:
+  - none
+- fill mismatches on exact-key matched rows:
+  - none
+
+## AmEx All
+
+- rows only in output: 0
+- rows only in reference: 5
+  - ref row 566: ('', '', '', '', '', '=G560-G565', '', '', '')
+  - ref row 565: ('', '', '', '', '', '=SUM(G562:G564)', '', '', '')
+  - ref row 564: ('', '', '', '', 'DEBT', '=DEBT_Reviewed!G12', '', '', '')
+  - ref row 562: ('', '', '', '', 'LP', '=AEA_Posted!G396', '', '', '')
+  - ref row 563: ('', '', '', '', 'SBF', '=SBF_Posted!G155', '', '', '')
+- value mismatches on exact-key matched rows:
+  - none
+- fill mismatches on exact-key matched rows:
+  - none
+
+## AEA_Posted
+
+- rows only in output: 183
+- rows only in reference: 182
+  - out row 397: ('', '', '', '', 'TOTAL - AEA', '=SUM(G2:G396)', '', '', '')
+  - out row 204: ('Ali', 'Allexandre', 'Mehfar', '2026-02-03', 'Dinner/Pave America BOD Dinner', 3461.31, '4263', 'CONS', 'A08W')
+  - out row 203: ('Ali', 'Allexandre', 'Mehfar', '2026-02-03', 'Refund/JFK-SLC/Strategy Mtg', -1445.08, '1035', 'CONS', 'A08W')
+  - out row 205: ('Ali', 'Allexandre', 'Mehfar', '2026-02-04', 'Inflight Wifi', '8', '4263', 'CONS', 'A08W')
+  - out row 207: ('Ali', 'Allexandre', 'Mehfar', '2026-02-04', 'Lodging/Pave America BOD Mtg', 1255.94, '4263', 'CONS', 'A08W')
+  - out row 206: ('Ali', 'Allexandre', 'Mehfar', '2026-02-04', 'Travel Meal/Pave America BOD Mtg', 95.02, '4263', 'CONS', 'A08W')
+  - out row 210: ('Ali', 'Allexandre', 'Mehfar', '2026-02-06', 'Office-LGA/Pave America BOD Mtg', 201.08, '4263', 'CONS', 'A08W')
+  - out row 213: ('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 'Conference Room Rental/Pave America Mtgs', 1276.67, '4263', 'CONS', 'A08W')
+  - out row 212: ('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 'SLC-JFK/Harris Williams Ski Outing', 2108.4, '4001', 'CONS', 'A08W')
+  - out row 211: ('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 'Tkt Fee/Harris Williams Ski Outing', '30', '4001', 'CONS', 'A08W')
+  - out row 214: ('Ali', 'Allexandre', 'Mehfar', '2026-02-10', 'Home-JFK/Harris Williams Ski Outing', 248.6, '4001', 'CONS', 'A08W')
+  - out row 215: ('Ali', 'Allexandre', 'Mehfar', '2026-02-10', 'Refund/SLC-JFK/Harris Williams Ski Outing', -324.29, '4001', 'CONS', 'A08W')
+  - out row 216: ('Ali', 'Allexandre', 'Mehfar', '2026-02-11', 'Dinner/Pave Masters dinner', 5106.83, '4263', 'CONS', 'A08W')
+  - out row 218: ('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 'Deposit/PaveAmerica+Nations Roof working dinner', 816.56, '4263', 'CONS', 'A08W')
+  - out row 219: ('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 'Deposit/PaveAmerica+Nations Roof working dinner', 816.57, '6470', 'CONS', 'A08W')
+  - out row 217: ('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 'Travel Meal/Harris Williams Ski Outing', 70.25, '4001', 'CONS', 'A08W')
+  - out row 221: ('Ali', 'Allexandre', 'Mehfar', '2026-02-13', 'BOS-LGA-BOS/J. Grapski interview travel', 1386.81, '1020', 'CONS', 'A08W')
+  - out row 220: ('Ali', 'Allexandre', 'Mehfar', '2026-02-13', 'Tkt Fee/J. Grapski Interview travel', '30', '1020', 'CONS', 'A08W')
+  - out row 222: ('Ali', 'Allexandre', 'Mehfar', '2026-02-17', 'Subscription', 42.45, '4001', 'CONS', 'A08W')
+  - out row 223: ('Ali', 'Allexandre', 'Mehfar', '2026-02-18', 'Birthday treats/Consumer Team celebration', '45', '4001', 'CONS', 'A08W')
+  - ref row 396: ('', '', '', '', 'TOTAL - AEA', '=SUM(G2:G395)', '', '', '')
+  - ref row 203: ('Ali', 'Allexandre', 'Mehfar', '2026-02-03', 'BOD Dinner/Pave America', 3461.31, '4263', 'CONS', 'A08W')
+  - ref row 202: ('Ali', 'Allexandre', 'Mehfar', '2026-02-03', 'Refund/Exch Tkt/JFK-SLC/Strategy Mtg', -1445.08, '1035', 'CONS', 'A08W')
+  - ref row 204: ('Ali', 'Allexandre', 'Mehfar', '2026-02-04', 'Inflight Wifi/BOD Mtg/Pave America', '8', '4263', 'CONS', 'A08W')
+  - ref row 206: ('Ali', 'Allexandre', 'Mehfar', '2026-02-04', 'Lodging/BOD Mtg/Pave America', 1255.94, '4263', 'CONS', 'A08W')
+  - ref row 205: ('Ali', 'Allexandre', 'Mehfar', '2026-02-04', 'Travel Meal/BOD Mtg/Pave America', 95.02, '4263', 'CONS', 'A08W')
+  - ref row 209: ('Ali', 'Allexandre', 'Mehfar', '2026-02-06', 'Office-LGA/BOD Mtg/Pave America', 201.08, '4263', 'CONS', 'A08W')
+  - ref row 212: ('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 'Balance/Room Rental/M&A Mtgs/Pave America', 1276.67, '4263', 'CONS', 'A08W')
+  - ref row 211: ('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 'SLC-JFK/Ski Outing/Harris Williams', 2108.4, '4001', 'CONS', 'A08W')
+  - ref row 210: ('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 'Tkt Fee/SLC-JFK/Ski Outing/Harris Williams', '30', '4001', 'CONS', 'A08W')
+  - ref row 213: ('Ali', 'Allexandre', 'Mehfar', '2026-02-10', 'Home-JFK/Ski Outing/Harris Williams', 248.6, '4001', 'CONS', 'A08W')
+  - ref row 214: ('Ali', 'Allexandre', 'Mehfar', '2026-02-10', 'Refund/SLC-JFK/Ski Outing/Harris Williams', -324.29, '4001', 'CONS', 'A08W')
+  - ref row 215: ('Ali', 'Allexandre', 'Mehfar', '2026-02-11', 'Pave Masters Dinner/Pave America', 5106.83, '4263', 'CONS', 'A08W')
+  - ref row 218: ('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 'Deposit/Room Rental/Nations Roof', 816.57, '6470', 'VAIP', 'A08W')
+  - ref row 217: ('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 'Deposit/Room Rental/Pave America', 816.56, '4263', 'CONS', 'A08W')
+  - ref row 216: ('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 'Travel Meal/Ski Outing/Harris Williams', 70.25, '4001', 'CONS', 'A08W')
+  - ref row 220: ('Ali', 'Allexandre', 'Mehfar', '2026-02-13', 'RT:BOS-LGA/Bus.Mtg w/J.Grapski/ORG Team Candidate', 1386.81, '1020', 'ORG', 'A08W')
+  - ref row 219: ('Ali', 'Allexandre', 'Mehfar', '2026-02-13', 'Tkt Fee/RT:BOS-LGA/Bus.Mtg w/J.Grapski/ORG Team Candidate', '30', '1020', 'ORG', 'A08W')
+  - ref row 221: ('Ali', 'Allexandre', 'Mehfar', '2026-02-17', 'Research Subscription', 42.45, '4001', 'CONS', 'A08W')
+  - ref row 222: ('Ali', 'Allexandre', 'Mehfar', '2026-02-18', 'Team Event/Birthday Celebration', '45', '4001', 'CONS', 'A08W')
+- value mismatches on exact-key matched rows:
+  - LEN: 160
+    - out row 208 vs ref row 207: output='=LEN(F208&J208)+12' reference='=LEN(F207&J207)+12' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-06', 'Dinner-Home/F.Braun', 255.13, '4001', 'CONS', 'A08W')
+    - out row 209 vs ref row 208: output='=LEN(F209&J209)+12' reference='=LEN(F208&J208)+12' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-06', 'Personal', 278.13, '1008', 'CONS', 'A08W')
+    - out row 229 vs ref row 228: output='=LEN(F229&J229)+12' reference='=LEN(F228&J228)+12' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-19', 'Refund/JFK-SLC/Strategy Mtg', -1668.4, '1035', 'CONS', 'A08W')
+    - out row 233 vs ref row 232: output='=LEN(F233&J233)+12' reference='=LEN(F232&J232)+12' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-24', 'Inflight Wifi', 14.99, '4001', 'CONS', 'A08W')
+    - out row 236 vs ref row 235: output='=LEN(F236&J236)+12' reference='=LEN(F235&J235)+12' key=('Ali', 'Allexandre', 'Mehfar', '2026-03-01', 'Personal', 237.44, '1008', 'CONS', 'A08W')
+    - out row 153 vs ref row 152: output='=LEN(F153&J153)+12' reference='=LEN(F152&J152)+12' key=('Collis', 'Locke', 'Klarberg', '2026-03-02', 'RT:EWR-SRQ-PBI/IR Florida Trip', 1799.72, '1016', 'IR', 'A0FQ')
+    - out row 154 vs ref row 153: output='=LEN(F154&J154)+12' reference='=LEN(F153&J153)+12' key=('Collis', 'Locke', 'Klarberg', '2026-03-02', 'Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip', '30', '1016', 'IR', 'A0FQ')
+    - out row 264 vs ref row 263: output='=LEN(F264&J264)+12' reference='=LEN(F263&J263)+12' key=('Edward', 'Walter', 'Newhouse', '2026-02-12', 'Bus.Parking/Tuck PE Conference', '34', '1016', 'IR', 'A0CN')
+  - Report Entry Vendor Name: 1
+    - out row 175 vs ref row 174: output='Uber' reference='Uber Eats' key=('Michelle', 'Yang', 'Liu', '2026-02-27', 'Travel Meal/Strategy Mtg', 26.99, '1035', 'CONS', 'A0GC')
+  - Report Entry Expense Type Name: 1
+    - out row 177 vs ref row 176: output='Other' reference='Airline' key=('Michelle', 'Yang', 'Liu', '2026-03-03', 'Refund/Personal', -153.4, '1008', 'CONS', 'A0GC')
+- fill mismatches on exact-key matched rows:
+  - Report Entry Description: 30
+    - out row 233 vs ref row 232: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Inflight Wifi' ref_val='Inflight Wifi' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-24', 'Inflight Wifi', 14.99, '4001', 'CONS', 'A08W')
+    - out row 2 vs ref row 2: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Refund/RT:ORD-SLC/Strategy Mtg' ref_val='Refund/RT:ORD-SLC/Strategy Mtg' key=('Deborah', 'Marie', 'Ackerman', '2026-02-18', 'Refund/RT:ORD-SLC/Strategy Mtg', -2097.29, '1035', 'AMA', 'A0CP')
+    - out row 26 vs ref row 26: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='LGA-SAV/BOD Mtg/AmeriVet' ref_val='LGA-SAV/BOD Mtg/AmeriVet' key=('James', 'Brian', 'Coleman', '2026-02-10', 'LGA-SAV/BOD Mtg/AmeriVet', 238.25, '4246', 'CONS', 'A0DJ')
+    - out row 32 vs ref row 32: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Travel Meal/Strategy Mtg' ref_val='Travel Meal/Strategy Mtg' key=('James', 'Brian', 'Coleman', '2026-02-23', 'Travel Meal/Strategy Mtg', 27.08, '1035', 'VAIP', 'A0DJ')
+    - out row 36 vs ref row 36: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='ORD-Home/Strategy Mtg' ref_val='ORD-Home/Strategy Mtg' key=('James', 'Brian', 'Coleman', '2026-02-26', 'ORD-Home/Strategy Mtg', 38.98, '1035', 'VAIP', 'A0DJ')
+    - out row 347 vs ref row 346: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Refund/EWR-SLC/Strategy Mtg' ref_val='Refund/EWR-SLC/Strategy Mtg' key=('James', 'Louis', 'Sharpe', '2026-02-10', 'Refund/EWR-SLC/Strategy Mtg', -1186.84, '1035', 'VAIP', 'A07Y')
+    - out row 256 vs ref row 255: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='ASE-ORD-LGA/Strategy Mtg' ref_val='ASE-ORD-LGA/Strategy Mtg' key=('Jeffrey', 'Alois', 'Nagel', '2026-03-03', 'ASE-ORD-LGA/Strategy Mtg', 956.41, '1035', 'VAIP', 'A08A')
+    - out row 115 vs ref row 114: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Tip/Work Late/Office-Home' ref_val='Tip/Work Late/Office-Home' key=('Osasogie', 'Vivian', 'Ighodaro', '2026-02-06', 'Tip/Work Late/Office-Home', 8.79, '6001', 'VAIP', 'A0FK')
+  - Employee ID: 9
+    - out row 209 vs ref row 208: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A08W' ref_val='A08W' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-06', 'Personal', 278.13, '1008', 'CONS', 'A08W')
+    - out row 236 vs ref row 235: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A08W' ref_val='A08W' key=('Ali', 'Allexandre', 'Mehfar', '2026-03-01', 'Personal', 237.44, '1008', 'CONS', 'A08W')
+    - out row 52 vs ref row 52: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0BI' ref_val='A0BI' key=('Derek', '', 'Darves-Bornoz', '2026-02-05', 'Personal', 2.37, '1008', 'VAIP', 'A0BI')
+    - out row 53 vs ref row 53: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0BI' ref_val='A0BI' key=('Derek', '', 'Darves-Bornoz', '2026-02-06', 'Personal', 7.06, '1008', 'VAIP', 'A0BI')
+    - out row 74 vs ref row 74: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0C7' ref_val='A0C7' key=('Heidi', 'Schwenzfeier', 'Dubois', '2026-02-28', 'Personal', 14.95, '1008', 'VAIP', 'A0C7')
+    - out row 38 vs ref row 38: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0DJ' ref_val='A0DJ' key=('James', 'Brian', 'Coleman', '2026-03-02', 'Personal', 19.08, '1008', 'VAIP', 'A0DJ')
+    - out row 259 vs ref row 258: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A08A' ref_val='A08A' key=('Jeffrey', 'Alois', 'Nagel', '2026-03-05', 'Personal', '30', '1008', 'VAIP', 'A08A')
+    - out row 261 vs ref row 260: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A08A' ref_val='A08A' key=('Jeffrey', 'Alois', 'Nagel', '2026-03-05', 'Personal', 293.4, '1008', 'VAIP', 'A08A')
+  - Project: 3
+    - out row 82 vs ref row 82: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Adam', 'Frederick', 'Goetsch', '2026-02-22', 'SLC-GEG/Strategy Mtg', 984.41, '1035', 'CONS', 'A0CU')
+    - out row 83 vs ref row 83: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Adam', 'Frederick', 'Goetsch', '2026-02-22', 'Tkt Fee/SLC-GEG/Strategy Mtg', '8', '1035', 'CONS', 'A0CU')
+    - out row 85 vs ref row 85: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Adam', 'Frederick', 'Goetsch', '2026-02-25', 'Refund/SLC-GEG/Strategy Mtg', -984.41, '1035', 'CONS', 'A0CU')
+  - Report Entry Expense Type Name: 1
+    - out row 74 vs ref row 74: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Other' ref_val='Other' key=('Heidi', 'Schwenzfeier', 'Dubois', '2026-02-28', 'Personal', 14.95, '1008', 'VAIP', 'A0C7')
+  - Report Entry Vendor Name: 1
+    - out row 175 vs ref row 174: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Uber' ref_val='Uber Eats' key=('Michelle', 'Yang', 'Liu', '2026-02-27', 'Travel Meal/Strategy Mtg', 26.99, '1035', 'CONS', 'A0GC')
+
+## SBF_Posted
+
+- rows only in output: 70
+- rows only in reference: 70
+  - out row 2: ('Benjamin', '', 'Althaus', '2026-02-05', 'Work Late/Office-Home', 21.94, '3500', 'SBF', 'A09A')
+  - out row 8: ('Benjamin', '', 'Althaus', '2026-02-08', 'Lodging/Conf/ACG M&A', 1693.87, '3501', 'SBF', 'A09A')
+  - out row 13: ('Benjamin', '', 'Althaus', '2026-02-11', 'Hotel-Dinner/Bus.Dinner w/B.Quintana', 37.98, '3431', 'SBF', 'A09A')
+  - out row 19: ('Benjamin', '', 'Althaus', '2026-02-12', 'Bus.Dinner w/J. Franklin, Pot EP', '158', '3501', 'SBF', 'A09A')
+  - out row 22: ('Benjamin', '', 'Althaus', '2026-02-16', 'JAX-PHL-CLT/CFO Interview/AmEx', 2058.66, '3431', 'SBF', 'A09A')
+  - out row 23: ('Benjamin', '', 'Althaus', '2026-02-16', 'Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx', '30', '3431', 'SBF', 'A09A')
+  - out row 26: ('Benjamin', '', 'Althaus', '2026-02-17', 'Home-JAX/CFO Interview/AmEx', '145', '3431', 'SBF', 'A09A')
+  - out row 25: ('Benjamin', '', 'Althaus', '2026-02-17', 'Travel Meal/Mgmt Mtg/Armstrong Transport', 12.19, '3501', 'SBF', 'A09A')
+  - out row 24: ('Benjamin', '', 'Althaus', '2026-02-17', 'Travel Meal/Mgmt Mtg/Armstrong Transport', 20.15, '3501', 'SBF', 'A09A')
+  - out row 30: ('Benjamin', '', 'Althaus', '2026-02-18', 'CLT-Mtg/Mgmt Mtg/Armstrong Transport', 48.98, '3501', 'SBF', 'A09A')
+  - out row 29: ('Benjamin', '', 'Althaus', '2026-02-18', 'Travel Meal/Mgmt Mtg/Armstrong Transport', 11.27, '3501', 'SBF', 'A09A')
+  - out row 27: ('Benjamin', '', 'Althaus', '2026-02-18', 'Travel Meal/Mgmt Mtg/Armstrong Transport', 17.26, '3501', 'SBF', 'A09A')
+  - out row 28: ('Benjamin', '', 'Althaus', '2026-02-18', 'Travel Meal/Mgmt Mtg/Armstrong Transport', 5.35, '3501', 'SBF', 'A09A')
+  - out row 33: ('Benjamin', '', 'Althaus', '2026-02-19', 'JAX-Home/Mgmt Mtg/Armstrong Transport', '145', '3501', 'SBF', 'A09A')
+  - out row 34: ('Benjamin', '', 'Althaus', '2026-02-19', 'Lodging/CFO Interview/AMX', 410.13, '3431', 'SBF', 'A09A')
+  - out row 32: ('Benjamin', '', 'Althaus', '2026-02-19', 'Mtg-CLT/Mgmt Mtg/Armstrong Transport', 50.98, '3501', 'SBF', 'A09A')
+  - out row 31: ('Benjamin', '', 'Althaus', '2026-02-19', 'Travel Meal/Mgmt Mtg/Armstrong Transport', 57.36, '3501', 'SBF', 'A09A')
+  - out row 49: ('Benjamin', '', 'Althaus', '2026-03-03', 'JAX-LGA/Catch up Mtg/OAPC', 503.4, '3399', 'SBF', 'A09A')
+  - out row 52: ('Benjamin', '', 'Althaus', '2026-03-03', 'Lodging/Catch up Mtg/OAPC', 490.04, '3399', 'SBF', 'A09A')
+  - out row 51: ('Benjamin', '', 'Althaus', '2026-03-03', 'Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC', '30', '3399', 'SBF', 'A09A')
+  - ref row 2: ('Benjamin', '', 'Althaus', '2026-02-05', 'Office-Home/Personal', 21.94, '1008', 'SBF', 'A09A')
+  - ref row 8: ('Benjamin', '', 'Althaus', '2026-02-08', 'Lodging/Stifel Transportation & Logistics Conf', 1693.87, '3501', 'SBF', 'A09A')
+  - ref row 13: ('Benjamin', '', 'Althaus', '2026-02-11', 'Hotel-Dinner/Bus.Dinner w/B.Quintana/AmEx', 37.98, '3431', 'SBF', 'A09A')
+  - ref row 19: ('Benjamin', '', 'Althaus', '2026-02-12', 'Bus.Dinner w/J.Franklin/Potential EP', '158', '3501', 'SBF', 'A09A')
+  - ref row 22: ('Benjamin', '', 'Althaus', '2026-02-16', 'RT:JAX-PHL-CLT/CFO Interview Mtg/AmEx', 2058.66, '3431', 'SBF', 'A09A')
+  - ref row 23: ('Benjamin', '', 'Althaus', '2026-02-16', 'Tkt Fee/RT:JAX-PHL-CLT/CFO Interview Mtg/AmEx', '30', '3431', 'SBF', 'A09A')
+  - ref row 26: ('Benjamin', '', 'Althaus', '2026-02-17', 'Home-JAX/CFO Interview Mtg/AmEx', '145', '3431', 'SBF', 'A09A')
+  - ref row 25: ('Benjamin', '', 'Althaus', '2026-02-17', 'Travel Meal/Mgmt Mtg/Armstrong', 12.19, '3313', 'SBF', 'A09A')
+  - ref row 24: ('Benjamin', '', 'Althaus', '2026-02-17', 'Travel Meal/Mgmt Mtg/Armstrong', 20.15, '3313', 'SBF', 'A09A')
+  - ref row 30: ('Benjamin', '', 'Althaus', '2026-02-18', 'CLT-Mgmt Mtg/Armstrong', 48.98, '3313', 'SBF', 'A09A')
+  - ref row 29: ('Benjamin', '', 'Althaus', '2026-02-18', 'Travel Meal/Mgmt Mtg/Armstrong', 11.27, '3313', 'SBF', 'A09A')
+  - ref row 27: ('Benjamin', '', 'Althaus', '2026-02-18', 'Travel Meal/Mgmt Mtg/Armstrong', 17.26, '3313', 'SBF', 'A09A')
+  - ref row 28: ('Benjamin', '', 'Althaus', '2026-02-18', 'Travel Meal/Mgmt Mtg/Armstrong', 5.35, '3313', 'SBF', 'A09A')
+  - ref row 33: ('Benjamin', '', 'Althaus', '2026-02-19', 'JAX-Home/Mgmt Mtg/Armstrong', '145', '3313', 'SBF', 'A09A')
+  - ref row 34: ('Benjamin', '', 'Althaus', '2026-02-19', 'Lodging/CFO Interview Mtg/AmEx', 410.13, '3431', 'SBF', 'A09A')
+  - ref row 32: ('Benjamin', '', 'Althaus', '2026-02-19', 'Mgmt Mtg-CLT/Armstrong', 50.98, '3313', 'SBF', 'A09A')
+  - ref row 31: ('Benjamin', '', 'Althaus', '2026-02-19', 'Travel Meal/Mgmt Mtg/Armstrong', 57.36, '3313', 'SBF', 'A09A')
+  - ref row 49: ('Benjamin', '', 'Althaus', '2026-03-03', 'JAX-LGA/OAPC Mtg/GPP/Unisyn', 503.4, '3399', 'SBF', 'A09A')
+  - ref row 52: ('Benjamin', '', 'Althaus', '2026-03-03', 'Lodging/OAPC Mtg/GPP/Unisyn', 490.04, '3399', 'SBF', 'A09A')
+  - ref row 51: ('Benjamin', '', 'Althaus', '2026-03-03', 'Tkt Fee/JAX-LGA/OAPC Mtg/GPP/Unisyn', '30', '3399', 'SBF', 'A09A')
+- value mismatches on exact-key matched rows:
+  - Report Entry Vendor Name: 2
+    - out row 60 vs ref row 60: output='Uber' reference='Uber Eats' key=('Rachel', 'Reardon', 'Kumar', '2026-02-19', 'Working Lunch', 22.33, '3500', 'SBF', 'A091')
+    - out row 68 vs ref row 68: output='Uber' reference='Uber Eats' key=('Rachel', 'Reardon', 'Kumar', '2026-02-25', 'Working Lunch', 22.33, '3500', 'SBF', 'A091')
+- fill mismatches on exact-key matched rows:
+  - Employee ID: 17
+    - out row 4 vs ref row 4: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-05', 'Personal', 24.73, '1008', 'SBF', 'A09A')
+    - out row 3 vs ref row 3: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-05', 'Refund/Personal', -24.73, '1008', 'SBF', 'A09A')
+    - out row 6 vs ref row 6: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-06', 'Personal', 14.24, '1008', 'SBF', 'A09A')
+    - out row 5 vs ref row 5: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-06', 'Refund/Personal', -14.24, '1008', 'SBF', 'A09A')
+    - out row 7 vs ref row 7: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-07', 'Personal', 2.97, '1008', 'SBF', 'A09A')
+    - out row 21 vs ref row 21: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-14', 'Personal', 2.39, '1008', 'SBF', 'A09A')
+    - out row 20 vs ref row 20: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-14', 'Refund/Personal', -2.39, '1008', 'SBF', 'A09A')
+    - out row 40 vs ref row 40: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '2026-02-28', 'Personal', 16.17, '1008', 'SBF', 'A09A')
+  - Report Entry Description: 8
+    - out row 47 vs ref row 47: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='RT:JAX-LGA/NY Office Visit' ref_val='RT:JAX-LGA/NY Office Visit' key=('Benjamin', '', 'Althaus', '2026-03-03', 'RT:JAX-LGA/NY Office Visit', 1181.8, '3500', 'SBF', 'A09A')
+    - out row 48 vs ref row 48: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Tkt Fee/RT:JAX-LGA/NY Office Visit' ref_val='Tkt Fee/RT:JAX-LGA/NY Office Visit' key=('Benjamin', '', 'Althaus', '2026-03-03', 'Tkt Fee/RT:JAX-LGA/NY Office Visit', '30', '3500', 'SBF', 'A09A')
+    - out row 77 vs ref row 77: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Inflight Wifi/Mgmt Mtg/Monroe' ref_val='Inflight Wifi/Mgmt Mtg/Monroe' key=('John', 'Daniel', 'Sedlacek', '2026-02-05', 'Inflight Wifi/Mgmt Mtg/Monroe', '8', '3369', 'SBF', 'A097')
+    - out row 81 vs ref row 81: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Inflight Wifi/Mgmt Mtg/Monroe' ref_val='Inflight Wifi/Mgmt Mtg/Monroe' key=('John', 'Daniel', 'Sedlacek', '2026-02-06', 'Inflight Wifi/Mgmt Mtg/Monroe', '8', '3369', 'SBF', 'A097')
+    - out row 89 vs ref row 89: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Inflight Wifi/Mgmt Mtg/Aqualis' ref_val='Inflight Wifi/Mgmt Mtg/Aqualis' key=('John', 'Daniel', 'Sedlacek', '2026-02-09', 'Inflight Wifi/Mgmt Mtg/Aqualis', '8', '3285', 'SBF', 'A097')
+    - out row 91 vs ref row 91: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Tkt Fee/RT:EWR-LHR/IR Mtgs' ref_val='Tkt Fee/RT:EWR-LHR/IR Mtgs' key=('John', 'Daniel', 'Sedlacek', '2026-02-09', 'Tkt Fee/RT:EWR-LHR/IR Mtgs', 22.5, '1016-SBF', 'SBF', 'A097')
+    - out row 102 vs ref row 102: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='EWR-FRA/LHR-EWR/IR Mtgs' ref_val='EWR-FRA/LHR-EWR/IR Mtgs' key=('John', 'Daniel', 'Sedlacek', '2026-02-20', 'EWR-FRA/LHR-EWR/IR Mtgs', 1849.68, '1016-SBF', 'SBF', 'A097')
+    - out row 134 vs ref row 134: output_fill='solid:rgb:FFFFC000' ref_fill='' output_val='Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe' ref_val='Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe' key=('John', 'Daniel', 'Sedlacek', '2026-03-03', 'Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe', '8', '3369', 'SBF', 'A097')
+  - LEN: 2
+    - out row 16 vs ref row 16: output_fill='solid:rgb:FFFFC7CE' ref_fill='' output_val='=LEN(F16&J16)+12' ref_val='=LEN(F16&J16)+12' key=('Benjamin', '', 'Althaus', '2026-02-11', 'Travel Meal/Stifel Transportation & Logistics Conf', '45', '3501', 'SBF', 'A09A')
+    - out row 15 vs ref row 15: output_fill='solid:rgb:FFFFC7CE' ref_fill='' output_val='=LEN(F15&J15)+12' ref_val='=LEN(F15&J15)+12' key=('Benjamin', '', 'Althaus', '2026-02-11', 'Travel Meal/Stifel Transportation & Logistics Conf', 12.81, '3501', 'SBF', 'A09A')
+  - Report Entry Vendor Name: 2
+    - out row 60 vs ref row 60: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Uber' ref_val='Uber Eats' key=('Rachel', 'Reardon', 'Kumar', '2026-02-19', 'Working Lunch', 22.33, '3500', 'SBF', 'A091')
+    - out row 68 vs ref row 68: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Uber' ref_val='Uber Eats' key=('Rachel', 'Reardon', 'Kumar', '2026-02-25', 'Working Lunch', 22.33, '3500', 'SBF', 'A091')
+  - Project: 1
+    - out row 61 vs ref row 61: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Rachel', 'Reardon', 'Kumar', '2026-02-22', 'EWR-SLC/Strategy Mtg', 1729.4, '1035', 'SBF', 'A091')
+
+## DEBT_Reviewed
+
+- rows only in output: 4
+- rows only in reference: 4
+  - out row 4: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-09', 'SLC-JFK/Strategy Mtg', 849.81, '1035', 'DEBT', 'A07V')
+  - out row 5: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-09', 'Tkt Fee/SLC-JFK/Strategy Mtg', '30', '1035', 'DEBT', 'A07V')
+  - out row 9: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-22', 'SAV-ATL-SLC/Strategy Mtg', 2108.11, '1035', 'DEBT', 'A07V')
+  - out row 10: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-22', 'Travel Insurance/Residence Inn by Marriott SLC Airport', 13.25, '1035', 'DEBT', 'A07V')
+  - ref row 4: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-09', 'RT:JFK-SLC/Strategy Mtg', 849.81, '1035', 'DEBT', 'A07V')
+  - ref row 5: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-09', 'Tkt Fee/RT:JFK-SLC/Strategy Mtg', '30', '1035', 'DEBT', 'A07V')
+  - ref row 9: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-22', 'LGA-SAV-ATL-SLC/Strategy Mtg', 2108.11, '1035', 'DEBT', 'A07V')
+  - ref row 10: ('Thomas', 'Wilson Shaw', 'Groves', '2026-02-22', 'Travel Insurance/Strategy Mtg', 13.25, '1035', 'DEBT', 'A07V')
+- value mismatches on exact-key matched rows:
+  - none
+- fill mismatches on exact-key matched rows:
+  - LEN: 1
+    - out row 7 vs ref row 7: output_fill='' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F7&J7)+12' ref_val='=LEN(F7&J7)+12' key=('Thomas', 'Wilson Shaw', 'Groves', '2026-02-11', 'Bus.Outing w/B.Udland, C.Grove/Incline', 83.01, '7501', 'DEBT', 'A07V')

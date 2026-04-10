@@ -1,0 +1,330 @@
+# Fresh Output vs Reference Diff
+
+- Output: `scrubbing_process\scrubbed_output.xlsx`
+- Reference: `scrubbing_process\Batch # 1 - $119,802.46 - AEA - Completed.xlsm`
+
+## AmEx Load Raw
+
+- Row count output/reference: 558 / 996
+- Col count output/reference: 15 / 15
+- Filled cells output/reference: 0 / 0
+- Top output fills: none
+- Top reference fills: none
+- Rows only in output by key: 0
+- Rows only in reference by key: 438
+  - ref row 562: ('', '', '', '', "='[1]AmEx All'!G560", '', '', '')
+  - ref row 560: ('', '', '', '', '', '', '', '')
+  - ref row 566: ('', '', '', '', '', '', '', '')
+  - ref row 567: ('', '', '', '', '', '', '', '')
+  - ref row 568: ('', '', '', '', '', '', '', '')
+  - ref row 569: ('', '', '', '', '', '', '', '')
+  - ref row 570: ('', '', '', '', '', '', '', '')
+  - ref row 571: ('', '', '', '', '', '', '', '')
+  - ref row 572: ('', '', '', '', '', '', '', '')
+  - ref row 573: ('', '', '', '', '', '', '', '')
+- Value mismatches by column:
+  - none
+- Fill mismatches by column:
+  - none
+
+## AmEx All
+
+- Row count output/reference: 559 / 996
+- Col count output/reference: 17 / 17
+- Filled cells output/reference: 1124 / 8
+- Top output fills: C6:solid:rgb:00FFA500=558, C11:solid:rgb:00FFA500=558, C17:solid:rgb:00FF6B6B=8
+- Top reference fills: C17:solid:rgb:FFFFC7CE=8
+- Rows only in output by key: 1
+  - out row 560: ('', '', '', '', 119802.46, '', '', '')
+- Rows only in reference by key: 438
+  - ref row 561: ('', '', '', '', '', '', '', '')
+  - ref row 567: ('', '', '', '', '', '', '', '')
+  - ref row 568: ('', '', '', '', '', '', '', '')
+  - ref row 569: ('', '', '', '', '', '', '', '')
+  - ref row 570: ('', '', '', '', '', '', '', '')
+  - ref row 571: ('', '', '', '', '', '', '', '')
+  - ref row 572: ('', '', '', '', '', '', '', '')
+  - ref row 573: ('', '', '', '', '', '', '', '')
+  - ref row 574: ('', '', '', '', '', '', '', '')
+  - ref row 575: ('', '', '', '', '', '', '', '')
+- Value mismatches by column:
+  - Report Entry Expense Type Name: 24
+    - out row 109 vs ref row 109: output='Info Services' reference='Airline' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-04', '8', '4263', 'CONS', 'A08W')
+    - out row 105 vs ref row 105: output='Lodging' reference='Other Travel' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-09', 1276.67, '4263', 'CONS', 'A08W')
+    - out row 96 vs ref row 96: output='Info Services' reference='PubSub' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-17', 42.45, '4001', 'CONS', 'A08W')
+    - out row 241 vs ref row 241: output='Meals' reference='Other' key=('Benjamin', '', 'Althaus', '2026-03-04', -3.43, '1008', 'SBF', 'A09A')
+    - out row 406 vs ref row 406: output='Info Services' reference='Airline' key=('Collis', 'Locke', 'Klarberg', '2026-02-04', '8', '1016', 'IR', 'A0FQ')
+  - Report Entry Description: 9
+    - out row 205 vs ref row 205: output='Refund/Personal' reference='Personal' key=('Benjamin', '', 'Althaus', '2026-02-05', -24.73, '1008', 'SBF', 'A09A')
+    - out row 202 vs ref row 202: output='Refund/Personal' reference='Personal' key=('Benjamin', '', 'Althaus', '2026-02-06', -14.24, '1008', 'SBF', 'A09A')
+    - out row 215 vs ref row 215: output='Refund/Personal' reference='Personal' key=('Benjamin', '', 'Althaus', '2026-02-14', -2.39, '1008', 'SBF', 'A09A')
+    - out row 238 vs ref row 238: output='Refund/Personal' reference='Personal' key=('Benjamin', '', 'Althaus', '2026-02-28', -16.17, '1008', 'SBF', 'A09A')
+    - out row 237 vs ref row 237: output='Refund/Personal' reference='Personal' key=('Benjamin', '', 'Althaus', '2026-02-28', -2.39, '1008', 'SBF', 'A09A')
+- Fill mismatches by column:
+  - Report Entry Description: 558
+    - out row 331 vs ref row 331: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Tkt Fee/SLC-GEG' ref_val='Tkt Fee/SLC-GEG' key=('Adam', 'Frederick', 'Goetsch', '2026-02-22', '8', '1035', 'CONS', 'A0CU')
+    - out row 330 vs ref row 330: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='SLC-GEG' ref_val='SLC-GEG' key=('Adam', 'Frederick', 'Goetsch', '2026-02-22', 984.41, '1035', 'CONS', 'A0CU')
+    - out row 329 vs ref row 329: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Travel Meal' ref_val='Travel Meal' key=('Adam', 'Frederick', 'Goetsch', '2026-02-23', 19.74, '1035', 'CONS', 'A0CU')
+    - out row 328 vs ref row 328: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Refund/SLC-GEG' ref_val='Refund/SLC-GEG' key=('Adam', 'Frederick', 'Goetsch', '2026-02-25', -984.41, '1035', 'CONS', 'A0CU')
+    - out row 327 vs ref row 327: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Tkt Fee/EWR-SLC-GEG/BOD Mtg/TileBar' ref_val='Tkt Fee/EWR-SLC-GEG/BOD Mtg/TileBar' key=('Adam', 'Frederick', 'Goetsch', '2026-02-26', '23', '4253', 'CONS', 'A0CU')
+  - Report Entry Vendor Name: 558
+    - out row 331 vs ref row 331: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Frosch' ref_val='Frosch' key=('Adam', 'Frederick', 'Goetsch', '2026-02-22', '8', '1035', 'CONS', 'A0CU')
+    - out row 330 vs ref row 330: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Delta' ref_val='Delta' key=('Adam', 'Frederick', 'Goetsch', '2026-02-22', 984.41, '1035', 'CONS', 'A0CU')
+    - out row 329 vs ref row 329: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Geg Greedy Burger' ref_val='Geg Greedy Burger' key=('Adam', 'Frederick', 'Goetsch', '2026-02-23', 19.74, '1035', 'CONS', 'A0CU')
+    - out row 328 vs ref row 328: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Delta' ref_val='Delta' key=('Adam', 'Frederick', 'Goetsch', '2026-02-25', -984.41, '1035', 'CONS', 'A0CU')
+    - out row 327 vs ref row 327: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Frosch' ref_val='Frosch' key=('Adam', 'Frederick', 'Goetsch', '2026-02-26', '23', '4253', 'CONS', 'A0CU')
+  - LEN: 8
+    - out row 99 vs ref row 99: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F99&K99)+12' ref_val='=LEN(F99&K99)+12' key=('Ali', 'Allexandre', 'Mehfar', '2026-02-12', 70.25, '4001', 'CONS', 'A08W')
+    - out row 298 vs ref row 298: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F298&K298)+12' ref_val='=LEN(F298&K298)+12' key=('Heidi', 'Schwenzfeier', 'Dubois', '2026-02-09', 496.1, '6006', 'VAIP', 'A0C7')
+    - out row 187 vs ref row 187: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F187&K187)+12' ref_val='=LEN(F187&K187)+12' key=('John', 'Daniel', 'Sedlacek', '2026-02-20', '30', '3338', 'SBF', 'A097')
+    - out row 160 vs ref row 160: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F160&K160)+12' ref_val='=LEN(F160&K160)+12' key=('John', 'Daniel', 'Sedlacek', '2026-02-26', '135', '3338', 'SBF', 'A097')
+    - out row 389 vs ref row 389: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F389&K389)+12' ref_val='=LEN(F389&K389)+12' key=('Osasogie', 'Vivian', 'Ighodaro', '2026-02-06', 8.99, '6487', 'VAIP', 'A0FK')
+
+## AEA_Posted
+
+- Row count output/reference: 396 / 395
+- Col count output/reference: 16 / 16
+- Filled cells output/reference: 398 / 316
+- Top output fills: C6:solid:rgb:00FFA500=395, C16:solid:rgb:00FF6B6B=3
+- Top reference fills: C6:solid:rgb:FFFFC000=231, C9:solid:rgb:FFFFC000=25, C12:solid:rgb:FFFFC000=22, C11:solid:rgb:FFFFC000=21, C14:solid:rgb:FFFFFF00=12, C16:solid:rgb:FFFFC7CE=3, C7:solid:rgb:FFFFC000=1, C10:solid:rgb:FFFFC000=1
+- Rows only in output by key: 1
+  - out row 114: ('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+- Rows only in reference by key: 0
+- Value mismatches by column:
+  - LEN: 282
+    - out row 203 vs ref row 202: output='=LEN(F203&J203)+12' reference='=LEN(F202&J202)+12' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 204 vs ref row 203: output='=LEN(F204&J204)+12' reference='=LEN(F203&J203)+12' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 205 vs ref row 204: output='=LEN(F205&J205)+12' reference='=LEN(F204&J204)+12' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 206 vs ref row 205: output='=LEN(F206&J206)+12' reference='=LEN(F205&J205)+12' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 207 vs ref row 206: output='=LEN(F207&J207)+12' reference='=LEN(F206&J206)+12' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+  - Report Entry Description: 186
+    - out row 90 vs ref row 90: output='Airport Parking' reference='Bus.Parking/Strategy Mtg' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 7 vs ref row 7: output='Refund/RT: JFK-SLC/Strategy Mtg' reference='Refund/RT:JFK-SLC/Strategy Mtg' key=('Alexander', 'Clayton', 'Bales', '', '', '', '', 'A06Y')
+    - out row 203 vs ref row 202: output='Refund/JFK-SLC/Strategy Mtg' reference='Refund/Exch Tkt/JFK-SLC/Strategy Mtg' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 204 vs ref row 203: output='Dinner/Pave America BOD Dinner' reference='BOD Dinner/Pave America' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 205 vs ref row 204: output='Inflight Wifi' reference='Inflight Wifi/BOD Mtg/Pave America' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+  - Project: 23
+    - out row 279 vs ref row 278: output='1001' reference='1035' key=('Edward', 'Walter', 'Newhouse', '', '', '', '', 'A0CN')
+    - out row 95 vs ref row 95: output='6371' reference='6450' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 101 vs ref row 101: output='6450' reference='1035' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 103 vs ref row 103: output='1035' reference='6371' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 104 vs ref row 104: output='6371' reference='6001' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+  - Cost Center: 22
+    - out row 219 vs ref row 218: output='CONS' reference='VAIP' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 220 vs ref row 219: output='CONS' reference='ORG' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 221 vs ref row 220: output='CONS' reference='ORG' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 140 vs ref row 139: output='IR' reference='GROWTH' key=('Collis', 'Locke', 'Klarberg', '', '', '', '', 'A0FQ')
+    - out row 141 vs ref row 140: output='IR' reference='GROWTH' key=('Collis', 'Locke', 'Klarberg', '', '', '', '', 'A0FQ')
+  - Journal Amount: 21
+    - out row 397 vs ref row 396: output=69485.2 reference='=SUM(G2:G395)' key=('', '', '', '', '', '', '', '')
+    - out row 93 vs ref row 93: output=5.95 reference=11.9 key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 94 vs ref row 94: output=5.95 reference=580.05 key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 95 vs ref row 95: output=580.05 reference=124.78 key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 96 vs ref row 96: output=124.78 reference=22.58 key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+  - Report Entry Expense Type Name: 20
+    - out row 218 vs ref row 217: output='Meals' reference='Lodging' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 219 vs ref row 218: output='Meals' reference='Lodging' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 143 vs ref row 142: output='Airline' reference='Other Travel' key=('Collis', 'Locke', 'Klarberg', '', '', '', '', 'A0FQ')
+    - out row 94 vs ref row 94: output='Other' reference='Lodging' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 95 vs ref row 95: output='Lodging' reference='Meals' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+  - Report Entry Vendor Name: 14
+    - out row 95 vs ref row 95: output='Marriott' reference='Shangri-La Hotel' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 96 vs ref row 96: output='Shangri-La Hotel' reference='Grab Taxi' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 97 vs ref row 97: output='Grab Taxi' reference='Shangri-La Hotel' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 98 vs ref row 98: output='Shangri-La Hotel' reference='LeMa Dumpling' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 99 vs ref row 99: output='LeMa Dumpling' reference='Grab Taxi' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+  - Report Entry Transaction Date: 13
+    - out row 93 vs ref row 93: output='2026-02-02' reference='2026-02-03' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 94 vs ref row 94: output='2026-02-03' reference='2026-02-04' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 95 vs ref row 95: output='2026-02-04' reference='2026-02-05' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 96 vs ref row 96: output='2026-02-05' reference='2026-02-06' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+    - out row 98 vs ref row 98: output='2026-02-06' reference='2026-02-07' key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+- Fill mismatches by column:
+  - Report Entry Description: 394
+    - out row 82 vs ref row 82: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='SLC-GEG/Strategy Mtg' ref_val='SLC-GEG/Strategy Mtg' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 83 vs ref row 83: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Tkt Fee/SLC-GEG/Strategy Mtg' ref_val='Tkt Fee/SLC-GEG/Strategy Mtg' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 84 vs ref row 84: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Travel Meal/Strategy Mtg' ref_val='Travel Meal/Strategy Mtg' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 85 vs ref row 85: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Refund/SLC-GEG/Strategy Mtg' ref_val='Refund/SLC-GEG/Strategy Mtg' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 86 vs ref row 86: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='EWR-SLC-GEG/BOD Mtg/TileBar' ref_val='EWR-SLC-GEG/BOD Mtg/TileBar' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+  - Report Entry Expense Type Name: 25
+    - out row 213 vs ref row 212: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Lodging' ref_val='Lodging' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 218 vs ref row 217: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Meals' ref_val='Lodging' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 219 vs ref row 218: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Meals' ref_val='Lodging' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 222 vs ref row 221: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Info Services' ref_val='Info Services' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 138 vs ref row 137: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Info Services' ref_val='Info Services' key=('Collis', 'Locke', 'Klarberg', '', '', '', '', 'A0FQ')
+  - Cost Center: 22
+    - out row 219 vs ref row 218: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='CONS' ref_val='VAIP' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 220 vs ref row 219: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='CONS' ref_val='ORG' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 221 vs ref row 220: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='CONS' ref_val='ORG' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 140 vs ref row 139: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='IR' ref_val='GROWTH' key=('Collis', 'Locke', 'Klarberg', '', '', '', '', 'A0FQ')
+    - out row 141 vs ref row 140: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='IR' ref_val='GROWTH' key=('Collis', 'Locke', 'Klarberg', '', '', '', '', 'A0FQ')
+  - Project: 21
+    - out row 82 vs ref row 82: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 83 vs ref row 83: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 85 vs ref row 85: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1035' ref_val='1035' key=('Adam', 'Frederick', 'Goetsch', '', '', '', '', 'A0CU')
+    - out row 279 vs ref row 278: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='1001' ref_val='1035' key=('Edward', 'Walter', 'Newhouse', '', '', '', '', 'A0CN')
+    - out row 72 vs ref row 72: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='6006' ref_val='1035' key=('Heidi', 'Schwenzfeier', 'Dubois', '', '', '', '', 'A0C7')
+  - Employee ID: 12
+    - out row 209 vs ref row 208: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A08W' ref_val='A08W' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 236 vs ref row 235: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A08W' ref_val='A08W' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 52 vs ref row 52: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0BI' ref_val='A0BI' key=('Derek', '', 'Darves-Bornoz', '', '', '', '', 'A0BI')
+    - out row 53 vs ref row 53: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0BI' ref_val='A0BI' key=('Derek', '', 'Darves-Bornoz', '', '', '', '', 'A0BI')
+    - out row 74 vs ref row 74: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A0C7' ref_val='A0C7' key=('Heidi', 'Schwenzfeier', 'Dubois', '', '', '', '', 'A0C7')
+  - LEN: 3
+    - out row 217 vs ref row 216: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F217&J217)+12' ref_val='=LEN(F216&J216)+12' key=('Ali', 'Allexandre', 'Mehfar', '', '', '', '', 'A08W')
+    - out row 71 vs ref row 71: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F71&J71)+12' ref_val='=LEN(F71&J71)+12' key=('Heidi', 'Schwenzfeier', 'Dubois', '', '', '', '', 'A0C7')
+    - out row 117 vs ref row 116: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F117&J117)+12' ref_val='=LEN(F116&J116)+12' key=('Osasogie', 'Vivian', 'Ighodaro', '', '', '', '', 'A0FK')
+  - Journal Amount: 1
+    - out row 93 vs ref row 93: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val=5.95 ref_val=11.9 key=('Frank', '', 'Herr', '', '', '', '', 'A0AJ')
+  - Report Entry Vendor Name: 1
+    - out row 175 vs ref row 174: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Uber' ref_val='Uber Eats' key=('Michelle', 'Yang', 'Liu', '', '', '', '', 'A0GC')
+
+## SBF_Posted
+
+- Row count output/reference: 154 / 155
+- Col count output/reference: 16 / 16
+- Filled cells output/reference: 158 / 205
+- Top output fills: C6:solid:rgb:00FFA500=153, C16:solid:rgb:00FF6B6B=5
+- Top reference fills: C6:solid:rgb:FFFFC000=108, C14:solid:rgb:FFFFFF00=18, C11:solid:rgb:FFFFC000=13, C12:solid:rgb:FFFFC000=5, C1:solid:theme:Values must be of type <class 'str'>=4, C2:solid:theme:Values must be of type <class 'str'>=4, C3:solid:theme:Values must be of type <class 'str'>=4, C4:solid:theme:Values must be of type <class 'str'>=4
+- Rows only in output by key: 0
+- Rows only in reference by key: 1
+  - ref row 156: ('', '', '', '', '', '', '', '')
+- Value mismatches by column:
+  - Report Entry Description: 74
+    - out row 2 vs ref row 2: output='Work Late/Office-Home' reference='Office-Home/Personal' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 8 vs ref row 8: output='Lodging/Conf/ACG M&A' reference='Lodging/Stifel Transportation & Logistics Conf' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 13 vs ref row 13: output='Hotel-Dinner/Bus.Dinner w/B.Quintana' reference='Hotel-Dinner/Bus.Dinner w/B.Quintana/AmEx' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 14 vs ref row 14: output='Hotel-Conf/Stifel T&L Conf' reference='Hotel-Conf/Stifel Transportation & Logistics Conf' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 19 vs ref row 19: output='Bus.Dinner w/J. Franklin, Pot EP' reference='Bus.Dinner w/J.Franklin/Potential EP' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Project: 12
+    - out row 2 vs ref row 2: output='3500' reference='1008' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 24 vs ref row 24: output='3501' reference='3313' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 25 vs ref row 25: output='3501' reference='3313' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 27 vs ref row 27: output='3501' reference='3313' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 28 vs ref row 28: output='3501' reference='3313' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Cost Center: 5
+    - out row 109 vs ref row 109: output='' reference='SBF' key=('John', 'Daniel', 'Sedlacek', '', '', '', '', 'A097')
+    - out row 138 vs ref row 138: output='SBF' reference='SBF-FL' key=('Sylvia', '', 'Vlahos', '', '', '', '', 'A057')
+    - out row 139 vs ref row 139: output='SBF' reference='SBF-FL' key=('Sylvia', '', 'Vlahos', '', '', '', '', 'A057')
+    - out row 140 vs ref row 140: output='SBF' reference='SBF-FL' key=('Sylvia', '', 'Vlahos', '', '', '', '', 'A057')
+    - out row 141 vs ref row 141: output='SBF' reference='SBF-FL' key=('Sylvia', '', 'Vlahos', '', '', '', '', 'A057')
+  - Report Entry Vendor Name: 3
+    - out row 123 vs ref row 123: output='Virgin Airways' reference='Virgin Atlantic' key=('John', 'Daniel', 'Sedlacek', '', '', '', '', 'A097')
+    - out row 60 vs ref row 60: output='Uber' reference='Uber Eats' key=('Rachel', 'Reardon', 'Kumar', '', '', '', '', 'A091')
+    - out row 68 vs ref row 68: output='Uber' reference='Uber Eats' key=('Rachel', 'Reardon', 'Kumar', '', '', '', '', 'A091')
+  - Journal Amount: 1
+    - out row 155 vs ref row 155: output=47059.17 reference='=SUM(G2:G154)' key=('', '', '', '', '', '', '', '')
+  - Report Entry Expense Type Name: 1
+    - out row 145 vs ref row 145: output='Kitchen Supplies' reference='Office Supplies' key=('Sylvia', '', 'Vlahos', '', '', '', '', 'A057')
+- Fill mismatches by column:
+  - Report Entry Description: 153
+    - out row 2 vs ref row 2: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Work Late/Office-Home' ref_val='Office-Home/Personal' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 3 vs ref row 3: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Refund/Personal' ref_val='Refund/Personal' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 4 vs ref row 4: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Personal' ref_val='Personal' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 5 vs ref row 5: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Refund/Personal' ref_val='Refund/Personal' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 6 vs ref row 6: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Personal' ref_val='Personal' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Employee ID: 22
+    - out row 2 vs ref row 2: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 3 vs ref row 3: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 4 vs ref row 4: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 5 vs ref row 5: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 6 vs ref row 6: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='A09A' ref_val='A09A' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Project: 18
+    - out row 2 vs ref row 2: output_fill='' ref_fill='solid:rgb:FFFFFF00' output_val='3500' ref_val='1008' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='3431' ref_val='3431' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='3431' ref_val='3431' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 24 vs ref row 24: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='3501' ref_val='3313' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 25 vs ref row 25: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='3501' ref_val='3313' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Cost Center: 9
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='SBF' ref_val='SBF' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='SBF' ref_val='SBF' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='SBF' ref_val='SBF' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='SBF' ref_val='SBF' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 109 vs ref row 109: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='' ref_val='SBF' key=('John', 'Daniel', 'Sedlacek', '', '', '', '', 'A097')
+  - Report Entry Vendor Name: 7
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='American' ref_val='American' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Frosch' ref_val='Frosch' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Surfside' ref_val='Surfside' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Marriott' ref_val='Marriott' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 123 vs ref row 123: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Virgin Airways' ref_val='Virgin Atlantic' key=('John', 'Daniel', 'Sedlacek', '', '', '', '', 'A097')
+  - Report Entry Expense Type Name: 6
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Airline' ref_val='Airline' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Airline' ref_val='Airline' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Car Service' ref_val='Car Service' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Lodging' ref_val='Lodging' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 53 vs ref row 53: output_fill='' ref_fill='solid:rgb:FFFFC000' output_val='Meals' ref_val='Meals' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - LEN: 5
+    - out row 15 vs ref row 15: output_fill='solid:rgb:00FF6B6B' ref_fill='' output_val='=LEN(F15&J15)+12' ref_val='=LEN(F15&J15)+12' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 16 vs ref row 16: output_fill='solid:rgb:00FF6B6B' ref_fill='' output_val='=LEN(F16&J16)+12' ref_val='=LEN(F16&J16)+12' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 106 vs ref row 106: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F106&J106)+12' ref_val='=LEN(F106&J106)+12' key=('John', 'Daniel', 'Sedlacek', '', '', '', '', 'A097')
+    - out row 121 vs ref row 121: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F121&J121)+12' ref_val='=LEN(F121&J121)+12' key=('John', 'Daniel', 'Sedlacek', '', '', '', '', 'A097')
+    - out row 69 vs ref row 69: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F69&J69)+12' ref_val='=LEN(F69&J69)+12' key=('Rachel', 'Reardon', 'Kumar', '', '', '', '', 'A091')
+  - Employee First Name: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Benjamin' ref_val='Benjamin' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Benjamin' ref_val='Benjamin' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Benjamin' ref_val='Benjamin' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Benjamin' ref_val='Benjamin' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Employee Middle Name: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Employee Last Name: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Althaus' ref_val='Althaus' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Althaus' ref_val='Althaus' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Althaus' ref_val='Althaus' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Althaus' ref_val='Althaus' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Blank/Placeholder: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='' ref_val='' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Report Entry Transaction Date: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='2026-02-16' ref_val='2026-02-16' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='2026-02-16' ref_val='2026-02-16' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='2026-02-17' ref_val='2026-02-17' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='2026-02-19' ref_val='2026-02-19' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Journal Amount: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val=2058.66 ref_val=2058.66 key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='30' ref_val='30' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='145' ref_val='145' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val=410.13 ref_val=410.13 key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Report Entry Payment Type Name: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='American Express' ref_val='American Express' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='American Express' ref_val='American Express' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='American Express' ref_val='American Express' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='American Express' ref_val='American Express' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+  - Report Purpose: 4
+    - out row 22 vs ref row 22: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Batch # 1 - $119,802.46' ref_val='Batch # 1 - $119,802.46' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 23 vs ref row 23: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Batch # 1 - $119,802.46' ref_val='Batch # 1 - $119,802.46' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 26 vs ref row 26: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Batch # 1 - $119,802.46' ref_val='Batch # 1 - $119,802.46' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+    - out row 34 vs ref row 34: output_fill='' ref_fill="solid:theme:Values must be of type <class 'str'>" output_val='Batch # 1 - $119,802.46' ref_val='Batch # 1 - $119,802.46' key=('Benjamin', '', 'Althaus', '', '', '', '', 'A09A')
+
+## DEBT_Reviewed
+
+- Row count output/reference: 11 / 11
+- Col count output/reference: 16 / 16
+- Filled cells output/reference: 12 / 8
+- Top output fills: C6:solid:rgb:00FFA500=10, C16:solid:rgb:00FF6B6B=2
+- Top reference fills: C6:solid:rgb:FFFFC000=6, C16:solid:rgb:FFFFC7CE=2
+- Rows only in output by key: 0
+- Rows only in reference by key: 0
+- Value mismatches by column:
+  - Report Entry Description: 6
+    - out row 4 vs ref row 4: output='SLC-JFK/Strategy Mtg' reference='RT:JFK-SLC/Strategy Mtg' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 5 vs ref row 5: output='Tkt Fee/SLC-JFK/Strategy Mtg' reference='Tkt Fee/RT:JFK-SLC/Strategy Mtg' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 6 vs ref row 6: output='Working Lunch w/ Sam Thompson' reference='Working Lunch/2 ppl' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 7 vs ref row 7: output='Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)' reference='Bus.Outing w/B.Udland, C.Grove/Incline' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 9 vs ref row 9: output='SAV-ATL-SLC/Strategy Mtg' reference='LGA-SAV-ATL-SLC/Strategy Mtg' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+  - Journal Amount: 1
+    - out row 12 vs ref row 12: output=3258.09 reference='=SUM(G2:G11)' key=('', '', '', '', '', '', '', '')
+- Fill mismatches by column:
+  - Report Entry Description: 10
+    - out row 2 vs ref row 2: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Working Lunch' ref_val='Working Lunch' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 3 vs ref row 3: output_fill='solid:rgb:00FFA500' ref_fill='' output_val='Office Supplies/CT Office' ref_val='Office Supplies/CT Office' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 4 vs ref row 4: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='SLC-JFK/Strategy Mtg' ref_val='RT:JFK-SLC/Strategy Mtg' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 5 vs ref row 5: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Tkt Fee/SLC-JFK/Strategy Mtg' ref_val='Tkt Fee/RT:JFK-SLC/Strategy Mtg' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 6 vs ref row 6: output_fill='solid:rgb:00FFA500' ref_fill='solid:rgb:FFFFC000' output_val='Working Lunch w/ Sam Thompson' ref_val='Working Lunch/2 ppl' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+  - LEN: 2
+    - out row 7 vs ref row 7: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F7&J7)+12' ref_val='=LEN(F7&J7)+12' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')
+    - out row 10 vs ref row 10: output_fill='solid:rgb:00FF6B6B' ref_fill='solid:rgb:FFFFC7CE' output_val='=LEN(F10&J10)+12' ref_val='=LEN(F10&J10)+12' key=('Thomas', 'Wilson Shaw', 'Groves', '', '', '', '', 'A07V')

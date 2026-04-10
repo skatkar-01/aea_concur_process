@@ -1,0 +1,45 @@
+{
+  "run_id": "run_20260324_182850",
+  "started_at": "2026-03-24T12:58:50.948822+00:00",
+  "finished_at": "2026-03-24T13:00:55.601759+00:00",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite-preview",
+  "total_files": 2,
+  "successful_files": 0,
+  "failed_files": 2,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "total_duration_seconds": 120.82058270000562,
+  "calls": [
+    {
+      "call_id": "9b9a87da",
+      "timestamp": "2026-03-24T13:00:29.587038+00:00",
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite-preview",
+      "file_name": "Bales $44.35.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 95.17,
+      "status": "error",
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "call_id": "17f57b80",
+      "timestamp": "2026-03-24T13:00:55.599763+00:00",
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite-preview",
+      "file_name": "Bassman $7,398.50.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 25.65,
+      "status": "error",
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    }
+  ]
+}

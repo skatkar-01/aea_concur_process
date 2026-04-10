@@ -1,0 +1,22 @@
+# AEA Concur Process — Dependencies
+# Install: pip install -r requirements.txt
+
+# PDF
+pdfplumber>=0.11.0      # Text + coordinate extraction from digital PDFs
+pypdfium2>=4.0.0        # Render PDF pages to images (used by AMEX extractor)
+Pillow>=10.0.0          # Image processing
+
+# Azure AI
+openai>=1.30.0          # Azure OpenAI Service (GPT-4o)
+azure-ai-inference>=1.0.0b6  # Azure AI Foundry / Serverless (optional)
+azure-core>=1.30.0
+
+# Config
+python-dotenv>=1.0.0    # .env file support
+
+# Output
+openpyxl>=3.1.0         # Excel tracker output (optional but recommended)
+
+# Testing
+pytest>=8.0.0
+pytest-mock>=3.12.0

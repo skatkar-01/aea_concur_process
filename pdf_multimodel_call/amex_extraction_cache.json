@@ -1,0 +1,92 @@
+{
+  "company_name": "AEA INVESTORS",
+  "statement_type": "AMERICAN EXPRESS STATEMENT",
+  "period": "FEB_042026",
+  "cardholders": [
+    {
+      "last_name": "BAKER",
+      "first_name": "CHRISTINE",
+      "card_number": "3794-379017-81002",
+      "transactions": [
+        {
+          "last_name": "BAKER",
+          "first_name": "CHRISTINE",
+          "card_number": "3794-379017-81002",
+          "process_date": "01/28/2026",
+          "merchant_name": "UBER",
+          "transaction_desc": "UBER TRIP HTTPS://HELP.UBER. CA K3PTACWB 6PYJKCKC 11371 01/27/26",
+          "current_opening": null,
+          "charges": 205.49,
+          "credits": 0.0,
+          "current_closing": null,
+          "is_total_row": false
+        },
+        {
+          "last_name": "BAKER",
+          "first_name": "CHRISTINE",
+          "card_number": "3794-379017-81002",
+          "process_date": "01/28/2026",
+          "merchant_name": "UBER",
+          "transaction_desc": "UBER TRIP HTTPS://HELP.UBER. CA 0V7DMNK7 NWJBCOLT 34787 01/28/26",
+          "current_opening": null,
+          "charges": 104.98,
+          "credits": 0.0,
+          "current_closing": null,
+          "is_total_row": false
+        },
+        {
+          "last_name": "BAKER",
+          "first_name": "CHRISTINE",
+          "card_number": "3794-379017-81002",
+          "process_date": "01/29/2026",
+          "merchant_name": "UBER",
+          "transaction_desc": "UBER TRIP HTTPS://HELP.UBER. CA REF# 2CTWW4V4 8005928996 01/29/26",
+          "current_opening": null,
+          "charges": 83.87,
+          "credits": 0.0,
+          "current_closing": null,
+          "is_total_row": false
+        },
+        {
+          "last_name": "BAKER",
+          "first_name": "CHRISTINE",
+          "card_number": "3794-379017-81002",
+          "process_date": "01/29/2026",
+          "merchant_name": "UBER",
+          "transaction_desc": "UBER TRIP HTTPS://HELP.UBER. CA KVN84N86 7NIPROSH 32827 01/29/26",
+          "current_opening": null,
+          "charges": 92.99,
+          "credits": 0.0,
+          "current_closing": null,
+          "is_total_row": false
+        },
+        {
+          "last_name": "BAKER",
+          "first_name": "CHRISTINE",
+          "card_number": "3794-379017-81002",
+          "process_date": "01/29/2026",
+          "merchant_name": "HYATT REGENCY ORLANDO",
+          "transaction_desc": "HYATT REGENCY ORLANDO HYATT REGENCY ORLAND ORLANDO FL FOL# 93021982 HYATT HOTELS 01/28/26",
+          "current_opening": null,
+          "charges": 419.17,
+          "credits": 0.0,
+          "current_closing": null,
+          "is_total_row": false
+        }
+      ],
+      "total_row": {
+        "last_name": "BAKER",
+        "first_name": "CHRISTINE",
+        "card_number": "3794-379017-81002",
+        "process_date": null,
+        "merchant_name": null,
+        "transaction_desc": null,
+        "current_opening": 0.0,
+        "charges": 906.5,
+        "credits": 0.0,
+        "current_closing": 906.5,
+        "is_total_row": true
+      }
+    }
+  ]
+}

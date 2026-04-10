@@ -1,0 +1,31 @@
+{
+  "run_id": "run_20260325_133635",
+  "started_at": "2026-03-25T08:06:35.090625+00:00",
+  "finished_at": "2026-03-25T08:06:49.677498+00:00",
+  "provider": "azure_openai",
+  "model": "gemini-3.1-flash-lite-preview",
+  "total_files": 1,
+  "successful_files": 0,
+  "failed_files": 1,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "total_duration_seconds": 11.141572099993937,
+  "calls": [
+    {
+      "call_id": "95f9c7f0",
+      "timestamp": "2026-03-25T08:06:49.675729+00:00",
+      "provider": "azure_openai",
+      "model": "gemini-3.1-flash-lite-preview",
+      "file_name": "Bales $44.35.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 11.14,
+      "status": "error",
+      "error_message": "Connection error."
+    }
+  ]
+}

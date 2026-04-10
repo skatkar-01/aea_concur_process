@@ -1,0 +1,403 @@
+{
+  "global_principles": [
+    {
+      "rule_id": "PROJECT_CODE_CONSISTENCY",
+      "condition": "all lodging, air, car service, meals, and other expenses for the same trip",
+      "action": "charge all related rows to the same project code after confirming with team members/calendar bookings",
+      "example": {
+        "trip_rows": ["Airline", "Lodging", "Meals", "Car Service"],
+        "output_project": "same project for all rows in that trip"
+      }
+    },
+    {
+      "rule_id": "REFUND_MIRRORS_ORIGINAL",
+      "condition": "amount < 0 or description starts with Refund/",
+      "action": "research original charge and mirror the original project, department, expense type, and description context",
+      "example": {
+        "input": "Refund/ORD-EWR/Executive Session/Montway",
+        "output": "same project/department/expense type as original ORD-EWR charge"
+      }
+    },
+    {
+      "rule_id": "ITEMIZE_MULTI_PROJECT_OR_MULTI_EXPENSE_RECEIPTS",
+      "condition": "event/hotel receipt contains separately listed meals, lodging, venue fees, or multiple project allocations",
+      "action": "split into multiple rows with matching descriptions and respective amounts",
+      "example": {
+        "input": "Lodging/Pension-Bridge-Private Credit/Amateras/MMDF V",
+        "output": [
+          "Lodging/Pension Bridge Conf/Amateras",
+          "Lodging/Pension Bridge Conf/MMDF V"
+        ]
+      }
+    },
+    {
+      "rule_id": "CONCISE_CLEAN_BUSINESS_PURPOSE",
+      "condition": "all business purpose descriptions",
+      "action": "use concise, consistent, meaningful wording with correct capitalization/spelling and only standard punctuation",
+      "example": {
+        "input": "8OD mtg /  tilebar",
+        "output": "BOD Mtg/TileBar"
+      }
+    }
+  ],
+  "description_formats": [
+    {
+      "rule_id": "MEETING_TERMINOLOGY",
+      "condition": "description references meetings",
+      "action": "use Mgmt Mtg, BOD Mtg, Strategy Mtg, Portfolio Mtg, and similar consistent meeting terms",
+      "example": {
+        "input": "Board meeting with SPI",
+        "output": "BOD Mtg/SPI"
+      }
+    },
+    {
+      "rule_id": "FLIGHT_DESCRIPTION_FORMAT",
+      "condition": "expense_type == Airline",
+      "action": "include airport routing or RT: route, meeting/trip purpose, and deal/company/event name at the end",
+      "examples": [
+        "LGA-ORD/Chicago Marketing Mtg",
+        "DFW-EWR/BOD Mtg/SPI",
+        "RT:JFK-STO/Fundraising/Growth Fund",
+        "Refund/ORD-EWR/Executive Session/Montway",
+        "RT:EWR-JAX/Mgmt Mtg/Tom King initiatives",
+        "Tkt Fee/RT:LGA-DTW-ATW-ORD/Crane Engineering",
+        "Tkt Fee/MTY-MEX/Fundraising Trip/Fund VIII",
+        "Seat Upgrade/Site Visit/Jack's",
+        "Exch Tkt/DTW-LGA/BOD Mtg/Monroe Engineering"
+      ]
+    },
+    {
+      "rule_id": "TRAVEL_MEAL_DESCRIPTION_FORMAT",
+      "condition": "expense_type == Meals and meal occurs while traveling without external guests",
+      "action": "use Travel Meal/<trip purpose>/<deal or company>",
+      "examples": [
+        "Travel Meal/BOD Mtg/Excelitas",
+        "Travel Meal/Cleveland Mktg Mtgs",
+        "Travel Meal/Site Visit/Turn 14"
+      ]
+    },
+    {
+      "rule_id": "BUSINESS_MEAL_DESCRIPTION_FORMAT",
+      "condition": "expense_type == Meals and business guests attended",
+      "action": "include meal type/purpose, attendee names as first-initial last-name where possible, guest count if applicable, and deal/company/event name at the end",
+      "examples": [
+        "Coffee Mtg/Recruiting/P.Suarez",
+        "Coffee Mtg w/B.Martin/Spencer Stuart",
+        "Coffee Mtg/Mentoring/J.Bloom",
+        "Bus.Lunch Mtg/Mentoring/M.Davis",
+        "Bus.Lunch/4 ppl/SMBC, Golub, Annaly",
+        "Bus.Lunch/BOD Mtg/Commonwealth",
+        "Bus.Lunch/30 ppl/CFO-CTO Best Practice",
+        "Bus.Dinner/K.Carbonez/Goldman Sachs",
+        "Bus.Dinner w/D.Ryan/MidOcean",
+        "Catered Breakfast/BOD Mtg/MSRE",
+        "Deposit/BOD Dinner/Window Nation",
+        "Bus.Dinner/BOD Dinner/17 ppl/Redwood",
+        "Bus.Dinner w/Clare Doyle/Verdesian",
+        "Bus.Dinner Mtg/Onsite Work/5 ppl/50 Floor",
+        "MMF New Assoc./Post-Dinner Event"
+      ]
+    },
+    {
+      "rule_id": "OFFICE_MEAL_DESCRIPTION_FORMAT",
+      "condition": "local office meal and not group order",
+      "action": "use Working Lunch or Working Dinner, and use Overage/Personal on the personal split line",
+      "examples": [
+        "Working Lunch",
+        "Working Lunch/Overage/Personal"
+      ]
+    },
+    {
+      "rule_id": "CAR_SERVICE_DESCRIPTION_FORMAT",
+      "condition": "expense_type == Car Service",
+      "action": "include origin-destination, trip purpose, and deal/company/event at the end, unless the row is a mandatory home/office policy format",
+      "examples": [
+        "JFK-Home/Denver Marketing Mtg",
+        "LGA-Home/Mgmt Mtg/Royal Foods",
+        "Mtg-JFK/B.Sherwin Trip/TileBar",
+        "BOD Mtg-Office-Dinner-Home/TriMech",
+        "RDU-Hotel/Site Visit/Verdesian",
+        "Home/Alvarez & Marsal Networking Event/Home",
+        "Tip/Team Bowling Event/Home",
+        "Bus.Rental/BOD Mtg/APG",
+        "Bus.Rental/Site Visit/Verdesian"
+      ]
+    },
+    {
+      "rule_id": "MANDATORY_HOME_OFFICE_CAR_FORMATS",
+      "condition": "car service is an early-arrival, work-late, or weekend commute",
+      "action": "use only approved formats and do not invent variants",
+      "examples": [
+        "Early Arrival/Home-Office",
+        "Weekend/Home-Office",
+        "Work Late/Office-Home",
+        "Weekend/Office-Home"
+      ]
+    },
+    {
+      "rule_id": "HOTEL_DESCRIPTION_FORMAT",
+      "condition": "expense_type == Lodging",
+      "action": "include Lodging/<purpose>/<deal or company>",
+      "examples": [
+        "Lodging/SensoScientific Mgmt Mtg/PST",
+        "Lodging/Site Visit/Crane",
+        "Lodging/BOD Mtg/AmeriVet"
+      ]
+    },
+    {
+      "rule_id": "INFO_SERVICES_DESCRIPTION_FORMAT",
+      "condition": "expense_type == Info Services",
+      "action": "use Inflight Wifi for flight wifi, otherwise describe the subscription and due-diligence purpose",
+      "examples": [
+        "Inflight Wifi",
+        "Research Subscription/Due Diligence/Condado Tacos"
+      ]
+    },
+    {
+      "rule_id": "OTHER_AND_MISC_DESCRIPTION_FORMAT",
+      "condition": "expense_type in ['Other', 'Other Travel']",
+      "action": "use concise description with purpose and deal/event destination where applicable",
+      "examples": [
+        "Luggage Transfer to LGA/Mgmt Mtg/Chemical Guys",
+        "Erroneous Charge/Awaiting Refund",
+        "Bus.Parking/BOD Mtg/Hero Digital",
+        "Bus.Parking/CT Office",
+        "Bus.Parking/Site Visit/Carrier",
+        "Bus.Fuel/Boston-Michigan/Canaccord Conf",
+        "Train/PHL-Penn/Working Session/AmEx",
+        "Train/DC-Penn/J.Carver/Consumer Advisory Council",
+        "AmEx Card Rush Delivery Fee"
+      ]
+    }
+  ],
+  "expense_code_rules": [
+    {
+      "rule_id": "TICKET_FEE_FOLLOWS_MAIN_TICKET",
+      "condition": "description contains Tkt Fee, Exch Tkt, or ticketing fee for a flight",
+      "action": "set expense type to Airline",
+      "example": {
+        "input": {
+          "description": "Tkt Fee/RT:LGA-DTW-ATW-ORD/Crane Engineering",
+          "expense_type": "Other Travel"
+        },
+        "output": {
+          "expense_type": "Airline"
+        }
+      }
+    },
+    {
+      "rule_id": "HOTEL_FEE_AS_LODGING",
+      "condition": "fee relates to a hotel or lodging charge",
+      "action": "set expense type to Lodging",
+      "example": {
+        "input": {
+          "description": "Booking Fee/Lodging/BOD Mtg/Chemical Guys",
+          "expense_type": "Other"
+        },
+        "output": {
+          "expense_type": "Lodging"
+        }
+      }
+    },
+    {
+      "rule_id": "NON_AIR_TRANSPORT_FEES_AS_OTHER_TRAVEL",
+      "condition": "fee relates to train, bus, boat, or other non-air transportation",
+      "action": "set expense type to Other Travel",
+      "example": {
+        "input": {
+          "description": "Train/DC-Penn/J.Carver/Consumer Advisory Council",
+          "expense_type": "Airline"
+        },
+        "output": {
+          "expense_type": "Other Travel"
+        }
+      }
+    },
+    {
+      "rule_id": "INFLIGHT_WIFI_EXPENSE_TYPE",
+      "condition": "description contains Inflight Wifi",
+      "action": "set expense type to Info Services",
+      "example": {
+        "input": {
+          "description": "Inflight Wifi",
+          "expense_type": "Airline"
+        },
+        "output": {
+          "expense_type": "Info Services"
+        }
+      }
+    },
+    {
+      "rule_id": "SEMINARS_TO_CONFERENCES",
+      "condition": "expense type is Seminars or Seminars and Conferences",
+      "action": "set expense type to Conferences",
+      "example": {
+        "input": "Seminars and Conferences",
+        "output": "Conferences"
+      }
+    },
+    {
+      "rule_id": "MISC_TO_OTHER",
+      "condition": "expense type is Miscellaneous",
+      "action": "set expense type to Other unless a more specific code clearly applies",
+      "example": {
+        "input": "Miscellaneous",
+        "output": "Other"
+      }
+    }
+  ],
+  "policy_rules": [
+    {
+      "rule_id": "EARLY_ARRIVAL_POLICY",
+      "condition": "car service arrival to office is after 7:00 AM",
+      "action": "code to Personal / project 1008 and use Personal description",
+      "example": {
+        "input": {
+          "description": "Early Arrival/Home-Office",
+          "arrival_time": "07:20"
+        },
+        "output": {
+          "description": "Personal",
+          "project": "1008"
+        }
+      }
+    },
+    {
+      "rule_id": "WORK_LATE_POLICY",
+      "condition": "car service office departure is before 7:30 PM on a weekday",
+      "action": "code to Personal / project 1008 unless weekend policy applies",
+      "example": {
+        "input": {
+          "description": "Work Late/Office-Home",
+          "departure_time": "19:00"
+        },
+        "output": {
+          "description": "Personal",
+          "project": "1008"
+        }
+      }
+    },
+    {
+      "rule_id": "LOCAL_MEAL_OVERAGE_SPLIT",
+      "condition": "local Working Lunch > 25 or local Working Dinner > 35",
+      "action": "itemize overage to project 1008 with Employee ID and use Overage/Personal description",
+      "example": {
+        "input": {
+          "description": "Working Lunch",
+          "amount": 40
+        },
+        "output": [
+          {
+            "description": "Working Lunch",
+            "amount": 25,
+            "project": "business project"
+          },
+          {
+            "description": "Working Lunch/Overage/Personal",
+            "amount": 15,
+            "project": "1008"
+          }
+        ]
+      }
+    },
+    {
+      "rule_id": "PERSONAL_PROJECT_REQUIRES_EMPLOYEE_ID",
+      "condition": "project == 1008",
+      "action": "Employee ID must be populated",
+      "example": {
+        "input": {
+          "project": "1008",
+          "employee_id": ""
+        },
+        "output": "flag for review"
+      }
+    }
+  ],
+  "text_cleaning": [
+    {
+      "rule_id": "REPLACE_BUSINESS",
+      "condition": "description contains 'Business'",
+      "action": "replace 'Business' with 'Bus.' in business meal/car rental/fuel/parking contexts",
+      "example": {
+        "input": "Business Lunch with client",
+        "output": "Bus. Lunch with client"
+      }
+    },
+    {
+      "rule_id": "REMOVE_TRANSPORTATION",
+      "condition": "expense_type == 'Car Service'",
+      "action": "remove the word 'Transportation'",
+      "example": {
+        "input": "Transportation Home to Office",
+        "output": "Home-Office"
+      }
+    },
+    {
+      "rule_id": "REPLACE_TO_DASH",
+      "condition": "expense_type == 'Car Service' and route separator appears as ' to '",
+      "action": "replace ' to ' with '-' and remove spaces around route dashes",
+      "example": {
+        "input": "Home to Office",
+        "output": "Home-Office"
+      }
+    },
+    {
+      "rule_id": "REMOVE_BUS_PREFIX_FROM_LODGING",
+      "condition": "expense_type == 'Lodging' and description starts with Bus.Lodging",
+      "action": "remove Bus. prefix from Lodging",
+      "example": {
+        "input": "Bus.Lodging/BOD Mtg/AmeriVet",
+        "output": "Lodging/BOD Mtg/AmeriVet"
+      }
+    },
+    {
+      "rule_id": "NORMALIZE_INFLIGHT_WIFI_TEXT",
+      "condition": "description references inflight wifi",
+      "action": "normalize to 'Inflight Wifi'",
+      "example": {
+        "input": "In-flight WiFi",
+        "output": "Inflight Wifi"
+      }
+    },
+    {
+      "rule_id": "NORMALIZE_PERSONAL_TEXT",
+      "condition": "description references personal expense",
+      "action": "use 'Personal' and remove the word 'expense'",
+      "example": {
+        "input": "Personal Expense",
+        "output": "Personal"
+      }
+    }
+  ],
+  "comments_guidance": [
+    {
+      "rule_id": "COMMENT_FIELD_CONTENT",
+      "condition": "row needs extra reviewer context",
+      "action": "write concise notes with attendee names/orgs, total attendee count, refund/reschedule/late-charge context, and any other posting-relevant detail",
+      "example": {
+        "input": "Refund row with unclear original charge",
+        "output": "Original ticket not found; verify project and expense coding before posting."
+      }
+    }
+  ],
+  "validation": [
+    {
+      "rule_id": "CHAR_LIMIT",
+      "condition": "len(description + vendor + 12) > 70",
+      "action": "flag and shorten description/vendor while preserving meaning",
+      "example": {
+        "input": "Long description and long vendor exceed Sage limit",
+        "output": "Flagged for review"
+      }
+    },
+    {
+      "rule_id": "DESCRIPTION_HAS_REQUIRED_PARTS",
+      "condition": "description is missing route, meeting purpose, attendee/company, or deal/event name required for that expense type",
+      "action": "flag and propose corrected description",
+      "example": {
+        "input": "Dinner",
+        "output": "Bus.Dinner w/D.Ryan/MidOcean"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "run_id": "run_20260324_182216",
+  "started_at": "2026-03-24T12:52:16.156710+00:00",
+  "finished_at": "2026-03-24T12:52:29.406027+00:00",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "total_files": 2,
+  "successful_files": 0,
+  "failed_files": 2,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "total_duration_seconds": 9.514265900012106,
+  "calls": [
+    {
+      "call_id": "022814f2",
+      "timestamp": "2026-03-24T12:52:24.313116+00:00",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "file_name": "Bales $44.35.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 4.69,
+      "status": "error",
+      "error_message": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Thinking level is not supported for this model.', 'status': 'INVALID_ARGUMENT'}}"
+    },
+    {
+      "call_id": "87f42173",
+      "timestamp": "2026-03-24T12:52:29.394006+00:00",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "file_name": "Bassman $7,398.50.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 4.82,
+      "status": "error",
+      "error_message": "400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Thinking level is not supported for this model.', 'status': 'INVALID_ARGUMENT'}}"
+    }
+  ]
+}

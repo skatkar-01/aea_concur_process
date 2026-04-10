@@ -1,0 +1,416 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "txn_1",
+      "transaction_date": "01/06/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 50.99,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_2",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 54.98,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_3",
+      "transaction_date": "01/08/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 55.98,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_4",
+      "transaction_date": "01/09/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 60.13,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_5",
+      "transaction_date": "01/13/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 49.27,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_6",
+      "transaction_date": "01/14/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 53.0,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_7",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 50.9,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_8",
+      "transaction_date": "01/16/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 55.97,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_9",
+      "transaction_date": "01/21/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 51.46,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_10",
+      "transaction_date": "01/22/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 52.35,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_11",
+      "transaction_date": "01/23/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 52.48,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_12",
+      "transaction_date": "01/28/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 85.59,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_13",
+      "transaction_date": "01/30/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 101.13,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_14",
+      "transaction_date": "02/03/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 50.98,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    },
+    {
+      "transaction_id": "txn_15",
+      "transaction_date": "02/04/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Work - Late/Office - Home",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card - American Express",
+      "amount": 49.97,
+      "cost_center": "CONS-4001-Consumer",
+      "project": "Consumer Products - New Bus",
+      "attendees": "Christopher Brown, Employee"
+    }
+  ],
+  "employee_report": {
+    "employee_name": "Christopher Brown",
+    "employee_id": "A0AN",
+    "report_id": "DD7E9F2C27054C7C9273",
+    "report_date": "02/10/2026",
+    "approval_status": "Approved & In Accounting Review",
+    "payment_status": "Not Paid",
+    "currency": "USD",
+    "report_total": 875.18,
+    "personal_expenses": 0.0,
+    "total_amount_claimed": 875.18,
+    "amount_approved": 875.18,
+    "amount_due_employee": 0.0,
+    "amount_due_company_card": 875.18,
+    "total_paid_by_company": 875.18,
+    "amount_due_from_employee": 0.0,
+    "total_paid_by_employee": 0.0
+  },
+  "receipts": [
+    {
+      "receipt_id": "rcp_1",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 5, 2026",
+      "date": "01/05/2026",
+      "vendor": "Uber",
+      "amount": 50.99
+    },
+    {
+      "receipt_id": "rcp_2",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 6, 2026",
+      "date": "01/06/2026",
+      "vendor": "Uber",
+      "amount": 54.98
+    },
+    {
+      "receipt_id": "rcp_3",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 7, 2026",
+      "date": "01/07/2026",
+      "vendor": "Uber",
+      "amount": 55.98
+    },
+    {
+      "receipt_id": "rcp_4",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 8, 2026",
+      "date": "01/08/2026",
+      "vendor": "Uber",
+      "amount": 60.13
+    },
+    {
+      "receipt_id": "rcp_5",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 12, 2026",
+      "date": "01/12/2026",
+      "vendor": "Uber",
+      "amount": 49.27
+    },
+    {
+      "receipt_id": "rcp_6",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 13, 2026",
+      "date": "01/13/2026",
+      "vendor": "Uber",
+      "amount": 53.0
+    },
+    {
+      "receipt_id": "rcp_7",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 14, 2026",
+      "date": "01/14/2026",
+      "vendor": "Uber",
+      "amount": 50.9
+    },
+    {
+      "receipt_id": "rcp_8",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 15, 2026",
+      "date": "01/15/2026",
+      "vendor": "Uber",
+      "amount": 55.97
+    },
+    {
+      "receipt_id": "rcp_9",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 20, 2026",
+      "date": "01/20/2026",
+      "vendor": "Uber",
+      "amount": 51.46
+    },
+    {
+      "receipt_id": "rcp_10",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 21, 2026",
+      "date": "01/21/2026",
+      "vendor": "Uber",
+      "amount": 52.35
+    },
+    {
+      "receipt_id": "rcp_11",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 22, 2026",
+      "date": "01/22/2026",
+      "vendor": "Uber",
+      "amount": 52.48
+    },
+    {
+      "receipt_id": "rcp_12",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 27, 2026",
+      "date": "01/27/2026",
+      "vendor": "Uber",
+      "amount": 85.59
+    },
+    {
+      "receipt_id": "rcp_13",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Jan 29, 2026",
+      "date": "01/29/2026",
+      "vendor": "Uber",
+      "amount": 101.13
+    },
+    {
+      "receipt_id": "rcp_14",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Feb 2, 2026",
+      "date": "02/02/2026",
+      "vendor": "Uber",
+      "amount": 50.98
+    },
+    {
+      "receipt_id": "rcp_15",
+      "order_id": null,
+      "description": "Uber ride (business). Email receipt header Feb 3, 2026",
+      "date": "02/03/2026",
+      "vendor": "Uber",
+      "amount": 49.97
+    }
+  ],
+  "reconciliation": [
+    {
+      "transaction_id": "txn_1",
+      "receipt_id": "rcp_1",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_2",
+      "receipt_id": "rcp_2",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_3",
+      "receipt_id": "rcp_3",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_4",
+      "receipt_id": "rcp_4",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_5",
+      "receipt_id": "rcp_5",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_6",
+      "receipt_id": "rcp_6",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_7",
+      "receipt_id": "rcp_7",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_8",
+      "receipt_id": "rcp_8",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_9",
+      "receipt_id": "rcp_9",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_10",
+      "receipt_id": "rcp_10",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_11",
+      "receipt_id": "rcp_11",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_12",
+      "receipt_id": "rcp_12",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_13",
+      "receipt_id": "rcp_13",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_14",
+      "receipt_id": "rcp_14",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_15",
+      "receipt_id": "rcp_15",
+      "match_status": "matched",
+      "confidence": "high"
+    }
+  ]
+}

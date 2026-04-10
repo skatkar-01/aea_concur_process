@@ -1,0 +1,162 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "txn_1",
+      "transaction_date": "01/29/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Hotel-MCO/BOD Mtg/Nations Roof",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": "$92.99",
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6470- Nations Roof",
+      "attendees": "Christine Baker, Employee LGA- American Express VAIP- 6470-",
+      "comments": null
+    },
+    {
+      "transaction_id": "txn_2",
+      "transaction_date": "01/28/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home/BOD Mtg/Nations Roof",
+      "vendor_description": "Uber",
+      "payment_type": "Corporate Card CBCP",
+      "amount": "$83.87",
+      "cost_center": "VAIP Team",
+      "project": "Nations Roof",
+      "attendees": "Christine Baker, Employee",
+      "comments": null
+    },
+    {
+      "transaction_id": "txn_3",
+      "transaction_date": "01/27/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "MCO-Site Visit/Nations Roof",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": "$104.98",
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6470- Nations Roof",
+      "attendees": "Christine Baker, Employee",
+      "comments": "Catherine Ardizzone (02/12/2026): SUV: Christine Baker, Louie Sharpe, Alex Reedy, Jordan Jett"
+    },
+    {
+      "transaction_id": "txn_4",
+      "transaction_date": "01/27/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home-LGA/BOD Mtg/Nations Roof",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": "$205.49",
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6470- Nations Roof",
+      "attendees": "Christine Baker, Employee",
+      "comments": null
+    },
+    {
+      "transaction_id": "txn_5",
+      "transaction_date": "01/28/2026",
+      "expense_type": "Lodging",
+      "business_purpose": "Lodging/BOD Mtg/Nations Roof",
+      "vendor_description": "Hyatt Regency Orlando",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": "$419.17",
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6470- Nations Roof",
+      "attendees": null,
+      "comments": null
+    }
+  ],
+  "employee_report": {
+    "employee_name": "Christine Baker",
+    "employee_id": "A0HN",
+    "report_id": "2EC424F7AFA84472A0D0",
+    "report_date": "02/11/2026",
+    "approval_status": "Approved",
+    "payment_status": "Processing Payment",
+    "currency": "US, Dollar",
+    "report_total": "$906.50",
+    "personal_expenses": "$0.00",
+    "total_amount_claimed": "$906.50",
+    "amount_approved": "$906.50",
+    "amount_due_employee": "$0.00",
+    "amount_due_company_card": "$906.50",
+    "total_paid_by_company": "$906.50",
+    "amount_due_from_employee": "$0.00",
+    "total_paid_by_employee": "$0.00",
+    "approval_log": "02/19/2026 11:46 AM Justin deLaChapelle Approval Status Change Status changed from Submitted & Pending Approval to Approved Comment: Step Name: Manager Approval\n02/18/2026 11:11 PM Justin deLaChapelle Email reminder has been sent An email reminder was sent to recipient: jdelachapelle@aeainvestors.com for: Approval Request- Expense Report, Overdue Expense Report Approvals\n02/17/2026 11:23 PM Justin deLaChapelle Email reminder has been sent An email reminder was sent to recipient: jdelachapelle@aeainvestors.com for: Approval Request- Expense Report, Overdue Expense Report Approvals\n02/16/2026 11:01 PM Justin deLaChapelle Email reminder has been sent An email reminder was sent to recipient: jdelachapelle@aeainvestors.com for: Approval Request- Expense Report, Overdue Expense Report Approvals\n02/15/2026 11:01 PM Justin deLaChapelle Email reminder has been sent An email reminder was sent to recipient: jdelachapelle@aeainvestors.com for: Approval Request- Expense Report, Overdue Expense Report Approvals\n02/12/2026 01:51 PM Christine Baker Approval Status Change Status changed from Submitted to Submitted & Pending Approval Comment:\n02/12/2026 01:51 PM Christine Baker Approval Status Change Status changed from Not Submitted to Submitted Comment: Step Name: Report Submitted"
+  },
+  "receipts": [
+    {
+      "receipt_id": "rcp_1",
+      "order_id": null,
+      "date": "Jan 27, 2026 7:40 AM",
+      "vendor": "Uber",
+      "amount": "$205.49",
+      "summary": "Thanks for riding, Christine. Total $205.49. Trip fare $182.36; LGA Airport Surcharge $2.50; MTA Congestion Surcharge (Below 60th St) $1.50; NY Congestion Fee $2.75; NY State Black Car Fund $4.46; New York State Benefits Surcharge $0.62; Sales Tax $16.16; Membership Discount -$4.86. Uber One credits earned $10.69. Payments: American Express \u2022\u2022\u2022\u20221002 (Work) $205.49. Trip details: Business Comfort, 10.27 miles, 21 minutes. License Plate: T723453C. 7:46 AM 284 Mott St, New York, NY 10012-3594, US -> 8:08 AM Terminal C | Express Dropoff, Checked-In, LaGuardia Airport (LGA), Queens, NY 11371, US. You rode with Pedro. FHV License Number: 5769570. Affiliated with UBER USA, LLC (B03404). Dispatched by UBER USA, LLC (B03404). Trip type Business. Trip ID f3f09509-422b-423a-b3c5-804bd1fa4c57. Full Name Christine Baker. Driver's TLC License Number: 5681368."
+    },
+    {
+      "receipt_id": "rcp_2",
+      "order_id": null,
+      "date": "Jan 27, 2026 11:38 AM",
+      "vendor": "Uber",
+      "amount": "$104.98",
+      "summary": "Thanks for riding, Christine. Total $104.98. Trip fare $96.11; Beachline West Toll Plaza $2.21; MCO Airport Surcharge $5.80; SR 91 (FL Turnpike) - Orlando South Toll NorthBound ON $0.86. Uber One credits earned $5.77. Payments: American Express \u2022\u2022\u2022\u20221002 (Work) $104.98. Trip details: Black SUV, 25.76 miles, 31 minutes. 12:42 PM Terminal B, Orlando International Airport (MCO), Orlando, FL 32827, US -> 1:13 PM 691 Garden Commerce Pkwy, Winter Garden, FL 34787-5709, US. You rode with DELINX. Trip type Business. Trip ID 6d921139-7312-4471-a019-49a976e2dded. Full Name Christine Baker. Issued on behalf of DELINX."
+    },
+    {
+      "receipt_id": "rcp_3",
+      "order_id": null,
+      "date": "Jan 28, 2026 6:31 PM",
+      "vendor": "Uber",
+      "amount": "$83.87",
+      "summary": "Thanks for riding, Christine. Total $83.87. Trip fare $68.32; LGA Airport Surcharge $2.50; MTA Congestion Surcharge (Below 60th St) $1.50; NY Congestion Fee $2.75; NY State Black Car Fund $1.73; New York State Benefits Surcharge $0.61; Sales Tax $6.46. Uber One credits earned $4.14. Payments: American Express \u2022\u2022\u2022\u20221002 (Work) $83.87. Trip details: Business Comfort, 10.26 miles, 28 minutes. License Plate: T673762C. 6:36 PM Terminal C | Express Dropoff, Checked-In, LaGuardia Airport (LGA), Queens, NY 11371, US -> 7:05 PM 284 Mott St, New York, NY 10012-3594, US. You rode with Abdullah. FHV License Number: 5612886. Affiliated with UBER USA, LLC (B03404). Dispatched by UBER USA, LLC (B03404). Trip type Business. Trip ID e4b18147-faf2-42fd-b648-81457995d720. Full Name Christine Baker. Driver's TLC License Number: 5969897."
+    },
+    {
+      "receipt_id": "rcp_4",
+      "order_id": null,
+      "date": "Jan 28, 2026 1:01 PM",
+      "vendor": "Uber",
+      "amount": "$92.99",
+      "summary": "Thanks for riding, Christine. Total $92.99. Trip fare $90.78; Beachline West Toll Plaza $2.21. Uber One credits earned $5.45. Payments: American Express \u2022\u2022\u2022\u20221002 (Work) $92.99. Trip details: Black SUV, 13.03 miles, 18 minutes. 1:05 PM 9801 International Dr, Orlando, FL 32819, US -> 1:24 PM Terminal B, Orlando International Airport (MCO), Orlando, FL 32827, US. You rode with JEAN. Trip type Business. Trip ID fb50f8ba-47e2-4f4c-b3a0-3ce27a12e07c. Full Name Christine Baker."
+    },
+    {
+      "receipt_id": "rcp_5",
+      "order_id": null,
+      "date": "01-27-26 / 01-28-26",
+      "vendor": "Hyatt Regency Orlando",
+      "amount": "$419.17",
+      "summary": "INVOICE for Christine Baker. Guest address: 851 East Interstate 65 Service Ste. 300 Mobile AL 36606. Room No. 22205. Arrival 01-27-26 Departure 01-28-26. Confirmation No. 5687051101. Group Name Nations Roof Meeting Folio No. 2721863. Charges: 01-27-26 Accommodation 359.00; 01-27-26 OCCCD Surcharge 3.59; 01-27-26 State Tax 6.5% 23.57; 01-27-26 Occupancy Tax 6% 21.76; 01-27-26 Resort Fee 10.00; 01-27-26 Resort Fee Tax 0.65; 01-27-26 Resort Fee Occupancy Tax 0.60; 01-28-26 American Express XXXXXXXXXXXX1002 XX/XX 419.17. Total 419.17. Balance 0.00. World of Hyatt Summary: Membership: XXXXXX011K; Qualifying Nights: 1; Eligible Spend: 369.00; Redemption Eligible: 0.00. Summary Invoice notes. Additional charges apart from base accommodation (359.00) total: 60.17 (OCCCD Surcharge 3.59 + State Tax 23.57 + Occupancy Tax 21.76 + Resort Fee 10.00 + Resort Fee Tax 0.65 + Resort Fee Occupancy Tax 0.60 = 60.17). Tel: 407-284-1234 Fax: 407-351-9177 orlando.regency.hyatt.com."
+    }
+  ],
+  "reconciliation": [
+    {
+      "transaction_id": "txn_4",
+      "receipt_id": "rcp_1",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_3",
+      "receipt_id": "rcp_2",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_2",
+      "receipt_id": "rcp_3",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_1",
+      "receipt_id": "rcp_4",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_5",
+      "receipt_id": "rcp_5",
+      "match_status": "matched",
+      "confidence": "high"
+    }
+  ]
+}

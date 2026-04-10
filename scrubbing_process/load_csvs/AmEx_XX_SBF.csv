@@ -1,0 +1,154 @@
+Employee First Name,Employee Middle Name,Employee Last Name,Blank/Placeholder,Report Entry Transaction Date,Report Entry Description,Journal Amount,Report Entry Payment Type Name,Report Entry Expense Type Name,Report Entry Vendor Name,Project,Cost Center,Report Purpose,Employee ID
+Benjamin,,Althaus,,2026-02-05,Work Late/Office-Home,21.94,American Express,Car Service,Uber,3500,SBF,,A09A
+Benjamin,,Althaus,,2026-02-05,Refund/Personal,-24.73,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-05,Personal,24.73,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-06,Refund/Personal,-14.24,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-06,Personal,14.24,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-07,Personal,2.97,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-08,Lodging/Conf/ACG M&A,1693.87,American Express,Lodging,W Hotels,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-09,Travel Meal/BOD Mtg/WWE,13.21,American Express,Meals,Shell Oil,3354,SBF,,A09A
+Benjamin,,Althaus,,2026-02-09,Travel Meal/BOD Mtg/WWE,46.64,American Express,Meals,Naples Golf Club,3354,SBF,,A09A
+Benjamin,,Althaus,,2026-02-10,Travel Meal/BOD Mtg/WWE,24.38,American Express,Meals,Jersey Mike's,3354,SBF,,A09A
+Benjamin,,Althaus,,2026-02-10,Travel Meal/BOD Mtg/WWE,96.87,American Express,Meals,Versailles,3354,SBF,,A09A
+Benjamin,,Althaus,,2026-02-11,Hotel-Dinner/Bus.Dinner w/B. Quintana,37.98,American Express,Car Service,Uber,3431,SBF,,A09A
+Benjamin,,Althaus,,2026-02-11,Hotel-Conf/Stifel T&L Conf,25.98,American Express,Car Service,Uber,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-11,Travel Meal/Stifel T&L Conf,12.81,American Express,Meals,Shell Oil,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-11,Travel Meal/Stifel T&L Conf,45.0,American Express,Meals,Four Seasons,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-12,Travel Meal/Stifel T&L Conf,21.38,American Express,Meals,W Hotels,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-12,Travel Meal/Stifel T&L Conf,22.6,American Express,Meals,W Hotels,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-12,"Bus.Dinner w/J. Franklin, Pot EP",158.0,American Express,Meals,Midtown Table,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-14,Refund/Personal,-2.39,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-14,Personal,2.39,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-16,JAX-PHL-CLT/CFO Interview/AmEx,2058.66,American Express,Airline,American,3431,SBF,,A09A
+Benjamin,,Althaus,,2026-02-16,Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx,30.0,American Express,Airline,Frosch,3431,SBF,,A09A
+Benjamin,,Althaus,,2026-02-17,Travel Meal/Mgmt Mtg/Armstrong Transport,20.15,American Express,Meals,Qdoba,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-17,Travel Meal/Mgmt Mtg/Armstrong Transport,12.19,American Express,Meals,The Today Show,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-17,Home-JAX/CFO Interview/AmEx,145.0,American Express,Car Service,Surfside,3431,SBF,,A09A
+Benjamin,,Althaus,,2026-02-18,Travel Meal/Mgmt Mtg/Armstrong Transport,17.26,American Express,Meals,Toastique,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-18,Travel Meal/Mgmt Mtg/Armstrong Transport,5.35,American Express,Meals,The Today Show,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-18,Travel Meal/Mgmt Mtg/Armstrong Transport,11.27,American Express,Meals,Travel At Ease,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-18,CLT-Mtg/Mgmt Mtg/Armstrong Transport,48.98,American Express,Car Service,Uber,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-19,Travel Meal/Mgmt Mtg/Armstrong Transport,57.36,American Express,Meals,Culinary Dropout,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-19,Mtg-CLT/Mgmt Mtg/Armstrong Transport,50.98,American Express,Car Service,Uber,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-19,JAX-Home/Mgmt Mtg/Armstrong Transport,145.0,American Express,Car Service,Surfside,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-02-19,Lodging/CFO Interview/AMX,410.13,American Express,Lodging,Marriott,3431,SBF,,A09A
+Benjamin,,Althaus,,2026-02-20,Travel Meal/Strategy,28.35,American Express,Meals,Burger Fi,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-20,Travel Meal/Strategy,5.29,American Express,Meals,Paradies Lagardere,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-20,Travel Meal/Strategy,44.61,American Express,Meals,Hudson,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-21,Home-JAX/Strategy,145.0,American Express,Car Service,Surfside,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-27,JAX-Home/Strategy,145.0,American Express,Car Service,Surfside,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28,Personal,16.17,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28,Personal,2.39,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28,Refund/Personal,-2.39,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28,Refund/Personal,-16.17,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28,Lodging/NY Office Visit,884.43,American Express,Lodging,Hotels.com,3500,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,Lodging/ACG M&A South Conf,1859.68,American Express,Lodging,Hotel At Avalon,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,LGA-CHS/William Blair T&L Conf,396.1,American Express,Airline,American,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,RT:JAX-LGA/NY Office Visit,1181.8,American Express,Airline,Delta,3500,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,Tkt Fee/RT:JAX-LGA/NY Office Visit,30.0,American Express,Airline,Frosch,3500,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,JAX-LGA/Catch up Mtg/OAPC,503.4,American Express,Airline,Delta,3399,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf,30.0,American Express,Airline,Frosch,3501,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC,30.0,American Express,Airline,Frosch,3399,SBF,,A09A
+Benjamin,,Althaus,,2026-03-03,Lodging/Catch up Mtg/OAPC,490.04,American Express,Lodging,Hotels.com,3399,SBF,,A09A
+Benjamin,,Althaus,,2026-03-04,Refund/Personal,-3.43,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-04,Personal,3.43,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-05,Personal,5.73,American Express,Meals,Grubhub,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-05,Refund/Personal,-5.73,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-06,Refund/Personal,-2.05,American Express,Meals,American Express,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-06,Personal,3.26,American Express,Meals,Grubhub,1008,SBF,,A09A
+Rachel,Reardon,Kumar,,2026-02-11,Coffee Mtg w/ Cindy Li-Farewell,20.24,American Express,Meals,Blu,3500,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-19,Working Lunch,22.33,American Express,Meals,Uber,3500,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22,EWR-SLC/Strategy,1729.4,American Express,Airline,Delta,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22,SLC-JFK/Strategy,2998.41,American Express,Airline,Delta,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22,Tkt Fee/EWR-SLC/Strategy,30.0,American Express,Airline,Frosch,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22,EWR-SLC/Strategy,1472.68,American Express,Airline,United,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-23,REFUND/EWR-SLC/Strategy,-1729.4,American Express,Airline,Delta,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-23,REFUND/JFK-SLC-JFK/Strategy,-2428.49,American Express,Airline,Delta,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-24,Mentoring Coffee/Brendan Gallagher,14.88,American Express,Meals,Blu,3500,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-25,Working Lunch,22.33,American Express,Meals,Uber,3500,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-25,Bus.Dinner w/ Brendan Gallagher & Ian Wood,704.06,American Express,Meals,53 Restaurant,3500,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-25,Dinner-Home/Bus.dinner w/BG & IW,19.74,American Express,Car Service,Curb,3500,SBF,,A091
+Rachel,Reardon,Kumar,,2026-03-02,Working Lunch,23.41,American Express,Meals,Sweetgreen,3500,SBF,,A091
+John,Daniel,Sedlacek,,2026-02-04,RDU-LGA/Agreement Mtg/LRB,383.4,American Express,Airline,Delta,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-04,Tkt Fee/Refund/RDU-EWR/Mgmt Mtg/Aqualis,30.0,American Express,Airline,Frosch,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-04,Tkt Fee/RDU-LGA/Agreement Mtg/LRB,30.0,American Express,Airline,Frosch,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-04,Refund/RDU-EWR/Mgmt Mtg/Aqualis,-363.4,American Express,Airline,United,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-05,Cancellation Fee/Mtg-Dinner/Mgmt Mtg/Monroe,5.2,American Express,Car Service,Uber,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-05,Inflight Wifi/Mgmt Mtg/Monroe,8.0,American Express,Info Services,United,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-05,Travel Meal/Mgmt Mtg/Monroe,6.67,American Express,Meals,Cibo,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-05,Travel Meal/Mgmt Mtg/Monroe,7.36,American Express,Meals,Verdi Market,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-06,Dinner-Hotel/Mgmt Mtg/Monroe,144.97,American Express,Car Service,Uber,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-06,Inflight Wifi/Mgmt Mtg/Monroe,8.0,American Express,Info Services,United,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-06,Lodging/Mgmt Mtg/Monroe,131.78,American Express,Lodging,Hyatt,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,RDU-Mtg/Mgmt Mtg/Aqualis,31.99,American Express,Car Service,Uber,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,Travel Meal/Mgmt Mtg/Aqualis,22.65,American Express,Meals,Lonerider,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,Travel Meal/Mgmt Mtg/Aqualis,7.64,American Express,Meals,Starbucks,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,Travel Meal/Mgmt Mtg/Aqualis,17.9,American Express,Meals,Playa Bowls,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,RT:EWR-LHR/BOD Mtg/RED,2746.26,American Express,Airline,United,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,RT:EWR-LHR/Mtgs/IR,2746.27,American Express,Airline,United,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,Inflight Wifi/Mgmt Mtg/Aqualis,8.0,American Express,Info Services,United,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,Tkt Fee/RT:EWR-LHR/BOD Mtg/RED,22.5,American Express,Airline,Frosch,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09,Tkt Fee/RT:EWR-LHR/IR Mtgs,22.5,American Express,Airline,Frosch,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-10,Hotel-Mtg/Agreement Mtg/LRB,40.97,American Express,Car Service,Uber,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-10,Travel Meal/Mgmt Mtg/Aqualis,83.37,American Express,Meals,Westin,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-10,Lodging/Mgmt Mtg/Aqualis,451.87,American Express,Lodging,Westin,3285,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-10,Travel Meal/Strategy,5.6,American Express,Meals,Hudson News,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-11,Home-Conf/Baird T&S Conf,55.36,American Express,Car Service,Uber,3501,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-11,Home-Event/Vinson & Elkins Networking Event,23.74,American Express,Car Service,Uber,3501,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-12,Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe,-188.17,American Express,Airline,United,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-12,Tkt Fee/Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe,30.0,American Express,Airline,Frosch,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,EWR-FRA/LHR-EWR/BOD Mtg/RED,1849.66,American Express,Airline,United,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent,1849.66,American Express,Airline,United,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,EWR-FRA/LHR-EWR/IR Mtgs,1849.68,American Express,Airline,United,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic,299.54,American Express,Airline,British Air,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,DUS-LHR/BOD Mtg/RED,299.53,American Express,Airline,British Air,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,DUS-LHR/IR Mtgs,299.53,American Express,Airline,British Air,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essentic,30.0,American Express,Airline,Frosch,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED,30.0,American Express,Airline,Frosch,3353,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20,Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs,30.0,American Express,Airline,Frosch,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-21,Refund/Exchange/EWR-SLC/Strategy,-961.36,American Express,Airline,United,1035,,,A097
+John,Daniel,Sedlacek,,2026-02-23,PHL-SLC/Strategy,728.4,American Express,Airline,Delta,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23,Travel Meal/Strategy,2.6,American Express,Meals,CMF Vending,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23,Tkt Fee/PHL-SLC/Strategy,30.0,American Express,Airline,Frosch,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23,Travel Meal/Strategy,1.0,American Express,Meals,CMF Vending,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23,Travel Meal/Strategy,2.1,American Express,Meals,CMF Vending,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24,Refund/EWR-SLC/Strategy,-594.27,American Express,Airline,United,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24,Travel Meal/Strategy,11.69,American Express,Meals,Dunkin Donuts,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24,Travel Meal/Strategy,19.53,American Express,Meals,Hudson,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24,Lodging/Strategy,194.54,American Express,Lodging,Holiday Inn,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24,Tkt Fee/Exchange/JAX-EWR/Banker Mtgs/Monroe,30.0,American Express,Airline,Frosch,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-25,Travel Meal/Strategy,15.3,American Express,Meals,Jamba Juice,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic,135.0,American Express,Airline,Frosch,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,Travel Meal/Strategy,10.9,American Express,Meals,Coffee Bean & Tea Leaf,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic,10242.43,American Express,Airline,Virgin Airways,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,Travel Meal/Strategy,11.52,American Express,Meals,Dunkin,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,Inflight Wifi/Strategy,8.0,American Express,Info Services,United,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic,6898.5,American Express,Airline,Lufthansa,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26,DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic,895.3,American Express,Airline,British Air,3338,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-02,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,12.31,American Express,Meals,Dunkin Donuts,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-02,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,11.72,American Express,Meals,Verdi Market,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-02,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,6.67,American Express,Meals,Vanguard Market,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Office-Dinner/BOD Mtg/Monroe,39.97,American Express,Car Service,Uber,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Hotel-Office/BOD Mtg/Monroe,18.99,American Express,Car Service,Uber,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Travel Meal/Banker Mtgs/Monroe,35.53,American Express,Meals,Angie's Subs,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe,8.0,American Express,Info Services,United,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,6.76,American Express,Meals,Paradies Lagardere,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,34.35,American Express,Meals,AC Hotel,3369,SBF,,A097
+John,Daniel,Sedlacek,,2026-03-03,Lodging/BOD Mtg/Banker Mtgs/Monroe,396.12,American Express,Lodging,AC Hotel,3369,SBF,,A097
+Sylvia,,Vlahos,,2026-02-04,Working Group Lunch/Sylvia Vlahos,25.0,American Express,Meals,Midtown Table,3500,SBF,,A057
+Sylvia,,Vlahos,,2026-02-04,Working Group Lunch/Chris Horton,25.0,American Express,Meals,Midtown Table,3500,SBF,,A057
+Sylvia,,Vlahos,,2026-02-04,Working Group Lunch/Harshit Juneja,25.0,American Express,Meals,Midtown Table,3500,SBF,,A057
+Sylvia,,Vlahos,,2026-02-04,Working Group Lunch/James Kwon,25.0,American Express,Meals,Midtown Table,3500,SBF,,A057
+Sylvia,,Vlahos,,2026-02-04,Working Group Lunch/Henry Senkfor,17.17,American Express,Meals,Midtown Table,3500,SBF,,A057
+Sylvia,,Vlahos,,2026-02-11,Catering/BOD Mtg/Crane,276.09,American Express,Meals,Ezcater,3336,SBF,,A057
+Sylvia,,Vlahos,,2026-02-11,Catering/BOD Mtg/Crane,249.09,American Express,Meals,Ezcater,3336,SBF,,A057
+Sylvia,,Vlahos,,2026-02-19,Kitchen Supplies/Supplies,45.09,American Express,Kitchen Supplies,Publix,3500,SBF-FL,,A057
+Sylvia,,Vlahos,,2026-02-23,Office Supplies for FL Office,15.78,American Express,Office Supplies,Amazon,3500,SBF-FL,,A057
+Sylvia,,Vlahos,,2026-02-23,Office Supplies for FL Office,105.21,American Express,Office Supplies,Amazon,3500,SBF-FL,,A057
+Sylvia,,Vlahos,,2026-02-25,Office Supplies for FL Office,32.24,American Express,Office Supplies,Amazon,3500,SBF-FL,,A057
+Sylvia,,Vlahos,,2026-03-01,Kitchen Supplies/Grocery,130.63,American Express,Kitchen Supplies,Walmart,3500,SBF-FL,,A057
+Sylvia,,Vlahos,,2026-03-03,Kitchen Supplies/Grocery,52.39,American Express,Kitchen Supplies,Instacart,3500,SBF-FL,,A057
+Sylvia,,Vlahos,,2026-03-03,Catering/BOD Mtg/Monroe,242.6,American Express,Meals,Ezcater,3369,SBF,,A057
+Sylvia,,Vlahos,,2026-03-03,Catering/BOD Mtg/Monroe,528.0,American Express,Meals,Ezcater,3369,SBF,,A057
+Sylvia,,Vlahos,,2026-03-03,Working Lunch/Jess Sang,25.0,American Express,Meals,Grubhub,3500,SBF,,A057
+Sylvia,,Vlahos,,2026-03-03,Working Lunch/Jonathan Roth,19.79,American Express,Meals,Grubhub,3500,SBF,,A057

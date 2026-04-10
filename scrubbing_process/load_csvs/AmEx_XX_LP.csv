@@ -1,0 +1,349 @@
+First Name,Middle Name,Last Name,Blank,Tran Dt,Report Entry Description,Amt,Descr 1,Expense,Vendor,Project,Dept,Report Purpose,Employee ID
+Alexander,Clayton,Bales,,2026-02-11 00:00:00,Refund/RT: JFK-SLC/Strategy,-4027.97,American Express,Airline,,1035,VAIP,,A06Y
+James,Louis,Sharpe,,2026-02-10 00:00:00,Refund/EWR-SLC/2026 Strategy Mtg,-1186.84,American Express,Airline,,1035,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-10 00:00:00,Refund/SLC-JFK/2026,-853.49,American Express,Airline,,1035,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-04 00:00:00,Travel Meal/BOD Mtg/Numotion,64.67,American Express,Meals,,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-04 00:00:00,Travel Meal/BOD Mtg/Numotion,59.38,American Express,Meals,,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2026-02-04 00:00:00,Lodging/BOD Mtg/BOD Mtg/Numotion,583.16,American Express,Lodging,,6409,VAIP,,A07Y
+Jeffrey,Alois,Nagel,,2026-02-26 00:00:00,Travel Meal/Strategy,7.41,American Express,Meals,,6001,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-03 00:00:00,Refund/ASE-DFW/Strategy,-2185.2,American Express,Airline,American Airlines,1035,VAIP,,A08A
+Steven,Edward,Decillis,,2026-02-04 00:00:00,Lodging/Global Fund Finance Symposium,2119.26,American Express,Lodging,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-05 00:00:00,Work Late/Office-Home,254.52,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-08 00:00:00,Home-EWR/Global Fund Finance Symposium,150.08,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-08 00:00:00,EWR-Home/Global Fund Finance Symposium,150.08,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-10 00:00:00,Refund/Strategy Mtg,-2892.37,American Express,Airline,,1035,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-10 00:00:00,Work Late/Office-Home,249.57,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-18 00:00:00,Work Event/Office-Eisner Amper Event,71.31,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-02-18 00:00:00,Work Event/Eisner Amper Event-Home,233.96,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-03-03 00:00:00,Work Late/Office-Home,279.21,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-03-04 00:00:00,Work Late/Office-Home,269.58,American Express,Car Service,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2026-03-06 00:00:00,Work Late/Office-Home,248.8,American Express,Car Service,,1001,MGMT,,A08E
+Ali,Allexandre,Mehfar,,2026-02-27 00:00:00,Lunch Catering/Amerivet BOD Mtg,763.83,American Express,Meals,,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-27 00:00:00,Breakfast Catering/Amerivet BOD Mtg,987.43,American Express,Meals,,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-24 00:00:00,Inflight Wifi,14.99,American Express,Info Services,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Dinner/Consumer Partner Dinner,914.37,American Express,Meals,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Home-JFK/Harris Williams Ski Outing,248.6,American Express,Car Service,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Home-Office/Breakfast Meeting D. Gibbs,255.13,American Express,Car Service,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Office-Conference-Office/Baird Conference,278.99,American Express,Car Service,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Refund/JFK-SLC/AEA Strategy Meeting,-1668.4,American Express,Airline,,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Deposit/AmeriVet BOD Mtg,6830.84,American Express,Lodging,,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-19 00:00:00,Breakfast-Meetings-Dinner-Home/ Various Meetings,1083.13,American Express,Car Service,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-18 00:00:00,Birthday treats/Consumer Team celebration,45,American Express,Meals,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-17 00:00:00,Subscription,42.45,American Express,PubSub,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-12 00:00:00,Travel Meal/Harris Williams Ski Outing,70.25,American Express,Meals,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-10 00:00:00,Home-JFK/Harris Williams Ski Outing,248.6,American Express,Car Service,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-10 00:00:00,Refund/SLC-JFK/Harris Williams Ski Outing,-324.29,American Express,Airline,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-09 00:00:00,Tkt Fee/Harris Williams Ski Outing,30,American Express,Airline,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-09 00:00:00,SLC-JFK/Harris Williams Ski Outing,2108.4,American Express,Airline,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-06 00:00:00,Dinner-Home/F.Braun,255.13,American Express,Car Service,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-03 00:00:00,Refund/JFK-SLC/AEA Strategy Meeting,-1445.08,American Express,Airline,,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-03-04 00:00:00,Dinner/AmeriVet BOD Dinner,7833.32,American Express,Meals,,4246,CONS,,A08W
+Rachel,Reardon,Kumar,,2026-02-23 00:00:00,REFUND/EWR-SLC/Strategy,-1729.4,American Express,Airline,Delta Air Lines,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-23 00:00:00,REFUND/JFK-SLC-JFK/Strategy,-2428.49,American Express,Airline,Delta Air Lines,1035,SBF,,A091
+John,Daniel,Sedlacek,,2026-02-09 00:00:00,RT: EWR-LHR/Mtgs/IR,2746.27,American Express,Airline,United Airlines,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-09 00:00:00,Tkt Fee/RT: EWR-LHR/IR Mtgs,22.5,American Express,Airline,United Airlines,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24 00:00:00,Refund/EWR-SLC/Strategy,-594.27,American Express,Airline,United Airlines,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-21 00:00:00,Refund/Exchange/EWR-SLC/Strategy,-961.36,American Express,Airline,United Airlines,1035,,,A097
+John,Daniel,Sedlacek,,2026-02-20 00:00:00,EWR-FRA/LHR-EWR/IR Mtgs,1849.68,American Express,Airline,,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20 00:00:00,DUS-LHR/IR Mtgs,299.53,American Express,Airline,British Airways,1016-SBF,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-20 00:00:00,Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs,30,American Express,Airline,United Airlines,1016-SBF,SBF,,A097
+Mohammad,Rizwan,Chand,,2026-02-12 00:00:00,Ticket/Human Capital Forum 2026/Kate Smith,2420,American Express,Seminars/Conferens,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-06 00:00:00,DFW-Home/AEA Internal Mtgs,103.99,American Express,Car Service,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-05 00:00:00,Refund/DFW-SLC/Strategy,-1176.96,American Express,Airline,American Airlines,1035,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-04 00:00:00,Dinner/Riz Chand & Kate Smith,124.51,American Express,Meals,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-06 00:00:00,Refreshments,41.93,American Express,Meals,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2026-02-06 00:00:00,Lodging/AEA Internal Mtgs,482.15,American Express,Lodging,,6001,VAIP,,A09K
+Randy,,Aung,,2026-03-05 00:00:00,Backoffice outing (MSG)-home,173.98,American Express,Car Service,,1001,IT,,A09Y
+Randy,,Aung,,2026-02-13 00:00:00,Tip for the ride on 2/13/2026,4.51,American Express,Car Service,,1001,IT,,A09Y
+Randy,,Aung,,2026-02-13 00:00:00,Work Late/Office-Home,45.16,American Express,Car Service,,1001,IT,,A09Y
+Frank,,Herr,,2026-02-08 00:00:00,Rfnd/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Meeting,230,American Express,Airline,United Airlines,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-08 00:00:00,Rfnd/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Meeting,-851.3,American Express,Airline,United Airlines,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-12 00:00:00,Working Lunch/2 ppl/AEA,35.31,American Express,Meals,,6001,VAIP,,A0AJ
+Derek,,Darves-Bornoz,,2026-02-05 00:00:00,Refund/EWR-SLC/D.Fernholz/2026 Strategy Mtg,-1043.48,American Express,Airline,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-05 00:00:00,Refund/SLC-EWR/D.Fernholz/2026 Strategy Mtg,-1652.16,American Express,Airline,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-23 00:00:00,Refund/JFK-SLC/J.Lee/2026 Strategy,-1908.49,American Express,Airline,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-19 00:00:00,Data Subscription/JetBrains,21.78,American Express,Software,,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-18 00:00:00,Data Subscription/JetBrains,43.55,American Express,Software,,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-14 00:00:00,Data Subscription/JetBrains,10.89,American Express,Software,,6001,VAIP,,A0BI
+Heidi,Schwenzfeier,Dubois,,2026-02-09 00:00:00,Tkt Fee/Paris-London/Comms/Biz Dev Trip,45,American Express,Other Travel,,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-09 00:00:00,Train/Paris-London/Comms/Biz Dev Trip,496.1,American Express,Other Travel,,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-22 00:00:00,Inflight Wifi,8,American Express,Info Services,,6006,VAIP,,A0C7
+Edward,Walter,Newhouse,,2026-03-02 00:00:00,Bus.Lunch w/ Pedram Shayegan/BCI,210.29,American Express,Meals,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Trip,21.35,American Express,Meals,,1001,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-23 00:00:00,Tkt Refund/AEA Strategy Trip,-1308.49,American Express,Airline,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-19 00:00:00,Subscription/Professional Svcs,75.85,American Express,Info Services,,1001,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-13 00:00:00,Travel Meal/Tuck PE Conference,11.11,American Express,Meals,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-13 00:00:00,Parking/Tuck PE Conference,15,American Express,Other Travel,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-12 00:00:00,Travel Meal/Tuck PE Conference,2.84,American Express,Meals,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-12 00:00:00,Travel Meal/Tuck PE Conference,37.25,American Express,Meals,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-12 00:00:00,Parking/Tuck PE Conference,34,American Express,Other Travel,,1016,IR,,A0CN
+Deborah,Marie,Ackerman,,2026-02-18 00:00:00,Refund/RT: ORD-SLC/AEA Strategy Meeting,-2097.29,American Express,Airline,,1035,AMA,,A0CP
+Adam,Frederick,Goetsch,,2026-02-25 00:00:00,Refund/SLC-GEG,-984.41,American Express,Airline,,1035,CONS,,A0CU
+Steven,Andrew,Botnick,,2026-02-21 00:00:00,Refund/Strategy Meeting,-293.09,American Express,Airline,,1035,MGMT,,A0DI
+Steven,Andrew,Botnick,,2026-02-22 00:00:00,Refund/Strategy Meeting,-1638.49,American Express,Airline,,1035,MGMT,,A0DI
+Steven,Andrew,Botnick,,2026-02-24 00:00:00,Refund/Strategy Meeting,-83,American Express,Airline,,1035,MGMT,,A0DI
+James,Brian,Coleman,,2026-03-04 00:00:00,Lodging/BOD Mtg/AmeriVet,744.5,American Express,Lodging,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-03-05 00:00:00,Hotel-LGA/BOD Mtg/AmeriVet,83.9,American Express,Car Service,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-03-04 00:00:00,Bus.Dinner-Hotel/BOD Mtg/AmeriVet,48.94,American Express,Car Service,,4246,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-03 00:00:00,LGA-Hotel/BOD Mtg/AmeriVet,88.17,American Express,Car Service,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-03-03 00:00:00,Home-ORD/BOD Mtg/AmeriVet,50.99,American Express,Car Service,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,Tkt Fee/ORD-LGA/BOD Mtg/AmeriVet,30,American Express,Other Travel,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-25 00:00:00,Tkt Fee/Exch Tkt:ORD-LGA/BOD Mtg/AmeriVet,30,American Express,Other Travel,,4246,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-25 00:00:00,Refund/LGA-ORD/BOD Mtg/AmeriVet,-50.6,American Express,Airline,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,ORD-LGA/BOD Mtg/AmeriVet,878.37,American Express,Airline,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-22 00:00:00,Bus.Dinner w/M.Slattery/4ppl/Xenon Arc,435.3,American Express,Meals,,6001,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-26 00:00:00,Inflight Wifi,8,American Express,Info Services,,6001,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04 00:00:00,BBY-NYP/West Monroe Offsite/Digital Offsite,151.5,American Express,Other Travel,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04 00:00:00,Refund/BBY-NYP/West Monroe Offsite/Digital Offsite,-19.5,American Express,Other Travel,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-04 00:00:00,Tkt Fee/BBY-NYP/West Monroe Offsite/Digital Offsite,15,American Express,Other Travel,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,LGA-SAV/BOD Mtg/AmeriVet,238.25,American Express,Airline,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,LGA-SAV/Gen Pact Event/Digital Offsite,713.85,American Express,Airline,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,Tkt Fee/LGA-SAV-VPS/BOD Mtg AmeriVet,7.5,American Express,Other Travel,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,Tkt Fee/LGA-SAV-VPS/Gen Pact Executive Event,22.5,American Express,Other Travel,,1018-D,VAIP,,A0DJ
+Osasogie,Vivian,Ighodaro,,2026-02-06 00:00:00,Tip/Work Late/Office-Home,8.79,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-09 00:00:00,Work Late/Office-Home,53.96,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-11 00:00:00,Work Late/Office-Home,49.97,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-11 00:00:00,Work Late/Office-Home,7.49,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-12 00:00:00,Work Late/Office-Home,71.81,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-12 00:00:00,Tip/Work Late/Office-Home,7.18,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-13 00:00:00,Work Late/Office-Home,44.36,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-19 00:00:00,Work Late/Office-Home,43.2,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-19 00:00:00,Tip/Work Late/Office-Home,8.64,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-19 00:00:00,Work Late/Office-Home,58.57,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-03 00:00:00,Work Late/Office-Home,39.05,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-03 00:00:00,Tip/Work Late/Office-Home,7.81,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-03 00:00:00,Work Late/Office-Home,67.21,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-03-04 00:00:00,Work Late/Office-Home,62.01,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-06 00:00:00,Work Late/Office-Home,43.99,American Express,Car Service,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26 00:00:00,Inflight Wifi,10,American Express,Airline,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26 00:00:00,Inflight Wifi,8,American Express,Airline,,6001,VAIP,,A0FK
+Collis,Locke,Klarberg,,2026-03-02 00:00:00,RT:EWR-SRQ-PBI/IR Florida Trip,1799.72,American Express,Airline,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-03-02 00:00:00,Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip,30,American Express,Other Travel,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-04 00:00:00,Hotel-Airport/Pension Bridge Private Credit,143.98,American Express,Car Service,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-04 00:00:00,Inflight Wifi/Pension Bridge Private Credit,8,American Express,Airline,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2026-02-04 00:00:00,Lodging/Pension Bridge Private Credit,1082.66,American Express,Lodging,,1016,IR,,A0FQ
+Ryan,Michael,Glazer,,2026-02-20 00:00:00,Working Late/Office-Home,45.79,American Express,Car Service,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-13 00:00:00,Working Late/Office-Home,79.65,American Express,Car Service,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-12 00:00:00,Working Late/Office-Home,46.59,American Express,Car Service,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-11 00:00:00,Working Late/Office-Home,46.99,American Express,Car Service,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2026-02-06 00:00:00,Working Late/Office-Home,47.58,American Express,Car Service,,6001,VAIP,,A0GB
+Michelle,Yang,Liu,,2026-03-04 00:00:00,Dinner-Home/AmeriVet BOD Dinner,68.02,American Express,Car Service,,4246,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-04 00:00:00,Office-Dinner/AmeriVet BOD Dinner,52.73,American Express,Car Service,,4246,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-03 00:00:00,Work Late/Office-Home,26.25,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-26 00:00:00,Inflight Wifi,8,American Express,Airline,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-20 00:00:00,Work Late/Office-Home,24.63,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-19 00:00:00,Work Late/Office-Home,51.39,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-18 00:00:00,Work Late/Office-Home,67.93,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-13 00:00:00,Work Late/Office-Home,38.44,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-12 00:00:00,Work Late/Office-Home,37.32,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-12 00:00:00,Mentor Mtg/N.Mamane,19.09,American Express,Meals,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11 00:00:00,Work Late/Office-Home,30.43,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11 00:00:00,Refund/JFK-SLC/AEA Strategy Meeting,-2108.56,American Express,Airline,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-10 00:00:00,Work Late/Office-Home,35.14,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-09 00:00:00,Mentor Mtg/J. Sang,16.1,American Express,Meals,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-05 00:00:00,Work Late/Office-Home,27.98,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-05 00:00:00,Work Late/Office-Home,43.58,American Express,Car Service,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-06 00:00:00,Subscription/AmeriVet Documents signing,16.34,American Express,PubSub,,4246,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-05 00:00:00,Work Late/Office-Home,56.09,American Express,Car Service,,4001,CONS,,A0GC
+Hannah,Beth,Norowitz,,2026-03-04 00:00:00,Work Late/Office-Home,37.99,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-03 00:00:00,Work Late/Office-Home,38.52,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-02 00:00:00,Inflight Wifi,5,American Express,Airline,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-20 00:00:00,Work Late/Office-Home,36.97,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-19 00:00:00,Work Late/Office-Home,53.17,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-18 00:00:00,Work Late/Office-Home,39.44,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-17 00:00:00,"Mentor Mtg/M.Liu, R.Marsh",27.85,American Express,Meals,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-13 00:00:00,Work Late/Office-Home,25.73,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-12 00:00:00,Work Late/Office-Home,50.57,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-12 00:00:00,Work Late/Office-Home,44.98,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-06 00:00:00,Work Late/Office-Home,6.39,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-06 00:00:00,Work Late/Office-Home,63.99,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-05 00:00:00,Work Late/Office-Home,4.91,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-05 00:00:00,Work Late/Office-Home,49.18,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-06 00:00:00,Work Late/Office-Home,67.05,American Express,Car Service,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-04 00:00:00,Work Late/Office-Home,37.98,American Express,Car Service,,4001,CONS,,A0GD
+Jacob,Aaron,Spigelman,,2026-02-13 00:00:00,Work Late/Office-Home,44.99,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-11 00:00:00,Event-Office/Read Ahead Event,65.68,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-10 00:00:00,Office-Event/Read Ahead Event,73.29,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-10 00:00:00,Work Late/Office-Home,39.21,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-06 00:00:00,Work Late/Office-Home,56.16,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-04 00:00:00,Working Lunch,17.31,American Express,Meals,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-02 00:00:00,Work Late/Office-Home,35.99,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-19 00:00:00,Work Late/Office-Home,35.01,American Express,Car Service,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-06 00:00:00,Work Late/Office-Home,47.35,American Express,Car Service,,4001,CONS,,A0GE
+Juliet,A,Yznaga,,2026-02-10 00:00:00,Refund/JFK-SLC,-2015.09,American Express,Airline,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-19 00:00:00,Mentor Mtg/K.Schott,6.4,American Express,Meals,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-03-04 00:00:00,Work Late/Office-Home,42.7,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-03-03 00:00:00,Work Late/Office-Home,25.99,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20 00:00:00,Work Late/Office-Home,45.56,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-19 00:00:00,Work Late/Office-Home,98.98,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-18 00:00:00,Work Late/Office-Home,38.31,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-13 00:00:00,Work Late/Office-Home,58.98,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-12 00:00:00,Work Late/Office-Home,39.43,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-11 00:00:00,Work Late/Office-Home,39.91,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10 00:00:00,Work Late/Office-Home,40.08,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-09 00:00:00,Office-Read Ahead /in person volunteer event,65.49,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-05 00:00:00,Work Late/Office-Home,39.73,American Express,Car Service,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2026-03-05 00:00:00,Work Late/Office-Home,44.83,American Express,Car Service,,4001,CONS,,A0GV
+Noah,Moshe Shalom,Mamane,,2026-02-13 00:00:00,Work Late/Office-Home,43.98,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-12 00:00:00,Work Late/Office-Home,80.99,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-11 00:00:00,Work Late/Office-Home,44.97,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-10 00:00:00,Work Late/Office-Home,40.98,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-10 00:00:00,Refund/Tkt Exch/SLC-BOS,-519.17,American Express,Airline,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-06 00:00:00,Work Late/Office-Home,65.98,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-05 00:00:00,Work Late/Office-Home,22.12,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-06 00:00:00,Work Late/Office-Home,47.28,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-05 00:00:00,Work Late/Office-Home,42.78,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-04 00:00:00,Dinner-Home/BOD Mtg/Amerivet,62.97,American Express,Car Service,,4246,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-04 00:00:00,Coffee Mtg/Mentoring/L. Adi,14.24,American Express,Meals,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-03-03 00:00:00,Work Late/Office-Home,61.98,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-20 00:00:00,Work Late/Office-Home,40.97,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-19 00:00:00,Work Late/Office-Home,41.97,American Express,Car Service,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-19 00:00:00,Coffee Mtg/Mentoring/J. Yzanga and K. Schott,17.97,American Express,Meals,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-18 00:00:00,Work Late/Office-Home,39.54,American Express,Car Service,,4001,CONS,,A0HL
+Kyle,James,Schott,,2026-02-13 00:00:00,Work Late/Office-Home,35.1,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-12 00:00:00,Work Late/Office-Home,55.98,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-05 00:00:00,Work Late/Office-Home,51.11,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-06 00:00:00,Work Late/Office-Home,59.85,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-05 00:00:00,Work Late/Office-Home,69.98,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-04 00:00:00,Work Late/Office-Home,83.83,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-03-03 00:00:00,Work Late/Office-Home,60.98,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-18 00:00:00,Work Late/Office-Home,36.97,American Express,Car Service,,4001,CONS,,A0HM
+Kyle,James,Schott,,2026-02-18 00:00:00,Work Late/Office-Home,33.98,American Express,Car Service,,4001,CONS,,A0HM
+Thomas,Wilson Shaw,Groves,,2026-02-22 00:00:00,SAV-ATL-SLC/AEA Strategy Meeting,2108.11,American Express,Airline,,1035,DEBT,,A07V
+Thomas,Wilson Shaw,Groves,,2026-02-22 00:00:00,Travel Insurance/Residence Inn by Marriott SLC Airport,13.25,American Express,Other Travel,,1035,DEBT,,A07V
+Thomas,Wilson Shaw,Groves,,2026-02-09 00:00:00,SLC-JFK/AEA Strategy Meeting,849.81,American Express,Airline,,1035,DEBT,,A07V
+Thomas,Wilson Shaw,Groves,,2026-02-09 00:00:00,Tkt Fee/SLC-JFK/AEA Strategy Meeting,30,American Express,Airline,,1035,DEBT,,A07V
+Thomas,Joseph,Pryma,,2026-02-24 00:00:00,Hotel-lunch/Strategy,41.97,American Express,Car Service,,1035,VAIP,,A080
+Thomas,Joseph,Pryma,,2026-02-24 00:00:00,Lunch/Strategy,828.28,American Express,Meals,,1035,VAIP,,A080
+Jeffrey,Alois,Nagel,,2026-02-26 00:00:00,ASE-DFW-LGA/Strategy,0.02,American Express,Airline,American Airlines,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-26 00:00:00,Tkt fee/JFK-SLC-LGA/Strategy,30,American Express,Airline,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-23 00:00:00,Traveal Meal/Strategy,28.19,American Express,Meals,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-02-22 00:00:00,Travel Meal/Strategy,11.82,American Express,Meals,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-03 00:00:00,ASE-ORD-LGA/Strategy,956.41,American Express,Airline,United Airlines,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-03 00:00:00,Tkt fee/ASE-ORD-LGA/Strategy,30,American Express,Airline,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-05 00:00:00,Personal,30,American Express,Airline,,1008,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2026-03-05 00:00:00,Personal,293.4,American Express,Airline,United Airlines,1008,VAIP,,A08A
+Ali,Allexandre,Mehfar,,2026-03-01 00:00:00,Personal,237.44,American Express,Car Service,,1008,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-23 00:00:00,Lunch Mtg/AEA Strategy Mtg,476.14,American Express,Meals,,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2026-02-06 00:00:00,Personal,278.13,American Express,Car Service,,1008,CONS,,A08W
+Rachel,Reardon,Kumar,,2026-02-22 00:00:00,EWR-SLC/Strategy,1729.4,American Express,Airline,Delta Air Lines,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22 00:00:00,SLC-JFK/Strategy,2998.41,American Express,Airline,Delta Air Lines,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22 00:00:00,Ticketing Fee/EWR-SLC/Strategy,30,American Express,Airline,United Airlines,1035,SBF,,A091
+Rachel,Reardon,Kumar,,2026-02-22 00:00:00,EWR-SLC/Strategy,1472.68,American Express,Airline,United Airlines,1035,SBF,,A091
+John,Daniel,Sedlacek,,2026-02-26 00:00:00,Travel Meal/Strategy,10.9,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26 00:00:00,Travel Meal/Strategy,11.52,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-26 00:00:00,InFlight Wifi/Strategy,8,American Express,Info Services,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-25 00:00:00,Travel Meal/Strategy,15.3,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-10 00:00:00,Travel Meal/Strategy,5.6,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24 00:00:00,Travel Meal/Strategy,11.69,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24 00:00:00,Travel Meal/Strategy,19.53,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-24 00:00:00,Lodging/Strategy,194.54,American Express,Lodging,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23 00:00:00,PHL-SLC/Strategy,728.4,American Express,Airline,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23 00:00:00,Travel Meal/Strategy,2.6,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23 00:00:00,Tkt Fee/PHL-SLC/Strategy,30,American Express,Airline,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23 00:00:00,Travel Meal/Strategy,1,American Express,Meals,,1035,SBF,,A097
+John,Daniel,Sedlacek,,2026-02-23 00:00:00,Travel Meal/Strategy,2.1,American Express,Meals,,1035,SBF,,A097
+Benjamin,,Althaus,,2026-02-07 00:00:00,Personal,2.97,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-06 00:00:00,Personal,-14.24,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-06 00:00:00,Personal,14.24,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-05 00:00:00,Personal,-24.73,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-05 00:00:00,Personal,24.73,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-14 00:00:00,Personal,-2.39,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-14 00:00:00,Personal,2.39,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28 00:00:00,Personal,16.17,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28 00:00:00,Personal,2.39,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-27 00:00:00,JAX-Home/Strategy,145,American Express,Car Service,,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-21 00:00:00,Home-JAX/Strategy,145,American Express,Car Service,,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-20 00:00:00,Travel Meal/Strategy,28.35,American Express,Meals,,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-20 00:00:00,Travel Meal/Strategy,5.29,American Express,Meals,,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-20 00:00:00,Travel Meal/Strategy,44.61,American Express,Meals,,1035,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28 00:00:00,Personal,-2.39,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-02-28 00:00:00,Personal,-16.17,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-05 00:00:00,Personal,5.73,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-05 00:00:00,Personal,-5.73,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-04 00:00:00,Personal,-3.43,American Express,Other,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-04 00:00:00,Personal,3.43,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-06 00:00:00,Personal,-2.05,American Express,Meals,,1008,SBF,,A09A
+Benjamin,,Althaus,,2026-03-06 00:00:00,Personal,3.26,American Express,Meals,,1008,SBF,,A09A
+Randy,,Aung,,2026-02-26 00:00:00,Microsoft license renewal for SBF,52.26,American Express,Software,,1008,IT,,A09Y
+Frank,,Herr,,2026-02-18 00:00:00,Airport-Home/AEA Strategy Meeting,164.09,American Express,Car Service,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-18 00:00:00,Airport-Home/AEA Strategy Meeting,10,American Express,Car Service,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-23 00:00:00,Travel Meal/AEA Strategy Meeting,37.13,American Express,Meals,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-22 00:00:00,Home-Airport/AEA Strategy Meeting,10,American Express,Car Service,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-22 00:00:00,Home-Airport/AEA Strategy Meeting,110.99,American Express,Car Service,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-27 00:00:00,Airport-Home/AEA Strategy Meeting,131.49,American Express,Car Service,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-27 00:00:00,Airport-Home/AEA Strategy Meeting,10,American Express,Car Service,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Meeting,3.28,American Express,Meals,,1035,VAIP,,A0AJ
+Frank,,Herr,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Meeting,19.54,American Express,Meals,,1035,VAIP,,A0AJ
+Derek,,Darves-Bornoz,,2026-02-06 00:00:00,Personal,7.06,American Express,Meals,,1008,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-05 00:00:00,Personal,2.37,American Express,Meals,,1008,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2026-02-22 00:00:00,Tkt Fee/RT:EWR-SLC/D.Fernholz/2026 Strategy Mtg,30,American Express,Airline,,1035,VAIP,,A0BI
+Heidi,Schwenzfeier,Dubois,,2026-02-22 00:00:00,Travel Meal/AEA Strategy,13.06,American Express,Meals,,1035,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2026-02-28 00:00:00,Personal,14.95,American Express,Other,,1008,VAIP,,A0C7
+Edward,Walter,Newhouse,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Trip,3.8,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Trip,3.34,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-24 00:00:00,Travel Meal/AEA Strategy Trip,14,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-23 00:00:00,Airport-Hotel/AEA Strategy Trip,161.98,American Express,Car Service,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-23 00:00:00,Travel Meal/AEA Strategy Trip,35.1,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-22 00:00:00,Travel Meal/AEA Strategy Trip,3.8,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-22 00:00:00,Travel Meal/AEA Strategy Trip,42.38,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-22 00:00:00,Travel Meal/AEA Strategy Trip,14.06,American Express,Meals,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-21 00:00:00,Trip Insurance/AEA Strategy Trip,31.55,American Express,Other Travel,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2026-02-21 00:00:00,JFK-SLC/AEA Strategy Trip,467.41,American Express,Airline,,1035,IR,,A0CN
+Adam,Frederick,Goetsch,,2026-02-26 00:00:00,Travel Meal,14.93,American Express,Meals,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-26 00:00:00,Airport Parking,62,American Express,Other Travel,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-23 00:00:00,Travel Meal,19.74,American Express,Meals,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-22 00:00:00,SLC-GEG,984.41,American Express,Airline,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2026-02-22 00:00:00,Tkt Fee/SLC-GEG,8,American Express,Airline,,1035,CONS,,A0CU
+James,Brian,Coleman,,2026-02-26 00:00:00,ORD-Home/2026 Strategy Mtg,38.98,American Express,Car Service,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-23 00:00:00,Hotel-Hotel/2026 Strategy Mtg,26.98,American Express,Car Service,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,Tkt Fee/SLC-ORD/2026 Strategy Mtg,30,American Express,Other Travel,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-24 00:00:00,Tkt Fee/SLC-ORD/2026 Strategy Mtg,30,American Express,Other Travel,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-10 00:00:00,Exch Tkt:SLC-ORD/2026 Strategy Mtg,1518.68,American Express,Airline,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-02-23 00:00:00,Travel Meal/2026 Strategy Mtg,27.08,American Express,Meals,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2026-03-02 00:00:00,Personal,19.08,American Express,Other Travel,,1008,VAIP,,A0DJ
+Osasogie,Vivian,Ighodaro,,2026-02-20 00:00:00,Home- JFK/2026 Strategy Mtg,166.35,American Express,Car Service,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26 00:00:00,EWR-Home/2026 Strategy Mtg,84.35,American Express,Car Service,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-26 00:00:00,Travel Meal/2026 Strategy Mtg,16.17,American Express,Meals,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2026-02-20 00:00:00,Travel Meal/2026 Strategy Mtg,22.65,American Express,Meals,,1035,VAIP,,A0FK
+Ryan,Michael,Glazer,,2026-02-20 00:00:00,Home-JFK/Strategy,147.86,American Express,Car Service,,1035,VAIP,,A0GB
+Michelle,Yang,Liu,,2026-02-27 00:00:00,EWR-Home/AEA Strategy Meeting,83.56,American Express,Car Service,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-27 00:00:00,Travel Meal/AEA Strategy Meeting,26.99,American Express,Meals,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Meeting,17.82,American Express,Meals,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-25 00:00:00,Strategy Activity/AEA Strategy Meeting,311.1,American Express,Other,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-21 00:00:00,Home-JFK/AEA Strategy Meeting,160.87,American Express,Car Service,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11 00:00:00,SLC-EWR/AEA Strategy Meeting,2236.27,American Express,Airline,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11 00:00:00,Tkt Fee/AEA Strategy,30,American Express,Airline,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-02-11 00:00:00,Tkt Fee/JFK-SLC/AEA Strategy,30,American Express,Airline,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2026-03-03 00:00:00,Personal,-153.4,American Express,Other,,1008,CONS,,A0GC
+Hannah,Beth,Norowitz,,2026-03-01 00:00:00,Hotel-SLC/AEA Strategy Meeting,50.69,American Express,Car Service,,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-03-01 00:00:00,EWR-Home/AEA Strategy Meeting,125.35,American Express,Car Service,,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2026-02-21 00:00:00,Home-JFK/AEA Strategy Meeting,192.12,American Express,Car Service,,1035,CONS,,A0GD
+Jacob,Aaron,Spigelman,,2026-02-13 00:00:00,Amex Rewards Fee,1.8,American Express,Other,,1008,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-13 00:00:00,Amex Rewards Fee,7.8,American Express,Other,,1008,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-03-01 00:00:00,LGA-Home,66.44,American Express,Car Service,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-23 00:00:00,Travel Meal,35.95,American Express,Meals,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-23 00:00:00,Travel Meal,30.74,American Express,Meals,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-21 00:00:00,Supply Store-Hotel,23.28,American Express,Car Service,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-21 00:00:00,Hotel-Supply Store,21.96,American Express,Car Service,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-20 00:00:00,Home-JFK,108.74,American Express,Car Service,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-20 00:00:00,Event Materials,145.58,American Express,Other,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-20 00:00:00,Event Materials,380.93,American Express,Other,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2026-02-18 00:00:00,Associate Dinner,814.92,American Express,Meals,,1012,CONS,,A0GE
+Juliet,A,Yznaga,,2026-02-20 00:00:00,Travel Meal/AEA Strategy Meeting,11.47,American Express,Meals,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-26 00:00:00,Travel Meal/AEA Strategy Meeting,24.5,American Express,Meals,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-23 00:00:00,Travel Meal/AEA Strategy Meeting,5.15,American Express,Meals,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-26 00:00:00,Checked Bag Fee/JFK-SLC/AEA Strategy Meeting,45,American Express,Airline,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-11 00:00:00,Seat Assignment/JFK-SLC/AEA Strategy Meeting,74,American Express,Airline,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10 00:00:00,Tkt Fee/AEA Strategy,30,American Express,Airline,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-10 00:00:00,Tkt Fee/AEA Strategy,30,American Express,Airline,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-27 00:00:00,JFK-Home/AEA Strategy Meeting,94.48,American Express,Car Service,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20 00:00:00,SLC-Hotel/AEA Strategy Meeting,25.95,American Express,Car Service,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2026-02-20 00:00:00,Home-EWR/AEA Strategy Meeting,106.93,American Express,Car Service,,1035,CONS,,A0GV
+Noah,Moshe Shalom,Mamane,,2026-02-10 00:00:00,Tkt Fee/Tkt Exch/SLC-BOS,30,American Express,Airline,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-23 00:00:00,Travel Meal,13.82,American Express,Meals,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-23 00:00:00,Travel Meal,136.97,American Express,Meals,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2026-02-20 00:00:00,Home-JFK,158.38,American Express,Car Service,,1035,CONS,,A0HL
+Kyle,James,Schott,,2026-03-02 00:00:00,JFK-Home,159.61,American Express,Car Service,,1035,CONS,,A0HM
+Kyle,James,Schott,,2026-02-26 00:00:00,Event-Hotel,26.99,American Express,Car Service,,1035,CONS,,A0HM
+Kyle,James,Schott,,2026-02-20 00:00:00,Home-JFK,215.83,American Express,Car Service,,1035,CONS,,A0HM

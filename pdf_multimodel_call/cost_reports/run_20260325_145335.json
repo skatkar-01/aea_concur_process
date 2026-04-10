@@ -1,0 +1,31 @@
+{
+  "run_id": "run_20260325_145335",
+  "started_at": "2026-03-25T09:23:35.862591+00:00",
+  "finished_at": "2026-03-25T09:23:43.332146+00:00",
+  "provider": "azure_openai",
+  "model": "gemini-3.1-flash-lite-preview",
+  "total_files": 1,
+  "successful_files": 0,
+  "failed_files": 1,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "total_duration_seconds": 5.023871200013673,
+  "calls": [
+    {
+      "call_id": "95591ea9",
+      "timestamp": "2026-03-25T09:23:43.330153+00:00",
+      "provider": "azure_openai",
+      "model": "gemini-3.1-flash-lite-preview",
+      "file_name": "Bales $44.35.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 5.02,
+      "status": "error",
+      "error_message": "Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "run_20260325_162352",
+  "started_at": "2026-03-25T10:53:52.843982+00:00",
+  "finished_at": "2026-03-25T10:53:59.974519+00:00",
+  "provider": "azure_openai",
+  "model": "gpt-5-mini",
+  "total_files": 1,
+  "successful_files": 0,
+  "failed_files": 1,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_tokens": 0,
+  "total_cost_usd": 0.0,
+  "total_duration_seconds": 4.698268900014227,
+  "calls": [
+    {
+      "call_id": "50018656",
+      "timestamp": "2026-03-25T10:53:59.972505+00:00",
+      "provider": "azure_openai",
+      "model": "gpt-5-mini",
+      "file_name": "Bales $44.35.pdf",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cost_usd": 0.0,
+      "duration_seconds": 4.7,
+      "status": "error",
+      "error_message": "Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}"
+    }
+  ]
+}

@@ -1,0 +1,1050 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "txn_1",
+      "transaction_date": "02/04/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Exch Tkt/RSW-PHL/MLS Offsite/Ascential",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -124.22,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_2",
+      "transaction_date": "01/27/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Refund/RT: MIA-SAN/MLS Offsite/Ascential",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -3426.99,
+      "cost_center": null,
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_3",
+      "transaction_date": "01/25/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RSW-PHL-SAN-MIA/MLS Offsite/Ascential",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 5825.23,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_4",
+      "transaction_date": "01/21/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Exch Tkt/RSW-EWR/BOD Mtg/Spectrum",
+      "vendor_description": "United Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -580.03,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_5",
+      "transaction_date": "01/20/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Refund/RSW-PHL/BOD Mtg/Spectrum",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -792.50,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_6",
+      "transaction_date": "01/18/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RSW-EWR/BOD Mtg/Spectrum",
+      "vendor_description": "United Elec Ticketng",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 1168.50,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_7",
+      "transaction_date": "01/18/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RT: MIA-SAN/MLS Offsite/Ascential",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 3426.99,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_8",
+      "transaction_date": "01/14/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RT: RSW-MSP/Site Visit/Ascential",
+      "vendor_description": "Delta Air Lines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 3058.99,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_9",
+      "transaction_date": "01/10/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RT: MIA-SLC/Strategy",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 1896.99,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "1035-AEA Strategy Meeting",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_10",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RSW-PHL/Site Visit/Spectrum",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 373.49,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_11",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Airline",
+      "business_purpose": "Refund/RSW-MSP-PHL/Site Visit/Ascential",
+      "vendor_description": "Delta Air Lines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -2206.79,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_12",
+      "transaction_date": "01/06/2026",
+      "expense_type": "Airline",
+      "business_purpose": "EWR-RSW/BOD Mtg/Spectrum",
+      "vendor_description": "United Elec Ticketng",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 1168.50,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_13",
+      "transaction_date": "01/06/2026",
+      "expense_type": "Airline",
+      "business_purpose": "RSW-PHL/BOD Mtg/Spectrum",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 792.50,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_14",
+      "transaction_date": "02/04/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home to RSW/MLS Offsite/Ascential",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 109.19,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_15",
+      "transaction_date": "01/29/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "RSW to Home/BOD Mtg/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 106.78,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_16",
+      "transaction_date": "01/27/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home to RSW/BOD Mtg/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 106.78,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_17",
+      "transaction_date": "01/22/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Tip/RSW to Home/Site Visit/Ascential",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 14.99,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_18",
+      "transaction_date": "01/22/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "RSW to Home/Site Visit/Ascential",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 74.97,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_19",
+      "transaction_date": "01/20/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "MSP to Hotel/Site Visit/Ascential",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 83.98,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_20",
+      "transaction_date": "01/20/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home to RSW/Site Visit/Ascential",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 103.82,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_21",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "RSW to Home/Site Visit/SCIO",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 91.99,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_22",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Hotel to MUC/Site Visit/SCIO",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 95.60,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_23",
+      "transaction_date": "01/08/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "PHL to Home/Site Visit/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 131.08,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_24",
+      "transaction_date": "01/08/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home to RSW/Site Visit/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 108.55,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_25",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "RSW to Home/Site Visit/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 109.12,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_26",
+      "transaction_date": "01/07/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home to RSW/Site Visit/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 113.75,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_27",
+      "transaction_date": "01/06/2026",
+      "expense_type": "Car Service",
+      "business_purpose": "Home to RSW/Site Visit/Spectrum",
+      "vendor_description": "Uber",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 114.63,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_28",
+      "transaction_date": "01/29/2026",
+      "expense_type": "Info Services",
+      "business_purpose": "Inflight Wifi",
+      "vendor_description": "United Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 8.00,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_29",
+      "transaction_date": "01/27/2026",
+      "expense_type": "Info Services",
+      "business_purpose": "Inflight Wifi",
+      "vendor_description": "United Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 8.00,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_30",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Info Services",
+      "business_purpose": "Inflight Wifi",
+      "vendor_description": "United Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 8.00,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_31",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Info Services",
+      "business_purpose": "Inflight Wifi",
+      "vendor_description": "United Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 14.99,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_32",
+      "transaction_date": "01/08/2026",
+      "expense_type": "Info Services",
+      "business_purpose": "Inflight Wifi",
+      "vendor_description": "American Airlines",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 24.00,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_33",
+      "transaction_date": "01/30/2026",
+      "expense_type": "Lodging",
+      "business_purpose": "Lodging/BOD Mtg/Spectrum",
+      "vendor_description": "Omni Berkshire Place",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 647.30,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6416-Spectrum Control (API)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_34",
+      "transaction_date": "01/22/2026",
+      "expense_type": "Lodging",
+      "business_purpose": "Lodging/Site Visit/Ascential",
+      "vendor_description": "FFI&S Blaine",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 147.66,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6450-Ascential Technologies (BPG)",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_35",
+      "transaction_date": "01/12/2026",
+      "expense_type": "Lodging",
+      "business_purpose": "Lodging/Site Visit/SCIO",
+      "vendor_description": "Eriks Hotel",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 502.04,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_36",
+      "transaction_date": "01/15/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal/Site Visit/SCIO",
+      "vendor_description": "Allresto",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 35.55,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_37",
+      "transaction_date": "01/14/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal/Site Visit/SCIO",
+      "vendor_description": "Eriks Hotel",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 86.55,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_38",
+      "transaction_date": "01/12/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal/Site Visit/SCIO",
+      "vendor_description": "Eriks Hotel",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 35.86,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": "Charles Dougherty"
+    },
+    {
+      "transaction_id": "txn_39",
+      "transaction_date": "01/11/2026",
+      "expense_type": "Meals",
+      "business_purpose": "Travel Meal/Site Visit/SCIO",
+      "vendor_description": "EWR Airp Streat B17",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 52.88,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6915-Project Volo/SCIO Automation",
+      "attendees": "Charles Dougherty, Jeff Nagel"
+    },
+    {
+      "transaction_id": "txn_40",
+      "transaction_date": "01/18/2026",
+      "expense_type": "Other Travel",
+      "business_purpose": "Refund/Erroneous charge",
+      "vendor_description": "Amtrak Mobile I",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": -56.00,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": null
+    },
+    {
+      "transaction_id": "txn_41",
+      "transaction_date": "01/06/2026",
+      "expense_type": "Other Travel",
+      "business_purpose": "Erroneous charge/To be refunded",
+      "vendor_description": "Amtrak Mobile I",
+      "payment_type": "American Express Corporate Card CBCP",
+      "amount": 56.00,
+      "cost_center": "VAIP-VAIP Team",
+      "project": "6001-Value-added Industrial Prod",
+      "attendees": null
+    }
+  ],
+  "employee_report": {
+    "employee_name": "Charles Dougherty",
+    "employee_id": "A0FN",
+    "report_id": "894684286FC64E3D8C17",
+    "report_date": "01/27/2026",
+    "approval_status": "Approved & In Accounting Review",
+    "payment_status": "Not Paid",
+    "currency": "US, Dollar",
+    "report_total": 13516.72,
+    "personal_expenses": 0.0,
+    "total_amount_claimed": 13516.72,
+    "amount_approved": 13516.72,
+    "amount_due_employee": 0.0,
+    "amount_due_company_card": 13516.72,
+    "total_paid_by_company": 13516.72,
+    "amount_due_from_employee": 0.0,
+    "total_paid_by_employee": 0.0
+  },
+  "receipts": [
+    {
+      "receipt_id": "rcp_1",
+      "order_id": "4000eeb3-1798-4774-9f87-f3d130ebb740",
+      "description": "Uber ride from RSW Airport to Naples, FL",
+      "date": "01/06/2026",
+      "vendor": "Uber",
+      "amount": 114.63
+    },
+    {
+      "receipt_id": "rcp_2",
+      "order_id": "c64d558c-d39d-46c5-ad00-750895eb4304",
+      "description": "Uber ride from Naples to RSW Airport",
+      "date": "01/07/2026",
+      "vendor": "Uber",
+      "amount": 113.75
+    },
+    {
+      "receipt_id": "rcp_3",
+      "order_id": "20390f73-09e3-42b1-a34f-370cb4e18c16",
+      "description": "Uber ride from RSW Airport to Naples",
+      "date": "01/07/2026",
+      "vendor": "Uber",
+      "amount": 109.12
+    },
+    {
+      "receipt_id": "rcp_4",
+      "order_id": "a711d242-878e-414b-9cae-53b91ba16b87",
+      "description": "Uber ride from Naples to RSW Airport",
+      "date": "01/08/2026",
+      "vendor": "Uber",
+      "amount": 108.55
+    },
+    {
+      "receipt_id": "rcp_5",
+      "order_id": "d6071c2c-f555-406e-aae8-998f5081c930",
+      "description": "Uber ride from PHL Airport to Blue Bell, PA",
+      "date": "01/08/2026",
+      "vendor": "Uber",
+      "amount": 131.08
+    },
+    {
+      "receipt_id": "rcp_6",
+      "order_id": "3afe95df-de41-463a-9adf-0220130a0f70",
+      "description": "Uber ride from Neufahrn to MUC Airport",
+      "date": "01/14/2026",
+      "vendor": "Uber",
+      "amount": 95.60
+    },
+    {
+      "receipt_id": "rcp_7",
+      "order_id": "134e0a39-662f-4ce1-a45b-03d67bd1c796",
+      "description": "Uber ride from RSW Airport to Naples",
+      "date": "01/15/2026",
+      "vendor": "Uber",
+      "amount": 91.99
+    },
+    {
+      "receipt_id": "rcp_8",
+      "order_id": "79752b69-5284-47e9-b828-e915e4636df0",
+      "description": "Uber ride from Naples to RSW Airport",
+      "date": "01/20/2026",
+      "vendor": "Uber",
+      "amount": 103.82
+    },
+    {
+      "receipt_id": "rcp_9",
+      "order_id": "5c4b38b3-c4d1-4ef6-bff7-3bee71446eea",
+      "description": "Uber ride from MSP Airport to Blaine, MN",
+      "date": "01/20/2026",
+      "vendor": "Uber",
+      "amount": 83.98
+    },
+    {
+      "receipt_id": "rcp_10",
+      "order_id": "055928c5-e669-468e-8bee-9bffef3138cf",
+      "description": "Uber ride from RSW Airport to Naples",
+      "date": "01/21/2026",
+      "vendor": "Uber",
+      "amount": 74.97
+    },
+    {
+      "receipt_id": "rcp_11",
+      "order_id": "055928c5-e669-468e-8bee-9bffef3138cf",
+      "description": "Uber Tip for Jan 21 ride",
+      "date": "01/21/2026",
+      "vendor": "Uber",
+      "amount": 14.99
+    },
+    {
+      "receipt_id": "rcp_12",
+      "order_id": "07b790e9-dc81-4629-b9f2-72c6fffc8e63",
+      "description": "Uber ride from Naples to RSW Airport",
+      "date": "01/27/2026",
+      "vendor": "Uber",
+      "amount": 106.78
+    },
+    {
+      "receipt_id": "rcp_13",
+      "order_id": "c67e548d-90ea-452e-bf8d-aa40d612f7ce",
+      "description": "Uber ride from RSW Airport to Naples",
+      "date": "01/29/2026",
+      "vendor": "Uber",
+      "amount": 106.78
+    },
+    {
+      "receipt_id": "rcp_14",
+      "order_id": "7f18609b-b2c4-4f19-9d99-624fefbfa786",
+      "description": "Uber ride from Naples to RSW Airport",
+      "date": "02/04/2026",
+      "vendor": "Uber",
+      "amount": 109.19
+    },
+    {
+      "receipt_id": "rcp_15",
+      "order_id": "MNRNWP",
+      "description": "Flight ticket RSW to PHL",
+      "date": "01/06/2026",
+      "vendor": "American Airlines",
+      "amount": 373.49
+    },
+    {
+      "receipt_id": "rcp_16",
+      "order_id": "DHMATM",
+      "description": "Flight ticket MIA to SLC",
+      "date": "01/10/2026",
+      "vendor": "American Airlines",
+      "amount": 1896.99
+    },
+    {
+      "receipt_id": "rcp_17",
+      "order_id": "HVUNYR",
+      "description": "Flight tickets multisegment",
+      "date": "01/25/2026",
+      "vendor": "American Airlines",
+      "amount": 5825.23
+    },
+    {
+      "receipt_id": "rcp_18",
+      "order_id": "DUGKVP",
+      "description": "Flight ticket MIA to SAN",
+      "date": "01/18/2026",
+      "vendor": "American Airlines",
+      "amount": 3426.99
+    },
+    {
+      "receipt_id": "rcp_19",
+      "order_id": "LRWYLL",
+      "description": "Refund for canceled flight RSW to PHL",
+      "date": "01/18/2026",
+      "vendor": "American Airlines",
+      "amount": 792.50
+    },
+    {
+      "receipt_id": "rcp_20",
+      "order_id": "C5TPCH",
+      "description": "Flight ticket RSW to EWR",
+      "date": "01/18/2026",
+      "vendor": "United Airlines",
+      "amount": 1168.50
+    },
+    {
+      "receipt_id": "rcp_21",
+      "order_id": "17703743",
+      "description": "Hotel stay Omni Berkshire Place",
+      "date": "01/30/2026",
+      "vendor": "Omni Berkshire Place",
+      "amount": 647.30
+    },
+    {
+      "receipt_id": "rcp_22",
+      "order_id": "0164365433373",
+      "description": "Inflight Wi-Fi RSW-EWR",
+      "date": "01/27/2026",
+      "vendor": "United Airlines",
+      "amount": 8.00
+    },
+    {
+      "receipt_id": "rcp_23",
+      "order_id": "0164366047367",
+      "description": "Inflight Wi-Fi EWR-RSW",
+      "date": "01/29/2026",
+      "vendor": "United Airlines",
+      "amount": 8.00
+    },
+    {
+      "receipt_id": "rcp_24",
+      "order_id": "OJENQK",
+      "description": "United Airlines booking confirm",
+      "date": "01/06/2026",
+      "vendor": "United Airlines",
+      "amount": 1168.50
+    },
+    {
+      "receipt_id": "rcp_25",
+      "order_id": "53844",
+      "description": "Eriks Hotel stay",
+      "date": "01/12/2026",
+      "vendor": "Eriks Hotel",
+      "amount": 420.00
+    },
+    {
+      "receipt_id": "rcp_26",
+      "order_id": "53847",
+      "description": "Eriks Hotel breakfast",
+      "date": "01/12/2026",
+      "vendor": "Eriks Hotel",
+      "amount": 30.00
+    },
+    {
+      "receipt_id": "rcp_27",
+      "order_id": "70755",
+      "description": "Eriks Hotel dinner",
+      "date": "01/14/2026",
+      "vendor": "Eriks Hotel",
+      "amount": 72.30
+    },
+    {
+      "receipt_id": "rcp_28",
+      "order_id": "00013714",
+      "description": "Drinks receipt EWR",
+      "date": "01/11/2026",
+      "vendor": "EWR Airp Streat B17",
+      "amount": 52.88
+    },
+    {
+      "receipt_id": "rcp_29",
+      "order_id": "6306",
+      "description": "Breakfast and beer receipt",
+      "date": "01/15/2026",
+      "vendor": "Allresto Airbrau",
+      "amount": 29.75
+    },
+    {
+      "receipt_id": "rcp_30",
+      "order_id": "0164362281362",
+      "description": "Inflight Wi-Fi EWR-RSW",
+      "date": "01/15/2026",
+      "vendor": "United Airlines",
+      "amount": 8.00
+    },
+    {
+      "receipt_id": "rcp_31",
+      "order_id": "0164362146625",
+      "description": "Inflight Wi-Fi MUC-EWR",
+      "date": "01/15/2026",
+      "vendor": "United Airlines",
+      "amount": 14.99
+    },
+    {
+      "receipt_id": "rcp_32",
+      "order_id": "GBJYAM",
+      "description": "Flight receipt RSW-MSP",
+      "date": "01/13/2026",
+      "vendor": "Delta Air Lines",
+      "amount": 3058.99
+    },
+    {
+      "receipt_id": "rcp_33",
+      "order_id": "70977",
+      "description": "Hotel stay Fairfield Blaine",
+      "date": "01/21/2026",
+      "vendor": "FFI&S Blaine",
+      "amount": 147.66
+    },
+    {
+      "receipt_id": "rcp_34",
+      "order_id": "0060757382824",
+      "description": "Refund confirm Delta",
+      "date": "01/06/2026",
+      "vendor": "Delta Air Lines",
+      "amount": 2206.79
+    },
+    {
+      "receipt_id": "rcp_35",
+      "order_id": "CHKELU8YS0KWT",
+      "description": "Wi-Fi receipt AA",
+      "date": "01/08/2026",
+      "vendor": "American Airlines",
+      "amount": 24.00
+    },
+    {
+      "receipt_id": "rcp_36",
+      "order_id": "0162366842915",
+      "description": "Total refund United",
+      "date": "01/27/2026",
+      "vendor": "United Airlines",
+      "amount": 580.03
+    },
+    {
+      "receipt_id": "rcp_37",
+      "order_id": "DUGKVP",
+      "description": "Refund confirmation for $3,426.99",
+      "date": "01/25/2026",
+      "vendor": "American Airlines",
+      "amount": 3426.99
+    },
+    {
+      "receipt_id": "rcp_38",
+      "order_id": "0012310004399",
+      "description": "Refund confirmation for $124.22",
+      "date": "02/02/2026",
+      "vendor": "American Airlines",
+      "amount": 124.22
+    }
+  ],
+  "reconciliation": [
+    {
+      "transaction_id": "txn_1",
+      "receipt_id": "rcp_38",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_2",
+      "receipt_id": "rcp_37",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_3",
+      "receipt_id": "rcp_17",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_4",
+      "receipt_id": "rcp_36",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_5",
+      "receipt_id": "rcp_19",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_6",
+      "receipt_id": "rcp_20",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_7",
+      "receipt_id": "rcp_18",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_8",
+      "receipt_id": "rcp_32",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_9",
+      "receipt_id": "rcp_16",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_10",
+      "receipt_id": "rcp_15",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_11",
+      "receipt_id": "rcp_34",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_12",
+      "receipt_id": "rcp_24",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_14",
+      "receipt_id": "rcp_14",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_15",
+      "receipt_id": "rcp_13",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_16",
+      "receipt_id": "rcp_12",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_17",
+      "receipt_id": "rcp_11",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_18",
+      "receipt_id": "rcp_10",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_19",
+      "receipt_id": "rcp_9",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_20",
+      "receipt_id": "rcp_8",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_21",
+      "receipt_id": "rcp_7",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_22",
+      "receipt_id": "rcp_6",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_23",
+      "receipt_id": "rcp_5",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_24",
+      "receipt_id": "rcp_4",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_25",
+      "receipt_id": "rcp_3",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_26",
+      "receipt_id": "rcp_2",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_27",
+      "receipt_id": "rcp_1",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_28",
+      "receipt_id": "rcp_23",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_29",
+      "receipt_id": "rcp_22",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_30",
+      "receipt_id": "rcp_30",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_31",
+      "receipt_id": "rcp_31",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_32",
+      "receipt_id": "rcp_35",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_33",
+      "receipt_id": "rcp_21",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_34",
+      "receipt_id": "rcp_33",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_35",
+      "receipt_id": "rcp_25",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_36",
+      "receipt_id": "rcp_29",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_37",
+      "receipt_id": "rcp_27",
+      "match_status": "matched",
+      "confidence": "high"
+    },
+    {
+      "transaction_id": "txn_38",
+      "receipt_id": "rcp_26",
+      "match_status": "matched",
+      "confidence": "medium"
+    },
+    {
+      "transaction_id": "txn_39",
+      "receipt_id": "rcp_28",
+      "match_status": "matched",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+Employee First Name,Employee Middle Name,Employee Last Name,Blank/Placeholder,Report Entry Transaction Date,Report Entry Description,Journal Amount,Report Entry Payment Type Name,Report Entry Expense Type Name,Report Entry Vendor Description,Report Entry Vendor Name,Project,Cost Center,Report Purpose,Employee ID
+Sylvia,,Vlahos,,2/11/2026,Catering/BOD Mtg/Crane,276.09,American Express Corporate Card CBCP,Meals,ezCater,,3336,SBF,Payment,A057
+Sylvia,,Vlahos,,2/11/2026,Catering/BOD Mtg/Crane,249.09,American Express Corporate Card CBCP,Meals,ezCater,,3336,SBF,Payment,A057
+Sylvia,,Vlahos,,3/1/2026,Kitchen Supplies/Grocery,130.63,American Express Corporate Card CBCP,Kitchen Supplies,WAL-MART SUPERCENTER 1082,,3500,SBF-FL,Payment,A057
+Sylvia,,Vlahos,,2/25/2026,Office Supplies for FL Office,32.24,American Express Corporate Card CBCP,Office Supplies,AMAZON MARKEPLACE NA  PA,,3500,SBF-FL,Payment,A057
+Sylvia,,Vlahos,,2/23/2026,Office Supplies for FL Office,15.78,American Express Corporate Card CBCP,Office Supplies,AMAZON MARKEPLACE NA  PA,,3500,SBF-FL,Payment,A057
+Sylvia,,Vlahos,,2/23/2026,Office Supplies for FL Office,105.21,American Express Corporate Card CBCP,Office Supplies,AMAZON MARKEPLACE NA  PA,,3500,SBF-FL,Payment,A057
+Sylvia,,Vlahos,,2/19/2026,Kitchen Supplies/Supplies,45.09,American Express Corporate Card CBCP,Kitchen Supplies,PUBLIX 393,,3500,SBF-FL,Payment,A057
+Sylvia,,Vlahos,,3/3/2026,Kitchen Supplies/Grocery,52.39,American Express Corporate Card CBCP,Kitchen Supplies,INSTACART,,3500,SBF-FL,Payment,A057
+Sylvia,,Vlahos,,3/3/2026,Catering/BOD Mtg/Monroe,242.6,American Express Corporate Card CBCP,Meals,ezCater,,3369,SBF,Payment,A057
+Sylvia,,Vlahos,,3/3/2026,Catering/BOD Mtg/Monroe,528,American Express Corporate Card CBCP,Meals,ezCater,,3369,SBF,Payment,A057
+Sylvia,,Vlahos,,2/4/2026,Working Group Lunch/Sylvia Vlahos,25,American Express Corporate Card CBCP,Meals,MIDTOWN TABLE,,3500,SBF,Payment,A057
+Sylvia,,Vlahos,,2/4/2026,Working Group Lunch/Chris Horton,25,American Express Corporate Card CBCP,Meals,MIDTOWN TABLE,,3500,SBF,Payment,A057
+Sylvia,,Vlahos,,2/4/2026,Working Group Lunch/Harshit Juneja,25,American Express Corporate Card CBCP,Meals,MIDTOWN TABLE,,3500,SBF,Payment,A057
+Sylvia,,Vlahos,,2/4/2026,Working Group Lunch/James Kwon,25,American Express Corporate Card CBCP,Meals,MIDTOWN TABLE,,3500,SBF,Payment,A057
+Sylvia,,Vlahos,,2/4/2026,Working Group Lunch/Henry Senkfor,17.17,American Express Corporate Card CBCP,Meals,MIDTOWN TABLE,,3500,SBF,Payment,A057
+Sylvia,,Vlahos,,3/3/2026,Working Lunch/Jess Sang,25,American Express Corporate Card CBCP,Meals,GRUBHUB,,3500,SBF,Payment,A057
+Sylvia,,Vlahos,,3/3/2026,Working Lunch/Jonathan Roth,19.79,American Express Corporate Card CBCP,Meals,GRUBHUB,,3500,SBF,Payment,A057
+Alexander,Clayton,Bales,,2/11/2026,Refund/RT: JFK-SLC/Strategy,-4027.97,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,VAIP,,A06Y
+Thomas,Wilson Shaw,Groves,,3/5/2026,Working Lunch,22.84,American Express Corporate Card CBCP,Meals,MADE MAD INC,,7500,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/22/2026,SAV-ATL-SLC/AEA Strategy Meeting,2108.11,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/22/2026,Travel Insurance/Residence Inn by Marriott SLC Airport,13.25,American Express Corporate Card CBCP,Other Travel,ALLIANZ INSURANCE,,1035,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/13/2026,Working Lunch,22.67,American Express Corporate Card CBCP,Meals,RINALDI'S DELI,,7500,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/11/2026,"Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)",83.01,American Express Corporate Card CBCP,Meals,BERGAMO'S,,7501,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/10/2026,Working Lunch w/ Sam Thompson,44.55,American Express Corporate Card CBCP,Meals,CHICK-FIL-A # 04141,,7500,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/9/2026,SLC-JFK/AEA Strategy Meeting,849.81,American Express Corporate Card CBCP,Airline,Delta,,1035,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/7/2026,Working Lunch,24.33,American Express Corporate Card CBCP,Meals,RINALDI'S DELI,,7500,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/7/2026,Office Supplies/CT Office,59.52,American Express Corporate Card CBCP,Office Supplies,WWW.STAPLES.COM 472,,7500,DEBT,Business,A07V
+Thomas,Wilson Shaw,Groves,,2/9/2026,Tkt Fee/SLC-JFK/AEA Strategy Meeting,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,DEBT,Business,A07V
+James,Louis,Sharpe,,2/2/2026,Refund/LGA-RDU/BOD Mtg/Pave America,-414.1,American Express Corporate Card CBCP,Airline,AMERICAN AIRLINES,,4263,CONS,,A07Y
+James,Louis,Sharpe,,2/26/2026,Deposit/BOD Dinner/Nations Roof,1375,American Express Corporate Card CBCP,Meals,"MILOS, INC.",,6470,VAIP,,A07Y
+James,Louis,Sharpe,,3/4/2026,RT:LGA-ORD/Mgmt Mtg/Tangent,1056.52,American Express Corporate Card CBCP,Airline,United,,6645,VAIP,,A07Y
+James,Louis,Sharpe,,2/10/2026,Refund/EWR-SLC/2026 Strategy Mtg,-1186.84,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,1035,VAIP,,A07Y
+James,Louis,Sharpe,,2/10/2026,Refund/SLC-JFK/2026,-853.49,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,VAIP,,A07Y
+James,Louis,Sharpe,,3/4/2026,Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,6645,VAIP,,A07Y
+James,Louis,Sharpe,,2/4/2026,Travel Meal/BOD Mtg/Pave America,8.58,American Express Corporate Card CBCP,Meals,THE UMSTEAD HTL & SPA,,4263,CONS,,A07Y
+James,Louis,Sharpe,,2/4/2026,Travel Meal/BOD Mtg/Numotion,64.67,American Express Corporate Card CBCP,Meals,THE UMSTEAD HTL & SPA,,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2/4/2026,Travel Meal/BOD Mtg/Numotion,59.38,American Express Corporate Card CBCP,Meals,THE UMSTEAD HTL & SPA,,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2/4/2026,Lodging/BOD Mtg/BOD Mtg/Numotion,583.16,American Express Corporate Card CBCP,Lodging,THE UMSTEAD HTL & SPA,,6409,VAIP,,A07Y
+James,Louis,Sharpe,,2/4/2026,Lodging/BOD Mtg/Pave America,1749.45,American Express Corporate Card CBCP,Lodging,THE UMSTEAD HTL & SPA,,4263,CONS,,A07Y
+Thomas,Joseph,Pryma,,2/5/2026,NYC-Home/BOD Dinner/HUGE,214.12,American Express Corporate Card CBCP,Car Service,SUMMIT EXPRESS NJ,,6454,VAIP,,A080
+Thomas,Joseph,Pryma,,2/24/2026,Hotel-lunch/Strategy,41.97,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A080
+Thomas,Joseph,Pryma,,2/24/2026,Lunch/Strategy,828.28,American Express Corporate Card CBCP,Meals,501 ON MAIN,,1035,VAIP,,A080
+Thomas,Joseph,Pryma,,2/13/2026,NYC-Home/Management Dinner/NES,214.12,American Express Corporate Card CBCP,Car Service,SUMMIT EXPRESS NJ,,6961,VAIP,,A080
+Thomas,Joseph,Pryma,,2/12/2026,NYC-Home/BOD Dinner/Redwood,214.12,American Express Corporate Card CBCP,Car Service,SUMMIT EXPRESS NJ,,6456,VAIP,,A080
+Thomas,Joseph,Pryma,,2/12/2026,Bus Dinner/Management Team/NES,640.41,American Express Corporate Card CBCP,Meals,IL GATTOPARDO,,6961,VAIP,,A080
+Jeffrey,Alois,Nagel,,2/26/2026,ASE-DFW-LGA/Strategy,0.02,American Express Corporate Card CBCP,Airline,American Airlines,American Airlines,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/26/2026,Tkt fee/JFK-SLC-LGA/Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/26/2026,Travel Meal/Strategy,7.41,American Express Corporate Card CBCP,Meals,SLC 3054 MAVERIK,,6001,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/23/2026,Traveal Meal/Strategy,28.19,American Express Corporate Card CBCP,Meals,DV SILVER LAKE REST,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/22/2026,Travel Meal/Strategy,11.82,American Express Corporate Card CBCP,Meals,PROTEIN BAR & KITCHEN,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/12/2026,Office-Train Station/Internal Mtgs/Window Nation,68.98,American Express Corporate Card CBCP,Car Service,UBER,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/12/2026,Hotel-Office/Internal Mtgs/Window Nation,26.94,American Express Corporate Card CBCP,Car Service,UBER,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/12/2026,Lodging/Internal Mtgs/Window Nation,637.32,American Express Corporate Card CBCP,Lodging,Hilton Hotels,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/12/2026,Travel Coffee/Internal Mtgs/Window Nation,13.49,American Express Corporate Card CBCP,Meals,DECADENT,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/11/2026,Dinner-Hotel/Internal Mtgs/Window Nation,23.72,American Express Corporate Card CBCP,Car Service,UBER,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/11/2026,Hotel-Office/Internal Mtgs/Window Nation,20.7,American Express Corporate Card CBCP,Car Service,UBER,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/11/2026,Travel Meal/Internal Mtgs/Window Nation,8.2,American Express Corporate Card CBCP,Meals,PANERA BREAD #ON3788,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/10/2026,Hotel-Office/Internal Mtgs/Window Nation,25.99,American Express Corporate Card CBCP,Car Service,UBER,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/4/2026,EWR-FRA-DRS-FRA-EWR/SCIO Workshop,17726.63,American Express Corporate Card CBCP,Airline,Lufthansa,Lufthansa,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/4/2026,Tkt fee/EWR-FRA-DRS-FRA-EWR/SCIO Workshop,45,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/3/2026,Refund/ASE-DFW/Strategy,-2185.2,American Express Corporate Card CBCP,Airline,AMERICAN AIRLINES,American Airlines,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/3/2026,ASE-ORD-LGA/Strategy,956.41,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,United Airlines,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/3/2026,Tkt fee/ASE-ORD-LGA/Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/5/2026,Tkt fee/RSW-BWI/Internal Mtgs/Window Nation,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/5/2026,Personal,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1008,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/5/2026,RSW-BWI/Internal Mtgs/Window Nation,591.4,American Express Corporate Card CBCP,Airline,SOUTHWEST AIRLINES,Southwest Airlines,6448,VAIP,,A08A
+Jeffrey,Alois,Nagel,,3/5/2026,Personal,293.4,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,United Airlines,1008,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/17/2026,Travel Meal/Workshop/SCIO,19.44,American Express Corporate Card CBCP,Meals,FRANKFURT AIRPORT MARRIOTT HOTEL,,6915,VAIP,,A08A
+Jeffrey,Alois,Nagel,,2/17/2026,Lodging/Workshop/SCIO,225.93,American Express Corporate Card CBCP,Lodging,FRANKFURT AIRPORT MARRIOTT HOTEL,,6915,VAIP,,A08A
+Steven,Edward,Decillis,,2/4/2026,Lodging/Global Fund Finance Symposium,2119.26,American Express Corporate Card CBCP,Lodging,FONTAINEBLEAU RESORT,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2/5/2026,Work Late/Office to Home,254.52,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2/8/2026,Home-EWR/Global Fund Finance Symposium,150.08,American Express Corporate Card CBCP,Car Service,SUMMIT ELITE CLASS LIMO,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2/8/2026,EWR-Home/Global Fund Finance Symposium,150.08,American Express Corporate Card CBCP,Car Service,SUMMIT ELITE CLASS LIMO,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2/10/2026,Refund/Strategy Mtg,-2892.37,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,1035,MGMT,,A08E
+Steven,Edward,Decillis,,2/10/2026,Work Late/Office to Home,249.57,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2/18/2026,Work Event/Office to Eisner Amper Event,71.31,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,2/18/2026,Work Event/Eisner Amper Event to Home,233.96,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,3/3/2026,Work Late/Office to Home,279.21,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,3/4/2026,Work Late/Office to Home,269.58,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Steven,Edward,Decillis,,3/6/2026,Work Late/Office to Home,248.8,American Express Corporate Card CBCP,Car Service,UBER,,1001,MGMT,,A08E
+Ali,Allexandre,Mehfar,,3/1/2026,Personal,237.44,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,1008,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/27/2026,Lunch Catering/Amerivet BOD Mtg,763.83,American Express Corporate Card CBCP,Meals,NAYA,,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/27/2026,Breakfast Catering/Amerivet BOD Mtg,987.43,American Express Corporate Card CBCP,Meals,CATER LADY NYC LLC,,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/24/2026,Inflight Wifi,14.99,American Express Corporate Card CBCP,Info Services,"BOINGO WIRELESS, INC.",,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/23/2026,Lunch Mtg/AEA Strategy Mtg,476.14,American Express Corporate Card CBCP,Meals,STEINERIKSENOSLO,,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Dinner/Consumer Partner Dinner,914.37,American Express Corporate Card CBCP,Meals,NOBU 57,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Office-Dinner-Home/PaveMasters Dinner,577.13,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Home-JFK/Harris Williams Ski Outing,248.6,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Home-Office/Breakfast Meeting D. Gibbs,255.13,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Office-Conference-Office/Baird Conference,278.99,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Refund/JFK-SLC/AEA Strategy Meeting,-1668.4,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Deposit/AmeriVet BOD Mtg,6830.84,American Express Corporate Card CBCP,Lodging,OMNI BERKSHIRE PLACE CONF,,4246,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/19/2026,Breakfast-Meetings-Dinner-Home/ Various Meetings,1083.13,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/18/2026,Birthday treats/Consumer Team celebration,45,American Express Corporate Card CBCP,Meals,GRUBHUB,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/17/2026,Subscription,42.45,American Express Corporate Card CBCP,PubSub,DOW JONES & CO INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/13/2026,Tkt Fee/J. Grapski Interview travel,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1020,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/13/2026,BOS-LGA-BOS/J. Grapski interview travel,1386.81,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1020,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/12/2026,Travel Meal/Harris Williams Ski Outing,70.25,American Express Corporate Card CBCP,Meals,ST REGIS DEER VALLEY,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/11/2026,Dinner/Pave Masters dinner,5106.83,American Express Corporate Card CBCP,Meals,CARBONE,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/10/2026,Home-JFK/Harris Williams Ski Outing,248.6,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/10/2026,Refund/SLC-JFK/Harris Williams Ski Outing,-324.29,American Express Corporate Card CBCP,Airline,JETBLUE ARC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/9/2026,Tkt Fee/Harris Williams Ski Outing,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/9/2026,SLC-JFK/Harris Williams Ski Outing,2108.4,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/9/2026,Conference Room Rental/Pave America Meetings,1276.67,American Express Corporate Card CBCP,Other Travel,THE UMSTEAD HTL & SPA,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/6/2026,Dinner-Home/F.Braun,255.13,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4001,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/6/2026,Personal,278.13,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,1008,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/6/2026,Office-LGA/Pave America BOD Mtg,201.08,American Express Corporate Card CBCP,Car Service,DTS NY LUXURY INC,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/4/2026,Inflight Wifi,8,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/3/2026,Refund/JFK-SLC/AEA Strategy Meeting,-1445.08,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/3/2026,Dinner/Pave America BOD Dinner,3461.31,American Express Corporate Card CBCP,Meals,ANGUS BARN LTD LLC,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/12/2026,Deposit/PaveAmerica+Nations Roof working dinner,816.56,American Express Corporate Card CBCP,Meals,LA BAIA,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/12/2026,Deposit/PaveAmerica+Nations Roof working dinner,816.57,American Express Corporate Card CBCP,Meals,LA BAIA,,6470,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/4/2026,Travel Meal/Pave America BOD Mtg,95.02,American Express Corporate Card CBCP,Meals,THE UMSTEAD HTL & SPA,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,2/4/2026,Lodging/Pave America BOD Mtg,1255.94,American Express Corporate Card CBCP,Lodging,THE UMSTEAD HTL & SPA,,4263,CONS,,A08W
+Ali,Allexandre,Mehfar,,3/4/2026,Dinner/AmeriVet BOD Dinner,7833.32,American Express Corporate Card CBCP,Meals,CAFE BOULUD NY,,4246,CONS,,A08W
+James,Vallis,Powers,,3/1/2026,Refund/JFK-SLC-MCO/AEA Strategy,-3346.8,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,2275-M,PWK,,A08X
+James,Vallis,Powers,,3/1/2026,Refund/JFK-SLC-MCO/AEA Strategy,-560,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,2275-M,PWK,,A08X
+Rachel,Reardon,Kumar,,2/11/2026,Coffee Mtg w/ Cindy Li-Farewell,20.24,American Express Corporate Card CBCP,Meals,BLUE BOTTLE COFFEE,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/25/2026,Working Lunch,22.33,American Express Corporate Card CBCP,Meals,UBER EATS,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/25/2026,Business Dinner w/ Brendan Gallagher & Ian Wood,704.06,American Express Corporate Card CBCP,Meals,53 RESTAURANT,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/24/2026,Mentoring Coffee/Brendan Gallagher,14.88,American Express Corporate Card CBCP,Meals,BLUE BOTTLE COFFEE,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/23/2026,REFUND/EWR-SLC/Strategy,-1729.4,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,Delta Air Lines,1035,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/23/2026,REFUND/JFK-SLC-JFK/Strategy,-2428.49,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,Delta Air Lines,1035,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/22/2026,EWR-SLC/Strategy,1729.4,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,Delta Air Lines,1035,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/22/2026,SLC-JFK/Strategy,2998.41,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,Delta Air Lines,1035,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/22/2026,Ticketing Fee/EWR-SLC/Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,1035,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/19/2026,Working Lunch,22.33,American Express Corporate Card CBCP,Meals,UBER EATS,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,3/2/2026,Working Lunch,23.41,American Express Corporate Card CBCP,Meals,SWEETGREEN,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/25/2026,Dinner-Home/Business dinner w/ BG & IW,19.74,American Express Corporate Card CBCP,Car Service,CURB-TAXI APP,,3500,SBF,Payment,A091
+Rachel,Reardon,Kumar,,2/22/2026,EWR-SLC/Strategy,1472.68,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,United Airlines,1035,SBF,Payment,A091
+John,Daniel,Sedlacek,,2/9/2026,RDU-Mtg/Mgmt Mtg/Aqualis,31.99,American Express Corporate Card CBCP,Car Service,UBER,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,Travel Meal/Mgmt Mtg/Aqualis,22.65,American Express Corporate Card CBCP,Meals,LONERIDER,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,Travel Meal/Mgmt Mtg/Aqualis,7.64,American Express Corporate Card CBCP,Meals,4254 STARBUCKS,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,Travel Meal/Mgmt Mtg/Aqualis,17.9,American Express Corporate Card CBCP,Meals,EWR PLAYA BOWLS #6841116,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/6/2026,Dinner-Hotel/Mgmt Mtg/Monroe,144.97,American Express Corporate Card CBCP,Car Service,UBER,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/6/2026,InFlight Wifi/Mgmt Mtg/Monroe,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/6/2026,Lodging/Mgmt Mtg/Monroe,131.78,American Express Corporate Card CBCP,Lodging,HYATT PLACE,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/5/2026,Cancellation Fee/Mtg-Dinner/Mgmt Mtg/Monroe,5.2,American Express Corporate Card CBCP,Car Service,UBER,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/5/2026,InFlight Wifi/Mgmt Mtg/Monroe,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/5/2026,Travel Meal/Mgmt Mtg/Monroe,6.67,American Express Corporate Card CBCP,Meals,EWR CIBO EXPRESS C90,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/5/2026,Travel Meal/Mgmt Mtg/Monroe,7.36,American Express Corporate Card CBCP,Meals,JAX 7084 VERDI MARKET,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/4/2026,RDU-LGA/Agreement Mtg/LRB,383.4,American Express Corporate Card CBCP,Airline,Delta,Delta Air Lines,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/4/2026,Tkt Fee/Refund/RDU-EWR/Mgmt Mtg/Aqualis,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/4/2026,Tkt Fee/RDU-LGA/Agreement Mtg/LRB,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,Delta Air Lines,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/4/2026,Refund/RDU-EWR/Mgmt Mtg/Aqualis,-363.4,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,United Airlines,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,RT: EWR-LHR/BOD Mtg/RED,2746.26,American Express Corporate Card CBCP,Airline,United,United Airlines,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,RT: EWR-LHR/Mtgs/IR,2746.27,American Express Corporate Card CBCP,Airline,United,United Airlines,1016-SBF,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/10/2026,Hotel-Mtg/Agreement Mtg/LRB,40.97,American Express Corporate Card CBCP,Car Service,UBER,,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/12/2026,Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe,-188.17,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,United Airlines,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/12/2026,Tkt Fee/Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/11/2026,Home-Conf/Baird T&S Conf,55.36,American Express Corporate Card CBCP,Car Service,UBER,,3501,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/11/2026,Home-Event/Vinson & Elkins Networking Event,23.74,American Express Corporate Card CBCP,Car Service,UBER,,3501,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,InFlight Wifi/Mgmt Mtg/Aqualis,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,Tkt Fee/RT: EWR-LHR/BOD Mtg/RED,22.5,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/9/2026,Tkt Fee/RT: EWR-LHR/IR Mtgs,22.5,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,1016-SBF,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/10/2026,Travel Meal/Mgmt Mtg/Aqualis,83.37,American Express Corporate Card CBCP,Meals,THE WESTIN RALEIGH-DURHAM AIRPORT,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/10/2026,Lodging/Mgmt Mtg/Aqualis,451.87,American Express Corporate Card CBCP,Lodging,THE WESTIN RALEIGH-DURHAM AIRPORT,,3285,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/2/2026,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,12.31,American Express Corporate Card CBCP,Meals,DUNKIN DONUTS 354506,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic,135,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,Travel Meal/Strategy,10.9,American Express Corporate Card CBCP,Meals,COFFEE BEAN AND TEA LEAF SLC,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic,10242.43,American Express Corporate Card CBCP,Airline,VAA ARC,,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,Travel Meal/Strategy,11.52,American Express Corporate Card CBCP,Meals,DUNKIN #363849,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,InFlight Wifi/Strategy,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic,6898.5,American Express Corporate Card CBCP,Airline,DEUTSCHE LUFTHANSA BSP,,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/25/2026,Travel Meal/Strategy,15.3,American Express Corporate Card CBCP,Meals,JAMBA JUICE D61574,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/10/2026,Travel Meal/Strategy,5.6,American Express Corporate Card CBCP,Meals,HUDSONST1740,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/24/2026,Refund/EWR-SLC/Strategy,-594.27,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,United Airlines,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/24/2026,Travel Meal/Strategy,11.69,American Express Corporate Card CBCP,Meals,DUNKIN DONUTS DE6,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/24/2026,Travel Meal/Strategy,19.53,American Express Corporate Card CBCP,Meals,HUDSON ST1852,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/24/2026,Lodging/Strategy,194.54,American Express Corporate Card CBCP,Lodging,HOLIDAY INN EXPRESS PHILA,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/24/2026,Tkt Fee/Exchange/JAX-EWR/Banker Mtgs/Monroe,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/23/2026,PHL-SLC/Strategy,728.4,American Express Corporate Card CBCP,Airline,Delta,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/23/2026,Travel Meal/Strategy,2.6,American Express Corporate Card CBCP,Meals,CMF VENDING,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/23/2026,Tkt Fee/PHL-SLC/Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/23/2026,Travel Meal/Strategy,1,American Express Corporate Card CBCP,Meals,CMF VENDING,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/23/2026,Travel Meal/Strategy,2.1,American Express Corporate Card CBCP,Meals,CMF VENDING,,1035,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/21/2026,Refund/Exchange/EWR-SLC/Strategy,-961.36,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,United Airlines,1035,,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,EWR-FRA/LHR-EWR/BOD Mtg/RED,1849.66,American Express Corporate Card CBCP,Airline,United,,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent,1849.66,American Express Corporate Card CBCP,Airline,United,,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,EWR-FRA/LHR-EWR/IR Mtgs,1849.68,American Express Corporate Card CBCP,Airline,United,,1016-SBF,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/26/2026,DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic,895.3,American Express Corporate Card CBCP,Airline,BRITISH AIRWAYS ARC US,British Airways,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,Office-Dinner/BOD Mtg/Monroe,39.97,American Express Corporate Card CBCP,Car Service,UBER,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic,299.54,American Express Corporate Card CBCP,Airline,British Airways,British Airways,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,DUS-LHR/BOD Mtg/RED,299.53,American Express Corporate Card CBCP,Airline,British Airways,British Airways,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,DUS-LHR/IR Mtgs,299.53,American Express Corporate Card CBCP,Airline,British Airways,British Airways,1016-SBF,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essentic,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,3338,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,3353,SBF,Payment,A097
+John,Daniel,Sedlacek,,2/20/2026,Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,United Airlines,1016-SBF,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,Hotel-Office/BOD Mtg/Monroe,18.99,American Express Corporate Card CBCP,Car Service,UBER,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,Travel Meal/Banker Mtgs/Monroe,35.53,American Express Corporate Card CBCP,Meals,ANGIE'S SUBS CONC. A JAX,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,InFlight Wifi/BOD Mtg/Banker Mtgs/Monroe,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,6.76,American Express Corporate Card CBCP,Meals,JAX 0048 TRAVEL AT EASE,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/2/2026,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,11.72,American Express Corporate Card CBCP,Meals,JAX 7084 VERDI MARKET,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/2/2026,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,6.67,American Express Corporate Card CBCP,Meals,EWR VANGUARD MKT,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,Travel Meal/BOD Mtg/Banker Mtgs/Monroe,34.35,American Express Corporate Card CBCP,Meals,AC HOTEL JACKSONVILLE ST JOHNS TOWN CENT,,3369,SBF,Payment,A097
+John,Daniel,Sedlacek,,3/3/2026,Lodging/BOD Mtg/Banker Mtgs/Monroe,396.12,American Express Corporate Card CBCP,Lodging,AC HOTEL JACKSONVILLE ST JOHNS TOWN CENT,,3369,SBF,Payment,A097
+Benjamin,,Althaus,,2/9/2026,Travel Meal/BOD Mtg/WWE,13.21,American Express Corporate Card CBCP,Meals,SHELL OIL,,3354,SBF,Payment,A09A
+Benjamin,,Althaus,,2/9/2026,Travel Meal/BOD Mtg/WWE,46.64,American Express Corporate Card CBCP,Meals,NAPLES NATIONAL GOLF CLUB PROSHO,,3354,SBF,Payment,A09A
+Benjamin,,Althaus,,2/8/2026,Lodging/Conf/ACG M&A,1693.87,American Express Corporate Card CBCP,Lodging,W HOTELS,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/7/2026,Personal,2.97,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/6/2026,Personal,-14.24,American Express Corporate Card CBCP,Meals,JUSTGIVING.COM PURCHASE WITH MR POINTS,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/6/2026,Personal,14.24,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/5/2026,Work Late/Office to Home,21.94,American Express Corporate Card CBCP,Car Service,UBER,,3500,SBF,Payment,A09A
+Benjamin,,Althaus,,2/5/2026,Personal,-24.73,American Express Corporate Card CBCP,Meals,JUSTGIVING.COM PURCHASE WITH MR POINTS,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/5/2026,Personal,24.73,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/11/2026,Hotel-Dinner/Bus. Dinner w/B. Quintana,37.98,American Express Corporate Card CBCP,Car Service,UBER,,3431,SBF,Payment,A09A
+Benjamin,,Althaus,,2/17/2026,Travel Meal/Mgmt Mtg/Armstrong Transport,20.15,American Express Corporate Card CBCP,Meals,QDOBA 3045,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/18/2026,Travel Meal/Mgmt Mtg/Armstrong Transport,17.26,American Express Corporate Card CBCP,Meals,TOASTIQUE,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/18/2026,Travel Meal/Mgmt Mtg/Armstrong Transport,5.35,American Express Corporate Card CBCP,Meals,PHL 1771 THE TODAY SHOW,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/19/2026,Travel Meal/Mgmt Mtg/Armstrong Transport,57.36,American Express Corporate Card CBCP,Meals,CULINARY DROPOUT,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/17/2026,Travel Meal/Mgmt Mtg/Armstrong Transport,12.19,American Express Corporate Card CBCP,Meals,PHL 1771 THE TODAY SHOW,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/18/2026,Travel Meal/Mgmt Mtg/Armstrong Transport,11.27,American Express Corporate Card CBCP,Meals,2077 CLT TRAVEL AT EASE,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/16/2026,JAX-PHL-CLT/CFO Interview/AmEx,2058.66,American Express Corporate Card CBCP,Airline,AMERICAN AIRLINES,,3431,SBF,Payment,A09A
+Benjamin,,Althaus,,2/14/2026,Personal,-2.39,American Express Corporate Card CBCP,Meals,JUSTGIVING.COM PURCHASE WITH MR POINTS,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/14/2026,Personal,2.39,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/12/2026,Travel Meal/Stifel T&L Conf,21.38,American Express Corporate Card CBCP,Meals,W HOTELS,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/12/2026,Travel Meal/Stifel T&L Conf,22.6,American Express Corporate Card CBCP,Meals,W HOTELS,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/12/2026,"Bus. Dinner w/J. Franklin, Pot EP",158,American Express Corporate Card CBCP,Meals,MIDTOWN TABLE,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/11/2026,Hotel-Conf/Stifel T&L Conf,25.98,American Express Corporate Card CBCP,Car Service,UBER,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/10/2026,Travel Meal/BOD Mtg/WWE,24.38,American Express Corporate Card CBCP,Meals,JERSEY MIKES 13231,,3354,SBF,Payment,A09A
+Benjamin,,Althaus,,2/10/2026,Travel Meal/BOD Mtg/WWE,96.87,American Express Corporate Card CBCP,Meals,VERSAILLES RSTR,,3354,SBF,Payment,A09A
+Benjamin,,Althaus,,2/19/2026,Mtg-CLT/Mgmt Mtg/Armstrong Transport,50.98,American Express Corporate Card CBCP,Car Service,UBER,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/18/2026,CLT-Mtg/Mgmt Mtg/Armstrong Transport,48.98,American Express Corporate Card CBCP,Car Service,UBER,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/17/2026,Home-JAX/CFO Interview/AmEx,145,American Express Corporate Card CBCP,Car Service,SURFSIDE TRANSPORTATION/ BOBCAT,,3431,SBF,Payment,A09A
+Benjamin,,Althaus,,2/16/2026,Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,American Airlines,3431,SBF,Payment,A09A
+Benjamin,,Althaus,,2/28/2026,Personal,16.17,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/28/2026,Personal,2.39,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/27/2026,JAX-Home/Strategy,145,American Express Corporate Card CBCP,Car Service,SURFSIDE TRANSPORTATION/ BOBCAT,,1035,SBF,Payment,A09A
+Benjamin,,Althaus,,2/21/2026,Home-JAX/Strategy,145,American Express Corporate Card CBCP,Car Service,SURFSIDE TRANSPORTATION/ BOBCAT,,1035,SBF,Payment,A09A
+Benjamin,,Althaus,,2/20/2026,Travel Meal/Strategy,28.35,American Express Corporate Card CBCP,Meals,BURGER FI JAX,,1035,SBF,Payment,A09A
+Benjamin,,Althaus,,2/11/2026,Travel Meal/Stifel T&L Conf,12.81,American Express Corporate Card CBCP,Meals,SHELL OIL,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/20/2026,Travel Meal/Strategy,5.29,American Express Corporate Card CBCP,Meals,JAX 0048 TRAVEL AT EASE,,1035,SBF,Payment,A09A
+Benjamin,,Althaus,,2/20/2026,Travel Meal/Strategy,44.61,American Express Corporate Card CBCP,Meals,HUDSON ST2165,,1035,SBF,Payment,A09A
+Benjamin,,Althaus,,2/19/2026,JAX-Home/Mgmt Mtg/Armstrong Transport,145,American Express Corporate Card CBCP,Car Service,SURFSIDE TRANSPORTATION/ BOBCAT,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,2/19/2026,Lodging/CFO Interview/AMX,410.13,American Express Corporate Card CBCP,Lodging,MARRIOTT 33737 PHIL ARPT,,3431,SBF,Payment,A09A
+Benjamin,,Althaus,,2/28/2026,Personal,-2.39,American Express Corporate Card CBCP,Meals,JUSTGIVING.COM PURCHASE WITH MR POINTS,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,2/28/2026,Personal,-16.17,American Express Corporate Card CBCP,Meals,JUSTGIVING.COM PURCHASE WITH MR POINTS,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/5/2026,Personal,5.73,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/5/2026,Personal,-5.73,American Express Corporate Card CBCP,Meals,American Express Initiated Activity,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/4/2026,Personal,-3.43,American Express Corporate Card CBCP,Miscellaneous,American Express Initiated Activity,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/4/2026,Personal,3.43,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,Lodging/ACG M&A South Conf,1859.68,American Express Corporate Card CBCP,Lodging,HOTEL AT AVALON,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,LGA-CHS/William Blair T&L Conf,396.1,American Express Corporate Card CBCP,Airline,AMERICAN AIRLINES,American Airlines,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,RT: JAX-LGA/NY Office Visit,1181.8,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,Delta Air Lines,3500,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,Tkt Fee/RT: JAX-LGA/NY Office Visit,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,Delta Air Lines,3500,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,JAX-LGA/Catch up Mtg/OAPC,503.4,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,Delta Air Lines,3399,SBF,Payment,A09A
+Benjamin,,Althaus,,3/6/2026,Personal,-2.05,American Express Corporate Card CBCP,Meals,American Express Initiated Activity,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/6/2026,Personal,3.26,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,Delta Air Lines,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,Delta Air Lines,3399,SBF,Payment,A09A
+Benjamin,,Althaus,,2/11/2026,Travel Meal/Stifel T&L Conf,45,American Express Corporate Card CBCP,Meals,FOUR SEASONS MIAMI EDGE R,,3501,SBF,Payment,A09A
+Benjamin,,Althaus,,3/3/2026,Lodging/Catch up Mtg/OAPC,490.04,American Express Corporate Card CBCP,Lodging,TRAVEL RESERVATION USA,,3399,SBF,Payment,A09A
+Benjamin,,Althaus,,2/28/2026,Lodging/NY Office Visit,884.43,American Express Corporate Card CBCP,Lodging,TRAVEL RESERVATION US,,3500,SBF,Payment,A09A
+Mohammad,Rizwan,Chand,,2/12/2026,Ticket/Human Capital Forum 2026/Kate Smith,2420,American Express Corporate Card CBCP,Seminars/Conferens,PEI MEDIA INC,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2/6/2026,DFW-Home/AEA Internal Mtgs,103.99,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2/5/2026,Refund/DFW-SLC/Strategy,-1176.96,American Express Corporate Card CBCP,Airline,AMERICAN AIRLINES,American Airlines,1035,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2/4/2026,Dinner/Riz Chand & Kate Smith,124.51,American Express Corporate Card CBCP,Meals,SANTI,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2/6/2026,Refreshments,41.93,American Express Corporate Card CBCP,Meals,OMNI BERKSHIRE PLACE,,6001,VAIP,,A09K
+Mohammad,Rizwan,Chand,,2/6/2026,Lodging/AEA Internal Mtgs,482.15,American Express Corporate Card CBCP,Lodging,OMNI BERKSHIRE PLACE,,6001,VAIP,,A09K
+Randy,,Aung,,3/5/2026,Backoffice outing (MSG) to home,173.98,American Express Corporate Card CBCP,Car Service,"Uber Technologies, Inc",,1001,IT,,A09Y
+Randy,,Aung,,2/26/2026,Microsoft license renewal for SBF,52.26,American Express Corporate Card CBCP,Software,MICROSOFT STORE,,1008,IT,,A09Y
+Randy,,Aung,,2/13/2026,Tip for the ride on 2/13/2026,4.51,American Express Corporate Card CBCP,Car Service,"Uber Technologies, Inc",,1001,IT,,A09Y
+Randy,,Aung,,2/13/2026,Work Late/Office to Home,45.16,American Express Corporate Card CBCP,Car Service,"Uber Technologies, Inc",,1001,IT,,A09Y
+Frank,,Herr,,2/7/2026,Travel Meal/Site Visit/BPG,8.61,American Express Corporate Card CBCP,Meals,LEMA DUMPLING & LE CONGEE T3,,6450,VAIP,,A0AJ
+Frank,,Herr,,2/7/2026,BPG Office-Hotel/Site Visit/BPG,22.35,American Express Corporate Card CBCP,Car Service,GRAB SG - TRANSPORT GL,,6450,VAIP,,A0AJ
+Frank,,Herr,,2/7/2026,Hotel-Airport/Site Visit/BPG,32.23,American Express Corporate Card CBCP,Car Service,GRAB SG-TRANSPORT ADY,,6450,VAIP,,A0AJ
+Frank,,Herr,,2/6/2026,Hotel-BPG Office/Site Visit/BPG,22.58,American Express Corporate Card CBCP,Car Service,GRAB SG - TRANSPORT GL,,6450,VAIP,,A0AJ
+Frank,,Herr,,2/2/2026,Travel Meal/Site Visit/VCC,36.36,American Express Corporate Card CBCP,Meals,MARRIOTT CLARK,Marriott Hotels,6371,VAIP,,A0AJ
+Frank,,Herr,,2/2/2026,Laundry/Site Visit/VCC,5.95,American Express Corporate Card CBCP,Miscellaneous,MARRIOTT CLARK,Marriott Hotels,6371,VAIP,,A0AJ
+Frank,,Herr,,2/3/2026,Laundry/Site Visit/VCC,5.95,American Express Corporate Card CBCP,Miscellaneous,MARRIOTT CLARK,Marriott Hotels,6371,VAIP,,A0AJ
+Frank,,Herr,,2/4/2026,Lodging/Site Visit/VCC,580.05,American Express Corporate Card CBCP,Lodging,MARRIOTT CLARK,Marriott Hotels,6371,VAIP,,A0AJ
+Frank,,Herr,,2/5/2026,Bus.B'fast/Site Visit/4 ppl/BPG,124.78,American Express Corporate Card CBCP,Meals,SHANGRI-LA SINGAPORE,,6450,VAIP,,A0AJ
+Frank,,Herr,,2/6/2026,Bus.B'fast/Site Visit/2 ppl/BPG,41.59,American Express Corporate Card CBCP,Meals,SHANGRI-LA SINGAPORE,,6450,VAIP,,A0AJ
+Frank,,Herr,,2/8/2026,Rfnd/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Meeting,230,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,United Airlines,1035,VAIP,,A0AJ
+Frank,,Herr,,2/8/2026,Rfnd/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Meeting,-851.3,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,United Airlines,1035,VAIP,,A0AJ
+Frank,,Herr,,2/10/2026,Lodging/Site Visit/VCC,144.08,American Express Corporate Card CBCP,Lodging,GZKRSWFWYXGS,,6371,VAIP,,A0AJ
+Frank,,Herr,,2/12/2026,Working Lunch/2 ppl/AEA,35.31,American Express Corporate Card CBCP,Meals,WEI XIN merchant,,6001,VAIP,,A0AJ
+Frank,,Herr,,2/18/2026,Airport-Home/AEA Strategy Meeting,164.09,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/18/2026,Airport-Home/AEA Strategy Meeting,10,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/23/2026,Travel Meal/AEA Strategy Meeting,37.13,American Express Corporate Card CBCP,Meals,LARK CREEK GRILL,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/22/2026,Home-Airport/AEA Strategy Meeting,10,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/22/2026,Home-Airport/AEA Strategy Meeting,110.99,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/27/2026,Airport-Home/AEA Strategy Meeting,131.49,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/27/2026,Airport-Home/AEA Strategy Meeting,10,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/26/2026,Travel Meal/AEA Strategy Meeting,3.28,American Express Corporate Card CBCP,Meals,SLC THIRST,,1035,VAIP,,A0AJ
+Frank,,Herr,,2/26/2026,Travel Meal/AEA Strategy Meeting,19.54,American Express Corporate Card CBCP,Meals,SLC PANDA EXPRESS,,1035,VAIP,,A0AJ
+Derek,,Darves-Bornoz,,2/5/2026,Refund/EWR-SLC/D.Fernholz/2026 Strategy Mtg,-1043.48,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/5/2026,Refund/SLC-EWR/D.Fernholz/2026 Strategy Mtg,-1652.16,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/6/2026,Personal,7.06,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/5/2026,Personal,2.37,American Express Corporate Card CBCP,Meals,GRUBHUB,,1008,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/23/2026,Refund/JFK-SLC/J.Lee/2026 Strategy,-1908.49,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/22/2026,Tkt Fee/RT:EWR-SLC/D.Fernholz/2026 Strategy Mtg,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/19/2026,Data Subscription/JetBrains,21.78,American Express Corporate Card CBCP,Software,JETBRAINS AMERICAS INC,,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/18/2026,Data Subscription/JetBrains,43.55,American Express Corporate Card CBCP,Software,JETBRAINS AMERICAS INC,,6001,VAIP,,A0BI
+Derek,,Darves-Bornoz,,2/14/2026,Data Subscription/JetBrains,10.89,American Express Corporate Card CBCP,Software,JETBRAINS AMERICAS INC,,6001,VAIP,,A0BI
+Heidi,Schwenzfeier,Dubois,,2/9/2026,Tkt Fee/Paris-London/Comms/Biz Dev Trip,45,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2/9/2026,Train/Paris-London/Comms/Biz Dev Trip,496.1,American Express Corporate Card CBCP,Other Travel,EUROSTAR INTERNATIONAL LTD ARCUS,,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2/22/2026,Inflight Wifi,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,6006,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2/22/2026,Travel Meal/AEA Strategy,13.06,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,VAIP,,A0C7
+Heidi,Schwenzfeier,Dubois,,2/28/2026,Personal,14.95,American Express Corporate Card CBCP,Miscellaneous,"AUDIBLE, INC.",,1008,VAIP,,A0C7
+Edward,Walter,Newhouse,,3/2/2026,Bus.Lunch w/ Pedram Shayegan/BCI,210.29,American Express Corporate Card CBCP,Meals,IL MULINO NEW YORK,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2/26/2026,Travel Meal/AEA Strategy Trip,3.8,American Express Corporate Card CBCP,Meals,SLC 3044 TRIP ADVISOR,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/26/2026,Travel Meal/AEA Strategy Trip,3.34,American Express Corporate Card CBCP,Meals,BEANS AND BREWS COFFEE HOUSE S,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/26/2026,Travel Meal/AEA Strategy Trip,21.35,American Express Corporate Card CBCP,Meals,CNP MARKET STREET GRILL C,,1001,IR,,A0CN
+Edward,Walter,Newhouse,,2/24/2026,Travel Meal/AEA Strategy Trip,14,American Express Corporate Card CBCP,Meals,GATERETAIL,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/23/2026,Airport-Hotel/AEA Strategy Trip,161.98,American Express Corporate Card CBCP,Car Service,UBER,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/23/2026,Tkt Refund/AEA Strategy Trip,-1308.49,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/23/2026,Travel Meal/AEA Strategy Trip,35.1,American Express Corporate Card CBCP,Meals,DV SILVER LAKE REST,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/22/2026,Travel Meal/AEA Strategy Trip,3.8,American Express Corporate Card CBCP,Meals,SLC 3050 SLC ESSENTIALS,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/22/2026,Travel Meal/AEA Strategy Trip,42.38,American Express Corporate Card CBCP,Meals,JFK T5 JACOBS PICKLES 637,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/22/2026,Travel Meal/AEA Strategy Trip,14.06,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/21/2026,Trip Insurance/AEA Strategy Trip,31.55,American Express Corporate Card CBCP,Other Travel,ALLIANZ TRAVEL INS,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/21/2026,JFK-SLC/AEA Strategy Trip,467.41,American Express Corporate Card CBCP,Airline,JETBLUE AIRWAYS,,1035,IR,,A0CN
+Edward,Walter,Newhouse,,2/19/2026,Subscription/Professional Svcs,75.85,American Express Corporate Card CBCP,Info Services,LINKEDIN CORPORATION,,1001,IR,,A0CN
+Edward,Walter,Newhouse,,2/13/2026,Travel Meal/Tuck PE Conference,11.11,American Express Corporate Card CBCP,Meals,CIRCLE K #7510,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2/13/2026,Parking/Tuck PE Conference,15,American Express Corporate Card CBCP,Other Travel,D.C. CECS PARKING,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2/12/2026,Travel Meal/Tuck PE Conference,2.84,American Express Corporate Card CBCP,Meals,DUNKIN DONUTS  PC300764,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2/12/2026,Travel Meal/Tuck PE Conference,37.25,American Express Corporate Card CBCP,Meals,HANOVER INN/DRTMTH CLLGE,,1016,IR,,A0CN
+Edward,Walter,Newhouse,,2/12/2026,Parking/Tuck PE Conference,34,American Express Corporate Card CBCP,Other Travel,HANOVER INN/DRTMTH CLLGE,,1016,IR,,A0CN
+Deborah,Marie,Ackerman,,2/18/2026,Refund/RT: ORD-SLC/AEA Strategy Meeting,-2097.29,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,1035,AMA,Business,A0CP
+Adam,Frederick,Goetsch,,2/26/2026,EWR-SLC-GEG/BOD Mtg/TileBar,1469.2,American Express Corporate Card CBCP,Airline,Delta,,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/26/2026,GEG-MSP-EWR/BOD Mtg/TileBar,1059.2,American Express Corporate Card CBCP,Airline,Delta,,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/26/2026,Travel Meal,14.93,American Express Corporate Card CBCP,Meals,JIMMY JOHNS A42 SLC,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/26/2026,Tkt Fee/GEG-MSP-EWR/BOD Mtg/TileBar,8,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/26/2026,Airport Parking,62,American Express Corporate Card CBCP,Other Travel,SPOKANE AIRPORT PARKING,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/26/2026,Tkt Fee/EWR-SLC-GEG/BOD Mtg/TileBar,23,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,4253,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/25/2026,Refund/SLC-GEG,-984.41,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/23/2026,Travel Meal,19.74,American Express Corporate Card CBCP,Meals,GEG GREEDY COW BURGER 698,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/22/2026,SLC-GEG,984.41,American Express Corporate Card CBCP,Airline,Delta,,1035,CONS,,A0CU
+Adam,Frederick,Goetsch,,2/22/2026,Tkt Fee/SLC-GEG,8,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,CONS,,A0CU
+Steven,Andrew,Botnick,,2/21/2026,Refund/Strategy Meeting,-293.09,American Express Corporate Card CBCP,Airline,JETBLUE AIRWAYS,,1035,MGMT,,A0DI
+Steven,Andrew,Botnick,,2/22/2026,Refund/Strategy Meeting,-1638.49,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,MGMT,,A0DI
+Steven,Andrew,Botnick,,2/24/2026,Refund/Strategy Meeting,-83,American Express Corporate Card CBCP,Airline,JETBLUE AIRWAYS,,1035,MGMT,,A0DI
+James,Brian,Coleman,,2/5/2026,Lodging/D.Kilimnik/BOD Mtg/Huge/Hero Digitial,291.23,American Express Corporate Card CBCP,Lodging,HOTEL GIRAFFE,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2/5/2026,Lodging/BOD Mtg/Huge/Hero Digital,1216.36,American Express Corporate Card CBCP,Lodging,HOTEL GIRAFFE,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2/5/2026,Lodging/A.Szafran/BOD Mtg/Huge/Hero Digital,291.23,American Express Corporate Card CBCP,Lodging,HOTEL GIRAFFE,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,Lodging/BOD Mtg/AmeriVet,744.5,American Express Corporate Card CBCP,Lodging,THE LXRY COLLECTION HOTL,,4246,CONS,,A0DJ
+James,Brian,Coleman,,3/5/2026,Hotel-LGA/BOD Mtg/AmeriVet,83.9,American Express Corporate Card CBCP,Car Service,UBER,,4246,CONS,,A0DJ
+James,Brian,Coleman,,3/4/2026,Bus.Dinner-Hotel/BOD Mtg/AmeriVet,48.94,American Express Corporate Card CBCP,Car Service,UBER,,4246,VAIP,,A0DJ
+James,Brian,Coleman,,3/3/2026,LGA-Hotel/BOD Mtg/AmeriVet,88.17,American Express Corporate Card CBCP,Car Service,UBER,,4246,CONS,,A0DJ
+James,Brian,Coleman,,3/3/2026,Home-ORD/BOD Mtg/AmeriVet,50.99,American Express Corporate Card CBCP,Car Service,UBER,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2/26/2026,ORD-Home/2026 Strategy Mtg,38.98,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2/23/2026,Hotel-Hotel/2026 Strategy Mtg,26.98,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2/6/2026,ORD-HOME/BOD Mtg/Huge/Hero Digital,50.97,American Express Corporate Card CBCP,Car Service,UBER,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2/6/2026,Huge Office-LGA/BOD Mtg/Huge/Hero Digital,104.07,American Express Corporate Card CBCP,Car Service,UBER,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2/10/2026,Tkt Fee/SLC-ORD/2026 Strategy Mtg,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2/10/2026,Tkt Fee/ORD-LGA/BOD Mtg/AmeriVet,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2/24/2026,Tkt Fee/SLC-ORD/2026 Strategy Mtg,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2/25/2026,Tkt Fee/Exch Tkt:ORD-LGA/BOD Mtg/AmeriVet,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,4246,VAIP,,A0DJ
+James,Brian,Coleman,,2/25/2026,Refund/LGA-ORD/BOD Mtg/AmeriVet,-50.6,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2/10/2026,Exch Tkt:SLC-ORD/2026 Strategy Mtg,1518.68,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2/10/2026,ORD-LGA/BOD Mtg/AmeriVet,878.37,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2/23/2026,Travel Meal/2026 Strategy Mtg,27.08,American Express Corporate Card CBCP,Meals,DV SILVER LAKE REST,,1035,VAIP,,A0DJ
+James,Brian,Coleman,,2/22/2026,Bus.Dinner w/M.Slattery/4ppl/Xenon Arc,435.3,American Express Corporate Card CBCP,Meals,YUKI YAMA,,6001,VAIP,,A0DJ
+James,Brian,Coleman,,3/2/2026,Personal,19.08,American Express Corporate Card CBCP,Other Travel,"SPOTHERO, INC.",,1008,VAIP,,A0DJ
+James,Brian,Coleman,,2/26/2026,Inflight Wifi,8,American Express Corporate Card CBCP,Info Services,UNITED AIRLINES,,6001,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,BBY-NYP/West Monroe Offsite/Digital Offsite,151.5,American Express Corporate Card CBCP,Other Travel,AMTRAK AGENCY X,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,BBY-NYP/BOD Mtg/Huge/Hero Digital,151.5,American Express Corporate Card CBCP,Other Travel,AMTRAK AGENCY X,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,Refund/BBY-NYP/West Monroe Offsite/Digital Offsite,-19.5,American Express Corporate Card CBCP,Other Travel,AMTRAK.COM,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,Refund/BBY-NYP/BOD Mtg/Huge/Hero Digital,-19.5,American Express Corporate Card CBCP,Other Travel,AMTRAK.COM,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,Tkt Fee/BBY-NYP/West Monroe Offsite/Digital Offsite,15,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,3/4/2026,Tkt Fee/BBY-NYP/BOD Mtg/Huge/Hero Digital,15,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,6454,VAIP,,A0DJ
+James,Brian,Coleman,,2/10/2026,LGA-SAV/BOD Mtg/AmeriVet,238.25,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2/10/2026,LGA-SAV/Gen Pact Event/Digital Offsite,713.85,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1018-D,VAIP,,A0DJ
+James,Brian,Coleman,,2/10/2026,Tkt Fee/LGA-SAV-VPS/BOD Mtg AmeriVet,7.5,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,4246,CONS,,A0DJ
+James,Brian,Coleman,,2/10/2026,Tkt Fee/LGA-SAV-VPS/Gen Pact Executive Event,22.5,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,1018-D,VAIP,,A0DJ
+Osasogie,Vivian,Ighodaro,,2/6/2026,Tip/Work Late/Office to Home,8.79,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/9/2026,Work Late/Office to Home,53.96,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/11/2026,Work Late/Office to Home,49.97,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/11/2026,Work Late/Office to Home,7.49,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/12/2026,Work Late/Office to Home,71.81,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/12/2026,Tip/Work Late/Office to Home,7.18,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/13/2026,Work Late/Office to Home,44.36,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/19/2026,Work Late/Office to Home,43.2,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/19/2026,Tip/Work Late/Office to Home,8.64,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/19/2026,Work Late/Office to Home,58.57,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/20/2026,Home- JFK/2026 Strategy Mtg,166.35,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/26/2026,EWR-Home/2026 Strategy Mtg,84.35,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,3/3/2026,Work Late/Office to Home,39.05,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,3/3/2026,Tip/Work Late/Office to Home,7.81,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,3/3/2026,Work Late/Office to Home,67.21,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,3/4/2026,Work Late/Office to Home,62.01,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/26/2026,Travel Meal/2026 Strategy Mtg,16.17,American Express Corporate Card CBCP,Meals,PICK UP STIX SLC,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/20/2026,Travel Meal/2026 Strategy Mtg,22.65,American Express Corporate Card CBCP,Meals,JFK2 SHAKE SHACK B37 1051,,1035,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/6/2026,Work Late/Office to Home,43.99,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/26/2026,Inflight Wifi,10,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/26/2026,Inflight Wifi,8,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,,6001,VAIP,,A0FK
+Osasogie,Vivian,Ighodaro,,2/6/2026,Data Subscription/ENR's Unlimited/Lonevolt/Lonestar Electric Sup,8.99,American Express Corporate Card CBCP,Software,BNP MEDIA INC,,6487,VAIP,,A0FK
+Collis,Locke,Klarberg,,3/2/2026,RT:EWR-SRQ-PBI/IR Florida Trip,1799.72,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,3/2/2026,Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2/19/2026,Amtrak Station-Home/Elevate Roadshow,63.98,American Express Corporate Card CBCP,Car Service,UBER,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/19/2026,BF&P Meeting-Amtrak/Elevate Roadshow,40.26,American Express Corporate Card CBCP,Car Service,UBER,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/18/2026,Travel Meal/Elevate Roadshow,23.44,American Express Corporate Card CBCP,Meals,TATTE BAKERY STORE 630036,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/18/2026,Travel Meal/Elevate Roadshow,55.58,American Express Corporate Card CBCP,Meals,KIMPTON MONACO BALTIMORE,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/17/2026,Airport-Accommodation/Elevate Roadshow,29.98,American Express Corporate Card CBCP,Car Service,UBER,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/17/2026,Pointfield Partners Mtg-Accomodations/Elevate Roadshow,44.97,American Express Corporate Card CBCP,Car Service,UBER,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/17/2026,Home-Airport/Elevate Roadshow,50.99,American Express Corporate Card CBCP,Car Service,UBER,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/12/2026,EWR-DCA/Elevate Roadshow,138,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/12/2026,Tkt Fee/EWR-DCA/Elevate Roadshow,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/6/2026,EWR-DCA/Elevate Roadshow,556.36,American Express Corporate Card CBCP,Airline,UNITED AIRLINES ARC,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/6/2026,Tkt Fee/EWR-DCA/Elevate Roadshow,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/6/2026,BAL-NJ PENN/Elevate Roadshow,259,American Express Corporate Card CBCP,Other Travel,AMTRAK AGENCY X,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/6/2026,Tkt Fee/BAL-NJ PENN/Elevate Roadshow,30,American Express Corporate Card CBCP,Other Travel,TRAVEL AGENCY SERVICES,,2106,IR,,A0FQ
+Collis,Locke,Klarberg,,2/4/2026,Hotel-Airport/Pension Bridge Private Credit,143.98,American Express Corporate Card CBCP,Car Service,UBER,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2/4/2026,Inflight Wifi/Pension Bridge Private Credit,8,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,,1016,IR,,A0FQ
+Collis,Locke,Klarberg,,2/4/2026,Bus.Lodging/Pension Bridge Private Credit,1082.66,American Express Corporate Card CBCP,Lodging,FAIRMONT GRND  DELMAR,,1016,IR,,A0FQ
+Ryan,Michael,Glazer,,2/20/2026,Home-JFK/Strategy,147.86,American Express Corporate Card CBCP,Car Service,UBER,,1035,VAIP,,A0GB
+Ryan,Michael,Glazer,,2/20/2026,Working Late/Office-Home,45.79,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2/13/2026,Working Late/Office-Home,79.65,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2/12/2026,Working Late/Office-Home,46.59,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2/11/2026,Working Late/Office-Home,46.99,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2/6/2026,Working Late/Office-Home,47.58,American Express Corporate Card CBCP,Car Service,UBER,,6001,VAIP,,A0GB
+Ryan,Michael,Glazer,,2/5/2026,HPN-Home/BOD Mtg/Excelitas,150.98,American Express Corporate Card CBCP,Car Service,UBER,,6396,VAIP,,A0GB
+Michelle,Yang,Liu,,3/4/2026,Dinner-Home/AmeriVet BOD Dinner,68.02,American Express Corporate Card CBCP,Car Service,UBER,,4246,CONS,,A0GC
+Michelle,Yang,Liu,,3/4/2026,Office-Dinner/AmeriVet BOD Dinner,52.73,American Express Corporate Card CBCP,Car Service,UBER,,4246,CONS,,A0GC
+Michelle,Yang,Liu,,3/3/2026,Work Late/Office-Home,26.25,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/27/2026,EWR-Home/AEA Strategy Meeting,83.56,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/27/2026,Travel Meal/AEA Strategy Meeting,26.99,American Express Corporate Card CBCP,Meals,UBER EATS,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/26/2026,Travel Meal/AEA Strategy Meeting,17.82,American Express Corporate Card CBCP,Meals,519 - TRAVEL RIGHT SLC,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/26/2026,Inflight Wifi,8,American Express Corporate Card CBCP,Airline,UNITED AIRLINES,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/25/2026,Strategy Activity/AEA Strategy Meeting,311.1,American Express Corporate Card CBCP,Miscellaneous,SPA MONTAGE,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/21/2026,Home-JFK/AEA Strategy Meeting,160.87,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/20/2026,Work Late/Office-Home,24.63,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/19/2026,Work Late/Office-Home,51.39,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/18/2026,Work Late/Office-Home,67.93,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/13/2026,Work Late/Office-Home,38.44,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/12/2026,Work Late/Office-Home,37.32,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/12/2026,Mentor Mtg/N.Mamane,19.09,American Express Corporate Card CBCP,Meals,BLUE BOTTLE COFFEE,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/11/2026,SLC-EWR/AEA Strategy Meeting,2236.27,American Express Corporate Card CBCP,Airline,United,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/11/2026,Work Late/Office-Home,30.43,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/11/2026,Refund/JFK-SLC/AEA Strategy Meeting,-2108.56,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/11/2026,Tkt Fee/AEA Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/11/2026,Tkt Fee/JFK-SLC/AEA Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,CONS,,A0GC
+Michelle,Yang,Liu,,2/10/2026,Work Late/Office-Home,35.14,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/9/2026,Mentor Mtg/J. Sang,16.1,American Express Corporate Card CBCP,Meals,ARABICA MIDTOWN,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,2/6/2026,Subscription/Pave America document signing,16.34,American Express Corporate Card CBCP,PubSub,DOCUSIGN,,4263,CONS,,A0GC
+Michelle,Yang,Liu,,2/5/2026,Work Late/Office-Home,27.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,3/3/2026,Personal,-153.4,American Express Corporate Card CBCP,Miscellaneous,American Express Initiated Activity,,1008,CONS,,A0GC
+Michelle,Yang,Liu,,3/5/2026,Work Late/Office-Home,43.58,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Michelle,Yang,Liu,,3/6/2026,Subscription/AmeriVet Documents signing,16.34,American Express Corporate Card CBCP,PubSub,DOCUSIGN,,4246,CONS,,A0GC
+Michelle,Yang,Liu,,3/5/2026,Work Late/Office-Home,56.09,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GC
+Hannah,Beth,Norowitz,,3/4/2026,Work Late/Office-Home,37.99,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,3/3/2026,Work Late/Office-Home,38.52,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,3/2/2026,Inflight Wifi,5,American Express Corporate Card CBCP,Airline,DELTA ONBOARD NON-DISCOUN,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,3/1/2026,Hotel-SLC/AEA Strategy Meeting,50.69,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,3/1/2026,EWR-Home/AEA Strategy Meeting,125.35,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/21/2026,Home-JFK/AEA Strategy Meeting,192.12,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/20/2026,Work Late/Office-Home,36.97,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/19/2026,Work Late/Office-Home,53.17,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/18/2026,Work Late/Office-Home,39.44,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/17/2026,Refund/LAX-JFK/Chemical Guys Fast Five Meeting,-4793.4,American Express Corporate Card CBCP,Airline,AMERICAN AIRLINES,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/17/2026,Refund/JFK-LAX/Chemical Guys Fast Five Meeting,-3498.49,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/17/2026,"Mentor Mtg/M.Liu, R.Marsh",27.85,American Express Corporate Card CBCP,Meals,BLUE BOTTLE COFFEE,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/13/2026,Work Late/Office-Home,25.73,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/12/2026,Work Late/Office-Home,50.57,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/12/2026,Work Late/Office-Home,44.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/11/2026,Tip/JFK-Home/Chemical Guys BOD Mtg,11.17,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/11/2026,JFK-Home/Chemical Guys BOD Mtg,111.76,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/10/2026,Hotel-BOD Mtg/Chemical Guys,129.98,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/9/2026,Hotel-Meeting/Chemical Guys,129.74,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/9/2026,LAX-Hotel/Chemical Guys BOD Meeting,82.98,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/9/2026,Home-JFK/Chemical Guys BOD Meeting,106.55,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/6/2026,Work Late/Office-Home,6.39,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/6/2026,Work Late/Office-Home,63.99,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/5/2026,JFK-LAX-JFK/Chemical Guys BOD Mtg,6696.8,American Express Corporate Card CBCP,Airline,Delta,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/5/2026,Work Late/Office-Home,4.91,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/5/2026,Work Late/Office-Home,49.18,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/5/2026,Tkt Fee/Hotel Booking,8,American Express Corporate Card CBCP,Lodging,TRAVEL AGENCY SERVICES,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,3/6/2026,Work Late/Office-Home,67.05,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,3/4/2026,Work Late/Office-Home,37.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/8/2026,Lodging/Chemical Guys BOD Mtg,1578.86,American Express Corporate Card CBCP,Lodging,SANTA MONICA PROPER HOTEL,,4239,CONS,,A0GD
+Hannah,Beth,Norowitz,,2/10/2026,Travel Meals/Chemical Guys BOD Mtg,87.25,American Express Corporate Card CBCP,Meals,SANTA MONICA PROPER HOTEL,,4239,CONS,,A0GD
+Jacob,Aaron,Spigelman,,2/13/2026,Work Late/Office-Home,44.99,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/13/2026,Amex Rewards Fee,1.8,American Express Corporate Card CBCP,Miscellaneous,MEMBERSHIP REWARDS  ADJUSTMENT,,1008,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/13/2026,Amex Rewards Fee,7.8,American Express Corporate Card CBCP,Miscellaneous,MEMBERSHIP REWARDS  ADJUSTMENT,,1008,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/11/2026,Event-Office/Read Ahead Event,65.68,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/10/2026,Office-Event/Read Ahead Event,73.29,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/10/2026,Work Late/Office-Home,39.21,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/6/2026,Work Late/Office-Home,56.16,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,3/4/2026,Working Lunch,17.31,American Express Corporate Card CBCP,Meals,CHIPOTLE 1359,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,3/2/2026,Work Late/Office-Home,35.99,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,3/1/2026,LGA-Home,66.44,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/23/2026,Travel Meal,35.95,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/23/2026,Travel Meal,30.74,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/21/2026,Supply Store-Hotel,23.28,American Express Corporate Card CBCP,Car Service,UBER,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/21/2026,Hotel-Supply Store,21.96,American Express Corporate Card CBCP,Car Service,UBER,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/20/2026,Home-JFK,108.74,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/20/2026,Event Materials,145.58,American Express Corporate Card CBCP,Miscellaneous,WAL-MART.COM,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/20/2026,Event Materials,380.93,American Express Corporate Card CBCP,Miscellaneous,STATE LIQUOR STORE 37,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/19/2026,Work Late/Office-Home,35.01,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Jacob,Aaron,Spigelman,,2/18/2026,Associate Dinner,814.92,American Express Corporate Card CBCP,Meals,ESTE PIZZA PARK CITY,,1012,CONS,,A0GE
+Jacob,Aaron,Spigelman,,3/5/2026,Office-Mtg/Mgmt Mtg/TileBar,26.46,American Express Corporate Card CBCP,Car Service,UBER,,4253,CONS,,A0GE
+Jacob,Aaron,Spigelman,,3/6/2026,Work Late/Office-Home,47.35,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GE
+Juliet,A,Yznaga,,2/20/2026,Travel Meal/AEA Strategy Meeting,11.47,American Express Corporate Card CBCP,Meals,4035 THE MARKETB,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/26/2026,Travel Meal/AEA Strategy Meeting,24.5,American Express Corporate Card CBCP,Meals,519 - TRAVEL RIGHT SLC,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/23/2026,Travel Meal/AEA Strategy Meeting,5.15,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/10/2026,Refund/JFK-SLC,-2015.09,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/19/2026,Mentor Mtg/K.Schott,6.4,American Express Corporate Card CBCP,Meals,DEVOCION - LEXINGTON NEW,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/26/2026,Checked Bag Fee/JFK-SLC/AEA Strategy Meeting,45,American Express Corporate Card CBCP,Airline,JETBLUE AIRWAYS,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/11/2026,Seat Assignment/JFK-SLC/AEA Strategy Meeting,74,American Express Corporate Card CBCP,Airline,JETBLUE ARC,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/10/2026,Tkt Fee/AEA Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/10/2026,Tkt Fee/AEA Strategy,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,3/4/2026,Work Late/Office-Home,42.7,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,3/3/2026,Work Late/Office-Home,25.99,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/27/2026,JFK-Home/AEA Strategy Meeting,94.48,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/20/2026,SLC-Hotel/AEA Strategy Meeting,25.95,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/20/2026,Home-EWR/AEA Strategy Meeting,106.93,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0GV
+Juliet,A,Yznaga,,2/20/2026,Work Late/Office-Home,45.56,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/19/2026,Work Late/Office-Home,98.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/18/2026,Work Late/Office-Home,38.31,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/13/2026,Work Late/Office-Home,58.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/12/2026,Work Late/Office-Home,39.43,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/11/2026,Work Late/Office-Home,39.91,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/10/2026,Work Late/Office-Home,40.08,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/9/2026,Office-Read Ahead /in person volunteer event,65.49,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,2/5/2026,Work Late/Office-Home,39.73,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Juliet,A,Yznaga,,3/5/2026,Work Late/Office-Home,44.83,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0GV
+Noah,Moshe Shalom,Mamane,,2/13/2026,Work Late/Office-Home,43.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/12/2026,Work Late/Office-Home,80.99,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/11/2026,Work Late/Office-Home,44.97,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/10/2026,Work Late/Office-Home,40.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/10/2026,Refund/Tkt Exch/SLC-BOS,-519.17,American Express Corporate Card CBCP,Airline,DELTA AIR LINES,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/10/2026,Tkt Fee/Tkt Exch/SLC-BOS,30,American Express Corporate Card CBCP,Airline,TRAVEL AGENCY SERVICES,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/6/2026,Work Late/Office-Home,65.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/5/2026,Work Late/Office-Home,22.12,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,3/6/2026,Work Late/Office-Home,47.28,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,3/5/2026,Work Late/Office-Home,42.78,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,3/4/2026,Dinner-Home/BOD Mtg/Amerivet,62.97,American Express Corporate Card CBCP,Car Service,UBER,,4246,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,3/4/2026,Coffee Mtg/Mentoring/L. Adi,14.24,American Express Corporate Card CBCP,Meals,WATCHHOUSE 5TH AVE,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,3/3/2026,Work Late/Office-Home,61.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/23/2026,Travel Meal,13.82,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/23/2026,Travel Meal,136.97,American Express Corporate Card CBCP,Meals,BURGERS AND BOURBON,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/20/2026,Home-JFK,158.38,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/20/2026,Work Late/Office-Home,40.97,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/19/2026,Work Late/Office-Home,41.97,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/19/2026,Coffee Mtg/Mentoring/J. Yzanga and K. Schott,17.97,American Express Corporate Card CBCP,Meals,DEVOCION - LEXINGTON NEW,,4001,CONS,,A0HL
+Noah,Moshe Shalom,Mamane,,2/18/2026,Work Late/Office-Home,39.54,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HL
+Kyle,James,Schott,,2/13/2026,Work Late/Office-Home,35.1,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,2/12/2026,Work Late/Office-Home,55.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,2/11/2026,JFK-Home/BOD Mtg/Chemical Guys,130.88,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/10/2026,Travel Meal/BOD Mtg/Chemical Guys,41.38,American Express Corporate Card CBCP,Meals,GRUBHUB,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/10/2026,Travel Meal/BOD Mtg/Chemical Guys,46.78,American Express Corporate Card CBCP,Meals,SANTA MONICA PROPER HOTEL,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/10/2026,Travel Meals/BOD Mtg/Chemical Guys,32.9,American Express Corporate Card CBCP,Meals,TBIT CHAYA 003257087,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/9/2026,LAX-Hotel/BOD Mtg/Chemical Guys,91.98,American Express Corporate Card CBCP,Car Service,UBER,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/8/2026,Travel Meal/BOD Mtg/Chemical Guys,39.3,American Express Corporate Card CBCP,Meals,MSP - STONE ARCH,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/8/2026,Inflight Wifi/BOD Mtg/Chemical Guys,4.95,American Express Corporate Card CBCP,Info Services,INTELSAT - DAL,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/5/2026,Work Late/Office-Home,51.11,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,2/10/2026,Lodging/BOD Mtg/Chemical Guys,1757.41,American Express Corporate Card CBCP,Lodging,SANTA MONICA PROPER HOTEL,,4239,CONS,,A0HM
+Kyle,James,Schott,,3/6/2026,Work Late/Office-Home,59.85,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,3/5/2026,Work Late/Office-Home,69.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,3/4/2026,Work Late/Office-Home,83.83,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,3/3/2026,Work Late/Office-Home,60.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,3/2/2026,JFK-Home,159.61,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0HM
+Kyle,James,Schott,,2/26/2026,Event-Hotel,26.99,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0HM
+Kyle,James,Schott,,2/20/2026,Home-JFK,215.83,American Express Corporate Card CBCP,Car Service,UBER,,1035,CONS,,A0HM
+Kyle,James,Schott,,2/20/2026,Travel Meal/BOD Mtg/Chemical Guys,30.82,American Express Corporate Card CBCP,Meals,JFK2 SHAKE SHACK B37 1051,,4239,CONS,,A0HM
+Kyle,James,Schott,,2/18/2026,Work Late/Office-Home,36.97,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
+Kyle,James,Schott,,2/18/2026,Work Late/Office-Home,33.98,American Express Corporate Card CBCP,Car Service,UBER,,4001,CONS,,A0HM
