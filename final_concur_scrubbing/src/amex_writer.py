@@ -49,8 +49,11 @@ from __future__ import annotations
 import threading
 import tempfile
 import uuid
+from datetime import datetime
+import re
 from pathlib import Path
 from typing import Optional
+from zipfile import BadZipFile
 
 from openpyxl import Workbook, load_workbook
 
@@ -58,11 +61,13 @@ from src.models import Statement
 from src.file_locks import file_lock, atomic_workbook_save
 from config.settings import get_settings
 from src.tracker_writer import MonthInfo
+from utils.logging_config import get_logger
 
 # Reuse styling helpers from writer.py
 from src.writer import _put, _fmt, _autofit, ALT_ROW, WHITE, TOTAL_BG, TOT_BORDER, COL_HDR_BG
 
 _CLOUD_LOCK = threading.Lock()   # BUG 2 FIX: guard concurrent cloud temp writes
+logger = get_logger(__name__)
 
 
 # ─────────────────────────────────────────────
@@ -76,12 +81,61 @@ def _safe_sheet_name(name: str) -> str:
     return cleaned[:31]
 
 
+def _normalize_identity_part(value: object) -> str:
+    """Normalize a cardholder identity component for stable matching."""
+    text = "" if value is None else str(value)
+    text = re.sub(r"\s+", " ", text).strip().upper()
+    text = re.sub(r"[^\w\s]", "", text)
+    return text
+
+
 def _load_workbook_safe(path: Path) -> Workbook:
     """
     Load workbook with safe defaults.
     BUG 1 FIX: data_only=True prevents stale formula cache corruption.
+
+    Any read failure is treated as workbook corruption because openpyxl can
+    surface the same underlying ZIP problem as BadZipFile, EOFError, or a
+    parser exception depending on where the archive breaks.
     """
-    return load_workbook(path, data_only=True, keep_vba=False)
+    try:
+        return load_workbook(path, data_only=True, keep_vba=False)
+    except Exception as exc:
+        raise BadZipFile(f"Corrupted workbook: {path}") from exc
+
+
+def _new_workbook() -> Workbook:
+    """Create a clean workbook with the default empty sheet removed."""
+    wb = Workbook()
+    default = wb.active
+    if default is not None:
+        wb.remove(default)
+    return wb
+
+
+def _recover_corrupted_workbook(path: Path, exc: Exception) -> Workbook:
+    """
+    Back up a corrupted workbook and replace it with a fresh file.
+
+    The existing output file may be partially written or otherwise invalid.
+    Instead of failing the whole AMEX job, move the bad file aside so the
+    current run can recreate a clean workbook.
+    """
+    stamp = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    backup_path = path.with_name(f"{path.stem}.corrupt_{stamp}{path.suffix}")
+    logger.warning(
+        "amex_output_corrupted_recovered",
+        path=str(path),
+        backup_path=str(backup_path),
+        error=str(exc),
+    )
+    try:
+        if path.exists():
+            path.replace(backup_path)
+    except OSError:
+        # If the backup move fails, continue with a fresh workbook anyway.
+        pass
+    return _new_workbook()
 
 
 # ─────────────────────────────────────────────
@@ -162,17 +216,72 @@ def _write_employee_sheet(wb: Workbook, ch) -> None:
 # Summary sheet helpers
 # ─────────────────────────────────────────────
 
-def _find_cardholder_summary_row(ws, last_name: str, first_name: str) -> Optional[int]:
+def _find_cardholder_summary_row(
+    ws,
+    last_name: str,
+    first_name: str,
+    card_number: Optional[str] = None,
+) -> Optional[int]:
     """Scan the summary sheet for an existing row matching this cardholder."""
-    target = f"{last_name}|{first_name}".upper().strip()
+    target = f"{_normalize_identity_part(last_name)}|{_normalize_identity_part(first_name)}"
+    card_target = _normalize_identity_part(card_number) if card_number else None
     for r in range(2, ws.max_row + 1):
         ln = ws.cell(row=r, column=1).value
         fn = ws.cell(row=r, column=2).value
+        existing_card_number = ws.cell(row=r, column=3).value
         if ln and fn:
-            key = f"{ln}|{fn}".upper().strip()
+            key = f"{_normalize_identity_part(ln)}|{_normalize_identity_part(fn)}"
             if key == target:
                 return r
+        if card_target and existing_card_number and _normalize_identity_part(existing_card_number) == card_target:
+            return r
     return None
+
+
+def _cardholder_identity(ch) -> str:
+    """
+    Build a stable identity for deduping the same cardholder within one run.
+
+    Summary rows are keyed by name so the same person updates in place
+    across reruns instead of appending a duplicate row.
+    """
+    return f"name:{_normalize_identity_part(ch.last_name)}|{_normalize_identity_part(ch.first_name)}"
+
+
+def _summary_row_identity(ws, row: int) -> str:
+    """Return the normalized identity key for a summary-sheet row."""
+    last_name = ws.cell(row=row, column=1).value
+    first_name = ws.cell(row=row, column=2).value
+    card_number = ws.cell(row=row, column=3).value
+    if card_number:
+        return f"card:{_normalize_identity_part(card_number)}"
+    return f"name:{_normalize_identity_part(last_name)}|{_normalize_identity_part(first_name)}"
+
+
+def _dedupe_summary_sheet(ws) -> None:
+    """
+    Remove duplicate summary rows already present in an existing workbook.
+
+    Keeps the first occurrence of each cardholder identity and deletes later
+    duplicates so reruns don't leave stale repeated names behind.
+    """
+    seen: set[str] = set()
+    rows_to_delete: list[int] = []
+
+    for row in range(2, ws.max_row + 1):
+        last_name = ws.cell(row=row, column=1).value
+        first_name = ws.cell(row=row, column=2).value
+        if not last_name and not first_name:
+            continue
+
+        identity = _summary_row_identity(ws, row)
+        if identity in seen:
+            rows_to_delete.append(row)
+        else:
+            seen.add(identity)
+
+    for row in reversed(rows_to_delete):
+        ws.delete_rows(row, 1)
 
 
 def _write_summary_row(ws, r: int, ch) -> None:
@@ -230,16 +339,19 @@ def write_amex_output(
             wb.save(tmp)
 
         # BUG 1 FIX: reload with data_only=True
-        wb = _load_workbook_safe(tmp)
+        try:
+            wb = _load_workbook_safe(tmp)
+        except BadZipFile as exc:
+            wb = _recover_corrupted_workbook(tmp, exc)
     else:
         with file_lock(output_file, timeout=60.0):
             if output_file.exists():
-                wb = _load_workbook_safe(output_file)   # BUG 1 FIX
+                try:
+                    wb = _load_workbook_safe(output_file)   # BUG 1 FIX
+                except BadZipFile as exc:
+                    wb = _recover_corrupted_workbook(output_file, exc)
             else:
-                wb = Workbook()
-                default = wb.active
-                if default is not None:
-                    wb.remove(default)
+                wb = _new_workbook()
 
     # ── 3. Summary sheet ────────────────────────────────────────────────────
     if sheet_name in wb.sheetnames:
@@ -252,11 +364,23 @@ def write_amex_output(
         ]
         for col, h in enumerate(headers, 1):
             _put(ws, 1, col, h, bg=COL_HDR_BG, bold=True)
+    _dedupe_summary_sheet(ws)
 
     # ── 4. Process cardholders ───────────────────────────────────────────────
     # BUG 3 FIX: check for existing row before appending
+    seen_cardholders: set[str] = set()
     for ch in statement.cardholders:
-        existing_row = _find_cardholder_summary_row(ws, ch.last_name, ch.first_name)
+        identity = _cardholder_identity(ch)
+        if identity in seen_cardholders:
+            continue
+        seen_cardholders.add(identity)
+
+        existing_row = _find_cardholder_summary_row(
+            ws,
+            ch.last_name,
+            ch.first_name,
+            ch.card_number,
+        )
         if existing_row is not None:
             target_row = existing_row
         else:

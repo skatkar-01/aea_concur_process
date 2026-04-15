@@ -49,10 +49,9 @@ def extract_pdf_data(client, file_id):
                     {
                         "type": "input_text",
                         "text": """
-Extract total row amount current closing.
+Extract total transactions and total amount.
 
-Return ONLY number amount.
-"""
+Return a JSON."""
                     },
                     {
                         "type": "input_file",

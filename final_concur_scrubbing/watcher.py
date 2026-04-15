@@ -99,13 +99,13 @@ def _worker(queue: Queue, stop_evt: threading.Event) -> None:
             time.sleep(remaining)
 
         if not pdf_path.exists():
-            log.warning("file_disappeared", path=pdf_path.name)
+            log.warning("file_disappeared", pdf_file=pdf_path.name)
             queue.task_done()
             continue
 
         job = _make_local_job(pdf_path, "watcher")
         if job is None:
-            log.debug("unclassified_pdf_skipped", path=pdf_path.name)
+            log.debug("unclassified_pdf_skipped", pdf_file=pdf_path.name)
             queue.task_done()
             continue
 
@@ -187,7 +187,7 @@ def run_watcher() -> None:
     base_path = str(getattr(s, "box_base_path", "."))
     observer.schedule(_PdfHandler(event_q, s.box_sync_delay_s), base_path, recursive=True)
     observer.start()
-    log.info("watchdog_started", path=base_path)
+    log.info("watchdog_started", watch_path=base_path)
 
     catchup = threading.Thread(
         target=_catchup_loop,

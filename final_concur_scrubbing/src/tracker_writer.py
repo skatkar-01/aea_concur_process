@@ -34,6 +34,9 @@ import os
 import shutil
 import threading
 import tempfile
+import time
+import uuid
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -42,6 +45,7 @@ from openpyxl import load_workbook, Workbook
 from openpyxl.styles import (
     Alignment, Border, Font, PatternFill, Side, GradientFill
 )
+from openpyxl.formatting.rule import FormulaRule
 from openpyxl.utils import get_column_letter
 
 from src.reconciler import TrackerRow
@@ -157,6 +161,80 @@ def _parse_currency_str(s: Optional[str]) -> Optional[float]:
         return None
 
 
+def _normalize_name(value: object) -> str:
+    """Normalize a cardholder name for stable matching across reruns."""
+    text = "" if value is None else str(value)
+    text = re.sub(r"\s+", " ", text).strip().upper()
+    text = re.sub(r"[^\w\s]", "", text)
+    return text
+
+
+def _find_existing_summary_row(ws, name: str) -> Optional[int]:
+    """Find an existing cardholder row by normalized name in column A."""
+    target = _normalize_name(name)
+    for r in range(3, ws.max_row + 1):
+        cell_value = ws.cell(row=r, column=1).value
+        if cell_value is None:
+            continue
+        if isinstance(cell_value, str) and cell_value.startswith("   "):
+            break
+        if _normalize_name(cell_value) == target:
+            return r
+    return None
+
+
+def _find_legend_start_row(ws) -> Optional[int]:
+    """Return the first row that belongs to the legend block, if present."""
+    for r in range(3, ws.max_row + 1):
+        cell_value = ws.cell(row=r, column=1).value
+        if isinstance(cell_value, str) and cell_value.startswith("   "):
+            return r
+    return None
+
+
+def _next_summary_append_row(ws) -> int:
+    """
+    Find the next row for a new cardholder row.
+
+    If the legend exists, insert above it so the legend stays at the bottom.
+    """
+    legend_row = _find_legend_start_row(ws)
+    if legend_row is not None:
+        return legend_row
+
+    for r in range(3, ws.max_row + 1):
+        value = ws.cell(row=r, column=1).value
+        if value is None or str(value).strip() == "":
+            return r
+    return ws.max_row + 1
+
+
+def _dedupe_month_sheet(ws) -> None:
+    """
+    Remove duplicate cardholder rows already present in a month sheet.
+
+    Keeps the first occurrence of each normalized cardholder name and removes
+    later duplicates, without recreating the sheet.
+    """
+    legend_row = _find_legend_start_row(ws)
+    last_data_row = legend_row - 1 if legend_row is not None else ws.max_row
+    seen: set[str] = set()
+    rows_to_delete: list[int] = []
+
+    for r in range(3, last_data_row + 1):
+        cell_value = ws.cell(row=r, column=1).value
+        if cell_value is None or str(cell_value).strip() == "":
+            continue
+        identity = _normalize_name(cell_value)
+        if identity in seen:
+            rows_to_delete.append(r)
+        else:
+            seen.add(identity)
+
+    for r in reversed(rows_to_delete):
+        ws.delete_rows(r, 1)
+
+
 # ── Row background based on status ───────────────────────────────────────────
 
 def _row_bg(row: TrackerRow) -> str:
@@ -204,7 +282,8 @@ def _write_row(ws, r: int, row: TrackerRow, col_b_header: str) -> None:
         else:
             cell.alignment = _al("left", wrap=col == 7)
 
-    ws.row_dimensions[r].height = 18
+    # Increase row height for text wrapping in comments column
+    ws.row_dimensions[r].height = 35
 
 
 def _first_append_row(ws) -> int:
@@ -296,6 +375,31 @@ def _set_col_widths(ws) -> None:
         ws.column_dimensions[get_column_letter(i)].width = w
 
 
+def _apply_mismatch_highlighting(ws, end_row: int) -> None:
+    """
+    Apply conditional formatting to highlight AMEX/Concur total mismatches.
+    Highlights cells in columns B and C red when values don't match and both are numbers.
+    """
+    if end_row < 3:
+        return
+    
+    # Red fill for mismatch highlighting
+    mismatch_fill = PatternFill(fill_type="solid", fgColor="FFE6E6")
+    mismatch_font = Font(color="B91C1C", bold=True)  # red font
+    
+    # Formula rule: highlight if B != C (comparing AMEX and Concur totals)
+    # Only applies to numeric values (not N/A)
+    rule = FormulaRule(
+        formula=[f'AND($B3<>"",C3<>"",NOT(ISERROR(VALUE($B3))),NOT(ISERROR(VALUE(C3))),$B3<>C3)'],
+        font=mismatch_font,
+        fill=mismatch_fill,
+        stopIfTrue=True,
+    )
+    
+    # Apply to data range (B3 to C + last data row)
+    ws.conditional_formatting.add(f"B3:C{end_row}", rule)
+
+
 # ── Legend rows (appended below data) ────────────────────────────────────────
 
 def _write_legend(ws, next_row: int) -> None:
@@ -322,41 +426,102 @@ def _write_legend(ws, next_row: int) -> None:
 
 # ── Atomic save ───────────────────────────────────────────────────────────────
 
-def _atomic_save(wb: Workbook, target: Path) -> None:
+def _cleanup_temp_file(tmp_path: str | Path) -> None:
     """
-    Write to a temp file then atomically replace the target; fallback to copy if replace fails.
+    Best-effort cleanup for temp workbook files on Windows.
 
-    Logs errors and keeps a temp file for inspection on failure.
+    A short retry loop prevents transient sharing violations from crashing the
+    workbook save path after the file has already been successfully replaced.
+    """
+    path = Path(tmp_path)
+    for attempt in range(5):
+        try:
+            path.unlink(missing_ok=True)
+            return
+        except PermissionError:
+            time.sleep(0.1 * (attempt + 1))
+        except OSError:
+            return
+    logger.warning("tracker_temp_cleanup_failed", temp_path=str(path))
+
+
+def _atomic_save(wb: Workbook, target: Path, max_retries: int = 5) -> None:
+    """
+    Write to a temp file then atomically replace the target with retry logic.
+    
+    Retries with exponential backoff when file is locked (PermissionError/WinError 32).
+    
+    Args:
+        wb: Workbook to save
+        target: Target file path
+        max_retries: Max attempts before raising (default 5)
+        
+    Raises:
+        PermissionError: File remains locked after all retries
     """
     target.parent.mkdir(parents=True, exist_ok=True)
-    fd, tmp = tempfile.mkstemp(suffix=".xlsx", dir=target.parent)
+    fd, tmp = tempfile.mkstemp(
+        suffix=f".{uuid.uuid4().hex[:8]}.xlsx",
+        dir=target.parent,
+    )
     os.close(fd)
     try:
         try:
             wb.save(tmp)
         except Exception as e:
-            logger.error("wb_save_failed", path=str(target), tmp=tmp, error=str(e))
+            logger.error("wb_save_failed", file_path=str(target), tmp=tmp, error=str(e))
             raise
 
-        try:
-            os.replace(tmp, target)
-            logger.info("atomic_replace_success", path=str(target))
-        except Exception as e_replace:
-            logger.warning("os_replace_failed_try_copy", path=str(target), tmp=tmp, error=str(e_replace))
+        # Attempt replace with retries on lock contention
+        for attempt in range(max_retries):
             try:
-                shutil.copy2(tmp, target)
-                os.unlink(tmp)
-                logger.info("fallback_copy_success", path=str(target))
-            except Exception as e_copy:
-                logger.error("fallback_copy_failed", path=str(target), tmp=tmp, error=str(e_copy))
-                # keep tmp for inspection, then re-raise
+                os.replace(tmp, target)
+                logger.info("atomic_replace_success", file_path=str(target), attempts=attempt + 1)
+                return
+            except PermissionError as e_replace:
+                # File is locked — wait and retry
+                if attempt < max_retries - 1:
+                    wait_seconds = min(0.5 * (2 ** attempt), 5.0)  # exponential backoff, capped at 5s
+                    logger.warning(
+                        "os_replace_locked_retry",
+                        file_path=str(target),
+                        attempt=attempt + 1,
+                        max_retries=max_retries,
+                        wait_seconds=wait_seconds,
+                        error=str(e_replace),
+                    )
+                    time.sleep(wait_seconds)
+                else:
+                    # Out of retries — try copy as final fallback
+                    logger.warning(
+                        "os_replace_failed_final_try_copy",
+                        file_path=str(target),
+                        tmp=tmp,
+                        error=str(e_replace),
+                    )
+                    try:
+                        shutil.copy2(tmp, target)
+                        _cleanup_temp_file(tmp)
+                        logger.info("fallback_copy_success", file_path=str(target))
+                        return
+                    except Exception as e_copy:
+                        logger.error(
+                            "fallback_copy_also_failed",
+                            file_path=str(target),
+                            tmp=tmp,
+                            replace_error=str(e_replace),
+                            copy_error=str(e_copy),
+                        )
+                        # Keep tmp for inspection
+                        raise PermissionError(
+                            f"Failed to save {target}: file locked (tried {max_retries} times)"
+                        ) from e_replace
+            except Exception as e_other:
+                # Non-lock error — fail immediately
+                logger.error("atomic_save_failed", file_path=str(target), tmp=tmp, error=str(e_other))
                 raise
     finally:
-        try:
-            if os.path.exists(tmp):
-                os.unlink(tmp)
-        except Exception:
-            pass
+        _cleanup_temp_file(tmp)
 
 # ── Public API ───────────────────────────────────────────────────────────────
 
@@ -394,28 +559,35 @@ def init_month_sheet(
             # ── GET OR CREATE SHEET ────────────────
             if month_info.sheet_name in wb.sheetnames:
                 ws = wb[month_info.sheet_name]
-                log.info("sheet_exists_appending")
-
-                # Find next empty row
-                start_row = ws.max_row - 7
-                ws.insert_rows(start_row)
-            
+                log.info("sheet_exists_updating")
             else:
                 ws = wb.create_sheet(title=month_info.sheet_name)
                 _write_headers(ws, month_info)
                 _set_col_widths(ws)
-                start_row = 3  # first data row
                 log.info("sheet_created")
 
-            for i, row in enumerate(rows, start=start_row):
-                _write_row(ws, i, row, month_info.col_b_header)
+            _dedupe_month_sheet(ws)
 
-            if start_row == 3:
+            for row in rows:
+                existing_row = _find_existing_summary_row(ws, row.cardholder_name)
+                if existing_row is not None:
+                    _write_row(ws, existing_row, row, month_info.col_b_header)
+                    continue
+
+                append_row = _next_summary_append_row(ws)
+                if append_row <= ws.max_row:
+                    ws.insert_rows(append_row)
+                _write_row(ws, append_row, row, month_info.col_b_header)
+
+            # Apply conditional formatting for AMEX/Concur mismatches
+            _apply_mismatch_highlighting(ws, ws.max_row)
+
+            if month_info.sheet_name not in wb.sheetnames or _find_legend_start_row(ws) is None:
                 _write_legend(ws, next_row=len(rows) + 4)
 
-            log.info("saving_tracker_init", path=str(tracker_path), sheet=month_info.sheet_name)
+            log.info("saving_tracker_init", file_path=str(tracker_path), sheet=month_info.sheet_name)
             _atomic_save(wb, tracker_path)
-            log.info("sheet_updated", rows=len(rows), path=str(tracker_path))
+            log.info("sheet_updated", rows=len(rows), file_path=str(tracker_path))
 
 
 def patch_cardholder_row(
@@ -443,7 +615,7 @@ def patch_cardholder_row(
     with _WRITE_LOCK:
         with file_lock(tracker_path, timeout=30.0):
             if not tracker_path.exists():
-                log.error("tracker_not_found", path=str(tracker_path))
+                log.error("tracker_not_found", file_path=str(tracker_path))
                 return False
 
             wb = load_workbook(tracker_path)
@@ -453,13 +625,14 @@ def patch_cardholder_row(
                 return False
 
             ws = wb[month_info.sheet_name]
-            target_name = row.cardholder_name.upper().strip()
+            _dedupe_month_sheet(ws)
+            target_name = _normalize_name(row.cardholder_name)
 
             for r in range(3, ws.max_row + 1):
                 cell_name = ws.cell(row=r, column=1).value
                 if cell_name is None:
                     continue
-                if str(cell_name).upper().strip() == target_name:
+                if _normalize_name(cell_name) == target_name:
                     # Read existing column B (AMEX total) if present
                     existing_b = ws.cell(row=r, column=2).value
                     existing_val = _parse_currency_str(existing_b)
@@ -473,14 +646,20 @@ def patch_cardholder_row(
                         row.amex_total = existing_val
 
                     _patch_row_values(ws, r, row)
-                log.info("saving_tracker_patch", path=str(tracker_path), sheet=month_info.sheet_name, name=row.cardholder_name)
-                _atomic_save(wb, tracker_path)
-                log.info("row_patched", row=r)
-                return True
+                    # Apply mismatch highlighting to ensure conditional formatting is current
+                    _apply_mismatch_highlighting(ws, ws.max_row)
+                    log.info("saving_tracker_patch", file_path=str(tracker_path), sheet=month_info.sheet_name, name=row.cardholder_name)
+                    _atomic_save(wb, tracker_path)
+                    log.info("row_patched", row=r)
+                    return True
 
-        append_row = _first_append_row(ws)
-        _write_row(ws, append_row, row, month_info.col_b_header)
-        log.info("saving_tracker_append", path=str(tracker_path), sheet=month_info.sheet_name, name=row.cardholder_name)
-        _atomic_save(wb, tracker_path)
-        log.warning("cardholder_row_not_found_appended", row=append_row)
-        return True
+            append_row = _next_summary_append_row(ws)
+            if append_row <= ws.max_row:
+                ws.insert_rows(append_row)
+            _write_row(ws, append_row, row, month_info.col_b_header)
+            # Apply mismatch highlighting to include the newly appended row
+            _apply_mismatch_highlighting(ws, append_row)
+            log.info("saving_tracker_append", file_path=str(tracker_path), sheet=month_info.sheet_name, name=row.cardholder_name)
+            _atomic_save(wb, tracker_path)
+            log.warning("cardholder_row_not_found_appended", row=append_row)
+            return True

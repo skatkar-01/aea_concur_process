@@ -80,7 +80,6 @@ Columns (MANDATORY):
 - status
 - note
 
-
 ========================
 TABLE 4: receipts
 ========================

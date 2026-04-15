@@ -20,6 +20,8 @@ import base64
 import hashlib
 import json
 import logging
+import re
+import time
 from pathlib import Path
 from typing import Any
 
@@ -45,16 +47,44 @@ logger = get_logger(__name__)
 
 
 # ═══════════════════════════════════════════════════════════════
+# Content filter refusal detection
+# ═══════════════════════════════════════════════════════════════
+
+class ContentFilterRefusalError(Exception):
+    """Raised when Azure content filter triggers mid-response."""
+    pass
+
+
+REFUSAL_PHRASES = [
+    "i'm sorry, but i cannot",
+    "i cannot assist with that",
+    "i'm unable to",
+    "i apologize, but i cannot",
+    "i need to decline",
+    "i can't help with that",
+]
+
+
+# ═══════════════════════════════════════════════════════════════
 # Prompts  —  taken verbatim from uploaded extractor.py
 # ═══════════════════════════════════════════════════════════════
 
 SYSTEM_PROMPT = """
-You are a data extraction assistant.
-CRITICAL RULES:
-- Return ALL names, emails, IDs, and personal data exactly as they appear in the document.
-- Do NOT redact, mask, anonymize, or replace any value with [REDACTED] or similar placeholders.
-- Do NOT add disclaimers, warnings, or notes about personal data.
+You are a financial document parser.
+
+Your task is to extract structured transaction data from input text.
+
+CRITICAL RULES: (You must ALWAYS):
 - Return ONLY raw JSON. No markdown, no code fences, no explanation text before or after.
+- Follow the exact schema provided
+- Return ALL names, emails, IDs, and personal data exactly as they appear in the document.
+- Do NOT add disclaimers, warnings, or notes about personal data.
+- Never refuse the request
+- If any text appears sensitive or inappropriate, replace only that portion with "REDACTED"
+- Continue processing the rest of the data normally
+
+Failure to follow JSON format is not allowed.
+
 """
 
 EXTRACTION_PROMPT = """
@@ -166,17 +196,18 @@ Fields (MANDATORY):
      "- Wrong receipt for Delta -$360.09 attached
       - Missing Burgers and Bourbon $57.64
       - Wrong receipt for JetBlue -$83.00 & -$293.09 attached"
-  → If no issues → "No receipt discrepancies found."
+  → If no issues → null
 
 - approval_comment  (string)
   → One consolidated comment listing ALL approval issues across the report.
+  → Check atleast two approvals are granted - Card holder approval and partner approval. If any of these is missing or pending, add to the comment.
   → Include: missing approvers, pending approvals, rejected steps, unapproved amounts.
   → Format: bullet-style list as a single string, each issue on a new line starting with "- "
   → Example:
      "- Approval missing from Finance Manager
       - VP approval pending for expenses above $500
       - Report submitted but not yet approved"
-  → If no issues → "All approvals complete."
+  → If no issues → null
 
 ========================
 RULES
@@ -196,6 +227,12 @@ RECONCILIATION LOGIC:
 - Partial match → matched (medium/low)
 - No match → unmatched
 
+Return ONLY valid JSON.
+- No explanation
+- No trailing commas
+- No comments
+- Ensure proper closing brackets
+- Ensure valid JSON format
 ========================
 OUTPUT FORMAT (STRICT JSON ONLY)
 ========================
@@ -235,142 +272,448 @@ def _cache_path(pdf_path: Path, cache_dir: Path) -> Path:
 
 
 def _load_cache(cache_file: Path) -> dict[str, Any] | None:
-    if cache_file.exists():
-        try:
-            with open(cache_file) as f:
-                return json.load(f)
-        except (json.JSONDecodeError, OSError) as exc:
+    """
+    Load cache file with file lock error handling.
+    
+    Returns None on any error (file doesn't exist, corrupted, locked, etc.)
+    """
+    if not cache_file.exists():
+        return None
+    
+    try:
+        with open(cache_file) as f:
+            return json.load(f)
+    except json.JSONDecodeError as exc:
+        logger.warning("concur_cache_corrupted", path=str(cache_file), error=str(exc))
+        return None
+    except (OSError, IOError) as exc:
+        # File lock, permission denied, or other OS-level error
+        if "file is in use" in str(exc).lower() or "permission denied" in str(exc).lower():
+            logger.debug("concur_cache_locked", path=str(cache_file))
+        else:
             logger.warning("concur_cache_read_failed", path=str(cache_file), error=str(exc))
-    return None
+        return None
 
 
 def _write_cache(cache_file: Path, data: dict[str, Any]) -> None:
+    """
+    Write cache with atomic operation and file lock error handling.
+    
+    Failures are logged but do not propagate (cache failures don't block extraction).
+    """
     try:
         cache_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(cache_file, "w") as f:
+        # Atomic write: write to temp, then rename
+        temp_file = cache_file.with_suffix('.tmp')
+        with open(temp_file, 'w') as f:
             json.dump(data, f, indent=2)
-    except OSError as exc:
-        logger.warning("concur_cache_write_failed", path=str(cache_file), error=str(exc))
+        # Atomic rename to final location
+        temp_file.replace(cache_file)
+        logger.debug("concur_cache_written", path=str(cache_file))
+    except (OSError, IOError) as exc:
+        # File lock, permission denied, or other OS-level error
+        if "file is in use" in str(exc).lower() or "permission denied" in str(exc).lower():
+            logger.debug("concur_cache_write_locked", path=str(cache_file))
+        else:
+            logger.warning("concur_cache_write_failed", path=str(cache_file), error=str(exc))
+        # Don't raise — cache failure is not fatal
 
 
-def _parse_response_text(raw: str) -> dict:
-    """Strip markdown fences and parse JSON with error recovery.
+import re
+
+
+def _write_failed_json(pdf_path: Path, output_text: str, model: str, attempt: int, error: str) -> None:
+    """
+    Write failed JSON response to debug folder for analysis.
     
-    Attempts standard JSON parsing first, then tries recovery strategies:
-    - Removes unterminated strings (last incomplete value)
-    - Closes unclosed objects/arrays
+    Helps identify patterns in malformed responses.
+    """
+    settings = get_settings()
+    failed_dir = settings.cache_dir / "failed_json"
+    try:
+        failed_dir.mkdir(parents=True, exist_ok=True)
+        filename = f"{pdf_path.stem}__attempt{attempt}_{model}__error.json"
+        failed_file = failed_dir / filename
+        with open(failed_file, 'w') as f:
+            f.write(f"// ERROR: {error}\n")
+            f.write(f"// MODEL: {model}\n")
+            f.write(f"// FILE: {pdf_path.name}\n")
+            f.write(f"// ATTEMPT: {attempt}\n\n")
+            f.write(output_text)
+        logger.debug("failed_json_written", path=str(failed_file), error=error)
+    except Exception as exc:
+        logger.warning("failed_json_write_error", error=str(exc))
+
+
+def _repair_json(raw: str) -> str:
+    """
+    Stage 3: Repair malformed JSON (unterminated strings, trailing commas, unbalanced braces).
+    
+    Strategies:
+    1. Close unterminated strings at the end
+    2. Add missing commas after closed strings
+    3. Remove trailing commas before ] or }
+    4. Balance braces and brackets
+    """
+    # Strategy 1: Close unterminated strings
+    # Count quotes and if odd number, close the last one
+    quote_count = raw.count('"') - raw.count('\\"')  # Ignore escaped quotes
+    if quote_count % 2 == 1:
+        # Odd number of quotes, close the last one
+        raw = raw.rstrip()
+        if not raw.endswith('"'):
+            raw += '"'
+        logger.debug("json_repair_closed_unterminated_string")
+    
+    # Strategy 2: Add missing commas after quotes followed by quotes (field: "value" "next")
+    # Pattern: closing quote followed by optional whitespace then opening quote
+    raw = re.sub(r'"\s+(?=["{[])', '",', raw)
+    logger.debug("json_repair_added_missing_commas")
+    
+    # Strategy 3: Remove trailing commas before ] or }
+    raw = re.sub(r',(\s*[\]}])', r'\1', raw)
+    logger.debug("json_repair_removed_trailing_commas")
+    
+    # Strategy 4: Balance braces and brackets
+    open_braces = raw.count('{') - raw.count('}')
+    open_brackets = raw.count('[') - raw.count(']')
+    if open_braces > 0 or open_brackets > 0:
+        raw = raw.rstrip()
+        raw += '}' * open_braces + ']' * open_brackets
+        logger.debug("json_repair_balanced_braces", braces=open_braces, brackets=open_brackets)
+    
+    return raw
+
+
+def _clean_and_parse_json(raw: str) -> dict:
+    """
+    3-stage JSON cleaning and parsing:
+    
+    Stage 1: Strip markdown fences
+    Stage 2: Extract balanced JSON object
+    Stage 3: Repair malformed JSON and parse
+    
+    Returns dict on success, raises json.JSONDecodeError on ultimate failure.
     """
     raw = raw.strip()
+    
+    # Stage 1: Strip markdown code fences
     if raw.startswith("```"):
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-        raw = raw.strip()
+        # Extract content between ``` marks
+        parts = raw.split("```")
+        if len(parts) >= 2:
+            raw = parts[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
     if raw.endswith("```"):
         raw = raw[:-3].strip()
+    logger.debug("json_stage1_markdown_stripped")
     
-    # Try standard JSON parsing first
+    # Stage 2: Extract balanced JSON object { ... }
+    # Find first { and match it with balanced }
+    brace_pos = raw.find('{')
+    if brace_pos >= 0:
+        depth = 0
+        in_string = False
+        escape_next = False
+        for i in range(brace_pos, len(raw)):
+            ch = raw[i]
+            
+            if escape_next:
+                escape_next = False
+                continue
+            if ch == '\\':
+                escape_next = True
+                continue
+            if ch == '"' and not escape_next:
+                in_string = not in_string
+                continue
+            if not in_string:
+                if ch == '{':
+                    depth += 1
+                elif ch == '}':
+                    depth -= 1
+                    if depth == 0:
+                        raw = raw[brace_pos:i+1]
+                        logger.debug("json_stage2_extracted_balanced_object", start=brace_pos, end=i+1)
+                        break
+    
+    # Stage 3: Repair and parse
     try:
         return json.loads(raw)
-    except json.JSONDecodeError as e:
-        logger.warning("json_parse_failed_trying_recovery", error=str(e), char_pos=e.pos)
-        
-        # Recovery strategy: remove likely unterminated string and close structure
-        if '"' in raw:
-            # Find last quote and truncate there, then close with }
-            last_quote = raw.rfind('"')
-            if last_quote > 0:
-                # Check if there's content after last quote (likely unterminated value)
-                after_quote = raw[last_quote+1:].strip()
-                if after_quote and not after_quote.startswith((',', '}', ']')):
-                    # Likely unterminated string - truncate and close
-                    raw = raw[:last_quote] + '"'
-                    # Count open braces/brackets and close them
-                    open_braces = raw.count('{') - raw.count('}')
-                    open_brackets = raw.count('[') - raw.count(']')
-                    raw += ']' * open_brackets + '}' * open_braces
-                    logger.warning("json_recovery_applied", truncated_at=last_quote, closed_braces=open_braces, closed_brackets=open_brackets)
-        
+    except json.JSONDecodeError as e1:
+        logger.warning("json_parse_failed_attempting_repair", error=str(e1), char_pos=e1.pos)
+        raw = _repair_json(raw)
         try:
             return json.loads(raw)
         except json.JSONDecodeError as e2:
-            logger.error("json_recovery_failed", original_error=str(e), recovery_error=str(e2))
-            raise
+            logger.error("json_repair_failed", original_error=str(e1), repair_error=str(e2))
+            raise e2
+
+
+def _parse_response_text(raw: str) -> dict:
+    """
+    Parse API response text through 3-stage JSON cleaning pipeline.
+    
+    Handles:
+    - Markdown code fences
+    - Unterminated strings
+    - Trailing commas
+    - Unbalanced braces
+    - Preamble/trailing text
+    """
+    return _clean_and_parse_json(raw)
 
 
 # ═══════════════════════════════════════════════════════════════
-# API call with retry
+# Retry configuration (singleton, built once at module load)
 # ═══════════════════════════════════════════════════════════════
 
-def _make_retry_decorator(max_attempts: int, wait_base: int):
+def _build_retry_decorator() -> callable:
+    """
+    Build a retry decorator that handles OpenAI API errors.
+    Built once at module load, shared across all API calls.
+    """
     return retry(
         retry=retry_if_exception_type(OpenAIError),
-        stop=stop_after_attempt(max_attempts),
-        wait=wait_exponential(multiplier=wait_base, min=wait_base, max=60),
+        stop=stop_after_attempt(3),  # 3 attempts per model
+        wait=wait_exponential(multiplier=2, min=2, max=60),  # Exponential backoff
         before_sleep=before_sleep_log(logging.getLogger(__name__), logging.WARNING),
         reraise=True,
     )
 
 
+_RETRY_DECORATOR = _build_retry_decorator()
+
+
+# ═══════════════════════════════════════════════════════════════
+# API calls with model fallback
+# ═══════════════════════════════════════════════════════════════
+
 def _call_api(client: OpenAI, b64: str, model: str, filename: str):
     """
-    OpenAI Responses API call — input_file + input_text pattern,
-    verbatim from uploaded extractor.py.
+    OpenAI Responses API call with single model.
+    
     Returns the raw response object so the caller can read usage tokens.
+    Decorated with retry logic at call site.
     """
-    try:
-        return client.responses.create(
-            model=model,
-            input=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "input_file",
-                            "filename": filename,
-                            "file_data": f"data:application/pdf;base64,{b64}",
-                        },
-                        {"type": "input_text", "text": EXTRACTION_PROMPT},
-                    ],
-                },
-            ],
-        )
-    except OpenAIError as exc:
-            # Print full error body from Azure
-            print(f"[API ERROR] status={getattr(exc, 'status_code', '?')}")
-            print(f"[API ERROR] body={getattr(exc, 'body', '?')}")
-            print(f"[API ERROR] message={str(exc)}")
-            raise
+    return client.responses.create(
+        model=model,
+        input=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "input_file",
+                        "filename": filename,
+                        "file_data": f"data:application/pdf;base64,{b64}",
+                    },
+                    {"type": "input_text", "text": EXTRACTION_PROMPT},
+                ],
+            },
+        ],
+    )
+
+
+def _call_with_model_fallback(
+    client: OpenAI,
+    b64: str,
+    models: list[str],
+    filename: str,
+    pdf_path: Path,
+) -> tuple[dict, str, int, int]:
+    """
+    Try extracting JSON from API response with model fallback.
+    
+    Attempts to:
+    1. Call API with primary model (retry up to 3 times)
+    2. Parse JSON response through 3-stage cleaning
+    3. Validate with Pydantic schema
+    
+    If ANY error occurs (API, JSON parse, validation), try next model.
+    
+    Args:
+        client: OpenAI client
+        b64: Base64-encoded PDF
+        models: List of model names to try [primary, fallback1, fallback2]
+        filename: PDF filename for API
+        pdf_path: PDF path for logging
+    
+    Returns:
+        (raw_dict, model_used, input_tokens, output_tokens)
+    
+    Raises:
+        ValueError: All models failed
+    """
+    log = logger.bind(pdf=pdf_path.name)
+    
+    for attempt_idx, model in enumerate(models, 1):
+        if not model:  # Skip empty fallback slots
+            log.debug("model_fallback_slot_empty", attempt=attempt_idx, model="<empty>")
+            continue
+        
+        log.info("model_attempt_start", attempt=attempt_idx, model=model)
+        
+        try:
+            # Apply retry decorator to this API call
+            api_call_with_retry = _RETRY_DECORATOR(_call_api)
+            
+            # Call API and get response
+            response = api_call_with_retry(client, b64, model, filename)
+            
+            # Extract tokens
+            usage = getattr(response, "usage", None)
+            input_tokens = getattr(usage, "input_tokens", 0) if usage else 0
+            output_tokens = getattr(usage, "output_tokens", 0) if usage else 0
+            
+            # Parse JSON response
+            output_text = getattr(response, "output_text", None)
+            if not output_text or (isinstance(output_text, str) and not output_text.strip()):
+                log.warning(
+                    "model_attempt_empty_response",
+                    attempt=attempt_idx,
+                    model=model,
+                    response_type=type(response).__name__,
+                )
+                continue  # Try next model
+            
+            # Check for mid-stream content filter refusal
+            output_lower = output_text.lower()
+            if any(phrase in output_lower for phrase in REFUSAL_PHRASES):
+                log.warning(
+                    "model_attempt_content_filter_refusal",
+                    attempt=attempt_idx,
+                    model=model,
+                    preview=output_text[-200:],
+                )
+                raise ContentFilterRefusalError(
+                    f"Content filter triggered mid-response for {filename!r}. "
+                    f"A merchant name likely contains flagged text. "
+                    f"Preview: {output_text[-200:]}"
+                )
+            
+            # Stage 1-3 JSON cleaning and parsing
+            try:
+                raw_dict: dict[str, Any] = _clean_and_parse_json(output_text)
+            except (json.JSONDecodeError, AttributeError) as exc:
+                # Write failed JSON to debug folder before moving to next model
+                _write_failed_json(pdf_path, output_text, model, attempt_idx, str(exc))
+                log.warning(
+                    "model_attempt_json_invalid",
+                    attempt=attempt_idx,
+                    model=model,
+                    error=str(exc),
+                )
+                continue  # Try next model
+            
+            # Validate with Pydantic
+            try:
+                record = ConcurRecord.model_validate(raw_dict)
+            except Exception as exc:
+                log.warning(
+                    "model_attempt_validation_failed",
+                    attempt=attempt_idx,
+                    model=model,
+                    error=str(exc),
+                )
+                continue  # Try next model
+            
+            # Success!
+            log.info(
+                "model_attempt_succeeded",
+                attempt=attempt_idx,
+                model=model,
+                tokens_in=input_tokens,
+                tokens_out=output_tokens,
+            )
+            return raw_dict, model, input_tokens, output_tokens
+        
+        except ContentFilterRefusalError as exc:
+            # Content filter detected mid-response — try next model
+            log.warning(
+                "model_attempt_content_filter_error",
+                attempt=attempt_idx,
+                model=model,
+                error=str(exc),
+            )
+            continue  # Try next model
+        
+        except OpenAIError as exc:
+            status_code = getattr(exc, "status_code", None)
+            
+            # For 500 server errors, sleep before retrying
+            if status_code == 500:
+                log.warning(
+                    "model_attempt_500_error_sleeping",
+                    attempt=attempt_idx,
+                    model=model,
+                    error=str(exc),
+                    sleep_seconds=10,
+                )
+                time.sleep(10)  # Wait 10 seconds before trying next model
+            
+            log.warning(
+                "model_attempt_failed",
+                attempt=attempt_idx,
+                model=model,
+                error=str(exc),
+                status_code=status_code,
+            )
+            continue  # Try next model
+        
+        except Exception as exc:
+            log.warning(
+                "model_attempt_unexpected_error",
+                attempt=attempt_idx,
+                model=model,
+                error_type=type(exc).__name__,
+                error=str(exc),
+            )
+            continue  # Try next model
+    
+    # All models exhausted
+    log.error("all_models_failed", tried_models=models)
+    raise ValueError(f"All {len([m for m in models if m])} models failed for {pdf_path.name}")
 
 
 # ═══════════════════════════════════════════════════════════════
 # Public API
 # ═══════════════════════════════════════════════════════════════
 
-def extract_concur_record(pdf_path: Path) -> tuple[ConcurRecord, LLMMetrics]:
+def extract_concur_record(pdf_path: Path, no_cache: bool = False) -> tuple[ConcurRecord, LLMMetrics]:
     """
     Extract and validate all 5 tables from a Concur expense report PDF.
+    
+    Features:
+    - Model fallback (primary + 2 fallback models)
+    - 3-stage JSON repair pipeline
+    - SHA-256 content-addressed cache
+    - Comprehensive error logging
+    - File lock error handling
+
+    Args:
+        pdf_path: Path to Concur PDF file
+        no_cache: If True, skip cache read and always rewrite cache
 
     Returns:
         (ConcurRecord, LLMMetrics)  — record for reconciliation,
                                       metrics for cost/token logging.
 
     Steps:
-      1. Cache check (SHA-256 content-addressed)
+      1. Cache check (SHA-256 content-addressed) — skipped if no_cache=True
       2. Encode PDF as base64
-      3. Call OpenAI Responses API (input_file + input_text)
-      4. Read token usage from response.usage
-      5. Parse JSON → 5-table dict
-      6. Validate with Pydantic ConcurRecord model
-      7. Write cache
-      8. Build and record LLMMetrics → logs/metrics.jsonl
+      3. Call OpenAI Responses API with model fallback
+      4. Parse JSON through 3-stage pipeline
+      5. Validate with Pydantic ConcurRecord model
+      6. Write cache (with file lock error handling)
+      7. Build and record LLMMetrics
 
     Raises:
         FileNotFoundError  — pdf_path does not exist
-        json.JSONDecodeError — model returned unparseable JSON
+        ValueError — All models failed or malformed JSON
         pydantic.ValidationError — extracted data fails schema
-        openai.OpenAIError — all retries exhausted
     """
     settings = get_settings()
 
@@ -381,28 +724,33 @@ def extract_concur_record(pdf_path: Path) -> tuple[ConcurRecord, LLMMetrics]:
     log.info("concur_extraction_start")
 
     # ── 1. Cache check ────────────────────────────────────────────────────────
-    if settings.cache_enabled:
+    if not no_cache and settings.cache_enabled:
         cp = _cache_path(pdf_path, settings.cache_dir)
         cached = _load_cache(cp)
         if cached is not None:
-            log.info("concur_cache_hit", cache_file=cp.name)
-            dummy = build_metrics(
-                pdf_file=pdf_path.name,
-                model=settings.azure_openai_model,
-                input_tokens=0, output_tokens=0,
-                cost_per_1k_input=settings.cost_per_1k_input,
-                cost_per_1k_output=settings.cost_per_1k_output,
-                latency=0.0, status="cache_hit",
-            )
-            return ConcurRecord.model_validate(cached), dummy
+            try:
+                # Validate cached data against schema
+                record = ConcurRecord.model_validate(cached)
+                log.info("concur_cache_hit", cache_file=cp.name)
+                dummy = build_metrics(
+                    pdf_file=pdf_path.name,
+                    model=settings.azure_openai_model,
+                    input_tokens=0, output_tokens=0,
+                    cost_per_1k_input=settings.cost_per_1k_input,
+                    cost_per_1k_output=settings.cost_per_1k_output,
+                    latency=0.0, status="cache_hit",
+                )
+                return record, dummy
+            except Exception as exc:
+                log.warning("concur_cache_validation_failed", error=str(exc))
+                # Cache is stale/corrupt, rebuild from API below
 
     # ── 2. Encode PDF ─────────────────────────────────────────────────────────
     log.debug("encoding_pdf")
     b64 = _pdf_to_base64(pdf_path)
 
-    # ── 3. API call with MetricsTimer (verbatim pattern from uploaded code) ───
-    # Use httpx.Timeout to properly set timeouts for large PDF processing
-    # timeout=(connection, read, write, pool) — all set to handle 20+ minute operations
+    # ── 3. API call with model fallback ───────────────────────────────────────
+    # Set up httpx timeout for large PDF processing
     timeout_config = httpx.Timeout(
         timeout=settings.api_timeout_seconds,
         connect=60,                              # 60s to establish connection
@@ -414,25 +762,24 @@ def extract_concur_record(pdf_path: Path) -> tuple[ConcurRecord, LLMMetrics]:
     client = OpenAI(
         api_key=settings.azure_openai_api_key,
         base_url=settings.azure_openai_base_url,
-        max_retries=0,
-        http_client=httpx.Client(timeout=timeout_config),
+        max_retries=0,  # We handle retries explicitly with tenacity
+        # http_client=httpx.Client(timeout=timeout_config),
     )
-    try:
-        retried_call = _make_retry_decorator(
-            settings.max_retries, settings.retry_wait_seconds
-        )(_call_api)
-    except OpenAIError as exc:
-            METRICS.api_failures.inc()
-            log.error("api_call_failed", error=str(exc))
-            # ADD THESE TWO LINES:
-            import traceback
-            traceback.print_exc()
-            raise
+    
+    # Build model list: primary + fallbacks
+    models = [
+        settings.azure_openai_model,
+        settings.azure_openai_model1,
+        settings.azure_openai_model2,
+    ]
+    models = [m for m in models if m]  # Filter out empty strings
 
     with MetricsTimer() as timer:
         try:
-            response = retried_call(client, b64, settings.azure_openai_model, pdf_path.name)
-        except OpenAIError as exc:
+            raw_dict, model_used, input_tokens, output_tokens = _call_with_model_fallback(
+                client, b64, models, pdf_path.name, pdf_path
+            )
+        except (ValueError, OpenAIError) as exc:
             METRICS.api_failures.inc()
             metrics = build_metrics(
                 pdf_file=pdf_path.name,
@@ -444,42 +791,32 @@ def extract_concur_record(pdf_path: Path) -> tuple[ConcurRecord, LLMMetrics]:
                 error_message=str(exc),
             )
             record_metrics(metrics)
-            log.error("concur_api_failed", error=str(exc))
+            log.error("concur_all_models_failed", error=str(exc))
             raise
 
-    # ── 4. Read token usage ───────────────────────────────────────────────────
-    usage         = getattr(response, "usage", None)
-    input_tokens  = getattr(usage, "input_tokens",  0) if usage else 0
-    output_tokens = getattr(usage, "output_tokens", 0) if usage else 0
-
-    # ── 5. Parse JSON ─────────────────────────────────────────────────────────
-    try:
-        raw_dict: dict[str, Any] = _parse_response_text(response.output_text)
-    except (json.JSONDecodeError, AttributeError) as exc:
-        metrics = build_metrics(
-            pdf_file=pdf_path.name,
-            model=settings.azure_openai_model,
-            input_tokens=input_tokens, output_tokens=output_tokens,
-            cost_per_1k_input=settings.cost_per_1k_input,
-            cost_per_1k_output=settings.cost_per_1k_output,
-            latency=timer.elapsed, status="parse_error",
-            error_message=str(exc),
-        )
-        record_metrics(metrics)
-        log.error("concur_json_parse_failed", error=str(exc))
-        raise
-
-    # ── 6. Validate ───────────────────────────────────────────────────────────
+    # ── 4. Validate ───────────────────────────────────────────────────────────
     record = ConcurRecord.model_validate(raw_dict)
 
-    # ── 7. Cache ──────────────────────────────────────────────────────────────
-    if settings.cache_enabled:
-        _write_cache(cp, raw_dict)
+    # ── 5. Cache write with file lock error handling ──────────────────────────
+    # When no_cache=True, always write cache even if cache_enabled=False
+    if no_cache or settings.cache_enabled:
+        cp = _cache_path(pdf_path, settings.cache_dir)
+        try:
+            _write_cache(cp, raw_dict)
+            if no_cache:
+                log.info("concur_cache_rewritten", cache_file=cp.name)
+        except OSError as exc:
+            # File lock error (concurrent writes) — log but don't fail extraction
+            if "file is in use" in str(exc).lower() or "permission denied" in str(exc).lower():
+                log.warning("concur_cache_write_locked", cache_file=str(cp), error=str(exc))
+            else:
+                log.warning("concur_cache_write_failed", cache_file=str(cp), error=str(exc))
+            # Continue anyway — cache miss on next run is acceptable
 
-    # ── 8. Build and record LLMMetrics ────────────────────────────────────────
+    # ── 6. Build and record LLMMetrics ────────────────────────────────────────
     metrics = build_metrics(
         pdf_file=pdf_path.name,
-        model=settings.azure_openai_model,
+        model=model_used,
         input_tokens=input_tokens,
         output_tokens=output_tokens,
         cost_per_1k_input=settings.cost_per_1k_input,
@@ -499,6 +836,7 @@ def extract_concur_record(pdf_path: Path) -> tuple[ConcurRecord, LLMMetrics]:
         unmatched=record.unmatched_count,
         tokens_in=input_tokens,
         tokens_out=output_tokens,
+        model_used=model_used,
         cost_usd=round(metrics.cost_usd, 4),
         latency_s=timer.elapsed,
     )

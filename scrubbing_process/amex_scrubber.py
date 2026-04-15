@@ -1,17 +1,6 @@
 """
 amex_scrubber.py — AEA AmEx Scrubber (corrected after full audit)
 =================================================================
-Verified output matches Batch # 1 - $119,802.46 - AEA - Completed.xlsm
-
-Key corrections from audit:
-  1. Removed ' to ' → '-' rule (reference NEVER applies this)
-  2. Removed ' - ' → '-' rule (reference keeps spaces around dashes)
-  3. Removed 'Business ' → 'Bus.' rule (human review step, not automated)
-  4. Added keyword-based vendor matching for chains not in Vendor List
-  5. AmEx All col15 (Comments) left EMPTY — only entity tab humans fill this
-  6. Entity tab col14 (Comments) left EMPTY — human reviewer fills this
-  7. No automated comments written to any tab
-
 Output structure (matches reference):
   AmEx Load Raw    — 15 cols, untouched original
   AmEx All         — 17 cols, same order as raw, col15 always empty
@@ -62,6 +51,8 @@ from amex_rules import (
     PROJECT_DEPT_RULES, PROJECT_NAME_MAP,
     LLM_SYSTEM_PROMPT, LLM_ROW_SCHEMA,
 )
+
+from reference_loader import ReferenceData
 
 try:
     from openai import OpenAI
@@ -159,91 +150,6 @@ class Row:
     def project_str(self) -> str:
         return str(self.project or "").strip()
 
-
-# ══════════════════════════════════════════════════════════════════════════════
-#  REFERENCE DATA
-# ══════════════════════════════════════════════════════════════════════════════
-class ReferenceData:
-    """Loads Vendor List and Employee List from a workbook."""
-
-    def __init__(self, wb_path: Optional[str] = None):
-        self.vendor_map:      dict[str, str] = {}
-        self.employee_entity: dict[str, str] = {}
-        if wb_path and Path(wb_path).exists():
-            self._load(wb_path)
-
-    def _load(self, path: str):
-        log.info(f"Loading reference data: {path}")
-        try:
-            wb = load_workbook(path, read_only=True, data_only=True)
-
-            if "Vendor List" in wb.sheetnames:
-                for row in wb["Vendor List"].iter_rows(min_row=2, values_only=True):
-                    if row[0] and row[1]:
-                        raw   = str(row[0]).strip()
-                        clean = str(row[1]).strip()
-                        self.vendor_map[raw]         = clean
-                        self.vendor_map[raw.upper()]  = clean
-                n = len([k for k in self.vendor_map if k == k.upper()])
-                log.info(f"  Vendor List: {n} entries")
-
-            if "Employee List" in wb.sheetnames:
-                for row in wb["Employee List"].iter_rows(min_row=2, values_only=True):
-                    if row[1]:
-                        self.employee_entity[str(row[1]).strip()] = (
-                            str(row[3] or "").strip() if len(row) > 3 else ""
-                        )
-                log.info(f"  Employee List: {len(self.employee_entity)} entries")
-
-        except Exception as exc:
-            log.warning(f"Reference data load failed: {exc}")
-
-    def lookup_vendor(self, vendor_desc: str) -> str:
-        """
-        Vendor name resolution with 5-step fallback:
-        1. Exact match in Vendor List
-        2. Uppercase match in Vendor List
-        3. Keyword match in VENDOR_KEYWORD_MAP (for chains not in list)
-        4. Strip leading numbers and trailing codes, then keyword match
-        5. title() with VENDOR_TITLE_FIXES + VENDOR_ABBREVIATIONS
-        """
-        vd = str(vendor_desc or "").strip()
-        if not vd:
-            return ""
-
-        # Step 1 & 2: Vendor List lookup (exact + uppercase)
-        result = self.vendor_map.get(vd) or self.vendor_map.get(vd.upper())
-        if result:
-            # Apply any capitalisation fix on top of vendor list result
-            return VENDOR_TITLE_FIXES.get(result, result)
-
-        # Step 3: Keyword match on the raw vendor description
-        vd_lower = vd.lower()
-        for keyword, canonical in VENDOR_KEYWORD_MAP.items():
-            if keyword in vd_lower:
-                return canonical
-
-        # Step 4: Strip leading digits/codes and retry keyword match
-        # e.g. "4254 STARBUCKS" → "STARBUCKS", "JFK2 SHAKE SHACK B37 1051" → ...
-        stripped = re.sub(r'^[\d\s]+', '', vd).strip()
-        stripped_lower = stripped.lower()
-        for keyword, canonical in VENDOR_KEYWORD_MAP.items():
-            if keyword in stripped_lower:
-                return canonical
-
-        # Step 5: title() with fixes
-        titled = vd.title()
-        fixed  = VENDOR_TITLE_FIXES.get(titled, titled)
-        for long_form, short_form in VENDOR_ABBREVIATIONS.items():
-            if fixed.lower() == long_form.lower():
-                return short_form
-
-        return fixed
-
-    def lookup_entity(self, employee_id: str) -> str:
-        if not employee_id:
-            return ENTITY_DEFAULT
-        return self.employee_entity.get(str(employee_id).strip(), ENTITY_DEFAULT)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -1178,13 +1084,7 @@ def main():
     p = argparse.ArgumentParser(description="AEA AmEx Scrubber")
     p.add_argument("--input",           required=True)
     p.add_argument("--output",          required=True)
-    p.add_argument("--reference",       default=None,
-                   help="Workbook with Vendor List + Employee List")
-    p.add_argument("--statement-date",  default="")
     p.add_argument("--llm-batch-size",  type=int, default=10)
-    p.add_argument("--azure-api-key",   default=AZURE_API_KEY)
-    p.add_argument("--azure-endpoint",  default=AZURE_ENDPOINT)
-    p.add_argument("--azure-model",     default=AZURE_MODEL)
     args = p.parse_args()
 
     AmExScrubber(

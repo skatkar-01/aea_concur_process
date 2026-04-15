@@ -94,7 +94,7 @@ class Settings(BaseSettings):
     cache_enabled: bool     = Field(default=True)
     max_retries: int        = Field(default=5, description="Max API retry attempts")
     retry_wait_seconds: int = Field(default=2, description="Initial wait between retries")
-    api_timeout_seconds: int = Field(default=60, description="API request timeout in seconds (20 min for large PDFs)")
+    api_timeout_seconds: int = Field(default=60, description="API request timeout in seconds (10 min for large PDFs)")
     max_tokens: int = Field(default=16000, description="Base max tokens for API response")
     max_tokens_per_kb: int = Field(default=50, description="Additional tokens per KB of PDF")
     max_tokens_cap: int = Field(default=32000, description="Hard cap on max_tokens")

@@ -6,6 +6,7 @@ Examples:
     python main.py --file "C:/tmp/report.pdf" --pdf-type concur --month-key 2026-03
     python main.py --input-dir "C:/Users/SKatkar/Box/AEA - Concur"
     python main.py --input-dir "C:/path" --batch-size 5  # Process with 5 parallel workers
+    python main.py --file "file.pdf" --no-cache  # Force fresh API call and rewrite cache
 """
 from __future__ import annotations
 
@@ -93,6 +94,11 @@ def _parse_args() -> argparse.Namespace:
         default=None,
         help="Processing mode (local or cloud).",
     )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="Ignore cache and rewrite extracted data (forces fresh API call).",
+    )
     return parser.parse_args()
 
 
@@ -135,6 +141,7 @@ def _build_job(
     pdf_type_override: str | None = None,
     month_key_override: str | None = None,
     mode_override: str | None = None,
+    no_cache: bool = False,
 ) -> PipelineJob | None:
     # Skip monthly aggregate files (ALL_*) in AMEX folder
     # Pattern: ALL_MAR_062026.pdf (ALL_ + month + MMYYYY date)
@@ -157,6 +164,7 @@ def _build_job(
         source=source,
         local_path=str(pdf_path),
         mode_override=mode_override,
+        no_cache=no_cache,
     )
 
 
@@ -168,6 +176,7 @@ def _collect_jobs(args: argparse.Namespace) -> list[PipelineJob]:
             pdf_type_override=args.pdf_type,
             month_key_override=args.month_key,
             mode_override=args.mode,
+            no_cache=args.no_cache,
         )
         return [job] if job else []
     settings = get_settings()
@@ -181,6 +190,7 @@ def _collect_jobs(args: argparse.Namespace) -> list[PipelineJob]:
             source="manual_batch",
             month_key_override=args.month_key,
             mode_override=args.mode,
+            no_cache=args.no_cache,
         )
         if job:
             jobs.append(job)
@@ -232,10 +242,21 @@ def _print_summary(results: list[RunResult]) -> None:
     console.print()
     console.print(table)
     succeeded = sum(1 for result in results if result.success)
+    failed = len(results) - succeeded
+    
+    # Compute batch statistics
+    total_time = sum(r.duration_s for r in results)
+    concur_count = sum(1 for r in results if r.job.pdf_type == "concur")
+    amex_count = sum(1 for r in results if r.job.pdf_type == "amex")
+    concur_succeeded = sum(1 for r in results if r.success and r.job.pdf_type == "concur")
+    amex_succeeded = sum(1 for r in results if r.success and r.job.pdf_type == "amex")
+    
     console.print(
-        f"\n[bold]Total:[/bold] {len(results)} job(s) | "
-        f"[green]{succeeded} succeeded[/green] | "
-        f"[red]{len(results) - succeeded} failed[/red]\n"
+        f"\n[bold]Summary:[/bold]\n"
+        f"  Total: {len(results)} file(s) | [green]{succeeded} succeeded[/green] | [red]{failed} failed[/red]\n"
+        f"  AMEX: {amex_count} file(s) | [green]{amex_succeeded} succeeded[/green]\n"
+        f"  Concur: {concur_count} file(s) | [green]{concur_succeeded} succeeded[/green]\n"
+        f"  Total Duration: {total_time:.1f}s\n"
     )
 
 
@@ -310,10 +331,22 @@ def main() -> int:
 
     _print_summary(results)
 
+    # Enhanced logging with detailed breakdown
+    succeeded = sum(1 for result in results if result.success)
+    concur_count = sum(1 for r in results if r.job.pdf_type == "concur")
+    amex_count = sum(1 for r in results if r.job.pdf_type == "amex")
+    concur_succeeded = sum(1 for r in results if r.success and r.job.pdf_type == "concur")
+    amex_succeeded = sum(1 for r in results if r.success and r.job.pdf_type == "amex")
+    
     log.info(
         "manual_run_complete",
         jobs=len(results),
-        succeeded=sum(1 for result in results if result.success),
+        succeeded=succeeded,
+        failed=len(results) - succeeded,
+        amex_total=amex_count,
+        amex_succeeded=amex_succeeded,
+        concur_total=concur_count,
+        concur_succeeded=concur_succeeded,
         wall_time_s=round(time.perf_counter() - t0, 2),
         parallel=batch_size > 1,
         workers=batch_size,

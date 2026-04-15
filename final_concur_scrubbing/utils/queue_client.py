@@ -48,6 +48,7 @@ class PipelineJob:
     enqueued_at:  str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat(timespec="seconds"))
     retry_count:  int = 0
     mode_override: Optional[str] = None  # "local" | "cloud" or None to auto-infer
+    no_cache:     bool = False           # True to skip cache read and force rewrite
 
     def to_json(self) -> str:
         return json.dumps(asdict(self))

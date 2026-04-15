@@ -19,7 +19,6 @@ Excel theme:
   - Color-coded reconciliation status (matched=green, unmatched=red)
 """
 
-import logging
 from datetime import datetime
 from pathlib import Path
 
@@ -27,7 +26,9 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-logger = logging.getLogger(__name__)
+from utils.logging_config import get_logger
+
+logger = get_logger(__name__)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Theme constants

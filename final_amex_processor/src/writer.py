@@ -269,6 +269,6 @@ def write_xlsx(statement: Statement, output_path: Path) -> Path:
         _autofit(ws)
         wb.save(output_path)
 
-    log.info("xlsx_write_complete", path=str(output_path))
+    log.info("xlsx_write_complete", output_file=str(output_path))
     METRICS.files_processed.inc()
     return output_path.resolve()

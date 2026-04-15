@@ -53,14 +53,16 @@ import hashlib
 import os
 import sys
 import tempfile
+import uuid
 import time
 from contextlib import contextmanager
 from pathlib import Path
 
 
 # ── Logging (import after path setup to avoid circular) ──────────────────────
-import logging
-_log = logging.getLogger(__name__)
+from utils.logging_config import get_logger
+
+_log = get_logger(__name__)
 
 
 # ── Lock file path (BUG 2 FIX) ───────────────────────────────────────────────
@@ -74,6 +76,24 @@ def _lock_path(file_path: Path) -> Path:
     lock_dir.mkdir(exist_ok=True)
     path_hash = hashlib.sha256(str(file_path.resolve()).encode()).hexdigest()[:12]
     return lock_dir / f"{file_path.stem}_{path_hash}.lock"
+
+
+def _cleanup_temp_path(tmp_path: Path) -> None:
+    """
+    Best-effort cleanup for Windows temp-file contention.
+
+    A short retry loop avoids failing the whole workbook save when antivirus,
+    indexing, or another worker briefly holds the temp file open.
+    """
+    for attempt in range(5):
+        try:
+            tmp_path.unlink(missing_ok=True)
+            return
+        except PermissionError:
+            time.sleep(0.1 * (attempt + 1))
+        except OSError:
+            return
+    _log.warning("temp_cleanup_failed", temp_path=str(tmp_path))
 
 
 # ── Platform-specific implementations ────────────────────────────────────────
@@ -112,7 +132,7 @@ if sys.platform == "win32":
             if not lock_acquired:
                 _log.warning(
                     "file_lock_timeout_proceeding",
-                    path=str(file_path),
+                    file_path=str(file_path),
                     timeout_s=timeout,
                 )
 
@@ -161,7 +181,7 @@ else:
             if not lock_acquired:
                 _log.warning(
                     "file_lock_timeout_proceeding",
-                    path=str(file_path),
+                    file_path=str(file_path),
                     timeout_s=timeout,
                 )
 
@@ -199,24 +219,20 @@ def atomic_workbook_save(wb, target_path: Path, max_retries: int = 3) -> Path:
     target_dir  = target_path.parent
     target_dir.mkdir(parents=True, exist_ok=True)
 
-    tmp_path: Path | None = None
-
     for attempt in range(max_retries):
-        tmp_path = target_dir / f".{target_path.name}.tmp"
+        tmp_path = target_dir / f".{target_path.name}.{uuid.uuid4().hex[:8]}.tmp"
         try:
             wb.save(tmp_path)
 
             try:
                 os.replace(tmp_path, target_path)
-                tmp_path = None   # successfully renamed — no cleanup needed
                 return target_path
             except OSError:
                 # Windows: destination may be open by another process
                 import shutil
                 time.sleep(0.2)
                 shutil.copy2(tmp_path, target_path)
-                tmp_path.unlink(missing_ok=True)
-                tmp_path = None
+                _cleanup_temp_path(tmp_path)
                 return target_path
 
         except Exception as exc:
@@ -225,14 +241,13 @@ def atomic_workbook_save(wb, target_path: Path, max_retries: int = 3) -> Path:
                     "atomic_save_retry",
                     attempt=attempt + 1,
                     error=str(exc),
-                    path=str(target_path),
+                    file_path=str(target_path),
                 )
                 time.sleep(0.5 * (attempt + 1))
             else:
                 raise
         finally:
             # BUG 4 FIX: always clean up temp if it still exists
-            if tmp_path is not None:
-                tmp_path.unlink(missing_ok=True)
+            _cleanup_temp_path(tmp_path)
 
     return target_path   # unreachable but satisfies type-checkers

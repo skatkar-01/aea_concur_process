@@ -4,12 +4,12 @@ src/runner.py
 The single pipeline entry point — used by every execution path.
 
 PRODUCTION FIXES (2024-Q2):
-  - BUG 5: TrackerRow.approvals expects Optional[bool].  When no matching AMEX
-            cardholder is found in _run_concur, the code was passing
-            approval_comment (a str) directly.  Fixed with _coerce_approval().
   - BUG 6: TrackerRow.comments is typed str, not Optional[str].  The fallback
             path was passing reconciliation_comment which can be None.
             Fixed with `or ""` coercion at every assignment site.
+  - BUG 5 RETRACTED: Removed improper _coerce_approval() function.  Instead,
+            now use concur_record.approvals_complete consistently in both
+            (AMEX match and no AMEX match) paths.
 """
 from __future__ import annotations
 
@@ -46,32 +46,7 @@ class RunResult:
     details:    Optional[str] = None
 
 
-# ── Type-safety helpers (BUG 5 + 6 FIX) ─────────────────────────────────────
-
-def _coerce_approval(value: object) -> Optional[bool]:
-    """
-    Safely coerce any approval value to Optional[bool].
-
-    TrackerRow.approvals is typed Optional[bool].  Sources like
-    report_summary.approval_comment are Optional[str].  Rather than
-    letting a string silently slip through (which renders incorrectly in
-    Excel), we normalise here.
-
-    Rules:
-      None              → None   (not yet determined)
-      bool              → as-is  (already correct)
-      str containing "approved" (case-insensitive) → True
-      any other str     → False
-    """
-    if value is None:
-        return None
-    if isinstance(value, bool):
-        return value
-    if isinstance(value, str):
-        return "approved" in value.lower()
-    # numeric / unexpected types — treat as falsy
-    return bool(value)
-
+# ── Type-safety helper ────────────────────────────────────────────────────────
 
 def _coerce_comments(value: object) -> str:
     """
@@ -138,10 +113,17 @@ def _run_amex(
     state,
     box_client=None,
 ) -> str:
-    statement = extract_statement(pdf_path)
-    rows      = [reconcile_amex_only(ch) for ch in statement.cardholders]
-    write_amex_output(statement, month_info, box_client)
-    _write_to_tracker("init", rows, month_info, box_client, job.mode_override)
+    try:
+        statement = extract_statement(pdf_path)
+        rows      = [reconcile_amex_only(ch) for ch in statement.cardholders]
+        write_amex_output(statement, month_info, box_client)
+        _write_to_tracker("init", rows, month_info, box_client, job.mode_override)
+    except Exception as exc:
+        # Log extraction failure but don't attempt to write partial data to tracker
+        # AMEX "init" requires full statement data; partial failure means skip tracker update
+        log = logger.bind(job_id=job.job_id, file=job.filename, month=month_info.sheet_name)
+        log.error("amex_extraction_failed", error=str(exc))
+        raise
 
     if hasattr(state, "mark_amex_initialized"):
         state.mark_amex_initialized(
@@ -176,42 +158,58 @@ def _run_concur(
             "Concur job will retry — AMEX must be processed first."
         )
 
-    concur_record, llm_metrics = extract_concur_record(pdf_path)
-    log.info(
-        "concur_llm_metrics",
-        tokens_in=llm_metrics.input_tokens,
-        tokens_out=llm_metrics.output_tokens,
-        cost_usd=llm_metrics.cost_usd,
-        latency_s=llm_metrics.latency_seconds,
-        status=llm_metrics.status,
-    )
-
-    amex_ch = _find_amex_cardholder(
-        concur_record.cardholder_name, month_info, state, box_client
-    )
-
-    if amex_ch:
-        tracker_row = reconcile(amex_ch, concur_record)
-    else:
-        # BUG 5 FIX: coerce approval to bool, not raw string
-        # BUG 6 FIX: coerce comments to str, never None
-        approval_raw = (
-            concur_record.report_summary.approval_comment
-            if concur_record.report_summary else None
+    try:
+        concur_record, llm_metrics = extract_concur_record(pdf_path, no_cache=job.no_cache)
+        log.info(
+            "concur_llm_metrics",
+            tokens_in=llm_metrics.input_tokens,
+            tokens_out=llm_metrics.output_tokens,
+            cost_usd=llm_metrics.cost_usd,
+            latency_s=llm_metrics.latency_seconds,
+            status=llm_metrics.status,
         )
-        recon_comment_raw = (
-            concur_record.report_summary.reconciliation_comment
-            if concur_record.report_summary else None
+
+        amex_ch = _find_amex_cardholder(
+            concur_record.cardholder_name, month_info, state, box_client
         )
+
+        if amex_ch:
+            tracker_row = reconcile(amex_ch, concur_record)
+        else:
+            # When no AMEX match, build TrackerRow manually from Concur data
+            # Use same fields as reconcile() function for consistency
+            tracker_row = TrackerRow(
+                cardholder_name=concur_record.cardholder_name,
+                amex_total=None,
+                concur_submitted=concur_record.amount_submitted,
+                report_pdf=concur_record.report_pdf_attached,
+                approvals=concur_record.approvals_complete,  # Use same field as reconcile()
+                receipts=concur_record.receipts_attached,
+                comments=_coerce_comments(concur_record.report_summary.reconciliation_comment if concur_record.report_summary else None),
+            )
+
+    except Exception as exc:
+        # Extraction failed — write error marker to tracker so row shows as attempted
+        error_msg = str(exc)
+        log.error(
+            "concur_extraction_failed",
+            error=error_msg,  # Limit error message length
+            error_type=type(exc).__name__,
+            file=job.filename,
+        )
+        error_comment = f"Extraction failed: {error_msg[:100]}"
         tracker_row = TrackerRow(
-            cardholder_name=concur_record.cardholder_name,
+            cardholder_name="[EXTRACTION FAILED]",
             amex_total=None,
-            concur_submitted=concur_record.amount_submitted,
-            report_pdf=concur_record.report_pdf_attached,
-            approvals=_coerce_approval(approval_raw),       # BUG 5 FIX
-            receipts=concur_record.receipts_attached,
-            comments=_coerce_comments(recon_comment_raw),   # BUG 6 FIX
+            concur_submitted=None,
+            report_pdf=False,
+            approvals=None,
+            receipts=False,
+            comments=error_comment,
         )
+        _write_to_tracker("patch", tracker_row, month_info, box_client)
+        # Re-raise so run_job can handle it and mark state as failed
+        raise
 
     _write_to_tracker("patch", tracker_row, month_info, box_client)
 
@@ -219,7 +217,7 @@ def _run_concur(
     output_base = s.output_dir
     try:
         excel_path = write_concur_excel(concur_record, output_base, month_info, job.filename)
-        log.info("concur_excel_written", path=str(excel_path))
+        log.info("concur_excel_written", excel_file=str(excel_path))
     except Exception as exc:
         log.warning("concur_excel_write_failed", error=str(exc))
 
@@ -230,6 +228,22 @@ def _run_concur(
                         sheet_name=month_info.sheet_name)
 
     METRICS.files_processed.inc()
+    
+    # Log successful completion summary
+    log.info(
+        "concur_processing_complete",
+        cardholder=concur_record.cardholder_name,
+        amount=concur_record.amount_submitted,
+        transactions=len(concur_record.transactions),
+        approvals=concur_record.approvals_complete,
+        receipts=concur_record.receipts_attached,
+        tokens_in=llm_metrics.input_tokens,
+        tokens_out=llm_metrics.output_tokens,
+        cost_usd=round(llm_metrics.cost_usd, 4),
+        latency_s=llm_metrics.latency_seconds,
+        status=llm_metrics.status,
+    )
+    
     return f"patched row for {concur_record.cardholder_name}"
 
 
