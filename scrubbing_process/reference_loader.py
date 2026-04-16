@@ -131,6 +131,13 @@ class ReferenceData:
 
         return fixed
 
+    def lookup_vendor_list_only(self, vendor_desc: str) -> str:
+        """Return a canonical vendor name using only the Vendor List sheet."""
+        vd = str(vendor_desc or "").strip()
+        if not vd:
+            return ""
+        return self.vendor_map.get(vd) or self.vendor_map.get(vd.upper()) or ""
+
     def lookup_entity(self, employee_id: str) -> str:
         if not employee_id:
             return ENTITY_DEFAULT
@@ -259,13 +266,41 @@ class ScrubPreparator:
     """Prepare CSV + reference data into ready-to-scrub XLSX."""
 
     @staticmethod
+    def _resolve_vendor_name(ref: ReferenceData, vendor_desc: str, vendor_name: str) -> tuple[str, bool]:
+        """
+        Resolve the vendor name from the vendor list.
+
+        Prefer the vendor description because it is usually the raw lookup key,
+        then fall back to the current vendor name if the description is blank or
+        not listed.
+        """
+        original = str(vendor_name or "").strip()
+        fallback = str(vendor_desc or "").strip()
+
+        for candidate in (fallback, original):
+            if not candidate:
+                continue
+            resolved = ref.lookup_vendor_list_only(candidate)
+            if resolved:
+                return resolved, resolved != original
+
+            resolved = ref.lookup_vendor(candidate)
+            if resolved and resolved != candidate.title():
+                return resolved, resolved != original
+
+        if original:
+            return original, False
+        return fallback, bool(fallback)
+
+    @staticmethod
     def prepare(csv_path: str, reference_path: str, output_path: str):
         """
         Prepare CSV for scrubbing:
         1. Copy Employee List + Vendor List from reference
-        2. Classify CSV rows using Employee List lookup
-        3. Populate entity tabs with properly typed data
-        4. amex_scrubber.py will apply styling/highlighting
+        2. Normalize vendor names in transaction rows from the Vendor List
+        3. Classify CSV rows using Employee List lookup
+        4. Populate entity tabs with properly typed data
+        5. amex_scrubber.py will apply styling/highlighting
         """
         csv_path = Path(csv_path)
         ref_path = Path(reference_path)
@@ -303,6 +338,7 @@ class ScrubPreparator:
             # 2. Load reference workbook and build Employee List lookup
             log.info(f"Reading reference: {ref_path}")
             ref_wb = load_workbook(ref_path)
+            ref = ReferenceData(str(ref_path))
             
             # Build Employee ID → Entity mapping from Employee List
             emp_to_entity = {}
@@ -360,12 +396,16 @@ class ScrubPreparator:
             # 4. Classify CSV rows and populate entity tabs
             entity_tabs = ["AEA_Posted", "SBF_Posted", "DEBT_Reviewed"]
             entity_data = {tab: [] for tab in entity_tabs}
+            vendor_updates = 0
             
             # Find Employee ID column in CSV (column name, not index)
             emp_id_col_name = "Employee ID"
             if emp_id_col_name not in csv_cols:
                 log.warning(f"  CSV missing '{emp_id_col_name}' column - defaulting all rows to AEA_Posted")
                 emp_id_col_name = None
+
+            vendor_desc_idx = csv_cols.index("Report Entry Vendor Description") if "Report Entry Vendor Description" in csv_cols else None
+            vendor_name_idx = csv_cols.index("Report Entry Vendor Name") if "Report Entry Vendor Name" in csv_cols else None
             
             # Classify each row
             for _, row in df_csv.iterrows():
@@ -386,8 +426,20 @@ class ScrubPreparator:
                         entity = "DEBT_Reviewed"
                     else:
                         entity = "AEA_Posted"
-                
-                entity_data[entity].append([row[col] for col in csv_cols])
+
+                row_values = [row[col] for col in csv_cols]
+
+                if vendor_desc_idx is not None and vendor_name_idx is not None:
+                    vendor_desc = row_values[vendor_desc_idx]
+                    vendor_name = row_values[vendor_name_idx]
+                    resolved_vendor, changed = ScrubPreparator._resolve_vendor_name(
+                        ref, vendor_desc, vendor_name
+                    )
+                    if changed:
+                        vendor_updates += 1
+                        row_values[vendor_name_idx] = resolved_vendor
+
+                entity_data[entity].append(row_values)
             
             # Write headers and data to entity tabs with proper formatting
             for idx, tab_name in enumerate(entity_tabs, 2):
@@ -423,6 +475,9 @@ class ScrubPreparator:
                 
                 row_count = len(entity_data[tab_name])
                 log.info(f"  OK '{tab_name}': {row_count} rows (classified from CSV)")
+
+            if vendor_updates:
+                log.info(f"  OK vendor names normalized in entity tabs: {vendor_updates} rows")
 
             # 5. Save output file
             out_wb.save(str(out_path))

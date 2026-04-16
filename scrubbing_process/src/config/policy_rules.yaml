@@ -1,0 +1,106 @@
+version: "1.0"
+last_updated: "2026-04-15"
+
+# Car service policy
+car_service_policy:
+  early_arrival_cutoff:
+    hour: 7
+    minute: 0
+    description: "Early arrival to office must be at or before 7:00am"
+  
+  work_late_cutoff:
+    hour: 19
+    minute: 30
+    description: "Work late from office must be at or after 7:30pm"
+  
+  weekend_days:
+    - "Saturday"
+    - "Sunday"
+
+  standard_formats:
+    work_late: "Work Late/Office-Home"
+    early_arrival: "Early Arrival/Home-Office"
+    weekend_to_office: "Weekend/Home-Office"
+    weekend_from_office: "Weekend/Office-Home"
+
+# Meal limits
+meal_limits:
+  "Working Lunch": 25.00
+  "Working Dinner": 35.00
+
+# Personal project code
+personal_project: "1008"
+
+# Character length limits
+length_limits:
+  description_vendor_combined: 70
+  overhead: 12  # Added to description + vendor length
+
+# G/L override notes (for flagging)
+gl_overrides:
+  "14000":
+    trigger_projects: ["1035", "1003", "1012"]
+    comment: "Change G/L to 14000 at time of posting (prepaid)"
+    
+  "58120":
+    trigger_expense: "Other"
+    trigger_projects: ["1001", "3500", "7500", "1105"]
+    comment: "Change G/L to 58120 at posting (AEA Corporate event)"
+    
+  "58140":
+    comment: "Holiday Party car - G/L 58140; NOT intercompany"
+    
+  "58230":
+    trigger_projects: ["1013"]
+    comment: "Intern/Summer Analyst event - G/L 58230"
+
+# Project-Department validation rules
+project_dept_rules:
+  "1055": "AMA"
+  "1010": ["UK", "GMBH"]
+  "4246": "CONS"
+  "6006": "VAIP"
+  "6001": "VAIP"
+  "3500": "SBF"
+  "7500": "DEBT"
+  "1105": "GROWTH"
+
+# Project metadata
+project_metadata:
+  "1008":
+    requires_emp_id: true
+    name: "Personal"
+    
+  "1003":
+    prepaid_gl: "14000"
+    name: "Annual Meeting (AGM)"
+    
+  "1012":
+    prepaid_gl: "14000"
+    name: "Associate Strategy Event"
+    
+  "1035":
+    prepaid_gl: "14000"
+    name: "Annual Strategy Meeting"
+    
+  "1013":
+    gl_note: "58230"
+    name: "Interns Events"
+    
+  "4246":
+    canonical_name: "AmeriVet"
+    
+  "6409":
+    canonical_name: "Numotion"
+    
+  "4200-B":
+    board_only: true
+    name: "Traeger Board"
+    
+  "1016-SBF":
+    entity_hint: "SBF"
+    name: "Investor Relations (SBF Funds)"
+    
+  "1016-G":
+    entity_hint: "GROWTH"
+    name: "Investor Relations (GROWTH Funds)"

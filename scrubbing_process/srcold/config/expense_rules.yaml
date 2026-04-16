@@ -1,0 +1,80 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  expense_rules.yaml
+#  AEA AmEx Scrubbing — Expense code remapping and validation rules
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Direct 1:1 remaps (applied deterministically)
+remap:
+  Miscellaneous: Other
+  Cell Phone: Phones
+  Telephones: Phones
+  "Furn & Equip": Equipment
+  "Furn & Equipment": Equipment
+  Furniture: Furniture
+  Seminars: Conferences
+  "Seminars and Conferences": Conferences
+  "Info Service": Info Services
+  "Inflight Wifi": Info Services
+  PubSub: Info Services
+
+# Disallowed codes — flag for review if found after remap
+disallowed:
+  - Miscellaneous
+  - Cell Phone
+  - Telephones
+
+# Description-keyword → expense code overrides (checked in order; first match wins)
+description_overrides:
+  - keywords: ["inflight wifi", "in-flight wifi"]
+    expense_code: "Info Services"
+    priority: 1
+
+  - keywords: ["tkt fee", "ticketing fee", "seat upgrade", "checked bag fee"]
+    expense_code: "Airline"
+    exclude_keywords: ["train", "boat"]
+    priority: 2
+
+  - keywords: ["exch tkt/", "refund/exch tkt/", "refund/tkt exch/", "tkt refund/"]
+    expense_code: "Airline"
+    exclude_keywords: ["train", "boat"]
+    priority: 3
+
+  - keywords: ["booking fee"]
+    context_keywords: ["lodging", "hotel"]
+    expense_code: "Lodging"
+    priority: 4
+
+  - keywords: ["train/", "bus.parking", "bus.fuel", "bus.rental", "travel insurance"]
+    expense_code: "Other Travel"
+    priority: 5
+
+  - keywords: ["research subscription"]
+    expense_code: "Info Services"
+    priority: 6
+
+# G/L override triggers — written to reviewer comments only
+gl_overrides:
+  - gl: "14000"
+    trigger_projects: ["1035", "1003", "1012"]
+    comment: "Change G/L to 14000 at time of posting (prepaid)"
+
+  - gl: "58120"
+    trigger_expense: "Other"
+    trigger_projects: ["1001", "3500", "7500", "1105"]
+    comment: "Change G/L to 58120 at posting (AEA Corporate event Other->58350 default)"
+
+  - gl: "58140"
+    trigger_keywords: ["holiday party"]
+    trigger_expense: "Car Service"
+    comment: "Holiday Party car — G/L 58140; NOT intercompany"
+
+  - gl: "58230"
+    trigger_projects: ["1013"]
+    comment: "Intern/Summer Analyst event — G/L 58230"
+
+# Meal limits (USD) — overage flagged for itemization to project 1008
+meal_limits:
+  "Working Lunch": 25.00
+  "Working Dinner": 35.00
+
+personal_project: "1008"

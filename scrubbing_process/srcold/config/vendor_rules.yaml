@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  vendor_rules.yaml
+#  AEA AmEx Scrubbing — Vendor normalization rules
+# ─────────────────────────────────────────────────────────────────────────────
+
+# title() output corrections — override what Python's str.title() gets wrong
+title_fixes:
+  Americet: AmeriVet
+  Americvet: AmeriVet
+  Numotion: Numotion
+  Tricorbraun: TricorBraun
+  Trikorbraun: TricorBraun
+  Ezcater: Ezcater
+  "Ez Cater": Ezcater
+  Jetblue: JetBlue
+  "Nyc Taxi": NYC Taxi
+  "Uber Eats": Uber
+  "Chick Fil A": Chick-fil-A
+  "Blue Bottle": Blu
+  "Blue Bottle Coffee": Blu
+
+# Expand long raw names → canonical short names
+abbreviations:
+  "Uber Technologies": Uber
+  "Uber Technologies Inc": Uber
+  "Lyft Inc": Lyft
+  "Curb Mobility": Curb
+
+# Keyword → canonical vendor (raw VendorDesc contains keyword → use canonical)
+# Keys are lowercase; first match wins
+keyword_map:
+  "omni berkshire place": Omni
+  "jersey mikes": Jersey Mike's
+  "travel reservation usa": Hotels.com
+  "slc essentials": Essen
+  "blue bottle coffee": Blu
+  "cibo express": Cibo
+  "british airways": British Air
+  "uber eats": Uber
+  "chick-fil-a": Chick-fil-A
+  "chick fil a": Chick-fil-A
+  marriott: Marriott
+  hilton: Hilton
+  hyatt: Hyatt
+  westin: Westin
+  sheraton: Sheraton
+  "holiday inn": Holiday Inn
+  "ac hotel": AC Hotel
+  "four seasons": Four Seasons
+  jetblue: JetBlue
+  dunkin: Dunkin Donuts
+  "shake shack": Shake Shack
+  starbucks: Starbucks
+  chipotle: Chipotle
+  qdoba: Qdoba
+  "cater lady": Cater Lady
+  "cafe boulud": Cafe Boulud
+  jetbrains: Jetbrains
+  intelsat: Intelsat
+  "delta onboard": Delta
+  devocion: Devocion
+  "american airlines": American Airlines
+  "united airlines": United
+  delta: Delta
+  "southwest airlines": Southwest
+  "spirit airlines": Spirit
+
+# Project-specific vendor name overrides
+project_overrides:
+  "4246":
+    canonical: AmeriVet
+  "6409":
+    canonical: Numotion

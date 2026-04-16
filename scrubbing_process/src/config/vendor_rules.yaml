@@ -1,0 +1,47 @@
+version: "1.0"
+last_updated: "2026-04-15"
+
+# Pay type cleanup
+pay_type:
+  find: "American Express Corporate Card CBCP"
+  replace: "American Express"
+
+# Vendor title() corrections
+title_fixes:
+  "Americet": "AmeriVet"
+  "Americvet": "AmeriVet"
+  "Numotion": "Numotion"
+  "Tricorbraun": "TricorBraun"
+  "Trikorbraun": "TricorBraun"
+  "Ezcater": "Ezcater"
+  "EzCater": "Ezcater"
+  "Blue Bottle": "Blu"
+  "Uber Eats": "Uber"
+  "Chick Fil A": "Chick-fil-A"
+  "Nyc Taxi": "NYC Taxi"
+  "Jetblue": "JetBlue"
+
+# Vendor abbreviations
+abbreviations:
+  "Uber Technologies": "Uber"
+  "Uber Technologies Inc": "Uber"
+  "Lyft Inc": "Lyft"
+  "Curb Mobility": "Curb"
+
+# Keyword-based vendor mapping (case-insensitive substring match)
+keyword_mapping:
+  "starbucks": "Starbucks"
+  "dunkin": "Dunkin Donuts"
+  "shake shack": "Shake Shack"
+  "chipotle": "Chipotle"
+  "qdoba": "Qdoba"
+  "cater lady": "Cater Lady"
+  "cafe boulud": "Cafe Boulud"
+  "jetbrains": "Jetbrains"
+  "intelsat": "Intelsat"
+  "delta onboard": "Delta"
+  "blue bottle": "Blu"
+  "devocion": "Devocion"
+  "united airlines": "United"
+  "american airlines": "American"
+  "delta air": "Delta"

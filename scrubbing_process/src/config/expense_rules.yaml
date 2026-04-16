@@ -1,0 +1,40 @@
+version: "1.0"
+last_updated: "2026-04-15"
+
+# Expense code remapping rules
+expense_code_remap:
+  "Miscellaneous": "Other"
+  "Cell Phone": "Phones"
+  "Telephones": "Phones"
+  "Furn & Equip": "Equipment"
+  "Furn & Equipment": "Equipment"
+  "Seminars": "Conferences"
+  "Seminars and Conferences": "Conferences"
+  "Info Service": "Info Services"
+  "Inflight Wifi": "Info Services"
+
+# Disallowed expense codes (should be flagged)
+disallowed_codes:
+  - "Miscellaneous"
+  - "Cell Phone"
+  - "Telephones"
+
+# Smart expense code detection (based on description patterns)
+smart_detection:
+  - pattern: "inflight wifi"
+    correct_code: "Info Services"
+    description: "Inflight wifi should use Info Services"
+
+  - pattern: "tkt fee|ticketing fee|seat upgrade|checked bag fee"
+    correct_code: "Airline"
+    exclude_patterns: "train|bus|boat"
+    description: "Flight-related fees should use Airline"
+
+  - pattern: "booking fee"
+    include_patterns: "lodging|hotel"
+    correct_code: "Lodging"
+    description: "Hotel booking fees should use Lodging"
+
+  - pattern: "train/|bus.parking|bus.fuel|bus.rental|travel insurance"
+    correct_code: "Other Travel"
+    description: "Other transportation should use Other Travel"

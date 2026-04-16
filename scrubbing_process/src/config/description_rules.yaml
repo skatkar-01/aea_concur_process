@@ -1,0 +1,133 @@
+version: "1.0"
+last_updated: "2026-04-15"
+
+# Description formatting rules
+rules:
+  - id: DESC_001
+    name: "Business abbreviation"
+    find: "Business "
+    replace: "Bus."
+    scope: "all"
+    enabled: true
+    priority: 1
+
+  - id: DESC_002
+    name: "Remove Bus from Lodging"
+    find: "Bus. Lodging"
+    replace: "Lodging"
+    scope: "lodging"
+    enabled: true
+    priority: 2
+
+  - id: DESC_003
+    name: "Remove Bus from Lodging (no space)"
+    find: "Bus.Lodging"
+    replace: "Lodging"
+    scope: "lodging"
+    enabled: true
+    priority: 3
+
+  - id: DESC_004
+    name: "Remove Transportation from Car Service"
+    find: "Transportation"
+    replace: ""
+    scope: "car_service"
+    enabled: true
+    priority: 4
+
+  - id: DESC_005
+    name: "Car service route separator"
+    find: " to "
+    replace: "-"
+    scope: "car_service"
+    enabled: true
+    priority: 5
+
+  - id: DESC_006
+    name: "Home to Office format"
+    find: "Home to Office"
+    replace: "Home-Office"
+    scope: "car_service"
+    enabled: true
+    priority: 6
+
+  - id: DESC_007
+    name: "Office to Home format"
+    find: "Office to Home"
+    replace: "Office-Home"
+    scope: "car_service"
+    enabled: true
+    priority: 7
+
+  # Inflight Wifi casing variations
+  - id: DESC_008
+    name: "Inflight WiFi casing 1"
+    find: "Inflight WiFi"
+    replace: "Inflight Wifi"
+    scope: "info_services"
+    enabled: true
+    priority: 8
+
+  - id: DESC_009
+    name: "Inflight WiFi casing 2"
+    find: "inflight wifi"
+    replace: "Inflight Wifi"
+    scope: "info_services"
+    enabled: true
+    priority: 9
+
+  - id: DESC_010
+    name: "Inflight WiFI casing 3"
+    find: "Inflight WIFI"
+    replace: "Inflight Wifi"
+    scope: "info_services"
+    enabled: true
+    priority: 10
+
+  - id: DESC_011
+    name: "Inflight WiFi hyphen"
+    find: "In-flight Wifi"
+    replace: "Inflight Wifi"
+    scope: "info_services"
+    enabled: true
+    priority: 11
+
+  # Personal expense cleanup
+  - id: DESC_012
+    name: "Personal expense cleanup 1"
+    find: "Personal expense"
+    replace: "Personal"
+    scope: "personal"
+    enabled: true
+    priority: 12
+
+  - id: DESC_013
+    name: "Personal expense cleanup 2"
+    find: "Personal Expense"
+    replace: "Personal"
+    scope: "personal"
+    enabled: true
+    priority: 13
+
+# Word abbreviations (whole word replacement)
+abbreviations:
+  - id: ABBR_001
+    long: "Ticketing Fee"
+    short: "Tkt Fee"
+    priority: 1
+
+  - id: ABBR_002
+    long: "Meeting"
+    short: "Mtg"
+    priority: 2
+
+  - id: ABBR_003
+    long: "Meetings"
+    short: "Mtgs"
+    priority: 3
+
+# Prefix abbreviations (not word boundary)
+prefix_abbreviations:
+  - id: PREFIX_001
+    long: "Ticket/"
+    short: "Tkt/"

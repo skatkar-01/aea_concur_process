@@ -1,0 +1,150 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  description_rules.yaml
+#  AEA AmEx Scrubbing — Description transformation rules
+#  Priority: lower number = applied first
+#  Scopes: all | car_service | lodging | info_services | personal | airline
+# ─────────────────────────────────────────────────────────────────────────────
+
+rules:
+  # ── Global abbreviations ────────────────────────────────────────────────────
+  - id: DESC_001
+    find: "Business "
+    replace: "Bus."
+    scope: all
+    priority: 1
+    note: "Business -> Bus. per written docs"
+
+  # ── Lodging ─────────────────────────────────────────────────────────────────
+  - id: DESC_010
+    find: "Bus. Lodging"
+    replace: "Lodging"
+    scope: lodging
+    priority: 2
+    note: "Remove Bus. prefix from Lodging"
+
+  - id: DESC_011
+    find: "Bus.Lodging"
+    replace: "Lodging"
+    scope: lodging
+    priority: 3
+    note: "Remove Bus. prefix from Lodging (no space variant)"
+
+  # ── Car Service ──────────────────────────────────────────────────────────────
+  - id: DESC_020
+    find: "Transportation"
+    replace: ""
+    scope: car_service
+    priority: 4
+    note: "Remove Transportation from Car Service descriptions"
+
+  - id: DESC_021
+    find: " to "
+    replace: "-"
+    scope: car_service
+    priority: 5
+    note: "Compact route separator in Car Service"
+
+  - id: DESC_022
+    find: "Home to Office"
+    replace: "Home-Office"
+    scope: car_service
+    priority: 6
+    note: "Mandatory Home/Office car format"
+
+  - id: DESC_023
+    find: "Office to Home"
+    replace: "Office-Home"
+    scope: car_service
+    priority: 7
+    note: "Mandatory Home/Office car format"
+
+  # ── Info Services ────────────────────────────────────────────────────────────
+  - id: DESC_030
+    find: "Inflight WiFi"
+    replace: "Inflight Wifi"
+    scope: info_services
+    priority: 8
+    note: "WiFi -> Wifi (exact casing per policy)"
+
+  - id: DESC_031
+    find: "inflight wifi"
+    replace: "Inflight Wifi"
+    scope: info_services
+    priority: 9
+    note: "lowercase -> Proper"
+
+  - id: DESC_032
+    find: "Inflight WIFI"
+    replace: "Inflight Wifi"
+    scope: info_services
+    priority: 10
+    note: "ALL CAPS -> Proper"
+
+  - id: DESC_033
+    find: "In-flight Wifi"
+    replace: "Inflight Wifi"
+    scope: info_services
+    priority: 11
+    note: "Remove hyphen"
+
+  - id: DESC_034
+    find: "In-flight WiFi"
+    replace: "Inflight Wifi"
+    scope: info_services
+    priority: 12
+    note: "Remove hyphen + fix case"
+
+  # ── Personal ─────────────────────────────────────────────────────────────────
+  - id: DESC_040
+    find: "Personal expense"
+    replace: "Personal"
+    scope: personal
+    priority: 13
+    note: "Strip trailing 'expense'"
+
+  - id: DESC_041
+    find: "Personal Expense"
+    replace: "Personal"
+    scope: personal
+    priority: 14
+    note: "Strip trailing 'Expense'"
+
+# ── Word-boundary abbreviations (regex-based) ─────────────────────────────────
+abbreviations:
+  - long: "Ticketing Fee"
+    short: "Tkt Fee"
+    priority: 1
+
+  - long: "Meetings"
+    short: "Mtgs"
+    priority: 2
+
+  - long: "Meeting"
+    short: "Mtg"
+    priority: 3
+
+# ── Prefix abbreviations (exact prefix match, not word-boundary) ──────────────
+prefix_abbreviations:
+  - find: "Ticket/"
+    replace: "Tkt/"
+
+# ── Entity-tab only substitutions (not applied to AmEx All) ───────────────────
+entity_tab_rules:
+  - find: "Business Lunch"
+    replace: "Bus.Lunch"
+  - find: "Business Dinner"
+    replace: "Bus.Dinner"
+  - find: "Bus. Lunch"
+    replace: "Bus.Lunch"
+  - find: "Bus. Dinner"
+    replace: "Bus.Dinner"
+  - find: "InFlight Wifi"
+    replace: "Inflight Wifi"
+  - find: "Work Late/Office to Home"
+    replace: "Work Late/Office-Home"
+  - find: "Early Arrival/Home to Office"
+    replace: "Early Arrival/Home-Office"
+  - find: "Weekend/Home to Office"
+    replace: "Weekend/Home-Office"
+  - find: "Weekend/Office to Home"
+    replace: "Weekend/Office-Home"

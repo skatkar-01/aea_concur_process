@@ -1,0 +1,100 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  project_rules.yaml
+#  AEA AmEx Scrubbing — Project code and department validation rules
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Project → required department code(s)
+project_dept_rules:
+  "1055": ["AMA"]
+  "1010": ["UK", "GMBH"]
+  "4246": ["CONS"]
+  "6006": ["VAIP"]
+  "6001": ["VAIP"]
+  "3500": ["SBF"]
+  "7500": ["DEBT"]
+  "1105": ["GROWTH"]
+
+# Project metadata
+project_meta:
+  "1008":
+    requires_emp_id: true
+    name: Personal
+  "1003":
+    prepaid_gl: "14000"
+    name: AEA Annual Meeting
+  "1012":
+    prepaid_gl: "14000"
+    name: Associate Events
+  "1035":
+    prepaid_gl: "14000"
+    name: Annual Strategy Meeting
+  "1013":
+    gl_note: "58230"
+    name: Interns Events
+  "4246":
+    canonical_vendor: AmeriVet
+    name: AmeriVet
+  "6409":
+    canonical_vendor: Numotion
+    name: Numotion
+  "4200-B":
+    board_only: true
+    name: Traeger Board Expenses
+  "1016-SBF":
+    entity_hint: SBF
+    name: Investor Relations (SBF Funds)
+  "1016-G":
+    entity_hint: GROWTH
+    name: Investor Relations (GROWTH Funds)
+  "1018":
+    name: Firm Dev/Out@AEA/Social Initiatives
+  "1018-A":
+    name: Best Practices/MMF Portfolio Councils
+  "1018-C":
+    name: Senior Advisory Council
+  "1018-D":
+    name: Digital Offsite - Portfolios
+  "1018-W":
+    name: Women Events
+  "1002":
+    name: Associate Recruiting
+  "1001":
+    name: AEA Mgmt Co Operating Expenses
+  "1016":
+    name: US Open Events / Investor Relations
+  "4001":
+    name: Consumer Team
+  "7501":
+    name: DEBT General
+
+# Car service policy
+car_policy:
+  early_arrival_cutoff_hour: 7
+  early_arrival_cutoff_minute: 0
+  work_late_cutoff_hour: 19
+  work_late_cutoff_minute: 30
+  weekend_days: [Saturday, Sunday]
+
+car_formats:
+  work_late: "Work Late/Office-Home"
+  early_arrival: "Early Arrival/Home-Office"
+  weekend_to_office: "Weekend/Home-Office"
+  weekend_from_office: "Weekend/Office-Home"
+
+# Entity tab configuration
+entity_tabs:
+  AEA: AEA_Posted
+  SBF: SBF_Posted
+  DEBT: DEBT_Reviewed
+  GROWTH: GROWTH_Reviewed
+
+entity_default: AEA
+
+# Pay type replacement
+pay_type:
+  find: "American Express Corporate Card CBCP"
+  replace: "American Express"
+
+# LEN formula
+len_overhead: 12
+len_limit: 70
