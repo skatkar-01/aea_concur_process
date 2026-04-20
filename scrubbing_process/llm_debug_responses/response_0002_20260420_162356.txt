@@ -1,0 +1,94 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/RT: JFK-SLC/Strategy
+Vendor: Delta
+Amount: $-4027.97
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"refund","formatted_description":"Refund/RT:JFK-SLC/Strategy","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.78,"reasoning":"Refund format preserved; route present, but purpose/deal appears truncated vs original travel context. Prepaid project review applies.","flags":["Prepaid project - review G/L 14000 at posting","Refund description may be incomplete vs original charge"],"is_refund":true,"error":""},{"index":2,"transaction_type":"refund","formatted_description":"Refund/LGA-RDU/BOD Mtg/Pave America","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.86,"reasoning":"Refund format is compliant; purpose/deal preserved and already in scrubbed style.","flags":[],"is_refund":true,"error":""},{"index":3,"transaction_type":"other","formatted_description":"Deposit/BOD Dinner/Nations Roof","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.67,"reasoning":"Looks like a meal deposit/advance, but description does not match a standard meal template and needs human review.","flags":["Description missing clear business meal format","Possible deposit/advance requires review"],"is_refund":false,"error":""},{"index":4,"transaction_type":"flight","formatted_description":"RT:LGA-ORD/Mgmt Mtg/Tangent","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.93,"reasoning":"Flight format compliant; route, purpose, and company preserved.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"refund","formatted_description":"Refund/EWR-SLC/2026 Strategy Mtg","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.74,"reasoning":"Refund format present, but original charge linkage is not fully mirrored and year-specific wording may not match source transaction.","flags":["Negative amount/refund may not mirror original charge","Refund description may be incomplete vs original charge"],"is_refund":true,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:JFK-SLC/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.78,
+      "reasoning": "Refund format preserved; route present, but purpose/deal appears truncated vs original travel context. Prepaid project review applies.",
+      "flags": [
+        "Prepaid project - review G/L 14000 at posting",
+        "Refund description may be incomplete vs original charge"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/LGA-RDU/BOD Mtg/Pave America",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Refund format is compliant; purpose/deal preserved and already in scrubbed style.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Deposit/BOD Dinner/Nations Roof",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.67,
+      "reasoning": "Looks like a meal deposit/advance, but description does not match a standard meal template and needs human review.",
+      "flags": [
+        "Description missing clear business meal format",
+        "Possible deposit/advance requires review"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "flight",
+      "formatted_description": "RT:LGA-ORD/Mgmt Mtg/Tangent",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.93,
+      "reasoning": "Flight format compliant; route, purpose, and company preserved.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/EWR-SLC/2026 Strategy Mtg",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.74,
+      "reasoning": "Refund format present, but original charge linkage is not fully mirrored and year-specific wording may not match source transaction.",
+      "flags": [
+        "Negative amount/refund may not mirror original charge",
+        "Refund description may be incomplete vs original charge"
+      ],
+      "is_refund": true,
+      "error": ""
+    }
+  ]
+}

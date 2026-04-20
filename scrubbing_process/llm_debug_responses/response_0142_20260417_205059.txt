@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus.B'fast/Site Visit/4 ppl/BPG
+Vendor: Shangri-La Hotel
+Amount: $124.78
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.B'fast/Site Visit/4 ppl/BPG",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Business breakfast format is already consistent with AEA meal rules and includes purpose, headcount, and deal code. Expense code matches a business meal.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.B'fast/Site Visit/4 ppl/BPG",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Business breakfast format is already consistent with AEA meal rules and includes purpose, headcount, and deal code. Expense code matches a business meal.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

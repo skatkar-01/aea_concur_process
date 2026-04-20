@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/Exchange/EWR-SLC/Strategy
+Vendor: United
+Amount: $-961.36
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Exchange/EWR-SLC/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Refund transaction already follows required Refund/ + original description format. Expense code Airline matches airfare refund.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Exchange/EWR-SLC/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Refund transaction already follows required Refund/ + original description format. Expense code Airline matches airfare refund.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

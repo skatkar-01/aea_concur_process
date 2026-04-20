@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Mentor Mtg/J. Sang
+Vendor: Arabica
+Amount: $16.10
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/J. Sang",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Business meal based on mentor meeting. Current description was not in AEA meal format; changed to Bus.Lunch with attendee name preserved. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/J. Sang",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Business meal based on mentor meeting. Current description was not in AEA meal format; changed to Bus.Lunch with attendee name preserved. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

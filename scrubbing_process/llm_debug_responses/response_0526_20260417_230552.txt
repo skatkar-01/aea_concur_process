@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Kitchen Supplies/Supplies
+Vendor: Publix
+Amount: $45.09
+Expense: Kitchen Supplies
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Kitchen Supplies/Supplies",
+    "description_changed": false,
+    "expense_code": "Kitchen Supplies",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Type: office/kitchen supplies (other). 2) Current description is concise and within length limits. 3) No AEA formatting rule mandates a different template for general supplies, so no change made. 4) Expense code matches the transaction. 5) Flagged for possible standardization to 'Kitchen Supplies/Grocery' to match historical entries.",
+    "flags": [
+        "Consider standardizing description to 'Kitchen Supplies/Grocery' for consistency with historical transactions"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Kitchen Supplies/Supplies",
+  "description_changed": false,
+  "expense_code": "Kitchen Supplies",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: office/kitchen supplies (other). 2) Current description is concise and within length limits. 3) No AEA formatting rule mandates a different template for general supplies, so no change made. 4) Expense code matches the transaction. 5) Flagged for possible standardization to 'Kitchen Supplies/Grocery' to match historical entries.",
+  "flags": [
+    "Consider standardizing description to 'Kitchen Supplies/Grocery' for consistency with historical transactions"
+  ],
+  "is_refund": false,
+  "error": ""
+}

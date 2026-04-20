@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Work Late/Office to Home
+Vendor: Uber
+Amount: $71.81
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Work Late/Office-Home",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Identified as car service (Uber). 2) Original description used 'Office to Home' which violates AEA special-format rule; the canonical form is 'Work Late/Office-Home'. 3) Reformatted to exact special-format string, keeping business purpose. 4) Expense code 'Car Service' is appropriate and left unchanged.",
+    "flags": [
+        "Verify that 'Work Late' is appropriate for an evening departure (time-of-trip supports evening)."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Work Late/Office-Home",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Identified as car service (Uber). 2) Original description used 'Office to Home' which violates AEA special-format rule; the canonical form is 'Work Late/Office-Home'. 3) Reformatted to exact special-format string, keeping business purpose. 4) Expense code 'Car Service' is appropriate and left unchanged.",
+  "flags": [
+    "Verify that 'Work Late' is appropriate for an evening departure (time-of-trip supports evening)."
+  ],
+  "is_refund": false,
+  "error": ""
+}

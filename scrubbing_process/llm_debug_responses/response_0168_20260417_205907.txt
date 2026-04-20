@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/SLC-EWR/D.Fernholz/2026 Strategy Mtg
+Vendor: United
+Amount: $-1652.16
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/SLC-EWR/D.Fernholz/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already matches refund format: Refund/ + original route/purpose/deal. Airline expense code is appropriate for refunded flight.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/SLC-EWR/D.Fernholz/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already matches refund format: Refund/ + original route/purpose/deal. Airline expense code is appropriate for refunded flight.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

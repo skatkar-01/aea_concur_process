@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Inflight Wifi
+Vendor: United
+Amount: $10.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "info_services",
+    "formatted_description": "Inflight Wifi",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "This is an inflight wifi purchase (info services). Description matches the exact permitted wording 'Inflight Wifi'. Expense type 'Airline' is consistent with an in-flight wifi charge. No changes required.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is an inflight wifi purchase (info services). Description matches the exact permitted wording 'Inflight Wifi'. Expense type 'Airline' is consistent with an in-flight wifi charge. No changes required.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

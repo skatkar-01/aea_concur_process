@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Catering/BOD Mtg/Monroe
+Vendor: Ezcater
+Amount: $528.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Catering/BOD Mtg/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Business meal/catering transaction for BOD meeting. Current description already follows the existing internal format and retains the deal/company name Monroe.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Catering/BOD Mtg/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Business meal/catering transaction for BOD meeting. Current description already follows the existing internal format and retains the deal/company name Monroe.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

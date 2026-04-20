@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Mgmt Mtg/Armstrong Transport
+Vendor: Culinary Dropout
+Amount: $57.36
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: Travel meal. 2) Current description matches AEA Travel Meal/<purpose>/<deal> format. 3) No corrections needed. 4) Expense code 'Meals' is appropriate. 5) No issues requiring review; length constraint validated.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: Travel meal. 2) Current description matches AEA Travel Meal/<purpose>/<deal> format. 3) No corrections needed. 4) Expense code 'Meals' is appropriate. 5) No issues requiring review; length constraint validated.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

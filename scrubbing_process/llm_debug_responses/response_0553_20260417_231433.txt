@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: SLC-JFK/Strategy
+Vendor: Delta
+Amount: $2998.41
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "SLC-JFK/Strategy Mtg",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "Identified as a one-way flight. Updated purpose to use the required abbreviation 'Mtg' to follow AEA flight format (<route>/<purpose>/<deal>). Did not add a deal since none provided and kept vendor and expense code unchanged.",
+    "flags": [
+        "Confirm whether this was actually a round-trip (would require 'RT:SLC-JFK/...')",
+        "Consider adding deal/company name if applicable"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "SLC-JFK/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Identified as a one-way flight. Updated purpose to use the required abbreviation 'Mtg' to follow AEA flight format (<route>/<purpose>/<deal>). Did not add a deal since none provided and kept vendor and expense code unchanged.",
+  "flags": [
+    "Confirm whether this was actually a round-trip (would require 'RT:SLC-JFK/...')",
+    "Consider adding deal/company name if applicable"
+  ],
+  "is_refund": false,
+  "error": ""
+}

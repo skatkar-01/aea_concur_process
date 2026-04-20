@@ -146,6 +146,123 @@ class TransactionMemory:
                 return self._clean_record(match.iloc[0].to_dict())
         return None
 
+    def find_receipt_data_by_composite_key(
+        self,
+        employee_first_name: str = None,
+        employee_last_name: str = None,
+        transaction_date: str = None,
+        amount: float = None
+    ) -> Optional[Dict]:
+        """
+        Look up receipt data using composite key: employee name + date + amount.
+        Returns receipt fields (receipt_id, receipt_date, receipt_vendor, etc.) if match found.
+        Handles multiple date formats (YYYY-MM-DD, MM/DD/YYYY, etc.)
+        
+        Args:
+            employee_first_name: Employee first name
+            employee_last_name: Employee last name
+            transaction_date: Transaction date (as string, any reasonable format)
+            amount: Transaction amount
+            
+        Returns:
+            Dict with receipt fields, or None if no match found
+        """
+        if self.memory_df.empty:
+            return None
+        
+        # Build candidate frame by employee
+        df = self.memory_df.copy()
+        
+        # Filter by last name
+        if employee_last_name:
+            last_name_normalized = self._normalize_text(employee_last_name).lower()
+            if "employee_last_name" in df.columns:
+                mask = df["employee_last_name"].fillna("").astype(str).str.lower().str.contains(last_name_normalized, na=False)
+                df = df[mask]
+                if df.empty:
+                    return None
+        
+        # Filter by date - normalize to YYYY-MM-DD format for comparison
+        if transaction_date:
+            date_normalized = self._normalize_date_to_iso(transaction_date)
+            if date_normalized and "transaction_date" in df.columns:
+                # Convert all dates in memory to ISO format for comparison
+                df_dates_normalized = df["transaction_date"].fillna("").astype(str).apply(self._normalize_date_to_iso)
+                mask = df_dates_normalized == date_normalized
+                df = df[mask]
+                if df.empty:
+                    return None
+        
+        # Filter by amount
+        if amount is not None:
+            amount_float = self._to_float(amount)
+            if amount_float is not None and "amount" in df.columns:
+                # Allow small rounding differences (within $0.01)
+                mask = df["amount"].apply(lambda x: abs(self._to_float(x) - amount_float) < 0.01)
+                df = df[mask]
+                if df.empty:
+                    return None
+        
+        # If match(es) found, extract receipt fields from first match
+        if not df.empty:
+            match_row = df.iloc[0].to_dict()
+            # Extract only receipt fields (they're already prefixed in memory_df)
+            receipt_fields = {
+                'receipt_id': match_row.get('receipt_id', ''),
+                'order_id': match_row.get('order_id', ''),
+                'receipt_date': match_row.get('receipt_date', ''),
+                'receipt_vendor': match_row.get('receipt_vendor', ''),
+                'receipt_amount': match_row.get('receipt_amount', 0.0),
+                'receipt_summary': match_row.get('receipt_summary', ''),
+                'receipt_ticket_number': match_row.get('receipt_ticket_number', ''),
+                'receipt_passenger': match_row.get('receipt_passenger', ''),
+                'receipt_route': match_row.get('receipt_route', ''),
+            }
+            return receipt_fields
+        
+        return None
+    
+    def _normalize_date_to_iso(self, date_str: str) -> Optional[str]:
+        """
+        Normalize date string to ISO format (YYYY-MM-DD) for consistent comparison.
+        Handles common formats: YYYY-MM-DD, MM/DD/YYYY, MM-DD-YYYY, etc.
+        
+        Args:
+            date_str: Date string in any reasonable format
+            
+        Returns:
+            Date string in YYYY-MM-DD format, or None if cannot parse
+        """
+        try:
+            from datetime import datetime
+            
+            if not date_str or not isinstance(date_str, str):
+                return None
+            
+            date_str = date_str.strip()
+            
+            # Try common formats
+            formats = [
+                '%Y-%m-%d',      # 2026-02-11
+                '%m/%d/%Y',      # 02/11/2026
+                '%m-%d-%Y',      # 02-11-2026
+                '%d/%m/%Y',      # 11/02/2026
+                '%Y/%m/%d',      # 2026/02/11
+                '%m/%d/%y',      # 02/11/26
+                '%m-%d-%y',      # 02-11-26
+            ]
+            
+            for fmt in formats:
+                try:
+                    parsed = datetime.strptime(date_str, fmt)
+                    return parsed.strftime('%Y-%m-%d')
+                except ValueError:
+                    continue
+            
+            return None
+        except Exception:
+            return None
+
     def find_similar(self, txn: Dict, top_k: int = 5) -> List[Dict]:
         if self.memory_df.empty:
             return []

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: LGA-SAV/Gen Pact Event/Digital Offsite
+Vendor: Delta
+Amount: $713.85
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LGA-SAV/Gen Pact Event/Digital Offsite",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 1.0,
+  "reasoning": "Description is a one-way flight with correct route and purpose/deal format per AEA rules; expense code matches flight type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LGA-SAV/Gen Pact Event/Digital Offsite",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 1.0,
+  "reasoning": "Description is a one-way flight with correct route and purpose/deal format per AEA rules; expense code matches flight type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

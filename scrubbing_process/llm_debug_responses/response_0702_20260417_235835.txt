@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-16.17
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Charge is a small meal expense with no business context provided; current description is already the only available label and does not violate formatting rules.",
+  "flags": [
+    "No business purpose or attendees provided; likely personal meal."
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Charge is a small meal expense with no business context provided; current description is already the only available label and does not violate formatting rules.",
+  "flags": [
+    "No business purpose or attendees provided; likely personal meal."
+  ],
+  "is_refund": false,
+  "error": ""
+}

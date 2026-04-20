@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Inflight Wifi
+Vendor: United
+Amount: $8.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "info_services",
+    "formatted_description": "Inflight Wifi",
+    "description_changed": false,
+    "expense_code": "Info Services",
+    "expense_code_changed": true,
+    "confidence": 0.95,
+    "reasoning": "1) This is an in-flight WiFi purchase -> Info Services. 2) Description already matches exact required format 'Inflight Wifi' so no change. 3) Expense code was 'Airline' which does not match the transaction type, so updated to 'Info Services'. 4) Length and vendor constraints satisfied. 5) No further edits needed.",
+    "flags": [
+        "Original expense code 'Airline' did not match an Info Services transaction; changed to 'Info Services' - please confirm accounting mapping"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi",
+  "description_changed": false,
+  "expense_code": "Info Services",
+  "expense_code_changed": true,
+  "confidence": 0.95,
+  "reasoning": "1) This is an in-flight WiFi purchase -> Info Services. 2) Description already matches exact required format 'Inflight Wifi' so no change. 3) Expense code was 'Airline' which does not match the transaction type, so updated to 'Info Services'. 4) Length and vendor constraints satisfied. 5) No further edits needed.",
+  "flags": [
+    "Original expense code 'Airline' did not match an Info Services transaction; changed to 'Info Services' - please confirm accounting mapping"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/ACG M&A South Conf
+Vendor: Hotel At Avalon
+Amount: $1859.68
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/ACG M&A South Conf",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Lodging transaction already uses correct AEA format with purpose and no deal/company change needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/ACG M&A South Conf",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Lodging transaction already uses correct AEA format with purpose and no deal/company change needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

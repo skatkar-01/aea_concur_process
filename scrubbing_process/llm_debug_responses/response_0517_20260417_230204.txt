@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Coffee Mtg/Mentoring/J. Yzanga and K. Schott
+Vendor: Devocion
+Amount: $17.97
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/J. Yzanga K. Schott/Mentoring",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Business coffee meeting with two attendees; reformatted from nonstandard 'Coffee Mtg' to Bus.Lunch and preserved mentoring purpose and attendee names.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/J. Yzanga K. Schott/Mentoring",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Business coffee meeting with two attendees; reformatted from nonstandard 'Coffee Mtg' to Bus.Lunch and preserved mentoring purpose and attendee names.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

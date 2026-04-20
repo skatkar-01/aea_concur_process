@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Office-Read Ahead /in person volunteer event
+Vendor: Uber
+Amount: $65.49
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Read Ahead/in person volunteer event",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Uber car service matches existing special-format style. Kept description as provided since it is concise and business context is present; only normalized spacing around the slash.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Read Ahead/in person volunteer event",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Uber car service matches existing special-format style. Kept description as provided since it is concise and business context is present; only normalized spacing around the slash.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

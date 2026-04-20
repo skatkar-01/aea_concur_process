@@ -31,7 +31,7 @@ rules:
     name: "Remove Transportation from Car Service"
     find: "Transportation"
     replace: ""
-    scope: "car_service"
+    scope: "all"
     enabled: true
     priority: 4
 

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+Vendor: Paradies Lagardere
+Amount: $6.76
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Travel meal format is already correct and includes purpose plus deal name. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Travel meal format is already correct and includes purpose plus deal name. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

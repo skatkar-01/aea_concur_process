@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Mentoring Coffee/Brendan Gallagher
+Vendor: Blue Bottle
+Amount: $14.88
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Bus.Lunch/Brendan Gallagher",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Type: business meal (coffee meeting). 2) Original 'Mentoring Coffee/Brendan Gallagher' does not follow AEA meal format. 3) Reformatted to Bus.Lunch/Brendan Gallagher to match 'Bus.Lunch/<attendees>/<deal>' rule (using attendee name). 4) Expense code 'Meals' is appropriate and left unchanged. 5) No refund. Kept description concise and preserved attendee name.",
+    "flags": [
+        "Confirm whether 'Bus.Lunch' is preferred for a coffee meeting (no explicit Breakfast/Coffee type exists)",
+        "No deal/company provided — confirm if project/deal name should be appended"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/Brendan Gallagher",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: business meal (coffee meeting). 2) Original 'Mentoring Coffee/Brendan Gallagher' does not follow AEA meal format. 3) Reformatted to Bus.Lunch/Brendan Gallagher to match 'Bus.Lunch/<attendees>/<deal>' rule (using attendee name). 4) Expense code 'Meals' is appropriate and left unchanged. 5) No refund. Kept description concise and preserved attendee name.",
+  "flags": [
+    "Confirm whether 'Bus.Lunch' is preferred for a coffee meeting (no explicit Breakfast/Coffee type exists)",
+    "No deal/company provided \u2014 confirm if project/deal name should be appended"
+  ],
+  "is_refund": false,
+  "error": ""
+}

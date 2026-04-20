@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Catering/BOD Mtg/Monroe
+Vendor: Ezcater
+Amount: $242.60
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/BOD Mtg/Monroe",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Catering for BOD Mtg fits business meal format. Replaced generic Catering/ prefix with Bus.Lunch per AEA meal rules and kept meeting/deal name Monroe.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/BOD Mtg/Monroe",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Catering for BOD Mtg fits business meal format. Replaced generic Catering/ prefix with Bus.Lunch per AEA meal rules and kept meeting/deal name Monroe.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

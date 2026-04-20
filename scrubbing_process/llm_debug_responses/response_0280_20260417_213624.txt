@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Spothero
+Amount: $19.08
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Parking expense under Other Travel; description is already concise but non-business. Kept as-is since no AEA travel-purpose format can be inferred from available details.",
+  "flags": [
+    "Personal description may require human review for business purpose support"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Parking expense under Other Travel; description is already concise but non-business. Kept as-is since no AEA travel-purpose format can be inferred from available details.",
+  "flags": [
+    "Personal description may require human review for business purpose support"
+  ],
+  "is_refund": false,
+  "error": ""
+}

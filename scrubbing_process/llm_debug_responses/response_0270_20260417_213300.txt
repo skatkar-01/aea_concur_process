@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/Exch Tkt:ORD-LGA/BOD Mtg/AmeriVet
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/Exch Tkt:ORD-LGA/BOD Mtg/AmeriVet",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Already in ticket fee/exchange format with route, purpose, and deal name preserved; expense code matches Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/Exch Tkt:ORD-LGA/BOD Mtg/AmeriVet",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Already in ticket fee/exchange format with route, purpose, and deal name preserved; expense code matches Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

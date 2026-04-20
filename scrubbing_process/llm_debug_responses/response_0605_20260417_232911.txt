@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/IR Mtgs
+Vendor: United
+Amount: $1849.68
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-FRA/LHR-EWR/IR Mtgs",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Round-trip airline ticket; description already follows route/purpose format and keeps the business purpose. Expense code matches flight travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-FRA/LHR-EWR/IR Mtgs",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Round-trip airline ticket; description already follows route/purpose format and keeps the business purpose. Expense code matches flight travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

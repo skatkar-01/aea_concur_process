@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Dinner-Home/AmeriVet BOD Dinner
+Vendor: Uber
+Amount: $68.02
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Dinner/AmeriVet BOD Dinner",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is car service; description did not follow 'from-to/purpose/deal' format. Changed 'Dinner-Home/AmeriVet BOD Dinner' to 'Home-Dinner/AmeriVet BOD Dinner' reflecting a likely route home after dinner, consistent with similar transactions.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Dinner/AmeriVet BOD Dinner",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is car service; description did not follow 'from-to/purpose/deal' format. Changed 'Dinner-Home/AmeriVet BOD Dinner' to 'Home-Dinner/AmeriVet BOD Dinner' reflecting a likely route home after dinner, consistent with similar transactions.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

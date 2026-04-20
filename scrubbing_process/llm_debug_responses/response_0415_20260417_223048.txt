@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Inflight Wifi
+Vendor: Delta
+Amount: $5.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "info_services",
+    "formatted_description": "Inflight Wifi",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Transaction is an inflight wifi charge which matches the allowed exact format 'Inflight Wifi'. Description and casing are correct; expense type 'Airline' is appropriate for an in-flight wifi charge. No changes made.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is an inflight wifi charge which matches the allowed exact format 'Inflight Wifi'. Description and casing are correct; expense type 'Airline' is appropriate for an in-flight wifi charge. No changes made.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

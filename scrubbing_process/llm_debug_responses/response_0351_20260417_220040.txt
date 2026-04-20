@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/EWR-DCA/Elevate Roadshow
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "Tkt Fee/EWR-DCA/Elevate Roadshow",
+    "description_changed": false,
+    "expense_code": "Other Travel",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Type: flight fee (ticketing fee). 2) Description matches AEA ticketing fee format (Tkt Fee/<route>/<deal>). 3) No corrections needed; route and event (Elevate Roadshow) retained. 4) Expense code 'Other Travel' aligns with historical entries for ticketing fees. 5) No human review items identified.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-DCA/Elevate Roadshow",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Type: flight fee (ticketing fee). 2) Description matches AEA ticketing fee format (Tkt Fee/<route>/<deal>). 3) No corrections needed; route and event (Elevate Roadshow) retained. 4) Expense code 'Other Travel' aligns with historical entries for ticketing fees. 5) No human review items identified.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

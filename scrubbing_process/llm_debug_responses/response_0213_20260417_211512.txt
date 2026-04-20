@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Parking/Tuck PE Conference
+Vendor: DC Cecs Parking
+Amount: $15.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Bus.Parking/Tuck PE Conference",
+    "description_changed": true,
+    "expense_code": "Other Travel",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Type: parking (other travel). 2) Original used 'Parking/...', AEA requires 'Bus.Parking/<purpose>/<deal>'. 3) Updated to 'Bus.Parking/Tuck PE Conference' to match format. 4) Expense code 'Other Travel' is appropriate for parking—no change. 5) No additional issues; length/layout within limits.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Bus.Parking/Tuck PE Conference",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: parking (other travel). 2) Original used 'Parking/...', AEA requires 'Bus.Parking/<purpose>/<deal>'. 3) Updated to 'Bus.Parking/Tuck PE Conference' to match format. 4) Expense code 'Other Travel' is appropriate for parking\u2014no change. 5) No additional issues; length/layout within limits.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

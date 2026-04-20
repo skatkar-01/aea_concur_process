@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Global Fund Finance Symposium
+Vendor: Fontainebleau
+Amount: $2119.26
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Global Fund Finance Symposium",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Transaction is lodging (hotel stay at Fontainebleau). 2) Description follows AEA Lodging format (Lodging/<purpose>); no deal/company applies. 3) Expense type matches lodging. 4) Length constraints met. No changes necessary.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Global Fund Finance Symposium",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Transaction is lodging (hotel stay at Fontainebleau). 2) Description follows AEA Lodging format (Lodging/<purpose>); no deal/company applies. 3) Expense type matches lodging. 4) Length constraints met. No changes necessary.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

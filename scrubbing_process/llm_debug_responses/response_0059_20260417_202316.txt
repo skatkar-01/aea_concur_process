@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: RSW-BWI/Internal Mtgs/Window Nation
+Vendor: Southwest
+Amount: $591.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "RSW-BWI/Internal Mtg/Window Nation",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "Identified as a flight. Original format mostly correct but used 'Mtgs' instead of the required abbreviation 'Mtg'. Did not add RT: since trip type (round trip vs one-way) is not confirmed. Kept deal/company name.",
+    "flags": [
+        "Confirm whether itinerary was round-trip; if so prepend 'RT:' to the description"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RSW-BWI/Internal Mtg/Window Nation",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Identified as a flight. Original format mostly correct but used 'Mtgs' instead of the required abbreviation 'Mtg'. Did not add RT: since trip type (round trip vs one-way) is not confirmed. Kept deal/company name.",
+  "flags": [
+    "Confirm whether itinerary was round-trip; if so prepend 'RT:' to the description"
+  ],
+  "is_refund": false,
+  "error": ""
+}

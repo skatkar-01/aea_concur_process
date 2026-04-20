@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Event-Office/Read Ahead Event
+Vendor: Uber
+Amount: $65.68
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Event-Office/Read Ahead Event",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "This is a car service. The description follows the <from>-<to>/<purpose> pattern (no spaces around dash) and includes the business purpose. No deal name provided, which is optional. Expense code 'Car Service' matches.",
+    "flags": [
+        "Confirm route direction: historical similar txn uses 'Office-Event/Read Ahead Event' — verify which endpoint should be first"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Event-Office/Read Ahead Event",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "This is a car service. The description follows the <from>-<to>/<purpose> pattern (no spaces around dash) and includes the business purpose. No deal name provided, which is optional. Expense code 'Car Service' matches.",
+  "flags": [
+    "Confirm route direction: historical similar txn uses 'Office-Event/Read Ahead Event' \u2014 verify which endpoint should be first"
+  ],
+  "is_refund": false,
+  "error": ""
+}

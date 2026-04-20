@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: GEG-MSP-EWR/BOD Mtg/TileBar
+Vendor: Delta
+Amount: $1059.20
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "GEG-MSP-EWR/BOD Mtg/TileBar",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Flight description already matches AEA format with multi-leg route, purpose, and deal name. Expense code aligns with airline travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "GEG-MSP-EWR/BOD Mtg/TileBar",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Flight description already matches AEA format with multi-leg route, purpose, and deal name. Expense code aligns with airline travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

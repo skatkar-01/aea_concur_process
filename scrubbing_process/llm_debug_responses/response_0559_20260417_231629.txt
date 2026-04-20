@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-SLC/Strategy
+Vendor: United
+Amount: $1472.68
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "EWR-SLC/Strategy Mtg",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.85,
+    "reasoning": "Identified as a flight. Original description missing the standard 'Mtg' abbreviation for purpose. Reformatted to one-way flight template: <origin>-<destination>/<purpose>. Kept company/deal blank because none provided.",
+    "flags": [
+        "Confirm whether this was RT (round trip); if so, prefix with 'RT:'",
+        "No deal/company provided — add deal name at end if applicable",
+        "Receipt/ticket available (ticket UA-0167419408360) — verify description matches ticket itinerary"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-SLC/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.85,
+  "reasoning": "Identified as a flight. Original description missing the standard 'Mtg' abbreviation for purpose. Reformatted to one-way flight template: <origin>-<destination>/<purpose>. Kept company/deal blank because none provided.",
+  "flags": [
+    "Confirm whether this was RT (round trip); if so, prefix with 'RT:'",
+    "No deal/company provided \u2014 add deal name at end if applicable",
+    "Receipt/ticket available (ticket UA-0167419408360) \u2014 verify description matches ticket itinerary"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/AEA Internal Mtgs
+Vendor: Omni
+Amount: $482.15
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/AEA Internal Mtgs",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already matches AEA lodging format with purpose included; no deal/company name available to append.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/AEA Internal Mtgs",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already matches AEA lodging format with purpose included; no deal/company name available to append.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

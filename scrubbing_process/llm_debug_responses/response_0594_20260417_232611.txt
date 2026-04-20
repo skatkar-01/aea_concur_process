@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: CMF Vending
+Amount: $2.60
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.85,
+    "reasoning": "1) Type: Travel meal. 2) Current description follows the 'Travel Meal/<purpose>' pattern but is missing a trailing deal/company per AEA rules. 3) No deal/company provided in transaction data or historical notes, so I did not invent one. 4) Expense code 'Meals' matches a travel meal. 5) Flagging for human review to add the deal/company if required.",
+    "flags": [
+        "Missing deal/company for Travel Meal — confirm and append as 'Travel Meal/<purpose>/<deal>' if applicable",
+        "Low-dollar vending purchase: verify business purpose if needed"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.85,
+  "reasoning": "1) Type: Travel meal. 2) Current description follows the 'Travel Meal/<purpose>' pattern but is missing a trailing deal/company per AEA rules. 3) No deal/company provided in transaction data or historical notes, so I did not invent one. 4) Expense code 'Meals' matches a travel meal. 5) Flagging for human review to add the deal/company if required.",
+  "flags": [
+    "Missing deal/company for Travel Meal \u2014 confirm and append as 'Travel Meal/<purpose>/<deal>' if applicable",
+    "Low-dollar vending purchase: verify business purpose if needed"
+  ],
+  "is_refund": false,
+  "error": ""
+}

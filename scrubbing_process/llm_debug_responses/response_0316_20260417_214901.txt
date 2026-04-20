@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home- JFK/2026 Strategy Mtg
+Vendor: Uber
+Amount: $166.35
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Home/2026 Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service trip was reversed in direction. Standard format requires from-to with no space around dash, so changed Home- JFK to JFK-Home and kept the business purpose.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Home/2026 Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service trip was reversed in direction. Standard format requires from-to with no space around dash, so changed Home- JFK to JFK-Home and kept the business purpose.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

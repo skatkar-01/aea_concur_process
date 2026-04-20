@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt fee/ASE-ORD-LGA/Strategy
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/ASE-ORD-LGA/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Airline ticket fee. Kept route and purpose; normalized description casing to match AEA format.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/ASE-ORD-LGA/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Airline ticket fee. Kept route and purpose; normalized description casing to match AEA format.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

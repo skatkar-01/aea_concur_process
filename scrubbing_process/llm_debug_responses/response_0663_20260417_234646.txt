@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: JAX-PHL-CLT/CFO Interview/AmEx
+Vendor: American
+Amount: $2058.66
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "JAX-PHL-CLT/CFO Interview/AmEx",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Multi-leg air travel already follows flight format with route/purpose/deal structure. No change needed; Airline code matches.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "JAX-PHL-CLT/CFO Interview/AmEx",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Multi-leg air travel already follows flight format with route/purpose/deal structure. No change needed; Airline code matches.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

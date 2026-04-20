@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/BOD Mtg/BOD Mtg/Numotion
+Vendor: Umstead
+Amount: $583.16
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/BOD Mtg/Numotion",
+    "description_changed": true,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Transaction is lodging. Original description duplicated the purpose ('BOD Mtg' twice). Reformatted to AEA lodging template Lodging/<purpose>/<deal> preserving business purpose and deal name. Expense code matches lodging.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/BOD Mtg/Numotion",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is lodging. Original description duplicated the purpose ('BOD Mtg' twice). Reformatted to AEA lodging template Lodging/<purpose>/<deal> preserving business purpose and deal name. Expense code matches lodging.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-DCA/Elevate Roadshow
+Vendor: United
+Amount: $556.36
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "EWR-DCA/Elevate Roadshow",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Type: one-way flight. 2) Description follows AEA one-way flight template (ROUTE/Purpose). 3) No corrections needed—purpose 'Elevate Roadshow' is concise and acceptable. 4) Expense code 'Airline' correctly matches flight. 5) No flags for human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-DCA/Elevate Roadshow",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: one-way flight. 2) Description follows AEA one-way flight template (ROUTE/Purpose). 3) No corrections needed\u2014purpose 'Elevate Roadshow' is concise and acceptable. 4) Expense code 'Airline' correctly matches flight. 5) No flags for human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

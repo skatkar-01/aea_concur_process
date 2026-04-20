@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: BBY-NYP/West Monroe Offsite/Digital Offsite
+Vendor: Amtrak
+Amount: $151.50
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "BBY-NYP/West Monroe Offsite/Digital Offsite",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Amtrak rail transaction fits Other Travel. Description already follows the route/purpose/deal format and keeps business context intact, so no change needed. Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "BBY-NYP/West Monroe Offsite/Digital Offsite",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Amtrak rail transaction fits Other Travel. Description already follows the route/purpose/deal format and keeps business context intact, so no change needed. Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

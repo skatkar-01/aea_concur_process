@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA-DRS-FRA-EWR/SCIO Workshop
+Vendor: Lufthansa
+Amount: $17726.63
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-DRS-FRA-EWR/SCIO Workshop",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket itinerary; reformatted to AEA flight template by adding RT: for round trip. Kept route and purpose intact.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-DRS-FRA-EWR/SCIO Workshop",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket itinerary; reformatted to AEA flight template by adding RT: for round trip. Kept route and purpose intact.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,87 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Catering/BOD Mtg/Crane
+Vendor: Ezcater
+Amount: $276.09
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/BOD Mtg/Crane","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Catering meal mapped to business dinner format; kept BOD Mtg and company context.","flags":[],"is_refund":false,"error":""},{"index":2,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/BOD Mtg/Crane","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Catering meal mapped to business dinner format; kept BOD Mtg and company context.","flags":["Working dinner amount exceeds $35.00 limit"],"is_refund":false,"error":""},{"index":3,"transaction_type":"other","formatted_description":"Kitchen Supplies/Grocery","description_changed":false,"expense_code":"Equipment","expense_code_changed":false,"confidence":0.92,"reasoning":"No description rule applied; expense code left as provided. Business context preserved.","flags":[],"is_refund":false,"error":""},{"index":4,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Office Supplies","expense_code_changed":false,"confidence":0.98,"reasoning":"Description is clear and no formatting rule applies; vendor untouched.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Office Supplies","expense_code_changed":false,"confidence":0.98,"reasoning":"Description is clear and no formatting rule applies; vendor untouched.","flags":[],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/BOD Mtg/Crane",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Catering meal mapped to business dinner format; kept BOD Mtg and company context.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/BOD Mtg/Crane",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Catering meal mapped to business dinner format; kept BOD Mtg and company context.",
+      "flags": [
+        "Working dinner amount exceeds $35.00 limit"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Grocery",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "No description rule applied; expense code left as provided. Business context preserved.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Description is clear and no formatting rule applies; vendor untouched.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Description is clear and no formatting rule applies; vendor untouched.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

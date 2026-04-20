@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Work Late/Office to Home
+Vendor: Uber
+Amount: $49.97
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Work Late/Office-Home",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "Identified as car service. Original used nonstandard wording 'Office to Home'; converted to AEA special format 'Work Late/Office-Home' (do not modify special formats). Expense type 'Car Service' matches transaction.",
+    "flags": ["Historical receipt shows name 'Osaso Ighodaro' — potential name mismatch with employee record requiring human review"],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Work Late/Office-Home",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Identified as car service. Original used nonstandard wording 'Office to Home'; converted to AEA special format 'Work Late/Office-Home' (do not modify special formats). Expense type 'Car Service' matches transaction.",
+  "flags": [
+    "Historical receipt shows name 'Osaso Ighodaro' \u2014 potential name mismatch with employee record requiring human review"
+  ],
+  "is_refund": false,
+  "error": ""
+}

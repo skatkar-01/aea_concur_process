@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Amtrak Station-Home/Elevate Roadshow
+Vendor: Uber
+Amount: $63.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Amtrak Station-Home/Elevate Roadshow",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service transaction; description already follows the AEA route/purpose/deal format and no rewrite was needed. Expense code matches the transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Amtrak Station-Home/Elevate Roadshow",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service transaction; description already follows the AEA route/purpose/deal format and no rewrite was needed. Expense code matches the transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -71,7 +71,8 @@ class ResultCache:
                     cached = json.load(f)
                 
                 self.hits += 1
-                return cached
+                # Return just the inner result dict (not the wrapped version with cached_at)
+                return cached.get('result', cached)
                 
             except Exception as e:
                 # Cache file corrupted, remove it

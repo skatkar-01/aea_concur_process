@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Burger Fi
+Amount: $28.35
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Identified as a travel meal. 2) Description matches AEA template 'Travel Meal/<purpose>/<deal>' for purpose 'Strategy' though it lacks an explicit deal/company. 3) No change made to preserve original business context; adding a deal was not possible from provided data. 4) Expense code 'Meals' correctly matches a travel meal. 5) Flagged for optional human review to add deal/company if required.",
+    "flags": [
+        "Consider adding deal/company to description if applicable"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Identified as a travel meal. 2) Description matches AEA template 'Travel Meal/<purpose>/<deal>' for purpose 'Strategy' though it lacks an explicit deal/company. 3) No change made to preserve original business context; adding a deal was not possible from provided data. 4) Expense code 'Meals' correctly matches a travel meal. 5) Flagged for optional human review to add deal/company if required.",
+  "flags": [
+    "Consider adding deal/company to description if applicable"
+  ],
+  "is_refund": false,
+  "error": ""
+}

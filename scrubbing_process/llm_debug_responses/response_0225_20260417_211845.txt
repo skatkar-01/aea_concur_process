@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal
+Vendor: Jimmy Johns
+Amount: $14.93
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Meal transaction at Jimmy Johns; current description already matches the Travel Meal format and no deal/purpose detail is provided to add. Expense code Meals is consistent.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Meal transaction at Jimmy Johns; current description already matches the Travel Meal format and no deal/purpose detail is provided to add. Expense code Meals is consistent.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight ticketing fee on a round-trip route. Current description already matches AEA format and includes the trip purpose/deal context. Expense code Other Travel is appropriate for ticketing fees.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-SRQ-PBI/IR Florida Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight ticketing fee on a round-trip route. Current description already matches AEA format and includes the trip purpose/deal context. Expense code Other Travel is appropriate for ticketing fees.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

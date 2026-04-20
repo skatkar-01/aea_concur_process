@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Laundry/Site Visit/VCC
+Vendor: Marriott
+Amount: $5.95
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Laundry/Site Visit/VCC",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a miscellaneous laundry charge tied to a site visit. The existing description is already concise and does not conflict with any required travel/meal/lodging formats, so no reformatting was needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Laundry/Site Visit/VCC",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a miscellaneous laundry charge tied to a site visit. The existing description is already concise and does not conflict with any required travel/meal/lodging formats, so no reformatting was needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

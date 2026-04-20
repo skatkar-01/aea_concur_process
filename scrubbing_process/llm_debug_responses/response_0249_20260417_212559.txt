@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/BOD Mtg/AmeriVet
+Vendor: The Luxury Collection Hotel
+Amount: $744.50
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/BOD Mtg/AmeriVet",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.98,
+    "reasoning": "Transaction is lodging. Description already matches Lodging/<purpose>/<deal> format. Expense type matches lodging. Length check (desc+vendor+12=63) under 70.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/BOD Mtg/AmeriVet",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Transaction is lodging. Description already matches Lodging/<purpose>/<deal> format. Expense type matches lodging. Length check (desc+vendor+12=63) under 70.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

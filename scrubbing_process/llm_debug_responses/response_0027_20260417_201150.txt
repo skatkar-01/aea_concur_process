@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt fee/JFK-SLC-LGA/Strategy
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JFK-SLC-LGA/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Airline ticketing fee. Kept route and purpose, standardized ticketing fee capitalization to match AEA format.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JFK-SLC-LGA/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Airline ticketing fee. Kept route and purpose, standardized ticketing fee capitalization to match AEA format.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

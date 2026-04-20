@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/WWE
+Vendor: Versailles
+Amount: $96.87
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/BOD Mtg/WWE",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Transaction is a travel meal. 2) Current description matches required Travel Meal/<purpose>/<deal> format (Travel Meal/BOD Mtg/WWE). 3) No reformatting needed. 4) Expense type is Meals, which aligns with a travel meal. 5) Length and formatting rules satisfied.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/WWE",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Transaction is a travel meal. 2) Current description matches required Travel Meal/<purpose>/<deal> format (Travel Meal/BOD Mtg/WWE). 3) No reformatting needed. 4) Expense type is Meals, which aligns with a travel meal. 5) Length and formatting rules satisfied.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

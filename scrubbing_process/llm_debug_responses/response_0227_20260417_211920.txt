@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/GEG-MSP-EWR/BOD Mtg/TileBar
+Vendor: Frosch
+Amount: $8.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:GEG-MSP-EWR/BOD Mtg/TileBar",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticketing fee. Added RT: to match round-trip route format; kept purpose and deal name unchanged.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:GEG-MSP-EWR/BOD Mtg/TileBar",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticketing fee. Added RT: to match round-trip route format; kept purpose and deal name unchanged.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/LAX-JFK/Chemical Guys Fast Five Meeting
+Vendor: American
+Amount: $-4793.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/LAX-JFK/Chemical Guys Fast Five Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Refund airline transaction already follows required Refund/<original route>/<purpose> format. Expense code matches airline refund.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/LAX-JFK/Chemical Guys Fast Five Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Refund airline transaction already follows required Refund/<original route>/<purpose> format. Expense code matches airline refund.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

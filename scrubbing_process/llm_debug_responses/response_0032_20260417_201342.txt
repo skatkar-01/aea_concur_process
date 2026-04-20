@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Office-Train Station/Internal Mtgs/Window Nation
+Vendor: Uber
+Amount: $68.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Train Station/Internal Mtgs/Window Nation",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service entry already follows the AEA route/purpose/deal format. Expense code matches car service.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Train Station/Internal Mtgs/Window Nation",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service entry already follows the AEA route/purpose/deal format. Expense code matches car service.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

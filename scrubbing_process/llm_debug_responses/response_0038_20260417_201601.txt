@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Internal Mtgs/Window Nation
+Vendor: Hilton
+Amount: $637.32
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Internal Mtgs/Window Nation",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 1.0,
+  "reasoning": "Description matches Lodging format 'Lodging/<purpose>/<deal>'. Expense code correctly set to Lodging. No changes needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Internal Mtgs/Window Nation",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 1.0,
+  "reasoning": "Description matches Lodging format 'Lodging/<purpose>/<deal>'. Expense code correctly set to Lodging. No changes needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Mgmt Mtg/Armstrong Transport
+Vendor: The Today Show
+Amount: $5.35
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: travel meal (matches Expense Type Meals). 2) Description already follows Travel Meal/<purpose>/<deal> with proper abbreviation 'Mgmt Mtg' and includes deal 'Armstrong Transport'. 3) No reformatting required. 4) Expense code 'Meals' is appropriate. 5) No issues requiring human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: travel meal (matches Expense Type Meals). 2) Description already follows Travel Meal/<purpose>/<deal> with proper abbreviation 'Mgmt Mtg' and includes deal 'Armstrong Transport'. 3) No reformatting required. 4) Expense code 'Meals' is appropriate. 5) No issues requiring human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Kitchen Supplies/Grocery
+Vendor: Instacart
+Amount: $52.39
+Expense: Kitchen Supplies
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Kitchen Supplies/Grocery",
+    "description_changed": false,
+    "expense_code": "Kitchen Supplies",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Identified as office/kitchen supplies purchase (Instacart grocery). 2) Current description matches historical examples and there is no specific AEA template requiring change. 3) Length and format comply with key rules. 4) Expense code 'Kitchen Supplies' correctly matches the transaction. No changes made.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Kitchen Supplies/Grocery",
+  "description_changed": false,
+  "expense_code": "Kitchen Supplies",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Identified as office/kitchen supplies purchase (Instacart grocery). 2) Current description matches historical examples and there is no specific AEA template requiring change. 3) Length and format comply with key rules. 4) Expense code 'Kitchen Supplies' correctly matches the transaction. No changes made.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

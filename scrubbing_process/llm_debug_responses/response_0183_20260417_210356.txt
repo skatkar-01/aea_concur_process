@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Data Subscription/JetBrains
+Vendor: Jetbrains
+Amount: $10.89
+Expense: Software
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/JetBrains",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Data subscription is an info services expense. Recast to standard Research Subscription format with vendor at end; expense code remains Software.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/JetBrains",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Data subscription is an info services expense. Recast to standard Research Subscription format with vendor at end; expense code remains Software.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

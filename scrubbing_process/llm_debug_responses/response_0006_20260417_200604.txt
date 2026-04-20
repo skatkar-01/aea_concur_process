@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Pave America
+Vendor: Umstead
+Amount: $8.58
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/BOD Mtg/Pave America",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Transaction is a travel meal for a BOD meeting at Pave America. Description already matches 'Travel Meal/<purpose>/<deal>' format and expense type 'Meals' is appropriate. Length constraint verified (description+vendor+12 <= 70).",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Pave America",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is a travel meal for a BOD meeting at Pave America. Description already matches 'Travel Meal/<purpose>/<deal>' format and expense type 'Meals' is appropriate. Length constraint verified (description+vendor+12 <= 70).",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

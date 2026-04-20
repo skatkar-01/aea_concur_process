@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-SLC/Strategy
+Vendor: Delta
+Amount: $1729.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-SLC/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket; description already matches one-way flight format with route and purpose. Expense code is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-SLC/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket; description already matches one-way flight format with route and purpose. Expense code is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

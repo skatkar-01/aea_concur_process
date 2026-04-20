@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: JAX-LGA/Catch up Mtg/OAPC
+Vendor: Delta
+Amount: $503.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "JAX-LGA/Catch up Mtg/OAPC",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "This is a one-way flight (Airline). The description already matches the one-way flight format <route>/<purpose>/<deal> with proper route dash usage and 'Mtg' abbreviation; no changes needed. Expense code 'Airline' matches the transaction type.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "JAX-LGA/Catch up Mtg/OAPC",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is a one-way flight (Airline). The description already matches the one-way flight format <route>/<purpose>/<deal> with proper route dash usage and 'Mtg' abbreviation; no changes needed. Expense code 'Airline' matches the transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

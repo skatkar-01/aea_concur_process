@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: SLC-JFK/Harris Williams Ski Outing
+Vendor: Delta
+Amount: $2108.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:SLC-JFK/Ski Outing/Harris Williams",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Added 'RT:' prefix for round trip since amount matches round trip fare. Added deal name 'Harris Williams' at the end per rules. Formatted route without spaces around dash and included purpose. Expense code 'Airline' matches flight transaction.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:SLC-JFK/Ski Outing/Harris Williams",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Added 'RT:' prefix for round trip since amount matches round trip fare. Added deal name 'Harris Williams' at the end per rules. Formatted route without spaces around dash and included purpose. Expense code 'Airline' matches flight transaction.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

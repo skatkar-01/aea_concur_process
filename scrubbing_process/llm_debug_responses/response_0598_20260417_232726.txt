@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: CMF Vending
+Amount: $2.10
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Type: Travel meal (vending). 2) Current description matches AEA template 'Travel Meal/<purpose>'. 3) No deal/company provided; project 1035 may map to a deal but not specified, so left unchanged. 4) Expense code 'Meals' is appropriate. 5) No reformat needed.",
+    "flags": [
+        "Confirm if Project 1035 should supply a deal/company suffix to the description",
+        "Verify receipt availability per policy (small vending charge may not have receipt)"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: Travel meal (vending). 2) Current description matches AEA template 'Travel Meal/<purpose>'. 3) No deal/company provided; project 1035 may map to a deal but not specified, so left unchanged. 4) Expense code 'Meals' is appropriate. 5) No reformat needed.",
+  "flags": [
+    "Confirm if Project 1035 should supply a deal/company suffix to the description",
+    "Verify receipt availability per policy (small vending charge may not have receipt)"
+  ],
+  "is_refund": false,
+  "error": ""
+}

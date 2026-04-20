@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Site Visit/VCC
+Vendor: Marriott
+Amount: $580.05
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Site Visit/VCC",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as Lodging. 2) Description matches required format Lodging/<purpose>/<deal>. 3) No corrections needed. 4) Expense code 'Lodging' matches transaction type. 5) Flagged potential allocation issue (see flags) but no description change.",
+    "flags": [
+        "Receipt text (historical) shows ancillary charges (food, laundry) — verify whether any non-lodging charges should be split to other expense codes."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Site Visit/VCC",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as Lodging. 2) Description matches required format Lodging/<purpose>/<deal>. 3) No corrections needed. 4) Expense code 'Lodging' matches transaction type. 5) Flagged potential allocation issue (see flags) but no description change.",
+  "flags": [
+    "Receipt text (historical) shows ancillary charges (food, laundry) \u2014 verify whether any non-lodging charges should be split to other expense codes."
+  ],
+  "is_refund": false,
+  "error": ""
+}

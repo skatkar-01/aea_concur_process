@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/Paris-London/Comms/Biz Dev Trip
+Vendor: Frosch
+Amount: $45.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/Paris-London/Comms/Biz Dev Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "This is a flight ticketing fee and the description already matches the required Tkt Fee format with route and purpose preserved. Expense code Other Travel is consistent.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/Paris-London/Comms/Biz Dev Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "This is a flight ticketing fee and the description already matches the required Tkt Fee format with route and purpose preserved. Expense code Other Travel is consistent.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

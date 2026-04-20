@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-Airport/AEA Strategy Meeting
+Vendor: Uber
+Amount: $10.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Airport/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service already matches the required route/purpose format. Expense code is consistent with Uber ground transport.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Airport/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service already matches the required route/purpose format. Expense code is consistent with Uber ground transport.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: Virgin Airways
+Amount: $10242.43
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket; description already matches flight route/purpose/deal format and includes the company name. Expense code is consistent.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket; description already matches flight route/purpose/deal format and includes the company name. Expense code is consistent.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

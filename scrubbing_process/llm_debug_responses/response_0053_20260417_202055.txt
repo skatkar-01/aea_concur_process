@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: ASE-ORD-LGA/Strategy
+Vendor: United
+Amount: $956.41
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:ASE-ORD-LGA/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline ticket; existing route/purpose format was close but needed RT: prefix for round trip per rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:ASE-ORD-LGA/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline ticket; existing route/purpose format was close but needed RT: prefix for round trip per rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

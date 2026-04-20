@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: United
+Amount: $293.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "RT:UNK/Personal",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.60,
+    "reasoning": "Identified as an airline ticket (United) from ticket/invoice. Original description 'Personal' does not follow RT: route/purpose format. No route or deal provided in record, so applied conservative placeholder 'RT:UNK/Personal' to meet AEA flight formatting rules. Expense code 'Airline' is appropriate.",
+    "flags": [
+        "Missing route/airport information — please confirm origin/destination to replace 'UNK'",
+        "Personal travel flagged — confirm whether this is allowable or should be coded as personal/no-reimbursement"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:UNK/Personal",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.6,
+  "reasoning": "Identified as an airline ticket (United) from ticket/invoice. Original description 'Personal' does not follow RT: route/purpose format. No route or deal provided in record, so applied conservative placeholder 'RT:UNK/Personal' to meet AEA flight formatting rules. Expense code 'Airline' is appropriate.",
+  "flags": [
+    "Missing route/airport information \u2014 please confirm origin/destination to replace 'UNK'",
+    "Personal travel flagged \u2014 confirm whether this is allowable or should be coded as personal/no-reimbursement"
+  ],
+  "is_refund": false,
+  "error": ""
+}

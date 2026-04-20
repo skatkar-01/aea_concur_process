@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lunch/Strategy
+Vendor: 501 On Main
+Amount: $828.28
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/Strategy",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Meal transaction; current description lacks AEA business-meal format. Reformatted to Bus.Lunch with the stated purpose preserved.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/Strategy",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Meal transaction; current description lacks AEA business-meal format. Reformatted to Bus.Lunch with the stated purpose preserved.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

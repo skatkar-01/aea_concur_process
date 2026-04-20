@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "Tkt Fee/Personal",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.75,
+    "reasoning": "Likely a ticketing/service fee based on vendor (Frosch), amount ($30) and historical matches. Original 'Personal' does not follow AEA flight fee format, so reformatted to 'Tkt Fee/Personal'. Kept expense code as Airline.",
+    "flags": [
+        "Missing route/purpose/deal information for a ticketing fee — please confirm if this is a business charge and provide route/purpose/deal if applicable",
+        "Confirm that this is indeed a ticketing/service fee and not a different airfare-related charge"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/Personal",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.75,
+  "reasoning": "Likely a ticketing/service fee based on vendor (Frosch), amount ($30) and historical matches. Original 'Personal' does not follow AEA flight fee format, so reformatted to 'Tkt Fee/Personal'. Kept expense code as Airline.",
+  "flags": [
+    "Missing route/purpose/deal information for a ticketing fee \u2014 please confirm if this is a business charge and provide route/purpose/deal if applicable",
+    "Confirm that this is indeed a ticketing/service fee and not a different airfare-related charge"
+  ],
+  "is_refund": false,
+  "error": ""
+}

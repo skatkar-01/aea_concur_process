@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Parking/Tuck PE Conference
+Vendor: Hanover Inn
+Amount: $34.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Bus.Parking/Tuck PE Conference",
+    "description_changed": true,
+    "expense_code": "Other Travel",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) This is a parking charge (other travel). 2) Current description 'Parking/Tuck PE Conference' doesn't follow AEA 'Bus.Parking/<purpose>/<deal>' template. 3) Reformatted to 'Bus.Parking/Tuck PE Conference' preserving purpose. 4) Expense Type 'Other Travel' aligns with Bus.Parking, so no change. 5) Flagged receipt shows in-room dining on same folio; verify allocation between parking and meal.",
+    "flags": [
+        "Receipt indicates combined folio with In-Room Dining $37.25 and Parking $34.00 — verify correct allocation and separate meal charge",
+        "Confirm 'Tuck PE Conference' is the intended purpose (no deal/company to append)"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Bus.Parking/Tuck PE Conference",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) This is a parking charge (other travel). 2) Current description 'Parking/Tuck PE Conference' doesn't follow AEA 'Bus.Parking/<purpose>/<deal>' template. 3) Reformatted to 'Bus.Parking/Tuck PE Conference' preserving purpose. 4) Expense Type 'Other Travel' aligns with Bus.Parking, so no change. 5) Flagged receipt shows in-room dining on same folio; verify allocation between parking and meal.",
+  "flags": [
+    "Receipt indicates combined folio with In-Room Dining $37.25 and Parking $34.00 \u2014 verify correct allocation and separate meal charge",
+    "Confirm 'Tuck PE Conference' is the intended purpose (no deal/company to append)"
+  ],
+  "is_refund": false,
+  "error": ""
+}

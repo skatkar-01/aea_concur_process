@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RT:EWR-SLC/D.Fernholz/2026 Strategy Mtg
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-SLC/D.Fernholz/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight ticketing fee format is correct as provided. Expense code matches Airline.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-SLC/D.Fernholz/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight ticketing fee format is correct as provided. Expense code matches Airline.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

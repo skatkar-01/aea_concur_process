@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: Frosch
+Amount: $135.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee for multi-leg flight; description already matches AEA format and retains purpose/deal. Expense code aligns with airfare-related fee.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee for multi-leg flight; description already matches AEA format and retains purpose/deal. Expense code aligns with airfare-related fee.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

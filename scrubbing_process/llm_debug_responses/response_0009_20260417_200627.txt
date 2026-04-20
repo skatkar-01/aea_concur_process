@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Numotion
+Vendor: Umstead
+Amount: $64.67
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Numotion",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Travel meal format is already correct and matches prior Numotion examples. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Numotion",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Travel meal format is already correct and matches prior Numotion examples. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

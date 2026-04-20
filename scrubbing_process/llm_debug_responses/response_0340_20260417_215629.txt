@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: BF&P Meeting-Amtrak/Elevate Roadshow
+Vendor: Uber
+Amount: $40.26
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "IPT-TAL/BF&P Mtg/Elevate Roadshow",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Uber car service. Original text was not in car-service format; updated to route/purpose/deal using route from receipt and kept business context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "IPT-TAL/BF&P Mtg/Elevate Roadshow",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Uber car service. Original text was not in car-service format; updated to route/purpose/deal using route from receipt and kept business context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

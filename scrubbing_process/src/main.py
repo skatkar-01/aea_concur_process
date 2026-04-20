@@ -9,7 +9,7 @@ from datetime import datetime
 from copy import copy
 import pandas as pd
 from openpyxl import Workbook, load_workbook
-from openpyxl.styles import PatternFill, Font
+from openpyxl.styles import PatternFill, Font, Alignment
 import os
 from dotenv import load_dotenv
 
@@ -41,7 +41,6 @@ ENTITY_FIELD_MAP = {
     'Journal Amount': 'amount',
     'Report Entry Payment Type Name': 'pay_type',
     'Report Entry Expense Type Name': 'expense_code',
-    'Report Entry Vendor Description': 'vendor_desc',
     'Report Entry Vendor Name': 'vendor',
     'Project': 'project',
     'Cost Center': 'cost_center',
@@ -50,6 +49,33 @@ ENTITY_FIELD_MAP = {
 }
 
 HIGHLIGHT_FILL = PatternFill(fill_type='solid', fgColor='FFFFC000')
+
+# Processing metadata columns (shown when data is available)
+PROCESSING_HEADERS = [
+    'Changes',
+    'Reasoning',
+    'Flags',
+    'Confidence',
+]
+
+DEBUG_MATCH_HEADERS = [
+    'Memory File',
+    'Memory Txn ID',
+    'Memory Receipt ID',
+]
+
+LLM_DEBUG_HEADERS = [
+    'LLM Transaction Type',
+    'LLM Formatted Description',
+    'LLM Description Changed',
+    'LLM Expense Code',
+    'LLM Expense Code Changed',
+    'LLM Confidence',
+    'LLM Reasoning',
+    'LLM Flags',
+    'LLM Is Refund',
+    'LLM Error',
+]
 
 AMEX_ALL_HEADERS = [
     'Employee First Name',
@@ -68,9 +94,6 @@ AMEX_ALL_HEADERS = [
     'Report Purpose',
     'Employee ID',
 ]
-
-CONFIDENCE_HEADER = 'Confidence'
-PERCENT_FORMAT = '0.00%'
 
 
 def _is_transaction_sheet(sheet_name: str) -> bool:
@@ -109,17 +132,6 @@ def _cell_value_for_output(value):
     return value
 
 
-def _copy_cell_style(src, dst) -> None:
-    dst._style = copy(src._style)
-    if src.has_style:
-        dst.font = copy(src.font)
-        dst.fill = copy(src.fill)
-        dst.border = copy(src.border)
-        dst.alignment = copy(src.alignment)
-        dst.protection = copy(src.protection)
-        dst.number_format = src.number_format
-
-
 def _header_map(ws) -> dict[str, int]:
     headers = {}
     for col_idx in range(1, ws.max_column + 1):
@@ -129,17 +141,85 @@ def _header_map(ws) -> dict[str, int]:
     return headers
 
 
-def _ensure_confidence_column(ws) -> int:
-    headers = _header_map(ws)
-    if CONFIDENCE_HEADER in headers:
-        return headers[CONFIDENCE_HEADER]
+def _build_note(result: dict) -> str:
+    """Build the short workbook note shown in column O (now unused - use split columns instead)."""
+    note = result.get('note') or ''
+    if not note:
+        return ''
+    return str(note).strip()
 
-    confidence_col = ws.max_column + 1
-    header_cell = ws.cell(row=1, column=confidence_col, value=CONFIDENCE_HEADER)
-    if confidence_col > 1:
-        _copy_cell_style(ws.cell(row=1, column=confidence_col - 1), header_cell)
-    header_cell.font = Font(bold=True)
-    return confidence_col
+
+def _processing_metadata_values(result: dict) -> list:
+    """Extract processing metadata for separate columns: Changes, Reasoning, Flags, Confidence."""
+    changes = result.get('changes', {})
+    
+    # Build changes string
+    changes_list = []
+    if 'description' in changes:
+        before, after = changes['description']
+        changes_list.append(f"Desc: {before} => {after}")
+    if 'expense_code' in changes:
+        before, after = changes['expense_code']
+        changes_list.append(f"ExpCode: {before} => {after}")
+    if 'pay_type' in changes:
+        before, after = changes['pay_type']
+        changes_list.append(f"PayType: {before} => {after}")
+    changes_str = " | ".join(changes_list) if changes_list else ""
+    
+    # Get reasoning and flags
+    reasoning = result.get('reasoning', '')
+    flags = result.get('flags', [])
+    flags_str = " | ".join(str(f) for f in flags if f) if flags else ""
+    confidence = result.get('confidence', 0)
+    
+    return [
+        changes_str,
+        reasoning,
+        flags_str,
+        f"{confidence:.2f}" if confidence else ""
+    ]
+
+
+def _memory_match_values(result: dict) -> list:
+    match = result.get('memory_match') or {}
+    return [
+        match.get('source_file', ''),
+        match.get('transaction_id', ''),
+        match.get('receipt_id', ''),
+    ]
+
+
+def _llm_debug_values(result: dict) -> list:
+    llm = result.get('llm_result') or {}
+    flags = llm.get('flags') or []
+    if isinstance(flags, list):
+        flags_value = ' | '.join(str(flag) for flag in flags if flag is not None)
+    else:
+        flags_value = str(flags)
+
+    return [
+        llm.get('transaction_type', ''),
+        llm.get('formatted_description', ''),
+        llm.get('description_changed', ''),
+        llm.get('expense_code', ''),
+        llm.get('expense_code_changed', ''),
+        llm.get('confidence', ''),
+        llm.get('reasoning', ''),
+        flags_value,
+        llm.get('is_refund', ''),
+        llm.get('error', ''),
+    ]
+
+
+def _copy_cell_style(src, dst) -> None:
+    dst._style = copy(src._style)
+    if src.has_style:
+        dst.font = copy(src.font)
+        dst.fill = copy(src.fill)
+        dst.border = copy(src.border)
+        dst.alignment = copy(src.alignment)
+        dst.protection = copy(src.protection)
+        dst.number_format = src.number_format
 
 
 def _result_to_row(result: dict) -> dict:
@@ -161,7 +241,6 @@ def _result_to_row(result: dict) -> dict:
         'Cost Center': scrubbed.get('cost_center', ''),
         'Report Purpose': scrubbed.get('report_purpose', ''),
         'Employee ID': scrubbed.get('employee_id', ''),
-        'Confidence': result.get('confidence', 0),
     }
     return row
 
@@ -182,7 +261,12 @@ def _write_dataframe_sheet(ws, headers: list[str], rows: list[dict]) -> None:
             ws.cell(row=row_idx, column=col_idx, value=record.get(header, ''))
 
 
-def _write_amex_all_sheet(wb, all_rows: list[dict]) -> None:
+def _write_amex_all_sheet(
+    wb,
+    all_rows: list[dict],
+    results: list[dict] | None = None,
+    debug_memory: bool = False,
+) -> None:
     """Update the AmEx All sheet while preserving workbook styling."""
     if 'AmEx All' in wb.sheetnames:
         ws = wb['AmEx All']
@@ -193,45 +277,95 @@ def _write_amex_all_sheet(wb, all_rows: list[dict]) -> None:
             insert_at = len(wb.sheetnames)
         ws = wb.create_sheet('AmEx All', insert_at)
 
-    if ws.max_row < 1:
-        ws.cell(row=1, column=1, value=AMEX_ALL_HEADERS[0])
-
-    existing_headers = _header_map(ws)
     for col_idx, header in enumerate(AMEX_ALL_HEADERS, start=1):
         cell = ws.cell(row=1, column=col_idx, value=header)
         if col_idx > 1:
             _copy_cell_style(ws.cell(row=1, column=col_idx - 1), cell)
         cell.font = Font(bold=True)
 
-    len_col = 17
-    confidence_col = _ensure_confidence_column(ws)
-    ws.cell(row=1, column=len_col, value='LEN')
-    if len_col > 1:
-        _copy_cell_style(ws.cell(row=1, column=len_col - 1), ws.cell(row=1, column=len_col))
-    ws.cell(row=1, column=confidence_col, value=CONFIDENCE_HEADER)
-    if confidence_col > 1:
-        _copy_cell_style(ws.cell(row=1, column=confidence_col - 1), ws.cell(row=1, column=confidence_col))
+    # Processing metadata columns (Changes, Reasoning, Flags, Confidence)
+    processing_start_col = 16
+    for offset, header in enumerate(PROCESSING_HEADERS, start=0):
+        cell = ws.cell(row=1, column=processing_start_col + offset, value=header)
+        cell.font = Font(bold=True)
+    
+    len_col = processing_start_col + len(PROCESSING_HEADERS)  # Column 20
+    len_header_cell = ws.cell(row=1, column=len_col, value='LEN')
+    len_header_cell.font = Font(bold=True)
+
+    debug_start_col = None
+    if debug_memory:
+        debug_start_col = len_col + 1
+        for offset, header in enumerate(DEBUG_MATCH_HEADERS, start=0):
+            cell = ws.cell(row=1, column=debug_start_col + offset, value=header)
+            cell.font = Font(bold=True)
+        llm_debug_start_col = debug_start_col + len(DEBUG_MATCH_HEADERS)
+        for offset, header in enumerate(LLM_DEBUG_HEADERS, start=0):
+            cell = ws.cell(row=1, column=llm_debug_start_col + offset, value=header)
+            cell.font = Font(bold=True)
+    else:
+        llm_debug_start_col = None
 
     for row_idx, record in enumerate(all_rows, start=2):
         for col_idx, header in enumerate(AMEX_ALL_HEADERS, start=1):
             cell = ws.cell(row=row_idx, column=col_idx, value=record.get(header, ''))
             if col_idx > 1:
                 _copy_cell_style(ws.cell(row=row_idx, column=col_idx - 1), cell)
+        
+        # Populate processing metadata columns (Changes, Reasoning, Flags, Confidence)
+        if results and row_idx - 2 < len(results):
+            result = results[row_idx - 2]
+            processing_vals = _processing_metadata_values(result)
+            for offset, value in enumerate(processing_vals, start=0):
+                cell = ws.cell(row=row_idx, column=processing_start_col + offset, value=value)
+                if value and str(value).strip():
+                    cell.alignment = Alignment(wrap_text=True, vertical='top')
+        
         ws.cell(row=row_idx, column=len_col, value=f'=LEN(F{row_idx}&K{row_idx})+12')
-        confidence_cell = ws.cell(row=row_idx, column=confidence_col, value=record.get(CONFIDENCE_HEADER, 0))
-        if confidence_col > 1:
-            _copy_cell_style(ws.cell(row=row_idx, column=confidence_col - 1), confidence_cell)
-        confidence_cell.number_format = PERCENT_FORMAT
+        if debug_memory and debug_start_col and results and row_idx - 2 < len(results):
+            result = results[row_idx - 2]
+            # Populate memory match columns
+            for offset, value in enumerate(_memory_match_values(result), start=0):
+                ws.cell(row=row_idx, column=debug_start_col + offset, value=value)
+            # Populate LLM debug columns - ensure data is present
+            llm_debug_vals = _llm_debug_values(result)
+            for offset, value in enumerate(llm_debug_vals, start=0):
+                cell = ws.cell(row=row_idx, column=llm_debug_start_col + offset, value=value)
+                # Add borders/formatting to indicate data presence
+                if value and str(value).strip():
+                    cell.alignment = Alignment(wrap_text=True)
 
     for row_idx in range(len(all_rows) + 2, ws.max_row + 1):
-        for col_idx in range(1, confidence_col + 1):
+        limit = (len_col + len(DEBUG_MATCH_HEADERS) + len(LLM_DEBUG_HEADERS)) if debug_memory else len_col
+        for col_idx in range(1, limit + 1):
             ws.cell(row=row_idx, column=col_idx, value=None)
 
 
-def _apply_entity_updates(ws, results: list[dict]) -> None:
+def _apply_entity_updates(ws, results: list[dict], debug_memory: bool = False) -> None:
     """Update a transaction sheet in place and highlight changed cells."""
     header_map = _header_map(ws)
-    confidence_col = _ensure_confidence_column(ws)
+    
+    # Column positions: 1-15 data, 16-19 processing metadata, 20 LEN formula
+    processing_start_col = 16
+    len_col = processing_start_col + len(PROCESSING_HEADERS)  # Column 20
+    debug_start_col = len_col + 1 if debug_memory else None
+    llm_debug_start_col = len_col + 1 + len(DEBUG_MATCH_HEADERS) if debug_memory else None
+
+    # Add headers for processing metadata and len columns with bold formatting
+    for offset, header in enumerate(PROCESSING_HEADERS, start=0):
+        cell = ws.cell(row=1, column=processing_start_col + offset, value=header)
+        cell.font = Font(bold=True)
+    
+    len_header_cell = ws.cell(row=1, column=len_col, value='LEN')
+    len_header_cell.font = Font(bold=True)
+    
+    if debug_memory:
+        for offset, header in enumerate(DEBUG_MATCH_HEADERS, start=0):
+            cell = ws.cell(row=1, column=debug_start_col + offset, value=header)
+            cell.font = Font(bold=True)
+        for offset, header in enumerate(LLM_DEBUG_HEADERS, start=0):
+            cell = ws.cell(row=1, column=llm_debug_start_col + offset, value=header)
+            cell.font = Font(bold=True)
 
     for result in results:
         original = result.get('original', {})
@@ -255,16 +389,48 @@ def _apply_entity_updates(ws, results: list[dict]) -> None:
                 cell.value = _cell_value_for_output(new_value)
                 cell.fill = HIGHLIGHT_FILL
 
-        confidence_cell = ws.cell(row=row_num, column=confidence_col)
-        confidence_cell.value = result.get('confidence', 0)
-        if confidence_col > 1:
-            _copy_cell_style(ws.cell(row=row_num, column=confidence_col - 1), confidence_cell)
-        confidence_cell.number_format = PERCENT_FORMAT
+        # Populate processing metadata columns
+        processing_vals = _processing_metadata_values(result)
+        for offset, value in enumerate(processing_vals, start=0):
+            cell = ws.cell(row=row_num, column=processing_start_col + offset, value=value)
+            if value and str(value).strip():
+                cell.alignment = Alignment(wrap_text=True, vertical='top')
+        
+        len_value = f'=LEN(F{row_num}&J{row_num})+12'
+        ws.cell(row=row_num, column=len_col, value=len_value)
+        if debug_memory and debug_start_col:
+            for offset, value in enumerate(_memory_match_values(result), start=0):
+                ws.cell(row=row_num, column=debug_start_col + offset, value=value)
+            for offset, value in enumerate(_llm_debug_values(result), start=0):
+                ws.cell(row=row_num, column=llm_debug_start_col + offset, value=value)
 
 def _style_sheet_headers(ws) -> None:
     for col_idx in range(1, ws.max_column + 1):
         cell = ws.cell(row=1, column=col_idx)
         cell.font = Font(bold=True)
+
+
+def _auto_fit_columns(ws, max_width: int = 50) -> None:
+    """Auto-fit column widths to content without increasing row height."""
+    for column in ws.columns:
+        max_length = 0
+        column_letter = column[0].column_letter
+        
+        for cell in column:
+            try:
+                # Calculate max content length
+                if cell.value:
+                    cell_length = len(str(cell.value))
+                    # Account for bold headers (slightly wider)
+                    if cell.row == 1:  # Header row
+                        cell_length = min(cell_length + 2, max_width)
+                    max_length = max(max_length, min(cell_length, max_width))
+            except:
+                pass
+        
+        # Set column width with reasonable min/max
+        adjusted_width = min(max(max_length + 2, 12), max_width)
+        ws.column_dimensions[column_letter].width = adjusted_width
 
 
 
@@ -347,7 +513,8 @@ def load_batch_file(filepath: Path) -> dict:
 def save_results(
     results: list,
     output_file: Path,
-    original_file: Path = None
+    original_file: Path = None,
+    debug_memory: bool = False,
 ):
     """
     Save scrubbed results to Excel file
@@ -373,7 +540,18 @@ def save_results(
     all_rows = [_result_to_row(result) for result in results]
 
     # Update the master sheet with all scrubbed rows.
-    _write_amex_all_sheet(wb, all_rows)
+    # Validate that results are being passed correctly
+    if results:
+        sample_result = results[0]
+        llm_data_present = 'llm_result' in sample_result and sample_result.get('llm_result')
+        if debug_memory and not llm_data_present:
+            import sys
+            print(f"[WARNING] Debug columns enabled but first result has no llm_result data", file=sys.stderr)
+            print(f"  Keys in result: {list(sample_result.keys())}", file=sys.stderr)
+            if 'llm_result' in sample_result:
+                print(f"  llm_result value: {sample_result['llm_result']}", file=sys.stderr)
+    
+    _write_amex_all_sheet(wb, all_rows, results=results, debug_memory=debug_memory)
 
     # Update entity sheets in place and highlight changed values.
     sheet_groups: dict[str, list[dict]] = {}
@@ -387,7 +565,13 @@ def save_results(
     for sheet_name, sheet_results in sheet_groups.items():
         if sheet_name not in wb.sheetnames:
             continue
-        _apply_entity_updates(wb[sheet_name], sheet_results)
+        _apply_entity_updates(wb[sheet_name], sheet_results, debug_memory=debug_memory)
+
+    # Ensure all sheet headers are bold
+    for sheet_name in wb.sheetnames:
+        _style_sheet_headers(wb[sheet_name])
+        # Auto-fit columns for readability WITHOUT increasing row height
+        _auto_fit_columns(wb[sheet_name])
 
     _delete_sheet_if_exists(wb, 'Summary')
     _delete_sheet_if_exists(wb, 'Flagged Items')
@@ -485,6 +669,17 @@ def main():
         default=50,
         help='Save checkpoint every N transactions (default: 50)'
     )
+    parser.add_argument(
+        '--llm-batch-size',
+        type=int,
+        default=5,
+        help='Number of transactions to send to the LLM in one batch (default: 5)'
+    )
+    parser.add_argument(
+        '--debug-memory',
+        action='store_true',
+        help='Write matched memory file, transaction ID, and receipt ID into the output workbook'
+    )
     
     args = parser.parse_args()
     
@@ -524,7 +719,8 @@ def main():
             memory_folder=args.memory_folder,
             use_cache=not args.no_cache,
             use_checkpoints=not args.no_checkpoint,
-            checkpoint_interval=args.checkpoint_interval
+            checkpoint_interval=args.checkpoint_interval,
+            llm_batch_size=args.llm_batch_size
         )
         
         # Process batch
@@ -543,7 +739,8 @@ def main():
         save_results(
             results,
             output_file=args.output,
-            original_file=args.input
+            original_file=args.input,
+            debug_memory=args.debug_memory,
         )
         
         print("Processing complete!")

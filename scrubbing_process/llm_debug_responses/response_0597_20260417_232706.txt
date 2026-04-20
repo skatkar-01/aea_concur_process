@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: CMF Vending
+Amount: $1.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Transaction is a travel meal. 2) Description matches required pattern 'Travel Meal/<purpose>/<deal>' — purpose 'Strategy' present. 3) No correction needed; deal/company not provided but historical entries show same pattern. 4) Expense Type 'Meals' is appropriate for a travel meal. 5) Flagged for review only if a deal/company should have been included.",
+    "flags": [
+        "No deal/company specified — confirm if a deal or counterparty should be appended"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Transaction is a travel meal. 2) Description matches required pattern 'Travel Meal/<purpose>/<deal>' \u2014 purpose 'Strategy' present. 3) No correction needed; deal/company not provided but historical entries show same pattern. 4) Expense Type 'Meals' is appropriate for a travel meal. 5) Flagged for review only if a deal/company should have been included.",
+  "flags": [
+    "No deal/company specified \u2014 confirm if a deal or counterparty should be appended"
+  ],
+  "is_refund": false,
+  "error": ""
+}

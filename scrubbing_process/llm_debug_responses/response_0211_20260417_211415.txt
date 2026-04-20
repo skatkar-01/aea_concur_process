@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Subscription/Professional Svcs
+Vendor: LinkedIn
+Amount: $75.85
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/Professional Svcs/LinkedIn",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Original description 'Subscription/Professional Svcs' did not follow AEA format for info services. Reformatted to 'Research Subscription/Professional Svcs/LinkedIn' to clarify type and include vendor context as allowed. Expense code 'Info Services' is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/Professional Svcs/LinkedIn",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Original description 'Subscription/Professional Svcs' did not follow AEA format for info services. Reformatted to 'Research Subscription/Professional Svcs/LinkedIn' to clarify type and include vendor context as allowed. Expense code 'Info Services' is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

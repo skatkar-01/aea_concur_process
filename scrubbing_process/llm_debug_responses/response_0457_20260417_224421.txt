@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Amex Rewards Fee
+Vendor: American Express
+Amount: $7.80
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Amex Rewards Fee",
+    "description_changed": false,
+    "expense_code": "Miscellaneous",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Type: Other (card/Amex fee). 2) Current description is concise and matches historical entries. 3) No AEA format rule directly applies, so no change. 4) Expense code 'Miscellaneous' is appropriate for a card/rewards fee. 5) Flagged for review to confirm business purpose and allowability.",
+    "flags": [
+        "Ambiguous business purpose — confirm this is a corporate card/rewards fee and allowable",
+        "No deal/project specified — confirm allocation is correct"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Amex Rewards Fee",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: Other (card/Amex fee). 2) Current description is concise and matches historical entries. 3) No AEA format rule directly applies, so no change. 4) Expense code 'Miscellaneous' is appropriate for a card/rewards fee. 5) Flagged for review to confirm business purpose and allowability.",
+  "flags": [
+    "Ambiguous business purpose \u2014 confirm this is a corporate card/rewards fee and allowable",
+    "No deal/project specified \u2014 confirm allocation is correct"
+  ],
+  "is_refund": false,
+  "error": ""
+}

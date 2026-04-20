@@ -1,0 +1,359 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Work Late/Office to Home
+Vendor: Uber
+Amount: $279.21
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"car_service","formatted_description":"Work Late/Office-Home","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.98,"reasoning":"Normalized to approved special format for late-night car service.","flags":[],"is_refund":false,"error":""},{"index":2,"transaction_type":"car_service","formatted_description":"Work Late/Office-Home","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.98,"reasoning":"Normalized to approved special format for late-night car service.","flags":[],"is_refund":false,"error":""},{"index":3,"transaction_type":"car_service","formatted_description":"Work Late/Office-Home","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.98,"reasoning":"Normalized to approved special format for late-night car service.","flags":[],"is_refund":false,"error":""},{"index":4,"transaction_type":"car_service","formatted_description":"Personal","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.61,"reasoning":"Kept as-is; receipt shows business car service but description is generic and needs review.","flags":["Description does not identify route/purpose; human review recommended."],"is_refund":false,"error":""},{"index":5,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/BOD Mtg/Amerivet","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"Reformatted catering meal to business meal pattern and retained deal name.","flags":[],"is_refund":false,"error":""},{"index":6,"transaction_type":"meal_business","formatted_description":"Bus.Breakfast/BOD Mtg/Amerivet","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.9,"reasoning":"Reformatted catering breakfast to business meal pattern and retained deal name.","flags":[],"is_refund":false,"error":""},{"index":7,"transaction_type":"info_services","formatted_description":"Inflight Wifi","description_changed":false,"expense_code":"Info Services","expense_code_changed":false,"confidence":0.99,"reasoning":"Already matches required exact info services format.","flags":[],"is_refund":false,"error":""},{"index":8,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/AEA Strategy Mtg","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.86,"reasoning":"Converted to business lunch format; attendee names were not available from source.","flags":["Attendees not listed; verify if required."],"is_refund":false,"error":""},{"index":9,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/Consumer Partner Dinner","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Reformatted to business dinner pattern; kept event purpose.","flags":[],"is_refund":false,"error":""},{"index":10,"transaction_type":"car_service","formatted_description":"Office-Dinner-Home/PaveMasters Dinner","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.62,"reasoning":"Kept original special-style routing text; purpose retained.","flags":["Route format is nonstandard vs. approved special formats; review suggested."],"is_refund":false,"error":""},{"index":11,"transaction_type":"car_service","formatted_description":"Home-JFK/Harris Williams Ski Outing","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.97,"reasoning":"Already consistent with car service route/purpose format.","flags":[],"is_refund":false,"error":""},{"index":12,"transaction_type":"car_service","formatted_description":"Home-Office/Breakfast Meeting D. Gibbs","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.93,"reasoning":"Already in acceptable car service format.","flags":[],"is_refund":false,"error":""},{"index":13,"transaction_type":"car_service","formatted_description":"Office-Conference-Office/Baird Conference","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.68,"reasoning":"Kept as-is; route/purpose are understandable though not a standard special format.","flags":["Nonstandard route wording; review suggested."],"is_refund":false,"error":""},{"index":14,"transaction_type":"refund","formatted_description":"Refund/RT:JFK-SLC/AEA Strategy Meeting","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.96,"reasoning":"Refund must start with Refund/ and mirror original flight format.","flags":[],"is_refund":true,"error":""},{"index":15,"transaction_type":"lodging","formatted_description":"Lodging/AmeriVet BOD Mtg","description_changed":true,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.94,"reasoning":"Reformatted deposit to lodging description and retained deal/purpose.","flags":[],"is_refund":false,"error":""},{"index":16,"transaction_type":"car_service","formatted_description":"Breakfast-Meetings-Dinner-Home/ Various Meetings","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.63,"reasoning":"Kept original; multiple stops/purpose are clear though spacing is inconsistent.","flags":["Nonstandard spacing after slash; review suggested."],"is_refund":false,"error":""},{"index":17,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/Birthday treats/Consumer Team celebration","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.86,"reasoning":"Converted to business meal format; kept celebration context.","flags":["Attendee list not provided."],"is_refund":false,"error":""},{"index":18,"transaction_type":"other","formatted_description":"Research Subscription/Subscription/Dow Jones","description_changed":true,"expense_code":"PubSub","expense_code_changed":false,"confidence":0.91,"reasoning":"Reformatted subscription under research subscription convention.","flags":[],"is_refund":false,"error":""},{"index":19,"transaction_type":"flight","formatted_description":"Tkt Fee/J. Grapski Interview travel","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Already matches ticketing fee format.","flags":[],"is_refund":false,"error":""},{"index":20,"transaction_type":"flight","formatted_description":"BOS-LGA-BOS/J. Grapski interview travel","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.89,"reasoning":"Kept as-is; round-trip route is clear though not in RT format.","flags":["Route not in RT format; human review suggested."],"is_refund":false,"error":""},{"index":21,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Harris Williams Ski Outing","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.99,"reasoning":"Already matches travel meal format.","flags":[],"is_refund":false,"error":""},{"index":22,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/Pave Masters dinner","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Reformatted to business dinner pattern.","flags":[],"is_refund":false,"error":""},{"index":23,"transaction_type":"car_service","formatted_description":"Home-JFK/Harris Williams Ski Outing","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.97,"reasoning":"Already consistent with car service route/purpose format.","flags":[],"is_refund":false,"error":""},{"index":24,"transaction_type":"refund","formatted_description":"Refund/RT:SLC-JFK/Harris Williams Ski Outing","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Refund must start with Refund/ and retain original flight route/purpose format.","flags":[],"is_refund":true,"error":""},{"index":25,"transaction_type":"flight","formatted_description":"Tkt Fee/Harris Williams Ski Outing","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Already matches ticketing fee format.","flags":[],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Normalized to approved special format for late-night car service.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Normalized to approved special format for late-night car service.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Normalized to approved special format for late-night car service.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "car_service",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.61,
+      "reasoning": "Kept as-is; receipt shows business car service but description is generic and needs review.",
+      "flags": [
+        "Description does not identify route/purpose; human review recommended."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/BOD Mtg/Amerivet",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "Reformatted catering meal to business meal pattern and retained deal name.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Breakfast/BOD Mtg/Amerivet",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Reformatted catering breakfast to business meal pattern and retained deal name.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "info_services",
+      "formatted_description": "Inflight Wifi",
+      "description_changed": false,
+      "expense_code": "Info Services",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Already matches required exact info services format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Converted to business lunch format; attendee names were not available from source.",
+      "flags": [
+        "Attendees not listed; verify if required."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/Consumer Partner Dinner",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Reformatted to business dinner pattern; kept event purpose.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "car_service",
+      "formatted_description": "Office-Dinner-Home/PaveMasters Dinner",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.62,
+      "reasoning": "Kept original special-style routing text; purpose retained.",
+      "flags": [
+        "Route format is nonstandard vs. approved special formats; review suggested."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-JFK/Harris Williams Ski Outing",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Already consistent with car service route/purpose format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-Office/Breakfast Meeting D. Gibbs",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.93,
+      "reasoning": "Already in acceptable car service format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "car_service",
+      "formatted_description": "Office-Conference-Office/Baird Conference",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.68,
+      "reasoning": "Kept as-is; route/purpose are understandable though not a standard special format.",
+      "flags": [
+        "Nonstandard route wording; review suggested."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:JFK-SLC/AEA Strategy Meeting",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Refund must start with Refund/ and mirror original flight format.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/AmeriVet BOD Mtg",
+      "description_changed": true,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Reformatted deposit to lodging description and retained deal/purpose.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "car_service",
+      "formatted_description": "Breakfast-Meetings-Dinner-Home/ Various Meetings",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.63,
+      "reasoning": "Kept original; multiple stops/purpose are clear though spacing is inconsistent.",
+      "flags": [
+        "Nonstandard spacing after slash; review suggested."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/Birthday treats/Consumer Team celebration",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Converted to business meal format; kept celebration context.",
+      "flags": [
+        "Attendee list not provided."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "other",
+      "formatted_description": "Research Subscription/Subscription/Dow Jones",
+      "description_changed": true,
+      "expense_code": "PubSub",
+      "expense_code_changed": false,
+      "confidence": 0.91,
+      "reasoning": "Reformatted subscription under research subscription convention.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/J. Grapski Interview travel",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Already matches ticketing fee format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "flight",
+      "formatted_description": "BOS-LGA-BOS/J. Grapski interview travel",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.89,
+      "reasoning": "Kept as-is; round-trip route is clear though not in RT format.",
+      "flags": [
+        "Route not in RT format; human review suggested."
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 21,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Harris Williams Ski Outing",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Already matches travel meal format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 22,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/Pave Masters dinner",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Reformatted to business dinner pattern.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 23,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-JFK/Harris Williams Ski Outing",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Already consistent with car service route/purpose format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 24,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:SLC-JFK/Harris Williams Ski Outing",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Refund must start with Refund/ and retain original flight route/purpose format.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 25,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/Harris Williams Ski Outing",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Already matches ticketing fee format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

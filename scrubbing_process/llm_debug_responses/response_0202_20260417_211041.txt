@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Trip
+Vendor: Essen
+Amount: $3.80
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy Trip",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Type: Travel meal (small purchase during travel). 2) Current desc begins with 'Travel Meal/' and includes the business purpose 'AEA Strategy Trip', matching the Travel Meal/<purpose>/<deal> template. 3) No correction needed—deal name not required if not applicable. 4) Expense code 'Meals' matches the transaction type. 5) No changes made; no human review required.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Type: Travel meal (small purchase during travel). 2) Current desc begins with 'Travel Meal/' and includes the business purpose 'AEA Strategy Trip', matching the Travel Meal/<purpose>/<deal> template. 3) No correction needed\u2014deal name not required if not applicable. 4) Expense code 'Meals' matches the transaction type. 5) No changes made; no human review required.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Office-Dinner/BOD Mtg/Monroe
+Vendor: Uber
+Amount: $39.97
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Office-Dinner/BOD Mtg/Monroe",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Transaction is a car service per expense type. 2) Description follows the <from>-<to>/<purpose>/<deal> pattern (Office-Dinner/BOD Mtg/Monroe) with no spaces around dash and includes purpose and deal. 3) No reformatting needed. 4) Expense code matches transaction type.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Dinner/BOD Mtg/Monroe",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Transaction is a car service per expense type. 2) Description follows the <from>-<to>/<purpose>/<deal> pattern (Office-Dinner/BOD Mtg/Monroe) with no spaces around dash and includes purpose and deal. 3) No reformatting needed. 4) Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

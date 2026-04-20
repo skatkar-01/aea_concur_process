@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/Strategy Meeting
+Vendor: Delta
+Amount: $-1638.49
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Refund on airline ticket; description already matches required Refund/ format and expense code is appropriate.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Refund on airline ticket; description already matches required Refund/ format and expense code is appropriate.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

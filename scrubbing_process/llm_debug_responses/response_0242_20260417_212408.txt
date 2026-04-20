@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/Strategy Meeting
+Vendor: Jetblue
+Amount: $-83.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "refund",
+    "formatted_description": "Refund/Strategy Meeting",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.65,
+    "reasoning": "1) Transaction is a refund for an airline ticket (vendor Jetblue, negative amount). 2) Description starts with 'Refund/' but does not include the required original flight format (route or RT:... and optional deal/company). 3) I did not invent route or deal information; kept original description and flagged for review. 4) Expense code 'Airline' correctly matches a flight refund. 5) Human review needed to append original ticket route (e.g., RT:JFK-LGA) and any deal/company per Refund format.",
+    "flags": [
+        "Missing original flight route/RT in refund description",
+        "Please verify original ticket details (route, RT vs one-way, deal/company) and update to 'Refund/<original flight format>'"
+    ],
+    "is_refund": true,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.65,
+  "reasoning": "1) Transaction is a refund for an airline ticket (vendor Jetblue, negative amount). 2) Description starts with 'Refund/' but does not include the required original flight format (route or RT:... and optional deal/company). 3) I did not invent route or deal information; kept original description and flagged for review. 4) Expense code 'Airline' correctly matches a flight refund. 5) Human review needed to append original ticket route (e.g., RT:JFK-LGA) and any deal/company per Refund format.",
+  "flags": [
+    "Missing original flight route/RT in refund description",
+    "Please verify original ticket details (route, RT vs one-way, deal/company) and update to 'Refund/<original flight format>'"
+  ],
+  "is_refund": true,
+  "error": ""
+}

@@ -1,0 +1,262 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Office Supplies for FL Office
+Vendor: Amazon
+Amount: $105.21
+Expense: Office Supplies
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description and expense code acceptable for office supplies; no change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Grocery",
+      "description_changed": true,
+      "expense_code": "Kitchen Supplies",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Standardize description to 'Kitchen Supplies/Grocery' matching historical naming conventions.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Grocery",
+      "description_changed": false,
+      "expense_code": "Kitchen Supplies",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description matches expected format for kitchen supplies.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_business",
+      "formatted_description": "Catering/BOD Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows business meal catering format with business purpose and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_business",
+      "formatted_description": "Catering/BOD Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows business meal catering format with business purpose and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/Sylvia Vlahos",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Replace 'Working Group Lunch' with 'Working Lunch' per AEA rules for office meals with attendees.",
+      "flags": ["Confirm attendee naming convention for working lunches"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/Chris Horton",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Updated 'Working Group Lunch' to 'Working Lunch' consistent with business meal formatting guidelines.",
+      "flags": ["Verify attendee names format"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/Harshit Juneja",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Format standardized to 'Working Lunch' with attendee name for office meal compliance.",
+      "flags": ["Validate name spelling and format"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/James Kwon",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Changed 'Working Group Lunch' to 'Working Lunch' per AEA policy for office meals with specific persons.",
+      "flags": ["Confirm attendee naming conventions"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/Henry Senkfor",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Corrected from 'Working Group Lunch' to 'Working Lunch' consistent with policy and added attendee name.",
+      "flags": ["Verify attendee name accuracy"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/Jess Sang",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description conforms with 'Working Lunch/Attendee' format for office meals.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/Jonathan Roth",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Correct naming format for a working lunch with attendee.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "meal_business",
+      "formatted_description": "Mentoring Coffee/Cindy Li",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Formatted description to match standard 'Mentoring Coffee/<Name>' form and removed farewell from description.",
+      "flags": ["Confirm attendee name spelling"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description meets policy; generic working lunch description accepted.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/B.Gallagher & I.Wood/53 Restaurant",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Converted verbose description to 'Bus.Dinner' with attendee initials and deal name per rules.",
+      "flags": ["Verify attendee initials mapping to full names"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "meal_business",
+      "formatted_description": "Mentoring Coffee/Brendan Gallagher",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description matches business meal mentoring coffee format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/EWR-SLC/Strategy",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Reformatted refund description to start with 'Refund/' plus original route and purpose as per refund rules.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/JFK-SLC-JFK/Strategy",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Corrected refund description prefix and kept original route and purpose per refund format rules.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "flight",
+      "formatted_description": "EWR-SLC/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+     
+
+================================================================================
+PARSING ERROR
+================================================================================
+JSON parse error: Expecting property name enclosed in double quotes: line 245 column 6 (char 8380)
+

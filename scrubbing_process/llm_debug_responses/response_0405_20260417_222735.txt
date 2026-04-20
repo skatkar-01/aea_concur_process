@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-153.40
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "refund",
+    "formatted_description": "Refund/Personal",
+    "description_changed": true,
+    "expense_code": "Miscellaneous",
+    "expense_code_changed": false,
+    "confidence": 0.60,
+    "reasoning": "Amount is negative, indicating a refund. Original description was just 'Personal' so prepend Refund/ per AEA rule. Cannot infer original business purpose or deal, so preserved original text. Expense code left as Miscellaneous pending review.",
+    "flags": [
+        "Negative amount suggests refund but original business context (original expense type/deal) is unknown — confirm",
+        "Expense code may need to match original charge's code — verify",
+        "Description 'Personal' is not a standard AEA format; confirm this is an allowed personal refund"
+    ],
+    "is_refund": true,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Personal",
+  "description_changed": true,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.6,
+  "reasoning": "Amount is negative, indicating a refund. Original description was just 'Personal' so prepend Refund/ per AEA rule. Cannot infer original business purpose or deal, so preserved original text. Expense code left as Miscellaneous pending review.",
+  "flags": [
+    "Negative amount suggests refund but original business context (original expense type/deal) is unknown \u2014 confirm",
+    "Expense code may need to match original charge's code \u2014 verify",
+    "Description 'Personal' is not a standard AEA format; confirm this is an allowed personal refund"
+  ],
+  "is_refund": true,
+  "error": ""
+}

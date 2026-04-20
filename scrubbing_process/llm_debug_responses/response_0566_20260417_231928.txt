@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Mgmt Mtg/Aqualis
+Vendor: Westin
+Amount: $451.87
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Mgmt Mtg/Aqualis",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as lodging. 2) Description matches Lodging/<purpose>/<deal> format. 3) No corrections needed. 4) Expense code 'Lodging' is appropriate. 5) Length check passes; no human review required.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Mgmt Mtg/Aqualis",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as lodging. 2) Description matches Lodging/<purpose>/<deal> format. 3) No corrections needed. 4) Expense code 'Lodging' is appropriate. 5) Length check passes; no human review required.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

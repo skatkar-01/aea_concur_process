@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Supply Store-Hotel
+Vendor: Uber
+Amount: $23.28
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Supply Store-Hotel",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service ride already follows AEA route format. No purpose/deal info was provided, so description was left unchanged.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Supply Store-Hotel",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Car service ride already follows AEA route format. No purpose/deal info was provided, so description was left unchanged.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

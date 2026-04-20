@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus.Lodging/Pension Bridge Private Credit
+Vendor: Grand Del Mar
+Amount: $1082.66
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Travel/Pension Bridge Private Credit",
+    "description_changed": true,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Transaction is lodging (hotel folio). 2) Original used 'Bus.Lodging/...' which doesn't follow AEA Lodging format. 3) Reformatted to 'Lodging/<purpose>/<deal>' using a generic purpose 'Travel' and kept the deal name. 4) Expense code was already Lodging and is appropriate. 5) Flagged to confirm the specific purpose (used 'Travel' as a placeholder).",
+    "flags": [
+        "Confirm purpose: 'Travel' was used as a generic purpose because original description lacked a clear purpose."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Travel/Pension Bridge Private Credit",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Transaction is lodging (hotel folio). 2) Original used 'Bus.Lodging/...' which doesn't follow AEA Lodging format. 3) Reformatted to 'Lodging/<purpose>/<deal>' using a generic purpose 'Travel' and kept the deal name. 4) Expense code was already Lodging and is appropriate. 5) Flagged to confirm the specific purpose (used 'Travel' as a placeholder).",
+  "flags": [
+    "Confirm purpose: 'Travel' was used as a generic purpose because original description lacked a clear purpose."
+  ],
+  "is_refund": false,
+  "error": ""
+}

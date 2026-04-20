@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Exch Tkt:SLC-ORD/2026 Strategy Mtg
+Vendor: United
+Amount: $1518.68
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Exch Tkt/SLC-ORD/2026 Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Flight change transaction. Replaced colon with required slash format for Exch Tkt and kept route/purpose intact.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Exch Tkt/SLC-ORD/2026 Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Flight change transaction. Replaced colon with required slash format for Exch Tkt and kept route/purpose intact.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

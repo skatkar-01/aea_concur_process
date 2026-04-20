@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Dunkin
+Amount: $11.52
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Transaction is a travel meal. Description already follows AEA 'Travel Meal/<purpose>' pattern; no deal provided in original so leaving as-is. Expense type 'Meals' matches the transaction.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is a travel meal. Description already follows AEA 'Travel Meal/<purpose>' pattern; no deal provided in original so leaving as-is. Expense type 'Meals' matches the transaction.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

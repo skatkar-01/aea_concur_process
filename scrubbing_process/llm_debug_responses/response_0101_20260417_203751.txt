@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Pave America BOD Mtg
+Vendor: Umstead
+Amount: $1255.94
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/BOD Mtg/Pave America",
+    "description_changed": true,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as lodging. 2) Current description places deal before purpose; AEA rule requires Lodging/<purpose>/<deal>. 3) Reordered to 'Lodging/BOD Mtg/Pave America' preserving business purpose and deal name. 4) Expense type 'Lodging' matches transaction. 5) No other format issues.",
+    "flags": [
+        "Confirm deal name exact wording ('Pave America' vs historical 'Pave')"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/BOD Mtg/Pave America",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as lodging. 2) Current description places deal before purpose; AEA rule requires Lodging/<purpose>/<deal>. 3) Reordered to 'Lodging/BOD Mtg/Pave America' preserving business purpose and deal name. 4) Expense type 'Lodging' matches transaction. 5) No other format issues.",
+  "flags": [
+    "Confirm deal name exact wording ('Pave America' vs historical 'Pave')"
+  ],
+  "is_refund": false,
+  "error": ""
+}

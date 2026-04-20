@@ -1,0 +1,42 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Audible
+Amount: $14.95
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Non-travel personal subscription charge; description is already generic and no AEA format applies. Kept as-is and left expense code unchanged.",
+  "flags": ["Personal expense", "Review for policy compliance if not an approved business subscription"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Non-travel personal subscription charge; description is already generic and no AEA format applies. Kept as-is and left expense code unchanged.",
+  "flags": [
+    "Personal expense",
+    "Review for policy compliance if not an approved business subscription"
+  ],
+  "is_refund": false,
+  "error": ""
+}

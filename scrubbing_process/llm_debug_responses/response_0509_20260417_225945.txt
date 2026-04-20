@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal
+Vendor: Burgers And Bourbon
+Amount: $13.82
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.86,
+    "reasoning": "1) Type: Travel meal (vendor Burgers And Bourbon). 2) Current description matches the accepted 'Travel Meal' token. 3) No purpose or deal provided in the record to append; per rules we are conservative and do not invent purpose/deal. 4) Expense code 'Meals' aligns with a travel meal. 5) Flagged missing business purpose/deal for review.",
+    "flags": [
+        "Missing business purpose and deal/company — please confirm business purpose (e.g., client, internal travel) and deal allocation",
+        "Confirm charge is business (not personal), given small food amount"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "1) Type: Travel meal (vendor Burgers And Bourbon). 2) Current description matches the accepted 'Travel Meal' token. 3) No purpose or deal provided in the record to append; per rules we are conservative and do not invent purpose/deal. 4) Expense code 'Meals' aligns with a travel meal. 5) Flagged missing business purpose/deal for review.",
+  "flags": [
+    "Missing business purpose and deal/company \u2014 please confirm business purpose (e.g., client, internal travel) and deal allocation",
+    "Confirm charge is business (not personal), given small food amount"
+  ],
+  "is_refund": false,
+  "error": ""
+}

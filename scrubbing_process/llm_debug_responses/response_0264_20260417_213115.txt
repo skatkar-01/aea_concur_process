@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/SLC-ORD/2026 Strategy Mtg
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "Tkt Fee/SLC-ORD/2026 Strategy Mtg",
+    "description_changed": false,
+    "expense_code": "Other Travel",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "This is a flight ticketing fee. The description follows the Tkt Fee/<route>/<purpose> pattern used historically, so no change made. Expense code Other Travel aligns with ticketing fees.",
+    "flags": [
+        "Confirm whether this was a round-trip ticket; if so, add RT: prefix per policy (e.g., Tkt Fee/RT:SLC-ORD/2026 Strategy Mtg)"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/SLC-ORD/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "This is a flight ticketing fee. The description follows the Tkt Fee/<route>/<purpose> pattern used historically, so no change made. Expense code Other Travel aligns with ticketing fees.",
+  "flags": [
+    "Confirm whether this was a round-trip ticket; if so, add RT: prefix per policy (e.g., Tkt Fee/RT:SLC-ORD/2026 Strategy Mtg)"
+  ],
+  "is_refund": false,
+  "error": ""
+}

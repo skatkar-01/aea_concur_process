@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Dinner/AmeriVet BOD Dinner
+Vendor: Cafe Boulud
+Amount: $7833.32
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/BOD Dinner/AmeriVet",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Current description was a dinner for AmeriVet BOD Dinner but not in AEA format. Reformatted to Bus.Dinner with meeting purpose and deal name preserved.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/BOD Dinner/AmeriVet",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Current description was a dinner for AmeriVet BOD Dinner but not in AEA format. Reformatted to Bus.Dinner with meeting purpose and deal name preserved.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

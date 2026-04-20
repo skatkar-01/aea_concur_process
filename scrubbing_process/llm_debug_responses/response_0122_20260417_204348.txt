@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Microsoft license renewal for SBF
+Vendor: Microsoft
+Amount: $52.26
+Expense: Software
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Research Subscription/SBF",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Software subscription renewal is best formatted as Research Subscription/<purpose>/<deal>. Kept deal context SBF and retained Software expense code.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Research Subscription/SBF",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Software subscription renewal is best formatted as Research Subscription/<purpose>/<deal>. Kept deal context SBF and retained Software expense code.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

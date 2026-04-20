@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Meeting/Chemical Guys
+Vendor: Uber
+Amount: $129.74
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Meeting/Chemical Guys",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Car service format is already acceptable and matches historical usage for this vendor/project. Kept description as-is; expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Meeting/Chemical Guys",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Car service format is already acceptable and matches historical usage for this vendor/project. Kept description as-is; expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

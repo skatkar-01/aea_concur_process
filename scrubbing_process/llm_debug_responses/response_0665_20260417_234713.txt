@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-2.39
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Transaction is a small Meals charge with description already set to Personal. No AEA formatting change is appropriate because there is no business purpose or deal context provided.",
+  "flags": [
+    "Personal meal charge; may require policy review if not reimbursable"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Transaction is a small Meals charge with description already set to Personal. No AEA formatting change is appropriate because there is no business purpose or deal context provided.",
+  "flags": [
+    "Personal meal charge; may require policy review if not reimbursable"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Lunch/Jonathan Roth
+Vendor: Grubhub
+Amount: $19.79
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Jonathan Roth",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Business meal. Current description already matches the approved Working Lunch format and includes attendee name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Jonathan Roth",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Business meal. Current description already matches the approved Working Lunch format and includes attendee name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

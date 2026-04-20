@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: RT: JAX-LGA/NY Office Visit
+Vendor: Delta
+Amount: $1181.80
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "RT:JAX-LGA/NY Office Visit",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Identified as a round-trip flight. Original had a space after 'RT:' which violates format; removed the space to match RT:<airports>/<purpose>. Route already uses no spaces around dash. Expense type 'Airline' matches a flight.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:JAX-LGA/NY Office Visit",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as a round-trip flight. Original had a space after 'RT:' which violates format; removed the space to match RT:<airports>/<purpose>. Route already uses no spaces around dash. Expense type 'Airline' matches a flight.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

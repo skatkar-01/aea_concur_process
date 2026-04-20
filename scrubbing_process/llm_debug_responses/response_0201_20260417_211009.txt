@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Trip
+Vendor: Silver Lake Restaurant
+Amount: $35.10
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy Trip",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) This is a travel meal. 2) Description matches AEA Travel Meal format (Travel Meal/<purpose>/<deal>) using 'AEA Strategy Trip' as the purpose. 3) No reformatting needed. 4) Expense code 'Meals' is appropriate. 5) No issues requiring escalation.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) This is a travel meal. 2) Description matches AEA Travel Meal format (Travel Meal/<purpose>/<deal>) using 'AEA Strategy Trip' as the purpose. 3) No reformatting needed. 4) Expense code 'Meals' is appropriate. 5) No issues requiring escalation.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

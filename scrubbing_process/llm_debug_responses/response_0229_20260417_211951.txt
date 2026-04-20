@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Airport Parking
+Vendor: Spokane Airport Parking
+Amount: $62.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Bus.Parking/Ort-Ter/Travel",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Airport parking was reformatted to the Bus.Parking template. Route/purpose were inferred from the receipt (ORT-TER) and kept concise.",
+  "flags": [
+    "Route/purpose inferred from receipt; no explicit business purpose provided."
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Bus.Parking/Ort-Ter/Travel",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Airport parking was reformatted to the Bus.Parking template. Route/purpose were inferred from the receipt (ORT-TER) and kept concise.",
+  "flags": [
+    "Route/purpose inferred from receipt; no explicit business purpose provided."
+  ],
+  "is_refund": false,
+  "error": ""
+}

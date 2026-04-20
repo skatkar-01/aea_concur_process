@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-SLC-GEG/BOD Mtg/TileBar
+Vendor: Delta
+Amount: $1469.20
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-SLC-GEG/BOD Mtg/TileBar",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Flight itinerary already matches AEA route/purpose/deal format. Airline expense code is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-SLC-GEG/BOD Mtg/TileBar",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Flight itinerary already matches AEA route/purpose/deal format. Airline expense code is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

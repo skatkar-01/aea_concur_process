@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: InFlight Wifi/BOD Mtg/Banker Mtgs/Monroe
+Vendor: United
+Amount: $8.00
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Info services charge for inflight Wi-Fi on United. Description was close to format; changed only casing to match AEA standard. Kept all business context and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Info services charge for inflight Wi-Fi on United. Description was close to format; changed only casing to match AEA standard. Kept all business context and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

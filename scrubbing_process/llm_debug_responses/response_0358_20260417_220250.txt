@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Inflight Wifi/Pension Bridge Private Credit
+Vendor: United
+Amount: $8.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "info_services",
+    "formatted_description": "Inflight Wifi/Pension Bridge Private Credit",
+    "description_changed": false,
+    "expense_code": "Info Services",
+    "expense_code_changed": true,
+    "confidence": 0.95,
+    "reasoning": "Transaction is an inflight wifi purchase. Description uses exact required casing 'Inflight Wifi' and includes the deal name, so no description change. Expense was coded as 'Airline' but should be 'Info Services' for inflight wifi.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi/Pension Bridge Private Credit",
+  "description_changed": false,
+  "expense_code": "Info Services",
+  "expense_code_changed": true,
+  "confidence": 0.95,
+  "reasoning": "Transaction is an inflight wifi purchase. Description uses exact required casing 'Inflight Wifi' and includes the deal name, so no description change. Expense was coded as 'Airline' but should be 'Info Services' for inflight wifi.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

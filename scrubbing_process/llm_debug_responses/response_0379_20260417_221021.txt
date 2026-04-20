@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Meeting
+Vendor: Uber Eats
+Amount: $26.99
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Travel meal format was close but needed standard abbreviation. Changed 'Meeting' to 'Mtg' per AEA style; kept business context and no deal name was provided.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Travel meal format was close but needed standard abbreviation. Changed 'Meeting' to 'Mtg' per AEA style; kept business context and no deal name was provided.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

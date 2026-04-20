@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: SLC-GEG
+Vendor: Delta
+Amount: $984.41
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "SLC-GEG",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "One-way flight route already formatted correctly for AEA; no purpose or deal provided, so no change made. Expense code matches airline airfare.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "SLC-GEG",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "One-way flight route already formatted correctly for AEA; no purpose or deal provided, so no change made. Expense code matches airline airfare.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

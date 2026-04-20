@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-JFK/AEA Strategy Meeting
+Vendor: Uber
+Amount: $160.87
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JFK/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service transaction already follows the route/purpose format and matches a valid Uber ride to JFK for AEA Strategy Meeting. No reformatting needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JFK/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service transaction already follows the route/purpose format and matches a valid Uber ride to JFK for AEA Strategy Meeting. No reformatting needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

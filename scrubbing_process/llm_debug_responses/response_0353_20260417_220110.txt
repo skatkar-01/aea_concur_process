@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: BAL-NJ PENN/Elevate Roadshow
+Vendor: Amtrak
+Amount: $259.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Train/BAL-NJ PENN/Elevate Roadshow",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Amtrak rail ticket from Baltimore to NJ Penn for Elevate Roadshow. Reformatted to Train/<route>/<purpose>/<deal> per travel rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Train/BAL-NJ PENN/Elevate Roadshow",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Amtrak rail ticket from Baltimore to NJ Penn for Elevate Roadshow. Reformatted to Train/<route>/<purpose>/<deal> per travel rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/2026 Strategy Mtg
+Vendor: Shake Shack
+Amount: $22.65
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/2026 Strategy Mtg",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Identified as a travel meal. 2) Current description matches the Travel Meal/<purpose>/<deal> pattern (purpose provided). 3) No reformat needed. 4) Expense code 'Meals' is appropriate for a travel meal. 5) Flagged that no deal/company was specified and to confirm Project 1035 mapping if a deal name should be appended.",
+    "flags": [
+        "No deal/company specified in description — confirm whether a deal/company (e.g., project name) should be appended",
+        "Confirm Project 1035 mapping to a deal/company if required"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Identified as a travel meal. 2) Current description matches the Travel Meal/<purpose>/<deal> pattern (purpose provided). 3) No reformat needed. 4) Expense code 'Meals' is appropriate for a travel meal. 5) Flagged that no deal/company was specified and to confirm Project 1035 mapping if a deal name should be appended.",
+  "flags": [
+    "No deal/company specified in description \u2014 confirm whether a deal/company (e.g., project name) should be appended",
+    "Confirm Project 1035 mapping to a deal/company if required"
+  ],
+  "is_refund": false,
+  "error": ""
+}

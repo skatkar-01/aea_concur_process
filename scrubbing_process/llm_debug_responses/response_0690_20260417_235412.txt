@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-JAX/Strategy
+Vendor: Surfside
+Amount: $145.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JAX-Home/Strategy",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Car service route was reversed in the current description. Corrected to airport-to-home format using the same purpose.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JAX-Home/Strategy",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Car service route was reversed in the current description. Corrected to airport-to-home format using the same purpose.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

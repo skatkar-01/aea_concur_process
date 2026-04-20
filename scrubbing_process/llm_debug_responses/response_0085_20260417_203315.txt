@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Dinner-Home/F.Braun
+Vendor: DTS NY
+Amount: $255.13
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Office/F.Braun",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Car service from home to office. Current text 'Dinner-Home/F.Braun' does not match AEA car service formats; corrected to standard route format and preserved passenger initials.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Office/F.Braun",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Car service from home to office. Current text 'Dinner-Home/F.Braun' does not match AEA car service formats; corrected to standard route format and preserved passenger initials.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

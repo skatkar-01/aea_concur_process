@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: JFK-SLC/AEA Strategy Trip
+Vendor: Jetblue
+Amount: $467.41
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "JFK-SLC/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Airline ticket routed JFK-SLC. Current description already matches route/purpose format and includes the business purpose. Expense code aligns with flight transaction.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "JFK-SLC/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Airline ticket routed JFK-SLC. Current description already matches route/purpose format and includes the business purpose. Expense code aligns with flight transaction.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

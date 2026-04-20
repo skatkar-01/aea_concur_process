@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $24.73
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Personal",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.85,
+    "reasoning": "1) Transaction is a meal (Grubhub) charged as 'Personal'. 2) 'Personal' is not a formatted AEA business meal string, but it indicates a personal/non-business expense. 3) Per conservative rules, do not convert to a business meal format. 4) Expense code is Meals which matches the vendor type but likely incorrect for a personal charge — requires review. 5) Flagging for human action rather than auto-rewrite.",
+    "flags": [
+        "Personal expense charged to corporate card — review for reimbursement/expense policy violation",
+        "No business purpose/attendee or deal provided; if business-related, reformat to Bus.Lunch or Bus.Dinner with attendees and deal",
+        "Verify project/department charging (Project 1008, Dept SBF) is appropriate for a personal charge"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.85,
+  "reasoning": "1) Transaction is a meal (Grubhub) charged as 'Personal'. 2) 'Personal' is not a formatted AEA business meal string, but it indicates a personal/non-business expense. 3) Per conservative rules, do not convert to a business meal format. 4) Expense code is Meals which matches the vendor type but likely incorrect for a personal charge \u2014 requires review. 5) Flagging for human action rather than auto-rewrite.",
+  "flags": [
+    "Personal expense charged to corporate card \u2014 review for reimbursement/expense policy violation",
+    "No business purpose/attendee or deal provided; if business-related, reformat to Bus.Lunch or Bus.Dinner with attendees and deal",
+    "Verify project/department charging (Project 1008, Dept SBF) is appropriate for a personal charge"
+  ],
+  "is_refund": false,
+  "error": ""
+}

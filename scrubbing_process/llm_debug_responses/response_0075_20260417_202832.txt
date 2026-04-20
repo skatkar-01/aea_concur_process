@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Work Event/Eisner Amper Event to Home
+Vendor: Uber
+Amount: $233.96
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Work Event/Home-Office",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Uber car service. Reframed the ride as a standard car service route using AEA format; original wording was not in template. Kept the work event context and ending location as home.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Work Event/Home-Office",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Uber car service. Reframed the ride as a standard car service route using AEA format; original wording was not in template. Kept the work event context and ending location as home.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

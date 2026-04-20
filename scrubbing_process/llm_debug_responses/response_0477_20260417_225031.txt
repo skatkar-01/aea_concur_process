@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Event Materials
+Vendor: Walmart
+Amount: $145.58
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Event Materials",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Miscellaneous event supply purchase; current description is acceptable and does not map to a more specific AEA travel/meals format. Kept as-is.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Event Materials",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Miscellaneous event supply purchase; current description is acceptable and does not map to a more specific AEA travel/meals format. Kept as-is.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

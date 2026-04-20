@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Chemical Guys BOD Mtg
+Vendor: Proper Hotel
+Amount: $1578.86
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Chemical Guys BOD Mtg",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already in correct lodging format with business purpose and deal/company name; expense code matches lodging.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Chemical Guys BOD Mtg",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already in correct lodging format with business purpose and deal/company name; expense code matches lodging.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

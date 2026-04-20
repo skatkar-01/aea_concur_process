@@ -1,0 +1,89 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Lunch
+Vendor: Made Mad
+Amount: $22.84
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.98,"reasoning":"Compliant working lunch; amount within $25 limit. Pay type normalized to American Express.","flags":[],"is_refund":false,"error":""},{"index":2,"transaction_type":"flight","formatted_description":"SAV-ATL-SLC/AEA Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.96,"reasoning":"Meeting abbreviated to Mtg; route/purpose preserved. Project 1035 flagged as prepaid project for G/L review.","flags":["Prepaid project - review G/L 14000 at posting"],"is_refund":false,"error":""},{"index":3,"transaction_type":"other","formatted_description":"Travel Insurance/Residence Inn by Marriott SLC Airport","description_changed":false,"expense_code":"Other Travel","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel insurance correctly coded to Other Travel; vendor/context preserved.","flags":[],"is_refund":false,"error":""},{"index":4,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.98,"reasoning":"Compliant working lunch; amount within $25 limit. Pay type normalized to American Express.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"meal_business","formatted_description":"Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.72,"reasoning":"Business meal/outing context preserved, but attendee names are not initials-only per rules.","flags":["Attendee names must be initials only for business meals"],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Compliant working lunch; amount within $25 limit. Pay type normalized to American Express.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "flight",
+      "formatted_description": "SAV-ATL-SLC/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Meeting abbreviated to Mtg; route/purpose preserved. Project 1035 flagged as prepaid project for G/L review.",
+      "flags": [
+        "Prepaid project - review G/L 14000 at posting"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Travel Insurance/Residence Inn by Marriott SLC Airport",
+      "description_changed": false,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel insurance correctly coded to Other Travel; vendor/context preserved.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Compliant working lunch; amount within $25 limit. Pay type normalized to American Express.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.72,
+      "reasoning": "Business meal/outing context preserved, but attendee names are not initials-only per rules.",
+      "flags": [
+        "Attendee names must be initials only for business meals"
+      ],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

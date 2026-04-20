@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal
+Vendor: Geg Greedy Burger
+Amount: $19.74
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Travel/1035",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.85,
+    "reasoning": "Identified as a travel meal (airport vendor). Original description 'Travel Meal' lacked required purpose/deal. Added '/Travel/1035' to meet 'Travel Meal/<purpose>/<deal>' format using provided Project number.",
+    "flags": [
+        "Please confirm that Project 1035 is the correct deal name to display; if a deal/company name is required, replace '1035' with formal deal name.",
+        "No attendee info—if this was a business meal with attendees, consider using Bus.Lunch/Dinner format instead."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Travel/1035",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.85,
+  "reasoning": "Identified as a travel meal (airport vendor). Original description 'Travel Meal' lacked required purpose/deal. Added '/Travel/1035' to meet 'Travel Meal/<purpose>/<deal>' format using provided Project number.",
+  "flags": [
+    "Please confirm that Project 1035 is the correct deal name to display; if a deal/company name is required, replace '1035' with formal deal name.",
+    "No attendee info\u2014if this was a business meal with attendees, consider using Bus.Lunch/Dinner format instead."
+  ],
+  "is_refund": false,
+  "error": ""
+}

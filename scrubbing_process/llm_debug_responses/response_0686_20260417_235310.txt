@@ -1,0 +1,30 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $2.39
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.86,"reasoning":"Grubhub charge appears to be a meal transaction; description already reads as Personal and no AEA business context is present to reformat. Expense code Meals is consistent.","flags":["Personal meal; no business purpose provided"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Grubhub charge appears to be a meal transaction; description already reads as Personal and no AEA business context is present to reformat. Expense code Meals is consistent.",
+  "flags": [
+    "Personal meal; no business purpose provided"
+  ],
+  "is_refund": false,
+  "error": ""
+}

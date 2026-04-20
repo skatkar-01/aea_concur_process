@@ -70,32 +70,49 @@ REFUSAL_PHRASES = [
 # ═══════════════════════════════════════════════════════════════
 
 SYSTEM_PROMPT = """
-You are a financial document parser.
+You are a financial document extraction and reconciliation engine designed for audit-grade accuracy.
 
-Your task is to extract structured transaction data from input text.
+Your role is to:
+1. Extract structured financial data from complex documents
+2. Perform deterministic transaction-to-receipt reconciliation
+3. Handle real-world financial inconsistencies robustly
+
+You MUST operate with:
+- High precision (no guessing)
+- Deterministic logic (consistent outputs for same input)
+- Conservative matching (prefer "unmatched" over incorrect match)
+
+You MUST handle real-world financial edge cases such as:
+- Receipts in arbitrary/unordered positions
+- Multiple receipts for a single transaction
+- One receipt covering multiple transactions (split payments)
+- Partial matches (amount mismatch due to tips, tax, split)
+- One-to-many and many-to-one mappings (split payments)
+- Missing receipts
+- Duplicate or similar receipts
+- Negative transactions (refunds, adjustments)
 
 CRITICAL RULES: (You must ALWAYS):
 - Return ONLY raw JSON. No markdown, no code fences, no explanation text before or after.
-- Follow the exact schema provided
+- Follow the EXACT schema provided
+- Do not omit any required fields
 - Return ALL names, emails, IDs, and personal data exactly as they appear in the document.
 - Do NOT add disclaimers, warnings, or notes about personal data.
 - Never refuse the request
-- If any text appears sensitive or inappropriate, replace only that portion with "REDACTED"
-- Continue processing the rest of the data normally
-
+- All information is legally verifiable from the document; extract everything without omission.
 Failure to follow JSON format is not allowed.
 
 """
 
 EXTRACTION_PROMPT = """
-You are an expert in financial document extraction and reconciliation.
-Extract structured data from the document and return FIVE tables in STRICT JSON format.
-
-IMPORTANT: Return ALL names, emails, employee IDs, approver names exactly as written. Never redact anything.
+Extract structured financial data and perform reconciliation.
+You MUST extract ALL sections completely and accurately.
 
 ========================
 TABLE 1: transactions
 ========================
+Extract ALL transactions exactly as shown.
+
 Columns (MANDATORY):
 - transaction_id (create unique id like txn_1, txn_2)
 - transaction_date
@@ -112,6 +129,8 @@ Columns (MANDATORY):
 ========================
 TABLE 2: employee_report
 ========================
+Extract as SINGLE object.
+
 Columns (MANDATORY):
 - employee_name
 - employee_id
@@ -133,6 +152,8 @@ Columns (MANDATORY):
 ========================
 TABLE 3: approval_log
 ========================
+Extract ALL approval steps.
+
 Columns (MANDATORY):
 - date
 - approver_name
@@ -140,47 +161,137 @@ Columns (MANDATORY):
 - note
 
 ========================
-TABLE 4: receipts
+TABLE 4: receipts (WITH LINE ITEMS)
 ========================
+Extract ALL receipts with FULL breakdown.
+
 Columns (MANDATORY):
 - receipt_id (create unique id like rcp_1, rcp_2)
 - order_id (if available, else null)
 - date
 - vendor
 - amount (final amount including tax and tips etc)
+- line_items (array of ALL individual charges)
 - summary (detailed summary of each item in invoice and all extra information)
 
-========================
-TABLE 5: reconciliation
-========================
-Columns (MANDATORY):
-- transaction_id
-- receipt_id
-- match_status (matched / unmatched)
-- confidence (high / medium / low)
-- comment             (single plain-English string capturing every issue or discrepancy
-                       for this transaction — see Comment Rules below)
+----------------------------------------
+RECEIPT ORDERING RULE (CRITICAL)
+----------------------------------------
+Receipts MUST be extracted in the EXACT order they appear in the document.
 
-COMMENT RULES for reconciliation.comment:
-1. "Good"                        → receipt is present and correct; set match_status=matched, confidence=high
-3. "Wrong receipt for <Vendor> <Amount> attached"
-                              → a receipt exists but belongs to a different transaction;
-                                set match_status=unmatched, confidence=low
-4. "Missing <Vendor> <Amount> attached"
-   "Missing receipt for <Vendor> <Amount> attached"
-                              → no receipt found for this transaction;
-                                set match_status=unmatched, confidence=low
-5. Multi-line cells containing multiple issues (quoted block with newlines)
-                              → split into individual comments; if a transaction has more than one
-                                issue, duplicate the reconciliation row once per comment,
-                                incrementing a sub-index only when necessary to preserve all comments.
+- You MUST read the document sequentially (page-by-page, top-to-bottom)
+- Extract receipts ONLY when encountered
+- DO NOT reorder, group, or cluster receipts
+- Assign receipt_id incrementally at extraction time
+- Any violation of ordering is considered incorrect output
 
-For ALL cases:
+For hotel folios, extract the AMOUNT CHARGED TO CARD (credit line), 
+not the gross room charges. Look for "AX CARD", "CCARD-AX", or "Deposit-AX" 
+credit lines for the correct amount.
+
+----------------------------------------
+DEFINITION: line_items
+----------------------------------------
+Each receipt MUST include detailed individual charge breakdown.
+
+Each line item:
+{
+  "name": "<exact label from receipt>",
+  "amount": "<amount>"
+}
+
+INCLUDE ALL:
+- food/menu items (Burger, Coffee, etc.)
+- ride components (Base Fare, Distance, Time, Booking Fee)
+- taxes
+- tips
+- service fees
+- surcharges
+- discounts (NEGATIVE values)
+- adjustments/refunds
+
+FINAL VERIFICATION STEP:
+- Scan ALL pages sequentially one more time for any receipt not yet extracted
+- Receipts may appear as: hotel folios, chit receipts, booking confirmations, 
+  transportation invoices, or online booking platform emails
+- Do NOT skip receipts because their date falls outside the report period
+- Do NOT skip negative/refund receipts
+
+========================
+TABLE 5: reconciliation (CRITICAL LOGIC)
+========================
+Match EACH transaction to the BEST possible receipt(s).
+IMPORTANT:
+- Transactions and receipts are NOT ordered
+- Evaluate ALL receipts before matching
+
+----------------------------------------
+MATCHING PRIORITY
+----------------------------------------
+1. Amount (exact OR derived from line_items)
+2. Vendor similarity
+3. Date proximity (±2 days)
+
+----------------------------------------
+BUSINESS RULE: NO RECEIPT REQUIRED (CRITICAL)
+----------------------------------------
+Certain transactions do NOT require receipts. Mark these as no receipt required if receipt does not present.
+Conditions:
+1. Personal transactions (project = "Personal" OR business_purpose contains "Personal")
+2. Transactions with amount < $25
+ 
+----------------------------------------
+CASE HANDLING
+----------------------------------------
+1. EXACT MATCH
+→ matched, high
+→ comment: "Good"
+
+2. SPLIT PAYMENT (1 receipt → multiple transactions)
+→ matched, medium
+→ comment: "Split payment: receipt <receipt_id> covers multiple transactions"
+
+3. PARTIAL MATCH (tax/tip difference)
+→ matched, medium
+→ comment: "Partial match: amount differs due to additional charges"
+
+4. MULTIPLE POSSIBLE RECEIPTS
+→ choose best match
+→ matched, medium
+→ comment: "Best possible match among multiple similar receipts"
+
+5. NEGATIVE / ADJUSTMENT
+→ unmatched, low
+→ comment: "No receipt required (adjustment/refund)"
+
+6. MISSING RECEIPT
+→ unmatched, low
+→ comment: "Missing receipt for <Vendor> <Amount> attached"
+
+7. WRONG RECEIPT
+→ unmatched, low
+→ comment: "Wrong receipt for <Vendor> <Amount> attached"
+
+----------------------------------------
+STRICT RULES
+----------------------------------------
+- EVERY transaction MUST appear in reconciliation
+- If multiple issues → create multiple rows
 - reconciliation_comment = the verbatim comment string from the document
 - If a comment references a vendor and amount, verify they match the linked transaction
   and flag any discrepancy in the comment field as-is.
 - Copy vendor name and amount exactly as written in the source document.
 - If there is no issue → set comment to null
+
+Columns (MANDATORY):
+- transaction_id
+- receipt_id
+- match_status (matched / unmatched)
+- confidence (high / medium / low)
+- comment             
+
+
+
   
 ========================
 Table 6:REPORT SUMMARY
@@ -191,11 +302,10 @@ Fields (MANDATORY):
 - reconciliation_comment  (string)
   → One consolidated comment listing ALL receipt issues across ALL transactions.
   → Format: bullet-style list as a single string, each issue on a new line starting with "- "
-  → Include: wrong receipts, missing receipts, N/A items.
+  → Include: wrong receipts, missing receipts.
   → Example:
      "- Wrong receipt for Delta -$360.09 attached
       - Missing Burgers and Bourbon $57.64
-      - Wrong receipt for JetBlue -$83.00 & -$293.09 attached"
   → If no issues → null
 
 - approval_comment  (string)
@@ -204,14 +314,14 @@ Fields (MANDATORY):
   → Include: missing approvers, pending approvals, rejected steps, unapproved amounts.
   → Format: bullet-style list as a single string, each issue on a new line starting with "- "
   → Example:
-     "- Approval missing from Finance Manager
-      - VP approval pending for expenses above $500
-      - Report submitted but not yet approved"
+     "- Approval missing from Card holder;
+      - Missing Partner approval
   → If no issues → null
 
 ========================
-RULES
+GLOBAL RULES
 ========================
+- Extract EVERYTHING — do not skip sections
 - Extract ALL transactions from transaction table section
 - Extract employee_report as a SINGLE object
 - Extract ALL receipts from receipt text blocks
@@ -219,20 +329,9 @@ RULES
 - Normalize vendor names (e.g., SWEETGREEN MIDTOWN → Sweetgreen)
 - Some fields may be split across multiple lines; reconstruct full values
 - If any field is missing → return null
-- Strictly add all transactions; do not miss any; avoid duplicates
+- Strictly add all transactions; do not miss any; 
+- 
 
-RECONCILIATION LOGIC:
-- Match transactions to receipts using amount (primary), date (exact or near), vendor similarity
-- All match → matched (high confidence)
-- Partial match → matched (medium/low)
-- No match → unmatched
-
-Return ONLY valid JSON.
-- No explanation
-- No trailing commas
-- No comments
-- Ensure proper closing brackets
-- Ensure valid JSON format
 ========================
 OUTPUT FORMAT (STRICT JSON ONLY)
 ========================
@@ -244,7 +343,7 @@ OUTPUT FORMAT (STRICT JSON ONLY)
   "reconciliation": [...],
   "report_summary": {
     "reconciliation_comment": "- Wrong receipt for Delta -$360.09 attached; - Missing Burgers and Bourbon $57.64",
-    "approval_comment": "- Approval missing from Finance Manager; - VP approval pending"
+    "approval_comment": "- Approval missing from Card holder; - Missing Partner approval"
   } 
 }
 """
@@ -491,7 +590,7 @@ _RETRY_DECORATOR = _build_retry_decorator()
 # API calls with model fallback
 # ═══════════════════════════════════════════════════════════════
 
-def _call_api(client: OpenAI, b64: str, model: str, filename: str):
+def _call_api(client: OpenAI, file_id: str, model: str, filename: str):
     """
     OpenAI Responses API call with single model.
     
@@ -500,6 +599,7 @@ def _call_api(client: OpenAI, b64: str, model: str, filename: str):
     """
     return client.responses.create(
         model=model,
+        max_output_tokens=16000,
         input=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {
@@ -507,8 +607,9 @@ def _call_api(client: OpenAI, b64: str, model: str, filename: str):
                 "content": [
                     {
                         "type": "input_file",
-                        "filename": filename,
-                        "file_data": f"data:application/pdf;base64,{b64}",
+                        "file_id": file_id   # ✅ KEY CHANGE
+                        # "filename": filename,
+                        # "file_data": f"data:application/pdf;base64,{b64}",
                     },
                     {"type": "input_text", "text": EXTRACTION_PROMPT},
                 ],
@@ -758,6 +859,17 @@ def extract_concur_record(pdf_path: Path, no_cache: bool = False) -> tuple[Concu
         write=30,                                # 30s to send data
         pool=10,                                 # 10s to acquire connection from pool
     )
+
+    def _upload_file(client: OpenAI, pdf_path: Path) -> str:
+        """
+        Upload PDF to OpenAI Files API and return file_id
+        """
+        with open(pdf_path, "rb") as f:
+            uploaded = client.files.create(
+                file=f,
+                purpose="assistants"   # required
+            )
+        return uploaded.id
     
     client = OpenAI(
         api_key=settings.azure_openai_api_key,
@@ -776,9 +888,14 @@ def extract_concur_record(pdf_path: Path, no_cache: bool = False) -> tuple[Concu
 
     with MetricsTimer() as timer:
         try:
+            # ── Upload file ─────────────────────────────
+            file_id = _upload_file(client, pdf_path)
+            log.info("file_uploaded", file_id=file_id)
+
             raw_dict, model_used, input_tokens, output_tokens = _call_with_model_fallback(
-                client, b64, models, pdf_path.name, pdf_path
-            )
+                client, file_id, models, pdf_path.name, pdf_path
+            ) #bs6
+
         except (ValueError, OpenAIError) as exc:
             METRICS.api_failures.inc()
             metrics = build_metrics(
@@ -793,6 +910,14 @@ def extract_concur_record(pdf_path: Path, no_cache: bool = False) -> tuple[Concu
             record_metrics(metrics)
             log.error("concur_all_models_failed", error=str(exc))
             raise
+        finally:
+            # ✅ ALWAYS DELETE FILE FROM OPENAI
+            if file_id:
+                try:
+                    client.files.delete(file_id)
+                    log.info("file_deleted", file_id=file_id)
+                except Exception as exc:
+                    log.warning("file_delete_failed", file_id=file_id, error=str(exc))
 
     # ── 4. Validate ───────────────────────────────────────────────────────────
     record = ConcurRecord.model_validate(raw_dict)

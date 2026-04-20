@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Data Subscription/ENR's Unlimited/Lonevolt/Lonestar Electric Sup
+Vendor: BNP Media
+Amount: $8.99
+Expense: Software
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/ENR's Unlimited/Lonevolt/Lonestar Electric Sup",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Treat as info services/software. Recast generic subscription into AEA format as a research subscription while preserving publication and deal/company names.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/ENR's Unlimited/Lonevolt/Lonestar Electric Sup",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Treat as info services/software. Recast generic subscription into AEA format as a research subscription while preserving publication and deal/company names.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

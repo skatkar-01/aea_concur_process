@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: PHL-SLC/Strategy
+Vendor: Delta
+Amount: $728.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "PHL-SLC/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight ticket; current route/purpose format is acceptable and no company/deal was provided to add. Airline expense code matches.",
+  "flags": [
+    "No deal/company listed in source description"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "PHL-SLC/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight ticket; current route/purpose format is acceptable and no company/deal was provided to add. Airline expense code matches.",
+  "flags": [
+    "No deal/company listed in source description"
+  ],
+  "is_refund": false,
+  "error": ""
+}

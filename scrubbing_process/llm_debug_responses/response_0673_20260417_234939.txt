@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Conf/Stifel T&L Conf
+Vendor: Uber
+Amount: $25.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Conf/Stifel T&L Conf",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Uber ride coded as Car Service. Description is already concise and captures the trip purpose; no AEA route-style rewrite possible from available data.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Conf/Stifel T&L Conf",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Uber ride coded as Car Service. Description is already concise and captures the trip purpose; no AEA route-style rewrite possible from available data.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Stifel T&L Conf
+Vendor: W Hotels
+Amount: $21.38
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Stifel T&L Conf",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as a travel meal. 2) Description already uses 'Travel Meal/<purpose>' format and includes the conference name. 3) No reformatting needed. 4) Expense type 'Meals' matches a travel meal. 5) No issues requiring human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Stifel T&L Conf",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as a travel meal. 2) Description already uses 'Travel Meal/<purpose>' format and includes the conference name. 3) No reformatting needed. 4) Expense type 'Meals' matches a travel meal. 5) No issues requiring human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

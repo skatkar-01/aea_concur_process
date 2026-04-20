@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Amex Rewards Fee
+Vendor: American Express
+Amount: $1.80
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Amex Rewards Fee",
+    "description_changed": false,
+    "expense_code": "Miscellaneous",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Transaction appears to be a card/rewards fee (non-travel, non-meal). 2) Description 'Amex Rewards Fee' is concise and does not conflict with any AEA special-format rules. 3) No reformat needed. 4) Expense code 'Miscellaneous' is appropriate for a small card fee. 5) No issues requiring human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Amex Rewards Fee",
+  "description_changed": false,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Transaction appears to be a card/rewards fee (non-travel, non-meal). 2) Description 'Amex Rewards Fee' is concise and does not conflict with any AEA special-format rules. 3) No reformat needed. 4) Expense code 'Miscellaneous' is appropriate for a small card fee. 5) No issues requiring human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

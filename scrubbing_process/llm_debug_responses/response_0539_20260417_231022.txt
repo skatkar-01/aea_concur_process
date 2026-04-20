@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Lunch/Jess Sang
+Vendor: Grubhub
+Amount: $25.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Jess Sang",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Business meal. Description already matches the allowed Working Lunch format and includes the attendee name. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Jess Sang",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Business meal. Description already matches the allowed Working Lunch format and includes the attendee name. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

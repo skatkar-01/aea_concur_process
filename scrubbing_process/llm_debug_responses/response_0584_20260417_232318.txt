@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Hudson News
+Amount: $5.60
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Identified as a travel meal. 2) Description follows the Travel Meal/<purpose> pattern (purpose = Strategy). 3) Deal/company is optional; no change needed. 4) Expense code 'Meals' matches travel meal. 5) No issues requiring escalation.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Identified as a travel meal. 2) Description follows the Travel Meal/<purpose> pattern (purpose = Strategy). 3) Deal/company is optional; no change needed. 4) Expense code 'Meals' matches travel meal. 5) No issues requiring escalation.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

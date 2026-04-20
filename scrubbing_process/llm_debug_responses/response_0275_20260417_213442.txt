@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: ORD-LGA/BOD Mtg/AmeriVet
+Vendor: United
+Amount: $878.37
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "ORD-LGA/BOD Mtg/AmeriVet",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Transaction is an airline ticket (flight). 2) Description matches one-way flight format <ORIGIN-DEST>/<purpose>/<deal>. 3) No reformatting required. 4) Expense code 'Airline' correctly corresponds to a flight. 5) No substantive changes made.",
+    "flags": [
+        "Confirm whether this was part of a round-trip itinerary (if so, description should be RT: route).",
+        "Receipt notes a separate $30 service/ticketing fee — verify that fee is captured on a separate transaction."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "ORD-LGA/BOD Mtg/AmeriVet",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Transaction is an airline ticket (flight). 2) Description matches one-way flight format <ORIGIN-DEST>/<purpose>/<deal>. 3) No reformatting required. 4) Expense code 'Airline' correctly corresponds to a flight. 5) No substantive changes made.",
+  "flags": [
+    "Confirm whether this was part of a round-trip itinerary (if so, description should be RT: route).",
+    "Receipt notes a separate $30 service/ticketing fee \u2014 verify that fee is captured on a separate transaction."
+  ],
+  "is_refund": false,
+  "error": ""
+}

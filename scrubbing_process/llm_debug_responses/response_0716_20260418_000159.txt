@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RT: JAX-LGA/NY Office Visit
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:JAX-LGA/NY Office Visit",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Flight ticketing fee. Kept RT and business purpose; removed the extra space after RT: to match AEA format.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:JAX-LGA/NY Office Visit",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Flight ticketing fee. Kept RT and business purpose; removed the extra space after RT: to match AEA format.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/LGA-SAV-VPS/BOD Mtg AmeriVet
+Vendor: Frosch
+Amount: $7.50
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:LGA-SAV-VPS/BOD Mtg/AmeriVet",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Flight ticketing fee. Added RT: to match round-trip ticket fee format; preserved route, meeting purpose, and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:LGA-SAV-VPS/BOD Mtg/AmeriVet",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Flight ticketing fee. Added RT: to match round-trip ticket fee format; preserved route, meeting purpose, and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

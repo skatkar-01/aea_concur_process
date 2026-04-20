@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/A.Szafran/BOD Mtg/Huge/Hero Digital
+Vendor: Hotel Giraffe
+Amount: $291.23
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/A.Szafran/BOD Mtg/Huge/Hero Digital",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Already in correct lodging format. Kept guest initials, meeting purpose, and deal/company name as provided.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/A.Szafran/BOD Mtg/Huge/Hero Digital",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Already in correct lodging format. Kept guest initials, meeting purpose, and deal/company name as provided.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

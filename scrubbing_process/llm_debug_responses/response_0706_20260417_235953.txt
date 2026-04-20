@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-3.43
+Expense: Miscellaneous
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "refund",
+    "formatted_description": "Refund/Personal",
+    "description_changed": true,
+    "expense_code": "Miscellaneous",
+    "expense_code_changed": false,
+    "confidence": 0.65,
+    "reasoning": "1) Negative amount suggests a credit/refund. 2) Original description 'Personal' is not AEA-compliant and refunds must start with 'Refund/'. 3) Prefixed with 'Refund/' to mark as refund but retained 'Personal' because original business context is unknown. 4) Expense code left as Miscellaneous since original mapping is unknown.",
+    "flags": [
+        "Original description 'Personal' is not in AEA format — needs human review to determine original expense type and correct Refund/<original format> value",
+        "Confirm this is a true refund credit (vs. reversal) and whether expense code should be changed to match original expense"
+    ],
+    "is_refund": true,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Personal",
+  "description_changed": true,
+  "expense_code": "Miscellaneous",
+  "expense_code_changed": false,
+  "confidence": 0.65,
+  "reasoning": "1) Negative amount suggests a credit/refund. 2) Original description 'Personal' is not AEA-compliant and refunds must start with 'Refund/'. 3) Prefixed with 'Refund/' to mark as refund but retained 'Personal' because original business context is unknown. 4) Expense code left as Miscellaneous since original mapping is unknown.",
+  "flags": [
+    "Original description 'Personal' is not in AEA format \u2014 needs human review to determine original expense type and correct Refund/<original format> value",
+    "Confirm this is a true refund credit (vs. reversal) and whether expense code should be changed to match original expense"
+  ],
+  "is_refund": true,
+  "error": ""
+}

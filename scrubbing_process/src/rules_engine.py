@@ -259,6 +259,37 @@ class RulesEngine:
                 flags.append("Early arrival car - verify receipt timestamp ≤ 7:00am")
             elif 'work late' in desc:
                 flags.append("Work late car - verify receipt timestamp ≥ 7:30pm")
+            
+            # Check weekend format
+            try:
+                from datetime import datetime
+                txn_date_str = str(txn.get('transaction_date', '')).strip()
+                if txn_date_str:
+                    # Try common date formats
+                    txn_date = None
+                    for fmt in ('%Y-%m-%d', '%m/%d/%Y', '%m-%d-%Y', '%Y/%m/%d'):
+                        try:
+                            txn_date = datetime.strptime(txn_date_str, fmt)
+                            break
+                        except ValueError:
+                            continue
+                    
+                    if txn_date:
+                        day_name = txn_date.strftime('%A')
+                        weekend_days = self.policy_rules.get('car_service_policy', {}).get('weekend_days', [])
+                        
+                        if day_name in weekend_days:
+                            # Car service on weekend - check format
+                            standard_formats = self.policy_rules.get('car_service_policy', {}).get('standard_formats', {})
+                            valid_weekend_formats = [standard_formats.get('weekend_to_office', ''), standard_formats.get('weekend_from_office', '')]
+                            valid_weekend_formats = [f for f in valid_weekend_formats if f]  # Remove empty strings
+                            
+                            # Check if description matches one of the valid weekend formats
+                            is_valid_format = any(fmt in desc for fmt in valid_weekend_formats)
+                            if valid_weekend_formats and not is_valid_format:
+                                flags.append(f"Weekend car service should use one of: {' or '.join(valid_weekend_formats)}")
+            except Exception:
+                pass  # If date parsing fails, skip this check
         
         # Character length check
         desc_str = txn.get('description', '')

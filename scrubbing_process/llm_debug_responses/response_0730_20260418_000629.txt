@@ -1,0 +1,153 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Lunch w/ Sam Thompson
+Vendor: Chick Fil A
+Amount: $44.55
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 4,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Description already matches office meal format; vendor supports lunch purchase.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "flight",
+      "formatted_description": "RT:SLC-JFK/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Standardized flight description to required RT format and abbreviated Mtg.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Office meal format is already correct.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies/CT Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 0.93,
+      "reasoning": "No formatting rule applies beyond preserving existing office supplies note.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/SLC-JFK/AEA Strategy Mtg",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Ticketing fee format already matches rule; only Mtg abbreviation implied by existing style.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 4,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Description already matches office meal format; vendor supports lunch purchase.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "flight",
+      "formatted_description": "RT:SLC-JFK/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Standardized flight description to required RT format and abbreviated Mtg.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Office meal format is already correct.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies/CT Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 0.93,
+      "reasoning": "No formatting rule applies beyond preserving existing office supplies note.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/SLC-JFK/AEA Strategy Mtg",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Ticketing fee format already matches rule; only Mtg abbreviation implied by existing style.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

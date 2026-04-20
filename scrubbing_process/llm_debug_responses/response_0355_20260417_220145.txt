@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/BAL-NJ PENN/Elevate Roadshow
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/BAL-NJ PENN/Elevate Roadshow",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Rail ticketing fee already matches the required Tkt Fee format and includes route + purpose. Expense code aligns to Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/BAL-NJ PENN/Elevate Roadshow",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Rail ticketing fee already matches the required Tkt Fee format and includes route + purpose. Expense code aligns to Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

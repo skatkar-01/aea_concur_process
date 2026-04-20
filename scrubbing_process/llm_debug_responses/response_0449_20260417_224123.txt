@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/Hotel Booking
+Vendor: Frosch
+Amount: $8.00
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Hotel Booking",
+    "description_changed": true,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.85,
+    "reasoning": "Identified as a lodging charge but original used 'Tkt Fee' (flight ticket fee format). Replaced with Lodging/<purpose> format per AEA rules. No deal/company provided so omitted. Expense code already Lodging and is appropriate.",
+    "flags": [
+        "Original description implied a ticketing fee — confirm this is a hotel charge and not an airline ticketing fee.",
+        "Attach receipt/folio to verify hotel stay details (vendor Frosch may be booking agent).",
+        "No deal/company specified — confirm if a deal name should be appended."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Hotel Booking",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.85,
+  "reasoning": "Identified as a lodging charge but original used 'Tkt Fee' (flight ticket fee format). Replaced with Lodging/<purpose> format per AEA rules. No deal/company provided so omitted. Expense code already Lodging and is appropriate.",
+  "flags": [
+    "Original description implied a ticketing fee \u2014 confirm this is a hotel charge and not an airline ticketing fee.",
+    "Attach receipt/folio to verify hotel stay details (vendor Frosch may be booking agent).",
+    "No deal/company specified \u2014 confirm if a deal name should be appended."
+  ],
+  "is_refund": false,
+  "error": ""
+}

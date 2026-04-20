@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Traveal Meal/Strategy
+Vendor: Silver Lake Restaurant
+Amount: $28.19
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Transaction is a travel meal (restaurant charge). 2) Original had a typo 'Traveal' and used 'Strategy' as purpose; format should be 'Travel Meal/<purpose>'. 3) Corrected spelling to 'Travel Meal/Strategy'. 4) Expense code 'Meals' matches a travel meal. 5) No deal/company provided in source, so none appended.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Transaction is a travel meal (restaurant charge). 2) Original had a typo 'Traveal' and used 'Strategy' as purpose; format should be 'Travel Meal/<purpose>'. 3) Corrected spelling to 'Travel Meal/Strategy'. 4) Expense code 'Meals' matches a travel meal. 5) No deal/company provided in source, so none appended.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

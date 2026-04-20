@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Work Event/Office to Eisner Amper Event
+Vendor: Uber
+Amount: $71.31
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Eisner Amper Event/Work Event",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.72,
+  "reasoning": "Reformatted Uber car service description to fit AEA route/purpose style. Current text was not in approved car service format, so converted to from-to/purpose. Deal/company not provided.",
+  "flags": [
+    "No deal/company listed"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Office-Eisner Amper Event/Work Event",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.72,
+  "reasoning": "Reformatted Uber car service description to fit AEA route/purpose style. Current text was not in approved car service format, so converted to from-to/purpose. Deal/company not provided.",
+  "flags": [
+    "No deal/company listed"
+  ],
+  "is_refund": false,
+  "error": ""
+}

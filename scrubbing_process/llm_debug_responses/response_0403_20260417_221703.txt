@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Subscription/Pave America document signing
+Vendor: Docusign
+Amount: $16.34
+Expense: PubSub
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "info_services",
+    "formatted_description": "Research Subscription/Document Signing/Pave America",
+    "description_changed": true,
+    "expense_code": "PubSub",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Transaction is a subscription (DocuSign). 2) Original used 'Subscription/<deal> document signing' which doesn't match AEA template. 3) Reformatted to 'Research Subscription/<purpose>/<deal>' keeping business purpose and deal. 4) Expense code PubSub matches a subscription charge so left unchanged. 5) Flagged potential issues for review.",
+    "flags": [
+        "Potential personal subscription charge — verify this is a company expense",
+        "Confirm deal name 'Pave America' is correct/legal entity to attribute"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/Document Signing/Pave America",
+  "description_changed": true,
+  "expense_code": "PubSub",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Transaction is a subscription (DocuSign). 2) Original used 'Subscription/<deal> document signing' which doesn't match AEA template. 3) Reformatted to 'Research Subscription/<purpose>/<deal>' keeping business purpose and deal. 4) Expense code PubSub matches a subscription charge so left unchanged. 5) Flagged potential issues for review.",
+  "flags": [
+    "Potential personal subscription charge \u2014 verify this is a company expense",
+    "Confirm deal name 'Pave America' is correct/legal entity to attribute"
+  ],
+  "is_refund": false,
+  "error": ""
+}

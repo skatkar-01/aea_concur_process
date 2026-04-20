@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/BBY-NYP/West Monroe Offsite/Digital Offsite
+Vendor: Frosch
+Amount: $15.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/BBY-NYP/West Monroe Offsite/Digital Offsite",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee format is correct as provided: Tkt Fee/<route>/<purpose>/<deal>. Expense code Other Travel is consistent with a flight-related fee.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/BBY-NYP/West Monroe Offsite/Digital Offsite",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee format is correct as provided: Tkt Fee/<route>/<purpose>/<deal>. Expense code Other Travel is consistent with a flight-related fee.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

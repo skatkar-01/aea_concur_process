@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Group Lunch/James Kwon
+Vendor: Midtown Table
+Amount: $25.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Working Lunch/James Kwon",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Transaction is an office meal. 2) Original used 'Working Group Lunch/James Kwon' which doesn't match AEA Office Meals format. 3) Changed to 'Working Lunch/James Kwon' to conform to required 'Working Lunch' format while keeping attendee. 4) Expense type 'Meals' is appropriate and left unchanged. 5) No additional issues noted.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/James Kwon",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Transaction is an office meal. 2) Original used 'Working Group Lunch/James Kwon' which doesn't match AEA Office Meals format. 3) Changed to 'Working Lunch/James Kwon' to conform to required 'Working Lunch' format while keeping attendee. 4) Expense type 'Meals' is appropriate and left unchanged. 5) No additional issues noted.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

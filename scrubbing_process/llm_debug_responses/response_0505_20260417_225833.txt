@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Dinner-Home/BOD Mtg/Amerivet
+Vendor: Uber
+Amount: $62.97
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Work Late/Office-Home",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Uber ride home after BOD Mtg is a car service. Current text \"Dinner-Home/BOD Mtg/Amerivet\" does not match AEA car service special format; normalized to Work Late/Office-Home based on late-night homebound ride. Expense code matches.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Work Late/Office-Home",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Uber ride home after BOD Mtg is a car service. Current text \"Dinner-Home/BOD Mtg/Amerivet\" does not match AEA car service special format; normalized to Work Late/Office-Home based on late-night homebound ride. Expense code matches.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

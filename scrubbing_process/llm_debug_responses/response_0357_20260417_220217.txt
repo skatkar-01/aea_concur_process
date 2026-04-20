@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Airport/Pension Bridge Private Credit
+Vendor: Uber
+Amount: $143.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Airport/Pension Bridge Private Credit",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Car service charge with route-style description already in acceptable AEA format and includes deal name. Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Airport/Pension Bridge Private Credit",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Car service charge with route-style description already in acceptable AEA format and includes deal name. Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

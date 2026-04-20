@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Catch up Mtg/OAPC
+Vendor: Hotels.com
+Amount: $490.04
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Catch up Mtg/OAPC",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as lodging. 2) Description already matches Lodging/<purpose>/<deal> format and uses 'Mtg' abbreviation. 3) No reformatting required. 4) Expense type is Lodging and matches transaction. 5) Length check passes; no issues to flag.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Catch up Mtg/OAPC",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as lodging. 2) Description already matches Lodging/<purpose>/<deal> format and uses 'Mtg' abbreviation. 3) No reformatting required. 4) Expense type is Lodging and matches transaction. 5) Length check passes; no issues to flag.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: SLC-EWR/AEA Strategy Meeting
+Vendor: United
+Amount: $2236.27
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "SLC-EWR/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight transaction already matches AEA route/purpose format. Airline expense code is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "SLC-EWR/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Flight transaction already matches AEA route/purpose format. Airline expense code is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt fee/EWR-FRA-DRS-FRA-EWR/SCIO Workshop
+Vendor: Frosch
+Amount: $45.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-FRA-DRS-FRA-EWR/SCIO Workshop",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Airline ticket fee; reformatted to AEA ticket fee template and capitalized Fee. Route kept as provided with RT: prefix since it appears to be a round-trip itinerary.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-FRA-DRS-FRA-EWR/SCIO Workshop",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Airline ticket fee; reformatted to AEA ticket fee template and capitalized Fee. Route kept as provided with RT: prefix since it appears to be a round-trip itinerary.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Trip
+Vendor: Market Street Grill
+Amount: $21.35
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy Trip",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: Travel meal. 2) Current desc matches 'Travel Meal/<purpose>' format; no deal provided but that's acceptable. 3) No corrections required. 4) Expense type 'Meals' matches travel meal. 5) No issues needing human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: Travel meal. 2) Current desc matches 'Travel Meal/<purpose>' format; no deal provided but that's acceptable. 3) No corrections required. 4) Expense type 'Meals' matches travel meal. 5) No issues needing human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

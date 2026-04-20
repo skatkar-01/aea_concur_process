@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal
+Vendor: Burgers And Bourbon
+Amount: $30.74
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already matches AEA Travel Meal format. Vendor and amount are consistent with a meal transaction; no description changes needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Already matches AEA Travel Meal format. Vendor and amount are consistent with a meal transaction; no description changes needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

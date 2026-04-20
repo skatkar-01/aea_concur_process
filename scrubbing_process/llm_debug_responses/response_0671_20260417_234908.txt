@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus. Dinner w/J. Franklin, Pot EP
+Vendor: Midtown Table
+Amount: $158.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Bus.Dinner/J.Franklin/Pot EP",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "Identified as a business dinner. Original used 'Bus. Dinner w/...' which doesn't match AEA format. Reformatted to Bus.Dinner/<attendee>/<deal> keeping attendee and 'Pot EP' as the deal/company. Expense code (Meals) matches a business meal.",
+    "flags": [
+        "Confirm that 'Pot EP' is the correct deal/company name to include in description",
+        "Confirm attendee name formatting (J.Franklin) is acceptable"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/J.Franklin/Pot EP",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Identified as a business dinner. Original used 'Bus. Dinner w/...' which doesn't match AEA format. Reformatted to Bus.Dinner/<attendee>/<deal> keeping attendee and 'Pot EP' as the deal/company. Expense code (Meals) matches a business meal.",
+  "flags": [
+    "Confirm that 'Pot EP' is the correct deal/company name to include in description",
+    "Confirm attendee name formatting (J.Franklin) is acceptable"
+  ],
+  "is_refund": false,
+  "error": ""
+}

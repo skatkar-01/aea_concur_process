@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/BBY-NYP/BOD Mtg/Huge/Hero Digital
+Vendor: Frosch
+Amount: $15.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:BBY-NYP/BOD Mtg/Huge/Hero Digital",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Ticketing fee format was close but missing RT: on the route. Kept the BOD Mtg and deal/company details intact.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:BBY-NYP/BOD Mtg/Huge/Hero Digital",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Ticketing fee format was close but missing RT: on the route. Kept the BOD Mtg and deal/company details intact.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

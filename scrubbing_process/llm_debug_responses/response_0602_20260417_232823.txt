@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/BOD Mtg/RED
+Vendor: United
+Amount: $1849.66
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-FRA/LHR-EWR/BOD Mtg/RED",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Round-trip flight already in AEA route/purpose/deal format; no changes needed. Airline expense code is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "EWR-FRA/LHR-EWR/BOD Mtg/RED",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Round-trip flight already in AEA route/purpose/deal format; no changes needed. Airline expense code is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

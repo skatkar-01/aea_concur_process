@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Trip
+Vendor: Beans & Brews Coffee
+Amount: $3.34
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy Trip",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Identified as a travel meal (small coffee purchase during trip). 2) Description already starts with 'Travel Meal/' and includes a clear purpose ('AEA Strategy Trip'), matching required template. 3) No deal/company was provided; rule says include deal when relevant — not mandatory. 4) Expense code 'Meals' aligns with travel meal type. 5) Flagged for review only to confirm whether a deal/company should be appended.",
+    "flags": [
+        "No deal/company specified — confirm if a deal or company name should be appended to match Travel Meal/<purpose>/<deal>"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Identified as a travel meal (small coffee purchase during trip). 2) Description already starts with 'Travel Meal/' and includes a clear purpose ('AEA Strategy Trip'), matching required template. 3) No deal/company was provided; rule says include deal when relevant \u2014 not mandatory. 4) Expense code 'Meals' aligns with travel meal type. 5) Flagged for review only to confirm whether a deal/company should be appended.",
+  "flags": [
+    "No deal/company specified \u2014 confirm if a deal or company name should be appended to match Travel Meal/<purpose>/<deal>"
+  ],
+  "is_refund": false,
+  "error": ""
+}

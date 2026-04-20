@@ -1,0 +1,257 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Stifel T&L Conf
+Vendor: Shell Oil
+Amount: $12.81
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Stifel T&L Conf",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows correct Travel Meal format with purpose and deal/company.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description fits Travel Meal format with purpose; no deal/company provided which is optional.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description conforms to Travel Meal format; vendor Hudson and amount appropriate.",
+      "flags": ["Verify vendor is appropriate for meals versus car service due to trip details."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "car_service",
+      "formatted_description": "JAX-Home/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description correctly formatted as car service route with purpose and deal/company.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/CFO Interview/AMX",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description matches correct lodging format with business purpose and deal info.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "meal_business",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Description is 'Personal' indicating a non-business meal; format is allowed for personal expenses.",
+      "flags": ["Check if personal expenses should be flagged for reimbursement or excluded."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "meal_business",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Personal description acceptable for non-business meals; vendor and amount appropriate.",
+      "flags": ["Ensure personal meals are properly flagged in accounts."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "meal_business",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Description for negative amount personal meal expense is consistent and acceptable.",
+      "flags": ["Validate handling of negative personal meal transactions."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "other",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Miscellaneous",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Miscellaneous expense with personal description is plausible; no reformat needed.",
+      "flags": ["Confirm miscellaneous personal expenses are allowed per policy."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_business",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Personal meal description accepted; no formatting change needed.",
+      "flags": ["Verify if personal meal with positive amount complies with guidelines."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/ACG M&A South Conf",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Lodging description includes purpose and deal; format correct and complete.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "flight",
+      "formatted_description": "JAX-CHS/William Blair T&L Conf",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Corrected route format removing inconsistent hyphen and extra airport; travel route simplified and consistent with ticket route.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "flight",
+      "formatted_description": "RT:JAX-LGA/NY Office Visit",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Added missing space after colon to align with format: RT:<route>/<purpose>/<deal>.",
+      "flags": ["Check vendor and expense code match for airline flight."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:JAX-LGA/NY Office Visit",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Added missing space after colon for 'RT:' and removed extra slash to fit ticket fee format correctly.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "flight",
+      "formatted_description": "JAX-LGA/Catch up Mtg/OAPC",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description properly formatted for flight route with meeting purpose and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_business",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Personal description accepted for meal expense; no reformat needed.",
+      "flags": ["Verify handling of negative personal meal transactions."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "meal_business",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Personal meal description accepted as is.",
+      "flags": ["Confirm personal meals comply with company policy."],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description properly formatted for ticket fee with route, purpose, and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt
+
+================================================================================
+PARSING ERROR
+================================================================================
+JSON parse error: Unterminated string starting at: line 240 column 32 (char 8331)
+

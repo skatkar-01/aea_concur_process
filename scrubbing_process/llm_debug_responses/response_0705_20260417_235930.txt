@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-5.73
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "refund",
+    "formatted_description": "Refund/Personal",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.60,
+    "reasoning": "1) Amount is negative, indicating a refund. 2) Original description was just 'Personal' which does not match any AEA templates, so prepended 'Refund/' per rules to preserve original intent. 3) Kept expense code as Meals (no evidence it should be reclassified).",
+    "flags": [
+        "Original description 'Personal' does not match AEA formatting templates — please confirm original transaction type/purpose and deal/company for correct formatting.",
+        "Negative amount suggests a refund; verify this is a vendor/merchant refund and not a misc reversal.",
+        "No business purpose or deal provided; needs human review if this should be reclassified as personal/non-reimbursable."
+    ],
+    "is_refund": true,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Personal",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.6,
+  "reasoning": "1) Amount is negative, indicating a refund. 2) Original description was just 'Personal' which does not match any AEA templates, so prepended 'Refund/' per rules to preserve original intent. 3) Kept expense code as Meals (no evidence it should be reclassified).",
+  "flags": [
+    "Original description 'Personal' does not match AEA formatting templates \u2014 please confirm original transaction type/purpose and deal/company for correct formatting.",
+    "Negative amount suggests a refund; verify this is a vendor/merchant refund and not a misc reversal.",
+    "No business purpose or deal provided; needs human review if this should be reclassified as personal/non-reimbursable."
+  ],
+  "is_refund": true,
+  "error": ""
+}

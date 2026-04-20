@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: RT:EWR-SRQ-PBI/IR Florida Trip
+Vendor: United
+Amount: $1799.72
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-SRQ-PBI/IR Florida Trip",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 1.0,
+  "reasoning": "Transaction is a round-trip flight as indicated by RT: prefix and multiple airports in route. Description format matches AEA rules with route/purpose. Expense type Airline is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-SRQ-PBI/IR Florida Trip",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 1.0,
+  "reasoning": "Transaction is a round-trip flight as indicated by RT: prefix and multiple airports in route. Description format matches AEA rules with route/purpose. Expense type Airline is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

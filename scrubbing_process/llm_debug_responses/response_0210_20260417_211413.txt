@@ -1,0 +1,257 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Subscription/Professional Svcs
+Vendor: LinkedIn
+Amount: $75.85
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "info_services",
+      "formatted_description": "Research Subscription/Professional Svcs",
+      "description_changed": true,
+      "expense_code": "Info Services",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Changed 'Subscription/Professional Svcs' to 'Research Subscription/Professional Svcs' per info services format rule",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Tuck PE Conference",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description format matches 'Travel Meal/<purpose>/<deal>' rule",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Bus.Parking/Tuck PE Conference",
+      "description_changed": true,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Changed description from 'Parking/Tuck PE Conference' to proper 'Bus.Parking/<purpose>/<deal>' format",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Tuck PE Conference",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description is proper for travel meal",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Tuck PE Conference",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description correctly formatted",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "other",
+      "formatted_description": "Bus.Parking/Tuck PE Conference",
+      "description_changed": true,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Changed 'Parking/Tuck PE Conference' to 'Bus.Parking/Tuck PE Conference' to meet formatting rules",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:ORD-SLC/AEA Strategy Meeting",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'Refund/' prefix and removed space after 'RT:' to match formatting; keep expense code Airline",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "RT:EWR-SLC-GEG/BOD Mtg/TileBar",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Added 'RT:' prefix to indicate round trip per rules; format flights with RT: prefix",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "flight",
+      "formatted_description": "RT:GEG-MSP-EWR/BOD Mtg/TileBar",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Added 'RT:' prefix to description for round trip flight per rules",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description 'Travel Meal' is acceptable for travel meals without further detail",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:GEG-MSP-EWR/BOD Mtg/TileBar",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'RT:' prefix before route in Tkt Fee description as this is a round trip",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "other",
+      "formatted_description": "Bus.Parking/Spokane Airport",
+      "description_changed": true,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.75,
+      "reasoning": "Changed generic 'Airport Parking' to 'Bus.Parking/Spokane Airport' to meet format rules; incomplete info on purpose or deal",
+      "flags": ["Confirm business purpose and deal for parking"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:EWR-SLC-GEG/BOD Mtg/TileBar",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'RT:' prefix before route in Tkt Fee as flight is round trip",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:SLC-GEG",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Corrected refund description to match flight route format with RT prefix as round trip refund",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Description 'Travel Meal' acceptable for meals without more details",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "flight",
+      "formatted_description": "RT:SLC-GEG",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'RT:' prefix for round trip flight description to conform with flight formatting rules",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:SLC-GEG",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'RT:' prefix for ticketing fee description for round trip flight",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Shortened 'Strategy Meeting' to abbreviation 'Strategy Mtg' to match AEA formatting",
+      "flags": ["Check if original purpose has other details"],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "refund",
+      "formatted_description
+
+================================================================================
+PARSING ERROR
+================================================================================
+JSON parse error: Unterminated string starting at: line 240 column 7 (char 7882)
+

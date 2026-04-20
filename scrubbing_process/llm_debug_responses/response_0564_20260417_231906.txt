@@ -1,0 +1,262 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Mgmt Mtg/Aqualis
+Vendor: Westin
+Amount: $83.37
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Description matches travel meal format with purpose and deal; expense code correct",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Description matches lodging format with purpose and deal; expense code correct",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description follows Travel Meal format with purpose and deal; minor complexity with two purposes but acceptable",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "flight_fee",
+      "formatted_description": "Tkt Fee/RT:BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added RT: prefix to route in ticketing fee description to indicate round trip per flight fee rules",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Description is correct for travel meal with purpose only",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "flight",
+      "formatted_description": "RT:LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added RT: prefix for round trip flight per rules; route format corrected without spaces",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Description matches travel meal format",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "info_services",
+      "formatted_description": "Inflight Wifi",
+      "description_changed": true,
+      "expense_code": "Info Services",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Corrected description casing and removed '/Strategy' suffix to match exact allowed format for inflight wifi",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "flight",
+      "formatted_description": "RT:BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added RT: prefix for round trip flight; removed extra suffix beyond permitted; simplified route to BOS-FRA as original has trailing which is unclear",
+      "flags": ["Verify route completeness and legs for complex multi-stop flights"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Correct format and expense code for travel meal",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Correct format for travel meal",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:EWR-SLC/Strategy",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added RT: prefix to route in refund to indicate round trip; refund prefix present and expense code correct",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Correct description for travel meal",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Correct travel meal format for strategy",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Strategy",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Description and expense code correct for lodging",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "flight_fee",
+      "formatted_description": "Tkt Fee/Exch Tkt/JAX-EWR/Banker Mtgs/Monroe",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Reformatted ticket fee for exchange with correct 'Exch Tkt' format and inserted route posperly",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "flight",
+      "formatted_description": "PHL-SLC/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Route and purpose provided; no RT prefix so assumed one-way flight; expense code correct",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Correct format for travel meal",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "flight_fee",
+      "formatted_description": "Tkt Fee/PHL-SLC/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1,
+      "reasoning": "Correct description and expense
+
+================================================================================
+PARSING ERROR
+================================================================================
+JSON parse error: Unterminated string starting at: line 245 column 20 (char 7946)
+

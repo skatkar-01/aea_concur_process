@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Subscription/AmeriVet Documents signing
+Vendor: Docusign
+Amount: $16.34
+Expense: PubSub
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/AmeriVet/Documents signing",
+  "description_changed": true,
+  "expense_code": "PubSub",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Reformatted subscription to AEA info services style. Preserved AmeriVet and document signing context; used Research Subscription since this is a subscription charge, not a travel item.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/AmeriVet/Documents signing",
+  "description_changed": true,
+  "expense_code": "PubSub",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Reformatted subscription to AEA info services style. Preserved AmeriVet and document signing context; used Research Subscription since this is a subscription charge, not a travel item.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

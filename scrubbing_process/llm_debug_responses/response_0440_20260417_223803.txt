@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-JFK/Chemical Guys BOD Meeting
+Vendor: Uber
+Amount: $106.55
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Home-JFK/BOD Mtg/Chemical Guys",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Identified as a car service. Original used 'BOD Meeting' — adjusted to AEA format <from>-<to>/<purpose>/<deal> and abbreviated 'Meeting' to 'Mtg'. Preserved route (Home-JFK) and deal name (Chemical Guys).",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JFK/BOD Mtg/Chemical Guys",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as a car service. Original used 'BOD Meeting' \u2014 adjusted to AEA format <from>-<to>/<purpose>/<deal> and abbreviated 'Meeting' to 'Mtg'. Preserved route (Home-JFK) and deal name (Chemical Guys).",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

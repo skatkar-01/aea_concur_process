@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Conf/ACG M&A
+Vendor: W Hotels
+Amount: $1693.87
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/ACG M&A Conf",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Lodging charge; current desc was close but used 'Conf' in a nonstandard order. Reformatted to standard Lodging/purpose/deal style while preserving ACG M&A context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/ACG M&A Conf",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Lodging charge; current desc was close but used 'Conf' in a nonstandard order. Reformatted to standard Lodging/purpose/deal style while preserving ACG M&A context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

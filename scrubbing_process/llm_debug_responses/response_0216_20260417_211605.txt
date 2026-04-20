@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Tuck PE Conference
+Vendor: Hanover Inn
+Amount: $37.25
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Tuck PE Conference",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Travel meal charge already matches AEA format and includes the business purpose. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Tuck PE Conference",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Travel meal charge already matches AEA format and includes the business purpose. Expense code Meals is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Airport-Home/AEA Strategy Meeting
+Vendor: Uber
+Amount: $10.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Airport-Home/AEA Strategy Mtg",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Transaction is a car service. Corrected route separator to a dash (Airport-Home) and abbreviated 'Meeting' to 'Mtg' per AEA conventions. Preserved purpose 'AEA Strategy' and vendor.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Airport-Home/AEA Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is a car service. Corrected route separator to a dash (Airport-Home) and abbreviated 'Meeting' to 'Mtg' per AEA conventions. Preserved purpose 'AEA Strategy' and vendor.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

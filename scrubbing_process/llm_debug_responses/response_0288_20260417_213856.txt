@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/BBY-NYP/BOD Mtg/Huge/Hero Digital
+Vendor: Amtrak
+Amount: $-19.50
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Refund/BBY-NYP/BOD Mtg/Huge/Hero Digital",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Already in valid refund format: Refund/ + route + purpose + deal/company. Kept as-is.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Refund/BBY-NYP/BOD Mtg/Huge/Hero Digital",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Already in valid refund format: Refund/ + route + purpose + deal/company. Kept as-is.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Airline ticketing fee format is correct; kept route and business purpose as provided. Expense code matches airline charge.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Airline ticketing fee format is correct; kept route and business purpose as provided. Expense code matches airline charge.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

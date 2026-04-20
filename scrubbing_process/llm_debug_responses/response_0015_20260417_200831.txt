@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-lunch/Strategy
+Vendor: Uber
+Amount: $41.97
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Lunch/Strategy",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.74,
+  "reasoning": "Car service transaction from Uber. Current description did not match AEA car service format; simplified to route-style description while preserving the provided business purpose. Expense code is already correct.",
+  "flags": [
+    "Route details (pickup/dropoff) not provided in source description"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Lunch/Strategy",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.74,
+  "reasoning": "Car service transaction from Uber. Current description did not match AEA car service format; simplified to route-style description while preserving the provided business purpose. Expense code is already correct.",
+  "flags": [
+    "Route details (pickup/dropoff) not provided in source description"
+  ],
+  "is_refund": false,
+  "error": ""
+}

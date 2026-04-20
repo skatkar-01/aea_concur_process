@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-24.73
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "No evidence of a business meal or other reimbursable travel/meal category; description remains as provided. Expense code Meals is consistent with the card transaction type.",
+  "flags": [
+    "Potential personal expense"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "No evidence of a business meal or other reimbursable travel/meal category; description remains as provided. Expense code Meals is consistent with the card transaction type.",
+  "flags": [
+    "Potential personal expense"
+  ],
+  "is_refund": false,
+  "error": ""
+}

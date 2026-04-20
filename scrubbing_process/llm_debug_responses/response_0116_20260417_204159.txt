@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refreshments
+Vendor: Omni
+Amount: $41.93
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Hotel/Omni",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.87,
+  "reasoning": "Charge is for refreshments at Omni and appears to be incidental hotel meal/drink spend, not a working lunch/dinner. Recast to Travel Meal format with hotel/vendor context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Hotel/Omni",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.87,
+  "reasoning": "Charge is for refreshments at Omni and appears to be incidental hotel meal/drink spend, not a working lunch/dinner. Recast to Travel Meal format with hotel/vendor context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

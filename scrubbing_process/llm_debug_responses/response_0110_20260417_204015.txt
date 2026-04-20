@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: DFW-Home/AEA Internal Mtgs
+Vendor: Uber
+Amount: $103.99
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "DFW-Home/AEA Internal Mtgs",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: Car service (Uber). 2) Current desc matches AEA car service format <from>-<to>/<purpose>/<deal> (DFW-Home/AEA Internal Mtgs). 3) No reformatting needed. 4) Expense code 'Car Service' aligns with transaction type. 5) No issues requiring human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "DFW-Home/AEA Internal Mtgs",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: Car service (Uber). 2) Current desc matches AEA car service format <from>-<to>/<purpose>/<deal> (DFW-Home/AEA Internal Mtgs). 3) No reformatting needed. 4) Expense code 'Car Service' aligns with transaction type. 5) No issues requiring human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

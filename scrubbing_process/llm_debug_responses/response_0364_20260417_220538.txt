@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Late/Office-Home
+Vendor: Uber
+Amount: $46.59
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Working Late/Office-Home",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "This is a car service. The description matches AEA's special format for evening departures (Working Late/Office-Home) and requires no change. Expense code aligns with transaction type.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Working Late/Office-Home",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a car service. The description matches AEA's special format for evening departures (Working Late/Office-Home) and requires no change. Expense code aligns with transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

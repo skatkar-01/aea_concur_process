@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-14.24
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Meal charge with no business context provided. Current description 'Personal' does not match AEA meal formatting, so standardized to the default office meal label 'Working Lunch'.",
+  "flags": [
+    "No attendee list, purpose, or deal/company provided"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Meal charge with no business context provided. Current description 'Personal' does not match AEA meal formatting, so standardized to the default office meal label 'Working Lunch'.",
+  "flags": [
+    "No attendee list, purpose, or deal/company provided"
+  ],
+  "is_refund": false,
+  "error": ""
+}

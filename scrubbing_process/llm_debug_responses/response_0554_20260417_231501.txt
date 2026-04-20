@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Ticketing Fee/EWR-SLC/Strategy
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "Tkt Fee/EWR-SLC/Strategy",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "This is a flight ticketing fee. AEA format uses 'Tkt Fee/route/purpose' not 'Ticketing Fee'. Did not add RT prefix because no round-trip indicated. Expense code 'Airline' is appropriate.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-SLC/Strategy",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a flight ticketing fee. AEA format uses 'Tkt Fee/route/purpose' not 'Ticketing Fee'. Did not add RT prefix because no round-trip indicated. Expense code 'Airline' is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

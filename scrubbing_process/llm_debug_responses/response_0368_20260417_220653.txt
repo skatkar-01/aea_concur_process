@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: HPN-Home/BOD Mtg/Excelitas
+Vendor: Uber
+Amount: $150.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "HPN-Home/BOD Mtg/Excelitas",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.96,
+    "reasoning": "This is a car service (Uber). Description follows the <from>-<to>/<purpose>/<deal> pattern (HPN-Home/BOD Mtg/Excelitas), uses Mtg abbreviation, no spaces around dash, and preserves deal name. No changes needed.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "HPN-Home/BOD Mtg/Excelitas",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "This is a car service (Uber). Description follows the <from>-<to>/<purpose>/<deal> pattern (HPN-Home/BOD Mtg/Excelitas), uses Mtg abbreviation, no spaces around dash, and preserves deal name. No changes needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

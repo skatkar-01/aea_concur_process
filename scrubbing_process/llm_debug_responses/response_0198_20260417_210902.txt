@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Airport-Hotel/AEA Strategy Trip
+Vendor: Uber
+Amount: $161.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Airport-Hotel/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Car service transaction already matches AEA route/purpose format. Expense code aligns with Uber ground transportation.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Airport-Hotel/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Car service transaction already matches AEA route/purpose format. Expense code aligns with Uber ground transportation.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

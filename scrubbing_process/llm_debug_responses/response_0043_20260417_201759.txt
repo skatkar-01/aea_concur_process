@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Internal Mtgs/Window Nation
+Vendor: Panera Bread
+Amount: $8.20
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Internal Mtgs/Window Nation",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Transaction is a travel meal. 2) Description matches AEA format Travel Meal/<purpose>/<deal> with purpose 'Internal Mtgs' and deal 'Window Nation'. 3) No corrections needed. 4) Expense type 'Meals' is appropriate. 5) No issues requiring human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Internal Mtgs/Window Nation",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Transaction is a travel meal. 2) Description matches AEA format Travel Meal/<purpose>/<deal> with purpose 'Internal Mtgs' and deal 'Window Nation'. 3) No corrections needed. 4) Expense type 'Meals' is appropriate. 5) No issues requiring human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

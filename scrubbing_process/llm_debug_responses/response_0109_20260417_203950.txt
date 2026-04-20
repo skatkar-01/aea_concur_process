@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Ticket/Human Capital Forum 2026/Kate Smith
+Vendor: PEI Media
+Amount: $2420.00
+Expense: Seminars/Conferens
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Ticket/Human Capital Forum 2026/Kate Smith",
+  "description_changed": false,
+  "expense_code": "Seminars/Conferens",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Seminar/conference ticket charge already follows the existing description format and includes the event plus attendee. Expense code matches the transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Ticket/Human Capital Forum 2026/Kate Smith",
+  "description_changed": false,
+  "expense_code": "Seminars/Conferens",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Seminar/conference ticket charge already follows the existing description format and includes the event plus attendee. Expense code matches the transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

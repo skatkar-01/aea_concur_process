@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Coffee Mtg/Mentoring/L. Adi
+Vendor: Watchhouse
+Amount: $14.24
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/Mentoring/L. Adi",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Business meal at coffee meeting; current format \"Coffee Mtg\" is not an AEA meal template. Recast to Bus.Lunch with the same mentoring purpose and attendee name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/Mentoring/L. Adi",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Business meal at coffee meeting; current format \"Coffee Mtg\" is not an AEA meal template. Recast to Bus.Lunch with the same mentoring purpose and attendee name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

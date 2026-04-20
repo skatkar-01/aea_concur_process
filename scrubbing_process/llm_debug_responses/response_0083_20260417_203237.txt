@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Conference Room Rental/Pave America Meetings
+Vendor: Umstead
+Amount: $1276.67
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Pave America Meetings",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": true,
+  "confidence": 0.83,
+  "reasoning": "Conference room rental at Umstead appears to be lodging-related group meeting space. Reformatted to Lodging/<purpose> and retained the business context. Expense code should be Lodging, not Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Pave America Meetings",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": true,
+  "confidence": 0.83,
+  "reasoning": "Conference room rental at Umstead appears to be lodging-related group meeting space. Reformatted to Lodging/<purpose> and retained the business context. Expense code should be Lodging, not Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/JFK-SLC/AEA Strategy Meeting
+Vendor: Delta
+Amount: $-1445.08
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/RT:JFK-SLC/AEA Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Refund on airline ticket. Kept route and business context, converted to required refund prefix plus RT format, and shortened Meeting to Mtg per AEA convention.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/RT:JFK-SLC/AEA Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Refund on airline ticket. Kept route and business context, converted to required refund prefix plus RT format, and shortened Meeting to Mtg per AEA convention.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

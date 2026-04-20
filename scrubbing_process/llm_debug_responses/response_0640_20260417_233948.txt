@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $2.97
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Personal",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.55,
+    "reasoning": "1) Transaction is a meal (Grubhub). 2) Description 'Personal' does not match AEA business-meal templates, but appears to indicate a personal charge. Per conservative rule, do not overwrite business context. 3) Leave description as-is and flag for human review to determine if this should be reclassified (e.g., Working Lunch/Overage/Personal) or reimbursed. 4) Expense code is Meals — likely incorrect for a personal charge but cannot auto-change without confirmation. 5) Recommend manual review.",
+    "flags": [
+        "Description not in AEA meal format — likely a personal charge; confirm business vs personal",
+        "If personal, update expense code or require employee reimbursement",
+        "Small recurring Grubhub amounts in history — verify policy compliance"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.55,
+  "reasoning": "1) Transaction is a meal (Grubhub). 2) Description 'Personal' does not match AEA business-meal templates, but appears to indicate a personal charge. Per conservative rule, do not overwrite business context. 3) Leave description as-is and flag for human review to determine if this should be reclassified (e.g., Working Lunch/Overage/Personal) or reimbursed. 4) Expense code is Meals \u2014 likely incorrect for a personal charge but cannot auto-change without confirmation. 5) Recommend manual review.",
+  "flags": [
+    "Description not in AEA meal format \u2014 likely a personal charge; confirm business vs personal",
+    "If personal, update expense code or require employee reimbursement",
+    "Small recurring Grubhub amounts in history \u2014 verify policy compliance"
+  ],
+  "is_refund": false,
+  "error": ""
+}

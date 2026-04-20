@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Trip Insurance/AEA Strategy Trip
+Vendor: Allianz
+Amount: $31.55
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "other",
+    "formatted_description": "Trip Insurance/AEA Strategy Trip",
+    "description_changed": false,
+    "expense_code": "Other Travel",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Type: travel insurance (other travel). 2) Current description follows concise format with purpose (AEA Strategy Trip). 3) No reformat needed per AEA rules (no explicit insurance template exists). 4) Expense code 'Other Travel' aligns with transaction but may warrant confirmation. 5) Flagged for review to ensure travel insurance should remain coded to Other Travel.",
+    "flags": [
+        "Confirm that travel insurance is correctly coded to 'Other Travel' rather than a separate Insurance/Benefits code"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Trip Insurance/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: travel insurance (other travel). 2) Current description follows concise format with purpose (AEA Strategy Trip). 3) No reformat needed per AEA rules (no explicit insurance template exists). 4) Expense code 'Other Travel' aligns with transaction but may warrant confirmation. 5) Flagged for review to ensure travel insurance should remain coded to Other Travel.",
+  "flags": [
+    "Confirm that travel insurance is correctly coded to 'Other Travel' rather than a separate Insurance/Benefits code"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy
+Vendor: Burgers And Bourbon
+Amount: $13.06
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "This is a travel meal (Travel Meal/<purpose>/<deal>). The description uses the correct 'Travel Meal' prefix and lists the business purpose 'AEA Strategy'. No reformatting required. Expense type 'Meals' matches a travel meal.",
+    "flags": ["Confirm whether 'AEA Strategy' is intended as the purpose or a deal/company name; add deal/company at end if required for tracking"],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "This is a travel meal (Travel Meal/<purpose>/<deal>). The description uses the correct 'Travel Meal' prefix and lists the business purpose 'AEA Strategy'. No reformatting required. Expense type 'Meals' matches a travel meal.",
+  "flags": [
+    "Confirm whether 'AEA Strategy' is intended as the purpose or a deal/company name; add deal/company at end if required for tracking"
+  ],
+  "is_refund": false,
+  "error": ""
+}

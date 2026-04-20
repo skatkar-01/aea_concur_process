@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Airport-Home/AEA Strategy Meeting
+Vendor: Uber
+Amount: $131.49
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Airport-Home/AEA Strategy Mtg",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: car service (Uber). 2) Original description used 'Meeting' instead of required abbreviation 'Mtg'. 3) Corrected to 'Airport-Home/AEA Strategy Mtg' to follow <from>-<to>/<purpose>/<deal> style (no deal provided). 4) Expense code 'Car Service' matches transaction type. 5) Short and conservative change made only to wording.",
+    "flags": [
+        "Receipt indicates $141.49 total with $10 tip paid separately — transaction shows $131.49; verify tip split/partial payment.",
+        "No deal/company provided — confirm if a deal name should be appended."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Airport-Home/AEA Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: car service (Uber). 2) Original description used 'Meeting' instead of required abbreviation 'Mtg'. 3) Corrected to 'Airport-Home/AEA Strategy Mtg' to follow <from>-<to>/<purpose>/<deal> style (no deal provided). 4) Expense code 'Car Service' matches transaction type. 5) Short and conservative change made only to wording.",
+  "flags": [
+    "Receipt indicates $141.49 total with $10 tip paid separately \u2014 transaction shows $131.49; verify tip split/partial payment.",
+    "No deal/company provided \u2014 confirm if a deal name should be appended."
+  ],
+  "is_refund": false,
+  "error": ""
+}

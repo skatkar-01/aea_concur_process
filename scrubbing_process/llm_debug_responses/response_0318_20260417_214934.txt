@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-Home/2026 Strategy Mtg
+Vendor: Uber
+Amount: $84.35
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "EWR-Home/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service routing is already in AEA format and includes the business purpose. Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "EWR-Home/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service routing is already in AEA format and includes the business purpose. Expense code matches transaction type.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

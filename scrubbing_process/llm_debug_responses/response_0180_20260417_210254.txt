@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Data Subscription/JetBrains
+Vendor: Jetbrains
+Amount: $21.78
+Expense: Software
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/JetBrains",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is a software/data subscription, so it fits Info Services. Current description used 'Data Subscription', which is not an allowed AEA format; reformatted to 'Research Subscription/JetBrains' while preserving the vendor/deal context. Expense code Software is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Research Subscription/JetBrains",
+  "description_changed": true,
+  "expense_code": "Software",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is a software/data subscription, so it fits Info Services. Current description used 'Data Subscription', which is not an allowed AEA format; reformatted to 'Research Subscription/JetBrains' while preserving the vendor/deal context. Expense code Software is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

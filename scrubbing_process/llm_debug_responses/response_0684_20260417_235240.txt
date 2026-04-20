@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $16.17
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Personal",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.75,
+    "reasoning": "1) Transaction is a meal (Grubhub). 2) Current description is 'Personal' which does not match any AEA business-meal templates but indicates a personal/non-reimbursable meal. 3) No appropriate AEA template for a pure personal meal—do not convert to a business format. 4) Expense code 'Meals' matches transaction type. 5) Flagged for review to confirm personal/non-reimbursable treatment and to attach receipt details if needed.",
+    "flags": [
+        "Personal expense — confirm non-reimbursable status or update to business format with purpose/attendees/deal",
+        "Missing business purpose/attendee/deal details",
+        "Receipt/merchant info in historical record suggests more detail may exist — verify"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.75,
+  "reasoning": "1) Transaction is a meal (Grubhub). 2) Current description is 'Personal' which does not match any AEA business-meal templates but indicates a personal/non-reimbursable meal. 3) No appropriate AEA template for a pure personal meal\u2014do not convert to a business format. 4) Expense code 'Meals' matches transaction type. 5) Flagged for review to confirm personal/non-reimbursable treatment and to attach receipt details if needed.",
+  "flags": [
+    "Personal expense \u2014 confirm non-reimbursable status or update to business format with purpose/attendees/deal",
+    "Missing business purpose/attendee/deal details",
+    "Receipt/merchant info in historical record suggests more detail may exist \u2014 verify"
+  ],
+  "is_refund": false,
+  "error": ""
+}

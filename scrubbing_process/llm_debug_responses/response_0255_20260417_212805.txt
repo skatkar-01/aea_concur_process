@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus.Dinner-Hotel/BOD Mtg/AmeriVet
+Vendor: Uber
+Amount: $48.94
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Unknown/BOD Mtg/AmeriVet",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "The original description 'Bus.Dinner-Hotel/BOD Mtg/AmeriVet' incorrectly combined business meal and car service; corrected to match car service format '<from>-<to>/<purpose>/<deal>', but the dropoff or pickup location is missing, so 'Unknown' used as placeholder.",
+  "flags": ["Check and clarify trip 'to' location for accurate description"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Unknown/BOD Mtg/AmeriVet",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "The original description 'Bus.Dinner-Hotel/BOD Mtg/AmeriVet' incorrectly combined business meal and car service; corrected to match car service format '<from>-<to>/<purpose>/<deal>', but the dropoff or pickup location is missing, so 'Unknown' used as placeholder.",
+  "flags": [
+    "Check and clarify trip 'to' location for accurate description"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: InFlight Wifi/Strategy
+Vendor: United
+Amount: $8.00
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi/Strategy",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Normalized casing to match required exact format for inflight wifi. No deal/company was provided, so kept the purpose only.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi/Strategy",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Normalized casing to match required exact format for inflight wifi. No deal/company was provided, so kept the purpose only.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

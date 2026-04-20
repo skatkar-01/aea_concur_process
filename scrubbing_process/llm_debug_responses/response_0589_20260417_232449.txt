@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Strategy
+Vendor: Holiday Inn
+Amount: $194.54
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Strategy Mtg",
+    "description_changed": true,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "Transaction is lodging. Original 'Lodging/Strategy' lacked the recommended 'Mtg' abbreviation for purpose and did not include a deal/company. Updated to 'Lodging/Strategy Mtg' to follow Lodging/<purpose>/<deal> format (deal not provided). Expense code 'Lodging' is appropriate.",
+    "flags": ["Missing deal/company — confirm if a specific deal or company name should be appended"],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Transaction is lodging. Original 'Lodging/Strategy' lacked the recommended 'Mtg' abbreviation for purpose and did not include a deal/company. Updated to 'Lodging/Strategy Mtg' to follow Lodging/<purpose>/<deal> format (deal not provided). Expense code 'Lodging' is appropriate.",
+  "flags": [
+    "Missing deal/company \u2014 confirm if a specific deal or company name should be appended"
+  ],
+  "is_refund": false,
+  "error": ""
+}

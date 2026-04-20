@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus.Dinner w/M.Slattery/4ppl/Xenon Arc
+Vendor: Yuki Yama
+Amount: $435.30
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/M.Slattery/4ppl/Xenon Arc",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Business dinner format was close but needed the required slash after Bus.Dinner. Kept attendee, headcount, and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/M.Slattery/4ppl/Xenon Arc",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Business dinner format was close but needed the required slash after Bus.Dinner. Kept attendee, headcount, and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

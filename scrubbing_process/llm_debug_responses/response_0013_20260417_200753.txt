@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: NYC-Home/BOD Dinner/HUGE
+Vendor: Summit Express
+Amount: $214.12
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "NYC-Home/BOD Dinner/HUGE",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as car service (chauffeured ride). 2) Description fits required <from>-<to>/<purpose>/<deal> pattern and matches historical examples. 3) No reformat needed; preserves route, purpose (BOD Dinner) and deal (HUGE). 4) Expense code 'Car Service' matches transaction type. 5) No issues requiring further review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "NYC-Home/BOD Dinner/HUGE",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as car service (chauffeured ride). 2) Description fits required <from>-<to>/<purpose>/<deal> pattern and matches historical examples. 3) No reformat needed; preserves route, purpose (BOD Dinner) and deal (HUGE). 4) Expense code 'Car Service' matches transaction type. 5) No issues requiring further review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

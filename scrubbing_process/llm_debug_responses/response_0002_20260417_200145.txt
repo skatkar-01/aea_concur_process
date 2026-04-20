@@ -1,0 +1,227 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/RT: JFK-SLC/Strategy
+Vendor: Delta
+Amount: $-4027.97
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"refund","formatted_description":"Refund/RT:JFK-SLC/Strategy","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Refund format preserved; route already present. Description is truncated but acceptable as-is.","flags":["Original description appears truncated; route/purpose only partial"],"is_refund":true,"error":""},{"index":2,"transaction_type":"refund","formatted_description":"Refund/LGA-RDU/BOD Mtg/Pave America","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.99,"reasoning":"Refund prefix and flight route present; format matches rules.","flags":[],"is_refund":true,"error":""},{"index":3,"transaction_type":"other","formatted_description":"Deposit/BOD Dinner/Nations Roof","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.82,"reasoning":"Non-standard meal deposit retained as provided; no clear rule-based rewrite available.","flags":["Meal deposit wording may need human review"],"is_refund":false,"error":""},{"index":4,"transaction_type":"flight","formatted_description":"RT:LGA-ORD/Mgmt Mtg/Tangent","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":1.0,"reasoning":"Flight description already in required RT format.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"refund","formatted_description":"Refund/EWR-SLC/2026 Strategy Mtg","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.99,"reasoning":"Refund format already valid and aligned to historical record.","flags":[],"is_refund":true,"error":""},{"index":6,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/Crane/Crane","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.56,"reasoning":"Catering is a business meal; reformatted to meal convention. Attendees not provided.","flags":["Attendee list missing; vendor is catering"],"is_refund":false,"error":""},{"index":7,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/Crane/Crane","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.56,"reasoning":"Catering is a business meal; reformatted to meal convention. Attendees not provided.","flags":["Attendee list missing; vendor is catering"],"is_refund":false,"error":""},{"index":8,"transaction_type":"other","formatted_description":"Kitchen Supplies/Grocery","description_changed":false,"expense_code":"Kitchen Supplies","expense_code_changed":false,"confidence":1.0,"reasoning":"Non-travel non-meal supply item left unchanged.","flags":[],"is_refund":false,"error":""},{"index":9,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Office Supplies","expense_code_changed":false,"confidence":1.0,"reasoning":"Office supply purchase already formatted acceptably.","flags":[],"is_refund":false,"error":""},{"index":10,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Office Supplies","expense_code_changed":false,"confidence":1.0,"reasoning":"Office supply purchase already formatted acceptably.","flags":[],"is_refund":false,"error":""},{"index":11,"transaction_type":"meal_business","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"Working Lunch is an allowed office-meal format.","flags":[],"is_refund":false,"error":""},{"index":12,"transaction_type":"flight","formatted_description":"SAV-ATL-SLC/AEA Strategy Meeting","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.93,"reasoning":"Flight description conveys route and purpose; retained as provided.","flags":["Purpose is not abbreviated to Mtg but still clear"],"is_refund":false,"error":""},{"index":13,"transaction_type":"other","formatted_description":"Travel Insurance/Residence Inn by Marriott SLC Airport","description_changed":false,"expense_code":"Other Travel","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel insurance does not map to a special format; retained.","flags":[],"is_refund":false,"error":""},{"index":14,"transaction_type":"meal_business","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":1.0,"reasoning":"Working Lunch is valid and matches receipt.","flags":[],"is_refund":false,"error":""},{"index":15,"transaction_type":"meal_business","formatted_description":"Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.74,"reasoning":"Business outing meal retained; format is non-standard but understandable.","flags":["Does not follow preferred attendee/deal format"],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:JFK-SLC/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Refund format preserved; route already present. Description is truncated but acceptable as-is.",
+      "flags": [
+        "Original description appears truncated; route/purpose only partial"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/LGA-RDU/BOD Mtg/Pave America",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Refund prefix and flight route present; format matches rules.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Deposit/BOD Dinner/Nations Roof",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.82,
+      "reasoning": "Non-standard meal deposit retained as provided; no clear rule-based rewrite available.",
+      "flags": [
+        "Meal deposit wording may need human review"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "flight",
+      "formatted_description": "RT:LGA-ORD/Mgmt Mtg/Tangent",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Flight description already in required RT format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/EWR-SLC/2026 Strategy Mtg",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Refund format already valid and aligned to historical record.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/Crane/Crane",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.56,
+      "reasoning": "Catering is a business meal; reformatted to meal convention. Attendees not provided.",
+      "flags": [
+        "Attendee list missing; vendor is catering"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/Crane/Crane",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.56,
+      "reasoning": "Catering is a business meal; reformatted to meal convention. Attendees not provided.",
+      "flags": [
+        "Attendee list missing; vendor is catering"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Grocery",
+      "description_changed": false,
+      "expense_code": "Kitchen Supplies",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Non-travel non-meal supply item left unchanged.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Office supply purchase already formatted acceptably.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Office supply purchase already formatted acceptably.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "Working Lunch is an allowed office-meal format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "flight",
+      "formatted_description": "SAV-ATL-SLC/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.93,
+      "reasoning": "Flight description conveys route and purpose; retained as provided.",
+      "flags": [
+        "Purpose is not abbreviated to Mtg but still clear"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "other",
+      "formatted_description": "Travel Insurance/Residence Inn by Marriott SLC Airport",
+      "description_changed": false,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel insurance does not map to a special format; retained.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Working Lunch is valid and matches receipt.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.74,
+      "reasoning": "Business outing meal retained; format is non-standard but understandable.",
+      "flags": [
+        "Does not follow preferred attendee/deal format"
+      ],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

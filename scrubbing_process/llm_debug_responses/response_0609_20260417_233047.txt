@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: British Air
+Amount: $895.30
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:DUS-LHR/Mgmt Mtg/Frissam Pumps Essentic",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as a flight; added RT: prefix for roundtrip flights per AEA rules. Joined deal and company into one segment per length limits and formatting rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:DUS-LHR/Mgmt Mtg/Frissam Pumps Essentic",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as a flight; added RT: prefix for roundtrip flights per AEA rules. Joined deal and company into one segment per length limits and formatting rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

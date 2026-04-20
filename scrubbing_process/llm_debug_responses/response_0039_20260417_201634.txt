@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Coffee/Internal Mtgs/Window Nation
+Vendor: Decadent
+Amount: $13.49
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Internal Mtgs/Window Nation",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Transaction is a travel-related meal (coffee). 2) Description used 'Travel Coffee/...' which doesn't match AEA template. 3) Changed to 'Travel Meal/Internal Mtgs/Window Nation' to follow 'Travel Meal/<purpose>/<deal>' format. 4) Expense code 'Meals' is appropriate for a travel meal. 5) Length and format validated; no further issues.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Internal Mtgs/Window Nation",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Transaction is a travel-related meal (coffee). 2) Description used 'Travel Coffee/...' which doesn't match AEA template. 3) Changed to 'Travel Meal/Internal Mtgs/Window Nation' to follow 'Travel Meal/<purpose>/<deal>' format. 4) Expense code 'Meals' is appropriate for a travel meal. 5) Length and format validated; no further issues.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/2026 Strategy Mtg
+Vendor: Silver Lake Restaurant
+Amount: $27.08
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/2026 Strategy Mtg",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as a travel meal (vendor is a restaurant, description begins with 'Travel Meal'). 2) Description follows the Travel Meal/<purpose> format and is concise. 3) No deal/company was provided; rule to include deal is 'when relevant' so no edit made. 4) Expense code 'Meals' matches a travel meal. 5) No edits required.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as a travel meal (vendor is a restaurant, description begins with 'Travel Meal'). 2) Description follows the Travel Meal/<purpose> format and is concise. 3) No deal/company was provided; rule to include deal is 'when relevant' so no edit made. 4) Expense code 'Meals' matches a travel meal. 5) No edits required.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

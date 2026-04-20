@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: LGA-CHS/William Blair T&L Conf
+Vendor: American
+Amount: $396.10
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LGA-CHS/William Blair T&L Conf",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket; description already matches one-way flight format with route and purpose. Expense code aligns with airfare.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LGA-CHS/William Blair T&L Conf",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Airline ticket; description already matches one-way flight format with route and purpose. Expense code aligns with airfare.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: NYC-Home/Management Dinner/NES
+Vendor: Summit Express
+Amount: $214.12
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "NYC-Home/Management Dinner/NES",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service format is already valid: route/purpose/deal. Kept original description since it matches AEA format and preserves business context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "NYC-Home/Management Dinner/NES",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Car service format is already valid: route/purpose/deal. Kept original description since it matches AEA format and preserves business context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

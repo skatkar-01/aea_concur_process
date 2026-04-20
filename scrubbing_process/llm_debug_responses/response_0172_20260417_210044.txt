@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $7.06
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Overage/Personal",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Description 'Personal' is unclear and does not follow AEA meal formats; changed to 'Working Lunch/Overage/Personal' as a standard office meal overage description. Expense code 'Meals' is appropriate.",
+  "flags": ["Verify if meal is business-related or purely personal reimbursement."],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Overage/Personal",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Description 'Personal' is unclear and does not follow AEA meal formats; changed to 'Working Lunch/Overage/Personal' as a standard office meal overage description. Expense code 'Meals' is appropriate.",
+  "flags": [
+    "Verify if meal is business-related or purely personal reimbursement."
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Group Lunch/Chris Horton
+Vendor: Midtown Table
+Amount: $25.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Working Lunch/Chris Horton",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Identified as an office/business meal. AEA rules require 'Working Lunch' (not 'Working Group Lunch'); updated prefix to match allowed Office Meals format and preserved attendee name. Expense type 'Meals' is appropriate.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Chris Horton",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as an office/business meal. AEA rules require 'Working Lunch' (not 'Working Group Lunch'); updated prefix to match allowed Office Meals format and preserved attendee name. Expense type 'Meals' is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

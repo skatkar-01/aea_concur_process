@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus.Lunch w/ Pedram Shayegan/BCI
+Vendor: Il Mulino
+Amount: $210.29
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Bus.Lunch/Pedram Shayegan/BCI",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Identified as a business lunch. Replaced informal 'w/' with required slash format per AEA rule (Bus.Lunch/<attendees>/<deal>) and preserved attendee name and deal. Expense type 'Meals' is appropriate.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Lunch/Pedram Shayegan/BCI",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as a business lunch. Replaced informal 'w/' with required slash format per AEA rule (Bus.Lunch/<attendees>/<deal>) and preserved attendee name and deal. Expense type 'Meals' is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

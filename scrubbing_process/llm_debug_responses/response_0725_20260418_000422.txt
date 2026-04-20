@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Ticketing fee is correctly formatted. Route, purpose, and deal/company are present and consistent with AEA rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Ticketing fee is correctly formatted. Route, purpose, and deal/company are present and consistent with AEA rules.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

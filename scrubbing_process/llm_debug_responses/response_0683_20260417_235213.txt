@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee on an airline itinerary; description already matches AEA Tkt Fee format and keeps purpose/deal context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee on an airline itinerary; description already matches AEA Tkt Fee format and keeps purpose/deal context.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

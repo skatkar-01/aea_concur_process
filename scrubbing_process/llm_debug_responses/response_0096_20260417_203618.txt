@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Deposit/PaveAmerica+Nations Roof working dinner
+Vendor: La Baia
+Amount: $816.56
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Dinner/PaveAmerica+Nations Roof",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Business meal charged as Meals. Current text was not in AEA meal format and included deposit wording; reformatted to a concise working dinner description with deal names preserved.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Dinner/PaveAmerica+Nations Roof",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Business meal charged as Meals. Current text was not in AEA meal format and included deposit wording; reformatted to a concise working dinner description with deal names preserved.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

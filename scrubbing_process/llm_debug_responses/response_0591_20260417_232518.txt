@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/Exchange/JAX-EWR/Banker Mtgs/Monroe
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/Exch Tkt/JAX-EWR/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline ticket fee for an exchange; reformatted to AEA ticket fee exchange pattern while preserving route, purpose, and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/Exch Tkt/JAX-EWR/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline ticket fee for an exchange; reformatted to AEA ticket fee exchange pattern while preserving route, purpose, and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

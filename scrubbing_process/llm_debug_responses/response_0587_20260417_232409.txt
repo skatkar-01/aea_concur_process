@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Dunkin Donuts
+Amount: $11.69
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Strategy",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.92,
+    "reasoning": "1) Type: travel meal. 2) Description follows 'Travel Meal/<purpose>' pattern. 3) No deal/company provided in original and none evident from data; not required. 4) Expense code 'Meals' matches travel meal. 5) Length and format meet AEA rules; no changes needed.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "1) Type: travel meal. 2) Description follows 'Travel Meal/<purpose>' pattern. 3) No deal/company provided in original and none evident from data; not required. 4) Expense code 'Meals' matches travel meal. 5) Length and format meet AEA rules; no changes needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

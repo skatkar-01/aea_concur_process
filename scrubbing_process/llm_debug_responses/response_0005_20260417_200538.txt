@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent",
+    "description_changed": false,
+    "expense_code": "Other Travel",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) This is a ticketing fee for an RT flight (Tkt Fee for RT:LGA-ORD). 2) Description exactly matches AEA ticketing fee format. 3) No corrections needed. 4) Expense code 'Other Travel' is appropriate for a separate ticketing/service fee (ticket portion appears on a separate Airline charge). 5) Length validated against rule 6.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) This is a ticketing fee for an RT flight (Tkt Fee for RT:LGA-ORD). 2) Description exactly matches AEA ticketing fee format. 3) No corrections needed. 4) Expense code 'Other Travel' is appropriate for a separate ticketing/service fee (ticket portion appears on a separate Airline charge). 5) Length validated against rule 6.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

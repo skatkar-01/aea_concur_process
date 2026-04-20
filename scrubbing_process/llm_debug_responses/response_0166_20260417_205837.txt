@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/EWR-SLC/D.Fernholz/2026 Strategy Mtg
+Vendor: Delta
+Amount: $-1043.48
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/EWR-SLC/D.Fernholz/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Refund already follows required format with route, traveler initials, and strategy meeting purpose; expense code matches airline refund.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/EWR-SLC/D.Fernholz/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Refund already follows required format with route, traveler initials, and strategy meeting purpose; expense code matches airline refund.",
+  "flags": [],
+  "is_refund": true,
+  "error": ""
+}

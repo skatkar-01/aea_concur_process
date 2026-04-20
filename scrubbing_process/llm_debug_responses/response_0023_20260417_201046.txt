@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus Dinner/Management Team/NES
+Vendor: Il Gattopardo
+Amount: $640.41
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Bus.Dinner/Management Team/NES",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Identified as a business meal (dinner). 2) Current description used 'Bus Dinner' but AEA format requires 'Bus.Dinner'. 3) Corrected only the delimiter to 'Bus.Dinner/Management Team/NES' preserving purpose and deal. 4) Expense type 'Meals' is appropriate and unchanged. 5) Change is minimal and conforms to length rules.",
+    "flags": [
+        "Attendee detail is generic ('Management Team') — AEA guidance prefers attendee names/initials or guest count; confirm if this is acceptable."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/Management Team/NES",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Identified as a business meal (dinner). 2) Current description used 'Bus Dinner' but AEA format requires 'Bus.Dinner'. 3) Corrected only the delimiter to 'Bus.Dinner/Management Team/NES' preserving purpose and deal. 4) Expense type 'Meals' is appropriate and unchanged. 5) Change is minimal and conforms to length rules.",
+  "flags": [
+    "Attendee detail is generic ('Management Team') \u2014 AEA guidance prefers attendee names/initials or guest count; confirm if this is acceptable."
+  ],
+  "is_refund": false,
+  "error": ""
+}

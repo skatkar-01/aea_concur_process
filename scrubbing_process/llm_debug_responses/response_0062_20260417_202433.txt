@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Workshop/SCIO
+Vendor: Marriott
+Amount: $225.93
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/Workshop/SCIO",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: lodging (hotel). 2) Current description matches required Lodging/<purpose>/<deal> format. 3) No reformatting needed. 4) Expense code 'Lodging' matches transaction type. 5) Flagged for review: folio shows breakfast/meal line items on similar receipts which may require a separate Travel Meal charge—confirm no meal split is needed.",
+    "flags": [
+        "Possible incidental meal on hotel folio; verify whether meal portion should be reclassified to Travel Meal"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Workshop/SCIO",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: lodging (hotel). 2) Current description matches required Lodging/<purpose>/<deal> format. 3) No reformatting needed. 4) Expense code 'Lodging' matches transaction type. 5) Flagged for review: folio shows breakfast/meal line items on similar receipts which may require a separate Travel Meal charge\u2014confirm no meal split is needed.",
+  "flags": [
+    "Possible incidental meal on hotel folio; verify whether meal portion should be reclassified to Travel Meal"
+  ],
+  "is_refund": false,
+  "error": ""
+}

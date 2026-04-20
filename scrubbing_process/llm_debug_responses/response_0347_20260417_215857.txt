@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-Airport/Elevate Roadshow
+Vendor: Uber
+Amount: $50.99
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Home-Airport/Roadshow/Elevate",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Transaction is a car service (Uber). 2) Original description 'Home-Airport/Elevate Roadshow' used route correctly but bundled purpose and deal together. 3) Reformatted to AEA car service template <from>-<to>/<purpose>/<deal> as 'Home-Airport/Roadshow/Elevate'. 4) Expense code 'Car Service' matches transaction type and was not changed. 5) Flagged to confirm that 'Elevate' is the deal name and 'Roadshow' is the intended purpose.",
+    "flags": [
+        "Confirm that 'Elevate' is the correct deal/company name and 'Roadshow' is the intended purpose"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Airport/Roadshow/Elevate",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Transaction is a car service (Uber). 2) Original description 'Home-Airport/Elevate Roadshow' used route correctly but bundled purpose and deal together. 3) Reformatted to AEA car service template <from>-<to>/<purpose>/<deal> as 'Home-Airport/Roadshow/Elevate'. 4) Expense code 'Car Service' matches transaction type and was not changed. 5) Flagged to confirm that 'Elevate' is the deal name and 'Roadshow' is the intended purpose.",
+  "flags": [
+    "Confirm that 'Elevate' is the correct deal/company name and 'Roadshow' is the intended purpose"
+  ],
+  "is_refund": false,
+  "error": ""
+}

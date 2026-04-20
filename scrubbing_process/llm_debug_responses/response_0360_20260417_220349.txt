@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-JFK/Strategy
+Vendor: Uber
+Amount: $147.86
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "Home-JFK/Strategy",
+    "description_changed": false,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "1) Identified as car service (Uber to airport). 2) Description matches required <from>-<to>/<purpose> format (Home-JFK/Strategy). 3) No deal/company provided — optional, so left unchanged. 4) Expense code 'Car Service' matches transaction type. 5) No further edits needed.",
+    "flags": [
+        "Missing deal/company — confirm if Project 1035 or a deal name should be appended to description"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JFK/Strategy",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Identified as car service (Uber to airport). 2) Description matches required <from>-<to>/<purpose> format (Home-JFK/Strategy). 3) No deal/company provided \u2014 optional, so left unchanged. 4) Expense code 'Car Service' matches transaction type. 5) No further edits needed.",
+  "flags": [
+    "Missing deal/company \u2014 confirm if Project 1035 or a deal name should be appended to description"
+  ],
+  "is_refund": false,
+  "error": ""
+}

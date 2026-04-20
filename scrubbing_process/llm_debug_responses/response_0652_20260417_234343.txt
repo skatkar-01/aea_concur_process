@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Dinner/Bus. Dinner w/B. Quintana
+Vendor: Uber
+Amount: $37.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Dinner/Bus.Dinner w/B. Quintana",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Transaction is car service but description improperly mixes meal format. Corrected spacing and capitalized Bus.Dinner as per AEA meal formatting guidance while retaining original context. The description follows car service route format except the meal reference; since vendor and expense code are consistent with car service, the focus is on clarifying formatting.",
+  "flags": ["Description mixes car service and meal terms - verify business purpose"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Dinner/Bus.Dinner w/B. Quintana",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Transaction is car service but description improperly mixes meal format. Corrected spacing and capitalized Bus.Dinner as per AEA meal formatting guidance while retaining original context. The description follows car service route format except the meal reference; since vendor and expense code are consistent with car service, the focus is on clarifying formatting.",
+  "flags": [
+    "Description mixes car service and meal terms - verify business purpose"
+  ],
+  "is_refund": false,
+  "error": ""
+}

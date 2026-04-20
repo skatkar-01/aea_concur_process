@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/JFK-SLC/AEA Strategy
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "Tkt Fee/JFK-SLC/AEA Strategy",
+    "description_changed": false,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "This is a ticketing fee for a flight. The description already follows the 'Tkt Fee/<route>/<purpose>/<deal>' pattern and the expense code 'Airline' is appropriate. No edits made to preserve original business context.",
+    "flags": [
+        "Confirm whether trip was round-trip — if so, prepend RT: to route (e.g., Tkt Fee/RT:JFK-SLC/AEA Strategy)."
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JFK-SLC/AEA Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "This is a ticketing fee for a flight. The description already follows the 'Tkt Fee/<route>/<purpose>/<deal>' pattern and the expense code 'Airline' is appropriate. No edits made to preserve original business context.",
+  "flags": [
+    "Confirm whether trip was round-trip \u2014 if so, prepend RT: to route (e.g., Tkt Fee/RT:JFK-SLC/AEA Strategy)."
+  ],
+  "is_refund": false,
+  "error": ""
+}

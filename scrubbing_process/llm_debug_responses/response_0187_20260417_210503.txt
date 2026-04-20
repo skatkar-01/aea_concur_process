@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Train/Paris-London/Comms/Biz Dev Trip
+Vendor: Eurostar International
+Amount: $496.10
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Train/Paris-London/Comms/Biz Dev Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Train transaction already matches AEA format and includes route plus business purpose. Expense code aligns with Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Train/Paris-London/Comms/Biz Dev Trip",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.97,
+  "reasoning": "Train transaction already matches AEA format and includes route plus business purpose. Expense code aligns with Other Travel.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/CFO Interview/AMX
+Vendor: Marriott
+Amount: $410.13
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "lodging",
+    "formatted_description": "Lodging/CFO Interview/AMX",
+    "description_changed": false,
+    "expense_code": "Lodging",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: Lodging. 2) Current description matches AEA Lodging template Lodging/<purpose>/<deal> with purpose 'CFO Interview' and deal 'AMX'. 3) No corrections needed. 4) Expense code is Lodging and matches the transaction. 5) No issues requiring human review; length constraint satisfied.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/CFO Interview/AMX",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: Lodging. 2) Current description matches AEA Lodging template Lodging/<purpose>/<deal> with purpose 'CFO Interview' and deal 'AMX'. 3) No corrections needed. 4) Expense code is Lodging and matches the transaction. 5) No issues requiring human review; length constraint satisfied.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

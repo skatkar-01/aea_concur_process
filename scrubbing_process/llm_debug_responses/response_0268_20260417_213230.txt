@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/SLC-ORD/2026 Strategy Mtg
+Vendor: Frosch
+Amount: $30.00
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/SLC-ORD/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Ticketing fee already follows AEA format for flight fees: Tkt Fee/route/purpose. Kept original description and expense code.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/SLC-ORD/2026 Strategy Mtg",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Ticketing fee already follows AEA format for flight fees: Tkt Fee/route/purpose. Kept original description and expense code.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

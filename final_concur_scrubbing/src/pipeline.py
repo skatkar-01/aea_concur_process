@@ -20,7 +20,7 @@ from typing import Optional
 import structlog
 
 from config.settings import get_settings
-from src.extractor import extract_statement
+# from src.extractor import extract_statement
 from src.models import Statement
 from src.writer import write_xlsx
 from utils.logging_config import get_logger

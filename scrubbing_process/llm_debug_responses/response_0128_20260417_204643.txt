@@ -1,0 +1,265 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Site Visit/BPG
+Vendor: LeMa Dumpling
+Amount: $8.61
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Site Visit/BPG",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows Travel Meal format with purpose and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "car_service",
+      "formatted_description": "Office-Hotel/Site Visit/BPG",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Corrected route format to remove duplicate place, reversed to Office-Hotel as per examples.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-Airport/Site Visit/BPG",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows car service format correctly.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-BPG Office/Site Visit/BPG",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows car service format correctly.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Site Visit/VCC",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description matches Travel Meal format with proper purpose and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "other",
+      "formatted_description": "Laundry/Site Visit/VCC",
+      "description_changed": false,
+      "expense_code": "Miscellaneous",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Laundry is accepted as other misc with no reformatting needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "other",
+      "formatted_description": "Laundry/Site Visit/VCC",
+      "description_changed": false,
+      "expense_code": "Miscellaneous",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Laundry description matches previous and no format change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Site Visit/VCC",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Correct lodging format with purpose and deal, no change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.B'fast/Site Visit/4 ppl/BPG",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Business meal breakfast correctly formatted with attendees and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.B'fast/Site Visit/2 ppl/BPG",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Business meal breakfast with proper attendees and deal, formatted correctly.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Meeting",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Prefixed Refund/ and reformatted Tkt Exch from 'Rfnd/Tkt Exch' per rules.",
+      "flags": ["Verify refund description correctness"],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/Tkt Exch/RT:HKG-SFO-HKG/AEA Strategy Meeting",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Corrected Refund prefix and standardized description format matching refund rules.",
+      "flags": ["Verify refund description correctness"],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Site Visit/VCC",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Proper lodging format with clear purpose and deal, no change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_business",
+      "formatted_description": "Working Lunch/2 ppl/AEA",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Corrected 'Working Lunch/2 ppl/AEA' to match Working Lunch format including attendees and deal/department abbreviation.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "car_service",
+      "formatted_description": "Airport-Home/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description and expense code correct for car service airport trip.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "car_service",
+      "formatted_description": "Airport-Home/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description and expense code correct; small fare amount no issue.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description correctly follows travel meal format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-Airport/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Properly formatted car service trip description and code.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-Airport/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description matches car service route and purpose with valid expense code.",
+      "flags": [],
+      "is_refund": false,
+
+
+================================================================================
+PARSING ERROR
+================================================================================
+JSON parse error: Expecting property name enclosed in double quotes: line 248 column 1 (char 8116)
+

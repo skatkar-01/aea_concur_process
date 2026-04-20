@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Site Visit/VCC
+Vendor: Marriott
+Amount: $36.36
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/Site Visit/VCC",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Type: Travel meal. 2) Description matches required pattern Travel Meal/<purpose>/<deal>. 3) No reformatting needed. 4) Expense code 'Meals' is appropriate for a travel meal. 5) Length check (description+vendor+12) OK. No issues requiring edits.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Site Visit/VCC",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Type: Travel meal. 2) Description matches required pattern Travel Meal/<purpose>/<deal>. 3) No reformatting needed. 4) Expense code 'Meals' is appropriate for a travel meal. 5) Length check (description+vendor+12) OK. No issues requiring edits.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

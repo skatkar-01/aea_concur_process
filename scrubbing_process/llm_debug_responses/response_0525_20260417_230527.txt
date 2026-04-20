@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Office Supplies for FL Office
+Vendor: Amazon
+Amount: $105.21
+Expense: Office Supplies
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Office Supplies/FL Office",
+  "description_changed": true,
+  "expense_code": "Office Supplies",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is office supplies expense; reformatted description to concise format including business location per AEA rules for other expenses.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Office Supplies/FL Office",
+  "description_changed": true,
+  "expense_code": "Office Supplies",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Transaction is office supplies expense; reformatted description to concise format including business location per AEA rules for other expenses.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

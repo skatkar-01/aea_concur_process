@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: JFK-Home/Chemical Guys BOD Mtg
+Vendor: Uber
+Amount: $111.76
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "car_service",
+    "formatted_description": "JFK-Home/BOD Mtg/Chemical Guys",
+    "description_changed": true,
+    "expense_code": "Car Service",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Identified as car service. 2) Original had from-to then deal+purpose combined: 'JFK-Home/Chemical Guys BOD Mtg'. 3) Reordered to match AEA format <from>-<to>/<purpose>/<deal> and abbreviated 'Meeting' to 'Mtg' and moved 'Chemical Guys' to deal position. 4) Expense code 'Car Service' matches transaction type. 5) No other issues noted.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Home/BOD Mtg/Chemical Guys",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Identified as car service. 2) Original had from-to then deal+purpose combined: 'JFK-Home/Chemical Guys BOD Mtg'. 3) Reordered to match AEA format <from>-<to>/<purpose>/<deal> and abbreviated 'Meeting' to 'Mtg' and moved 'Chemical Guys' to deal position. 4) Expense code 'Car Service' matches transaction type. 5) No other issues noted.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

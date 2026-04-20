@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $2.39
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Grubhub meal marked Personal does not match a business meal or office meal format, so description is left unchanged. Expense code remains Meals.",
+  "flags": [
+    "Personal meal expense may require human review for business purpose"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Grubhub meal marked Personal does not match a business meal or office meal format, so description is left unchanged. Expense code remains Meals.",
+  "flags": [
+    "Personal meal expense may require human review for business purpose"
+  ],
+  "is_refund": false,
+  "error": ""
+}

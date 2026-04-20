@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meals/Chemical Guys BOD Mtg
+Vendor: Proper Hotel
+Amount: $87.25
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/BOD Mtg/Chemical Guys",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.9,
+    "reasoning": "Identified as a travel meal. Original used plural 'Travel Meals' and had order 'Chemical Guys BOD Mtg' which doesn't follow Travel Meal/<purpose>/<deal>. Reformatted to 'Travel Meal/BOD Mtg/Chemical Guys'. Expense code 'Meals' is appropriate.",
+    "flags": [
+        "Receipt indicates in-room dining was charged on the hotel folio — verify meal portion was correctly allocated separate from lodging folio"
+    ],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Chemical Guys",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Identified as a travel meal. Original used plural 'Travel Meals' and had order 'Chemical Guys BOD Mtg' which doesn't follow Travel Meal/<purpose>/<deal>. Reformatted to 'Travel Meal/BOD Mtg/Chemical Guys'. Expense code 'Meals' is appropriate.",
+  "flags": [
+    "Receipt indicates in-room dining was charged on the hotel folio \u2014 verify meal portion was correctly allocated separate from lodging folio"
+  ],
+  "is_refund": false,
+  "error": ""
+}

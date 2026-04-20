@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Flight ticketing fee format is correct as provided. Route and business purpose are present; no formatting change needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Flight ticketing fee format is correct as provided. Route and business purpose are present; no formatting change needed.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

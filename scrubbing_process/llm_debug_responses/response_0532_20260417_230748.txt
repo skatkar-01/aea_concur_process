@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Group Lunch/Sylvia Vlahos
+Vendor: Midtown Table
+Amount: $25.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_business",
+    "formatted_description": "Working Lunch/Sylvia Vlahos",
+    "description_changed": true,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "This is an office meal. AEA format uses 'Working Lunch' (not 'Working Group Lunch'); retained the employee name as attendee. Expense type 'Meals' is appropriate.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Working Lunch/Sylvia Vlahos",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is an office meal. AEA format uses 'Working Lunch' (not 'Working Group Lunch'); retained the employee name as attendee. Expense type 'Meals' is appropriate.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

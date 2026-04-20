@@ -1,0 +1,247 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Dinner-Home/AmeriVet BOD Dinner
+Vendor: Uber
+Amount: $68.02
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-Dinner/AmeriVet BOD Dinner",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Reformatted description to fit 'from-to/purpose/deal' car service format. 'Dinner-Home' reversed to 'Home-Dinner' for clarity",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "car_service",
+      "formatted_description": "Office-Dinner/AmeriVet BOD Dinner",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description correctly follows car service format with route and purpose. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Special format 'Work Late/Office-Home' correct for car service evening departure. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "car_service",
+      "formatted_description": "EWR-Home/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description properly formatted as car service with route, purpose, and deal. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description follows travel meal format with purpose and deal. Expense code matches. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Correct travel meal format, purpose and deal present. Expense code suitable. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "other",
+      "formatted_description": "Strategy Activity/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Miscellaneous",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Description and expense code appropriate for miscellaneous. No reformatting required.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-JFK/AEA Strategy Meeting",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Proper car service format with explicit route, purpose, and deal. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Special format for evening trip 'Work Late/Office-Home' correct. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Same reasoning as prior; special format correct for car service. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Consistent special format correctly applied. No modifications required.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Proper special format, no need for changes.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Correct as per special evening car service trip format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_business",
+      "formatted_description": "Mentor Mtg/N.Mamane",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Description indicates business meal with attendee. Could be Bus.Lunch or Bus.Dinner but Meals expense code acceptable. Prefer business meal format but no explicit meal type given.",
+      "flags": ["Verify if should be Bus.Lunch or Bus.Dinner"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "flight",
+      "formatted_description": "EWR-SLC/AEA Strategy Meeting",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Flight route in description inverted from 'SLC-EWR' to 'EWR-SLC' to use origin-destination order, given historical examples show origin first; also missing RT or one-way status. Given only one airport pair, treat as one-way. Format fixed as one-way flight: 'EWR-SLC/AEA Strategy Meeting'",
+      "flags": ["Confirm flight direction is EWR to SLC or SLC to EWR"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Special format for car service evening; correct and consistent with prior transactions.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:JFK-SLC/AEA Strategy Meeting",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 1.0,
+      "reasoning": "Refund format requires prefix 'Refund/' and round trip flight route with RT:. Original description missing RT: and proper format, so corrected accordingly.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "flight_fees",
+      "formatted_description": "Tkt Fee/RT:JFK-SLC/AEA Strategy",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed":
+
+================================================================================
+PARSING ERROR
+================================================================================
+JSON parse error: Expecting value: line 230 column 30 (char 8157)
+

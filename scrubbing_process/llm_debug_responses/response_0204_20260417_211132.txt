@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Trip
+Vendor: Burgers And Bourbon
+Amount: $14.06
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy Trip",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.90,
+    "reasoning": "1) Type: Travel meal. 2) Description already uses the 'Travel Meal/<purpose>/<deal>' prefix and matches historical pattern. 3) No reformat needed to comply with AEA rules. 4) Expense code 'Meals' is appropriate for a travel meal. 5) No issues requiring human review.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Trip",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "1) Type: Travel meal. 2) Description already uses the 'Travel Meal/<purpose>/<deal>' prefix and matches historical pattern. 3) No reformat needed to comply with AEA rules. 4) Expense code 'Meals' is appropriate for a travel meal. 5) No issues requiring human review.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

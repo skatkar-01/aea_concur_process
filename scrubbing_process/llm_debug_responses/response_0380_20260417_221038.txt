@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/AEA Strategy Meeting
+Vendor: Travel Right
+Amount: $17.82
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "meal_travel",
+    "formatted_description": "Travel Meal/AEA Strategy Meeting",
+    "description_changed": false,
+    "expense_code": "Meals",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "1) Transaction is a travel meal. 2) Description follows the Travel Meal/<purpose> format (includes business purpose 'AEA Strategy Meeting'). 3) Expense code 'Meals' matches travel meal type. 4) Length check (description + vendor + 12) is within limits. No changes required.",
+    "flags": [],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/AEA Strategy Meeting",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "1) Transaction is a travel meal. 2) Description follows the Travel Meal/<purpose> format (includes business purpose 'AEA Strategy Meeting'). 3) Expense code 'Meals' matches travel meal type. 4) Length check (description + vendor + 12) is within limits. No changes required.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

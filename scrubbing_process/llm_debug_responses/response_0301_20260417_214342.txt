@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/LGA-SAV-VPS/Gen Pact Executive Event
+Vendor: Frosch
+Amount: $22.50
+Expense: Other Travel
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/LGA-SAV-VPS/Gen Pact Executive Event",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee format is correct as written: Tkt Fee/route/purpose. Kept route and deal context unchanged. Expense code Other Travel matches a flight change/ticket fee.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/LGA-SAV-VPS/Gen Pact Executive Event",
+  "description_changed": false,
+  "expense_code": "Other Travel",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee format is correct as written: Tkt Fee/route/purpose. Kept route and deal context unchanged. Expense code Other Travel matches a flight change/ticket fee.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

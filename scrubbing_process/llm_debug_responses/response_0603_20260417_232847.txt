@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent
+Vendor: United
+Amount: $1849.66
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+    "transaction_type": "flight",
+    "formatted_description": "RT:EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent",
+    "description_changed": true,
+    "expense_code": "Airline",
+    "expense_code_changed": false,
+    "confidence": 0.95,
+    "reasoning": "Identified as a round-trip flight. Added required RT: prefix to match RT:<airports>/<purpose>/<deal> format. Kept purpose (Mgmt Mtg) and trailing company names intact. Expense type 'Airline' is appropriate.",
+    "flags": ["Multiple company/deal names at end (Frissam Pumps/Essent); confirm order or if only one should be retained"],
+    "is_refund": false,
+    "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Identified as a round-trip flight. Added required RT: prefix to match RT:<airports>/<purpose>/<deal> format. Kept purpose (Mgmt Mtg) and trailing company names intact. Expense type 'Airline' is appropriate.",
+  "flags": [
+    "Multiple company/deal names at end (Frissam Pumps/Essent); confirm order or if only one should be retained"
+  ],
+  "is_refund": false,
+  "error": ""
+}

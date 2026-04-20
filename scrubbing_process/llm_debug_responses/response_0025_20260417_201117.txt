@@ -1,0 +1,39 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: ASE-DFW-LGA/Strategy
+Vendor: American
+Amount: $0.02
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "ASE-DFW-LGA/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Flight itinerary already follows route/purpose format; no deal/company context provided to add. Airline code is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "ASE-DFW-LGA/Strategy",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.99,
+  "reasoning": "Flight itinerary already follows route/purpose format; no deal/company context provided to add. Airline code is correct.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
