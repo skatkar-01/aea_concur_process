@@ -1,106 +1,341 @@
-version: "1.0"
-last_updated: "2026-04-15"
+version: "1.1"
+last_updated: "2026-04-20"
+# ─────────────────────────────────────────────────────────────────────────────
+# POLICY RULES
+# Source: Amex_Checklist_2025 (Step 3 pp.5-10), AEA_Data_Scrubbing_Analysis,
+#         Quick_Reference_Guide
+# ─────────────────────────────────────────────────────────────────────────────
 
-# Car service policy
+# ── Car service time policy ───────────────────────────────────────────────────
 car_service_policy:
   early_arrival_cutoff:
     hour: 7
     minute: 0
-    description: "Early arrival to office must be at or before 7:00am"
-  
+    description: "Drop-off at AEA office must be at or before 7:00 am; else → Personal (1008)"
+
   work_late_cutoff:
     hour: 19
     minute: 30
-    description: "Work late from office must be at or after 7:30pm"
-  
+    description: "Pick-up from AEA office must be at or after 7:30 pm; else → Personal (1008)"
+
   weekend_days:
     - "Saturday"
     - "Sunday"
 
+  # ONLY these exact strings are valid for home/office car service.
+  # Any other phrasing (e.g. 'werli-early', 'home-to-office', 'Late car') is wrong.
   standard_formats:
     work_late: "Work Late/Office-Home"
     early_arrival: "Early Arrival/Home-Office"
     weekend_to_office: "Weekend/Home-Office"
     weekend_from_office: "Weekend/Office-Home"
 
-# Meal limits
+# ── Meal amount limits (in USD) ───────────────────────────────────────────────
 meal_limits:
   "Working Lunch": 25.00
   "Working Dinner": 35.00
+# Overage rule: amounts above the limit must be split into a separate line
+# coded to project 1008 (Personal) with the employee's Sage Employee ID.
 
-# Personal project code
+# ── Personal project ──────────────────────────────────────────────────────────
 personal_project: "1008"
 
-# Character length limits
+# ── Character length limits ───────────────────────────────────────────────────
 length_limits:
-  description_vendor_combined: 70
-  overhead: 12  # Added to description + vendor length
+  description_vendor_combined: 70   # Hard limit; Sage max is 75 but we apply 70
+  overhead: 12                      # Added to represent the Sage memo prefix
 
-# G/L override notes (for flagging)
+# ── G/L override notes (flagged at scrub time; applied manually at posting) ───
 gl_overrides:
   "14000":
+    label: "Prepaid"
     trigger_projects: ["1035", "1003", "1012"]
-    comment: "Change G/L to 14000 at time of posting (prepaid)"
-    
+    comment: "Change G/L to 14000 at time of posting (prepaid expense)"
+
   "58120":
+    label: "AEA Corporate Event"
     trigger_expense: "Other"
     trigger_projects: ["1001", "3500", "7500", "1105"]
-    comment: "Change G/L to 58120 at posting (AEA Corporate event)"
-    
-  "58140":
-    comment: "Holiday Party car - G/L 58140; NOT intercompany"
-    
-  "58230":
-    trigger_projects: ["1013"]
-    comment: "Intern/Summer Analyst event - G/L 58230"
+    comment: >
+      AEA Corporate event with expense code 'Other' — manually change G/L to
+      58120 at posting (default 'Other' maps to 58350 in Sage).
 
-# Project-Department validation rules
+  "58140":
+    label: "Holiday Party Transport"
+    comment: >
+      Holiday Party car service — use G/L 58140.
+      Each entity pays its own costs; do NOT book as intercompany.
+      Only AEA Holiday Party charges go to 58140 (not team holiday events).
+      If UK/GmbH teams visited NY for the party, charges stay in AEA ledger.
+
+  "58230":
+    label: "Intern / Summer Analyst Event"
+    trigger_projects: ["1013"]
+    comment: "Intern / Summer Analyst event — G/L 58230 on all ledgers"
+
+  "56100":
+    label: "AEA Corporate Event Car Service"
+    comment: >
+      Car service for AEA Corporate Events by entity:
+        AEA Investors LP    → G/L 58120; Project 1001; Dept: employee's dept
+        AEA Investors SBF   → G/L 56100; Project 3500; Dept: SBF
+        AEA DEBT Mgmt LP    → G/L 58120; Project 7500; Dept: DEBT
+        AEA Growth Mgmt LP  → G/L 58120; Project 1105; Dept: GROWTH
+
+# ── Project → required department validation ──────────────────────────────────
+# Value is either a single string or a list of allowed strings.
 project_dept_rules:
-  "1055": "AMA"
-  "1010": ["UK", "GMBH"]
-  "4246": "CONS"
-  "6006": "VAIP"
-  "6001": "VAIP"
+  "1055": "AMA"           # Amateras — always code to dept AMA
+  "1010": ["UK", "GMBH"]  # Germany expenses → project 1010, dept UK or GMBH
+  "1010-MGMT": ["UK", "GMBH"]
+  "4246": "CONS"          # AmeriVet — CONS dept; note capital-V in "AmeriVet"
+  "6006": "VAIP"          # Heidi DuBois general ESG expenses
+  "6001": "VAIP"          # Frank Herr general expenses
   "3500": "SBF"
   "7500": "DEBT"
+  "7501": "DEBT"
   "1105": "GROWTH"
+  "1016-SBF": "SBF"       # Investor Relations (SBF Funds)
+  "1016-G": "GROWTH"      # Investor Relations (GROWTH Funds)
+  "4200-B": "CONS"        # Traeger Board (CONS partners only)
 
-# Project metadata
+# ── Project metadata: special rules beyond dept ───────────────────────────────
 project_metadata:
-  "1008":
-    requires_emp_id: true
-    name: "Personal"
-    
+  "1001":
+    name: "AEA Mgmt Co Operating Expenses"
+    entities: ["LP"]
+
   "1003":
+    name: "AEA Annual Meeting (AGM)"
     prepaid_gl: "14000"
-    name: "Annual Meeting (AGM)"
-    
+    note: "Associate AGM Dinner must use 1003, not 1002 (Associate Recruiting)"
+
+  "1008":
+    name: "Personal"
+    requires_emp_id: true
+    note: "Always pair with the employee's active Sage Employee ID"
+
   "1012":
-    prepaid_gl: "14000"
     name: "Associate Strategy Event"
-    
-  "1035":
     prepaid_gl: "14000"
-    name: "Annual Strategy Meeting"
-    
+    note: "Associate-hosted events (ski trips, outings/dinners) — given a budget by AEA"
+
   "1013":
-    gl_note: "58230"
     name: "Interns Events"
-    
-  "4246":
-    canonical_name: "AmeriVet"
-    
-  "6409":
-    canonical_name: "Numotion"
-    
-  "4200-B":
-    board_only: true
-    name: "Traeger Board"
-    
+    gl_note: "58230"
+    note: >
+      All intern-related: recruiting, alumni events, Meet & Greet, mentoring,
+      training lunches, offsites, AEA-organised intern events.
+      Maps to G/L 58230 on all ledgers.
+      SBF/DEBT intern activities do NOT need to be sent back to AEA —
+      post to each entity's ledger (works like code 1002 for Associates).
+
+  "1016":
+    name: "Investor Relations / US Open Events"
+    note: "US Open events — use 1016 for 2023 and forward"
+
   "1016-SBF":
-    entity_hint: "SBF"
     name: "Investor Relations (SBF Funds)"
-    
+    entity_hint: "SBF"
+    note: >
+      SBF IR team expenses maintaining relationships with investors of SBF Funds only.
+      Mostly meals, some meetings/events, initiated by SBF partner group or IR.
+      Use instead of 3500 or 3915 (fundraising is over).
+
   "1016-G":
-    entity_hint: "GROWTH"
     name: "Investor Relations (GROWTH Funds)"
+    entity_hint: "GROWTH"
+    note: >
+      Growth team IR expenses.  Charges cannot be allocated to fund investors
+      and are absorbed by Growth Mgmt entity.
+
+  "1017":
+    name: "Strategic Initiatives"
+    note: >
+      Rahul Goyal — under his role he works on strategic initiatives such as
+      'Jefferies Masters Event'; ok to book to 1017.
+
+  "1018":
+    name: "Firm Dev / Out@AEA / Social Initiatives"
+
+  "1018-A":
+    name: "Best Practices / MMF Portfolio Councils"
+
+  "1018-C":
+    name: "Senior Advisory Council"
+
+  "1018-D":
+    name: "Digital Offsite – Portfolios"
+
+  "1018-W":
+    name: "Women Events"
+    note: >
+      AEA-initiated and AEA-sponsored women's events only (Suzzette McDonough
+      organises: Larchmont Club, Bloomingdales Dinner, Women Golfing).
+      Always → 1018 / G/L 58100 for respective fiscal year.
+      Women PE events hosted by OTHER organisations where AEA professionals
+      are invited should stay in their home department codes.
+
+  "1035":
+    name: "Annual Strategy Meeting"
+    prepaid_gl: "14000"
+
+  "2275-M":
+    name: "MMF — Consumer Deals"
+
+  "3500":
+    name: "AEA Investors SBF LP (general)"
+
+  "3915":
+    name: "SBF Fundraising (RETIRED)"
+    note: "No longer in use — see 1016-SBF instead"
+
+  "4001":
+    name: "Consumer / LP General"
+    note: >
+      If MMF Partner meals/meetings include ALL Partners AND hosted by Brian
+      Hoesterey → code to 1001.
+      If hosted specifically by Consumer Partners → 4001.
+      If hosted specifically by VAIP Partners → 6001.
+
+  "4200-B":
+    name: "Traeger Board"
+    board_only: true
+    note: >
+      EXCLUSIVELY for James Ho, Martin Eltrich, and Tom Donley as it relates
+      to Traeger Board Meeting travel.  Anything not related to a Board meeting
+      must be charged to 4001.
+
+  "4246":
+    name: "AmeriVet"
+    canonical_name: "AmeriVet"
+    note: "The 'V' in AmeriVet must be capitalised."
+
+  "6001":
+    name: "VAIP General"
+    note: >
+      Frank Herr general expenses → project 6001, dept VAIP.
+      TricorBraun has SOLD — any remaining expenses book to 6001,
+      description 'TB (Mgmt Exp)'.
+
+  "6006":
+    name: "ESG / Heidi DuBois"
+    note: "Heidi DuBois general project code is ESG 6006."
+
+  "6409":
+    name: "Numotion"
+    canonical_name: "Numotion"
+    note: "The 'M' in Numotion must NOT be capitalised (correct: Numotion)."
+
+  "7500":
+    name: "AEA DEBT Management LP (general)"
+
+  "7501":
+    name: "DEBT — other"
+
+  "1105":
+    name: "AEA Growth Management LP (general)"
+
+# ── Entity → default corporate event project codes ───────────────────────────
+corporate_event_projects:
+  LP: "1001"
+  SBF: "3500"
+  DEBT: "7500"
+  GROWTH: "1105"
+
+# ── Special event project code table ─────────────────────────────────────────
+special_event_projects:
+  "Firm Dev/Out@AEA/Social Initiatives": "1018"
+  "Best Practices/MMF Portfolio Councils": "1018-A"
+  "Senior Advisory Council": "1018-C"
+  "Digital Offsite – Portfolios": "1018-D"
+  "Women Events": "1018-W"
+
+# ── Intercompany rules ────────────────────────────────────────────────────────
+intercompany_notes:
+  - "When an expense relates to another legal entity, book to the corresponding
+     entity's intercompany account with the appropriate project code and dept
+     for that entity."
+  - "Germany-related expenses → project 1010, dept UK."
+  - "Holiday Party car service stays on each entity's own books — NOT
+     intercompany, even for UK/GmbH teams attending in NY."
+
+# ── Cancellation / refund policy ─────────────────────────────────────────────
+refund_policy:
+  - "Cancellation fees cannot be billed to the portfolio company — book to the
+     management company (general project code)."
+  - "Refunds must always mirror the original charge's project, dept, and
+     expense code.  Find the original transaction in Sage before coding."
+  - "Always verify refunds in Sage to confirm where the original expense was
+     booked."
+
+# ── Entertainment itemisation ─────────────────────────────────────────────────
+entertainment_rules:
+  - "Management company entertainment REQUIRES itemisation."
+  - "Portfolio company entertainment does NOT require itemisation."
+  - "Split receipt: Meals expense code for food/beverage; Other for
+     entertainment portion."
+  - "Deposits for corporate events → expense code Other, G/L 58120,
+     project 1001, dept NY."
+  - "Always separate room-rental fees from catering; room rental → Lodging."
+  - "Read Ahead Event expenses → project 1001 for all entities."
+
+# ── Prepaid expense rules ─────────────────────────────────────────────────────
+prepaid_rules:
+  gl: "14000"
+  trigger_projects: ["1035", "1003", "1012"]
+  instruction: >
+    Note 'Change G/L to 14000 at posting' in the Comments column.
+    Examples of recurring prepaids: Annual Strategy Meeting (1035),
+    Annual Meeting/AGM (1003), Associate Strategy Event (1012).
+
+# ── Recruiting expense rules ──────────────────────────────────────────────────
+recruiting_rules:
+  code_1002_examples:
+    - "Career Fairs"
+    - "Associate Welcome Dinner (AEA-sponsored)"
+    - "Associate Training week"
+    - "Recruiting for Potential Associates"
+  code_1002_exclusions:
+    - "Car service to/from Associate Training or Welcome Dinner (→ 4001/6001)"
+    - "Meals with new Associates already hired (offer letter executed)"
+  code_1012_examples:
+    - "Associate ski trips"
+    - "Associate-only outings/dinners (budget events)"
+  notes:
+    - "AEA interviews and onboarding of Executive partners → general entity
+       project code, NOT recruiting."
+    - "Associate AGM Dinner → 1003 (not 1002)."
+    - "Expense types for recruiting events: use actual type (hotel→Lodging,
+       dinner→Meals, Uber→Car Service, not 'Recruiting Expenses')."
+    - "Recruiting Expenses code only for registration fees at career fairs or
+       charges that do not fit another category."
+
+# ── IT expense categorisation (as of 1 Jan 2025) ────────────────────────────
+it_expense_rules:
+  retired_codes:
+    - "Cell Phone"
+    - "Telephones"
+    - "Furn & Equipment"
+  current_codes:
+    PHONES: "Voice & data — Telecom services (G/L 56300)"
+    SOFTWARE: "Software subscriptions and licences (G/L 56370)"
+    EQUIPMENT: "Individual hardware ≤ $2,500 (G/L 56370)"
+    FURNITURE: "Office furniture ≤ $2,500 (G/L 56370)"
+    "EQUIPMENT LEASING": "Equipment rentals (G/L 56370)"
+    "COMPUTER SUPPLIES": "Consumables (G/L 56350)"
+  recurring_it_vendors:
+    - "Microsoft (365, Azure, SharePoint, Intune, Defender)"
+    - "JetBrains"
+    - "Intelsat"
+    - "Wasabi Technologies (storage)"
+    - "Duo / MFA"
+    - "ChartGPT / AI subscriptions"
+    - "Copilot"
+    - "GitHub"
+    - "Salesforce"
+    - "Zoom / Teams"
+  note: >
+    IT charges are often split across multiple entities (LP, SBF, DEBT,
+    GROWTH).  Fixed-allocation amounts must be noted in Comments and verified
+    against the IT allocation schedule.

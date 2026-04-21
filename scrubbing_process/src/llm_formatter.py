@@ -52,6 +52,40 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def _extract_json(text: str) -> Optional[Dict]:
+    """Return the first valid JSON object found in *text*, or None."""
+    if not text:
+        return None
+    # 1. Direct parse
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
+    # 2. ```json ... ``` block
+    m = re.search(r'```json\s*(.*?)\s*```', text, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(1))
+        except Exception:
+            pass
+    # 3. Any ``` ... ``` block
+    m = re.search(r'```\s*(.*?)\s*```', text, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(1))
+        except Exception:
+            pass
+    # 4. Outermost { … }
+    start = text.find('{')
+    end   = text.rfind('}')
+    if start != -1 and end > start:
+        try:
+            return json.loads(text[start:end + 1])
+        except Exception:
+            pass
+    return None
+
+
 class LLMFormatter:
     """
     Use Azure OpenAI (GPT-5-mini) to format descriptions with chain-of-thought reasoning
@@ -163,10 +197,11 @@ class LLMFormatter:
         
         debug_file = self.debug_folder / filename
         
-        with open(debug_file, 'w') as f:
-            f.write("="*80 + "\n")
-            f.write("TRANSACTION INPUT\n")
-            f.write("="*80 + "\n")
+        try:
+            with open(debug_file, 'w', encoding='utf-8') as f:
+                f.write("="*80 + "\n")
+                f.write("TRANSACTION INPUT\n")
+                f.write("="*80 + "\n")
             f.write(f"Description: {txn.get('description', '')}\n")
             f.write(f"Vendor: {txn.get('vendor', '')}\n")
             f.write(f"Amount: ${txn.get('amount', 0):.2f}\n")
@@ -192,6 +227,9 @@ class LLMFormatter:
                 f.write("="*80 + "\n")
                 f.write(json.dumps(parsed_result, indent=2))
                 f.write("\n")
+        except Exception as debug_error:
+            # If debug file write fails, at least log it
+            logger.warning(f"Failed to write debug file: {debug_error}")
     
 
     def _build_system_prompt(self) -> str:
@@ -209,23 +247,24 @@ GLOBAL ABBREVIATIONS:
   - "Meetings" → "Mtgs" (word boundary)
   - "Ticketing Fee" → "Tkt Fee" (word boundary)
   - "Ticket/" → "Tkt/" (prefix, no word boundary)
+  -  "Management" → "Mgmt" (word boundary)
 
 LODGING CLEANUP:
+  -  Remove any "Bus." prefix
   - "Bus. Lodging" → "Lodging"
   - "Bus.Lodging" → "Lodging"
 
 CAR SERVICE CLEANUP:
   - Remove "Transportation" entirely
-  - "Home to Office"/"office to home" → use dash format
-  - "Home to Office" → "Home-Office"
-  - "Office to Home" → "Office-Home"
+  -  Replace " to " with "-" (no spaces).  Remove spaces around "-" and "/".
+  ONLY valid home/office formats:
+    "Work Late/Office-Home"        (pick-up ≥ 7:30 pm)
+    "Early Arrival/Home-Office"    (drop-off ≤ 7:00 am)
+    "Weekend/Home-Office"          (Saturday/Sunday to office)
+    "Weekend/Office-Home"          (Saturday/Sunday from office)
   - Ensure compact format: no spaces around dashes or slashes
 
-INFLIGHT WIFI CASING (exact casing required):
-  - "Inflight WiFi" → "Inflight Wifi"
-  - "inflight wifi" → "Inflight Wifi"
-  - "Inflight WIFI" → "Inflight Wifi"
-  - "In-flight Wifi" → "Inflight Wifi"
+INFLIGHT WIFI – exact casing always: "Inflight Wifi"
 
 PERSONAL CLEANUP:
   - "Personal expense" → "Personal"
@@ -308,6 +347,10 @@ SMART DETECTION (remap expense codes based on description patterns):
   - If description contains "train/", "bus.parking", "bus.fuel", "bus.rental", "travel insurance" → use "Other Travel"
 
 EXPENSE CODE REMAPPING (convert invalid codes):
+  - "inflight wifi"         → Info Services
+  - "tkt fee" / "ticketing fee" / "seat upgrade" / "checked bag" / "exch tkt"  → Airline
+  - "hotel booking fee" / "resort fee"   → Lodging
+  - "bus.parking" / "bus.fuel" / "train/"  → Other Travel
   - "Miscellaneous" → "Other" (disallowed)
   - "Cell Phone" → "Phones" (disallowed)
   - "Telephones" → "Phones" (disallowed)
@@ -318,13 +361,7 @@ EXPENSE CODE REMAPPING (convert invalid codes):
   - "Info Service" → "Info Services"
 
 ═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 4: PAY TYPE CLEANUP
-═══════════════════════════════════════════════════════════════════════════════
-
-  - "American Express Corporate Card CBCP" → "American Express"
-
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 5: CHARACTER LENGTH LIMIT
+RULE CATEGORY 4: CHARACTER LENGTH LIMIT
 ═══════════════════════════════════════════════════════════════════════════════
 
   Length Formula: LEN(description + vendor) + 12 ≤ 70 characters
@@ -333,7 +370,7 @@ RULE CATEGORY 5: CHARACTER LENGTH LIMIT
   Example: "RT:JFK-STO/Fundraising/Growth Fund" (34) + "United Airlines" (15) + 12 = 61 ✓
 
 ═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 6: MEAL AMOUNT LIMITS
+RULE CATEGORY 5: MEAL AMOUNT LIMITS
 ═══════════════════════════════════════════════════════════════════════════════
 
   - Working Lunch: max $25.00
@@ -383,7 +420,9 @@ RULE CATEGORY 9: PROJECT & DEPARTMENT ALIGNMENT
     - 3500 → "SBF"
     - 7500 → "DEBT"
     - 1105 → "GROWTH"
-  
+    - 1016-SBF → "SBF"
+    - 1016-G → "GROWTH"
+
   PROJECT METADATA RULES:
     - 1008 (Personal) → REQUIRES Employee ID (flag if missing)
     - 4200-B (Traeger Board) → ONLY for board meetings (flag if description lacks BOD/Board)
@@ -396,8 +435,6 @@ RULE CATEGORY 10: WHAT THE SCRUBBER ALREADY DOES (Don't Flag These)
 ✓ Description: Applies all 13 rules above BEFORE LLM
 ✓ Abbreviations: Converts Meeting→Mtg, Tkt Fee→Tkt Fee BEFORE LLM
 ✓ Expense code: Smart detection + remapping BEFORE LLM
-✓ Pay type: CBCP → American Express BEFORE LLM
-✓ Vendor: NOT normalized (user preference)
 
 ═══════════════════════════════════════════════════════════════════════════════
 RULE CATEGORY 11: WHAT TO FLAG (Requires Human Review)
@@ -461,7 +498,7 @@ KEY PRINCIPLES
 ✓ NEVER MODIFY VENDOR: Only review description and expense code
 ✓ USE EXACT CASING: Especially for "Inflight Wifi", "Bus.Lunch", "Mtg"
 ✓ ATTENDEE NAMES AS INITIALS ONLY: Meal descriptions must use initials (B.Gallagher, K.Carbonez) - never full names
-✓ APPLY ALL 12 RULES: Use every rule category when applicable
+✓ APPLY ALL 13 RULES: Use every rule category when applicable
 ✓ CONFIDENCE IS KEY: Set confidence based on how well all rules align
 ✓ FLAG THOROUGHLY: Don't be silent about violations; flag everything needing review"""
 
@@ -576,6 +613,34 @@ KEY PRINCIPLES
         
         # Should not reach here
         return self._fallback_result(txn, "Max retries exceeded")
+    
+    def _repair_batch_json(self, response_text: str) -> Optional[Dict]:
+        """Attempt to repair incomplete/malformed batch JSON response"""
+        try:
+            # Try direct parse first
+            return json.loads(response_text)
+        except json.JSONDecodeError as e:
+            # Try to find closing braces and repair
+            logger.warning(f"Batch JSON parse failed. Attempting repair: {e}")
+            try:
+                text = response_text.strip()
+                
+                # Remove trailing comma if present
+                if text.endswith(','):
+                    text = text[:-1]
+                
+                # Close the JSON structure
+                if not text.endswith(']}'):
+                    if not text.endswith(']'):
+                        text += ']'  # Close results array
+                    if not text.endswith('}'):
+                        text += '}'  # Close root object
+                
+                # Try parsing again
+                return json.loads(text)
+            except json.JSONDecodeError:
+                logger.error(f"Could not repair batch JSON. Returning None.")
+                return None
 
     def format_description_batch(
         self,
@@ -634,8 +699,11 @@ KEY PRINCIPLES
                         logger.warning(f"[WARN] Batch failed with all models. Processing {len(items)} items individually.")
                         return [self.format_description(item["txn"], item.get("similar_txns") or [], max_retries=max_retries) for item in items]
 
-                # Attempt to parse JSON
-                payload = json.loads(result_text)
+                # Attempt to parse JSON with repair for incomplete responses
+                payload = self._repair_batch_json(result_text)
+                if payload is None:
+                    raise ValueError("Batch JSON unrecoverable after repair attempt")
+                
                 batch_results = payload.get("results", [])
                 if not isinstance(batch_results, list):
                     raise ValueError("Batch response missing results list")

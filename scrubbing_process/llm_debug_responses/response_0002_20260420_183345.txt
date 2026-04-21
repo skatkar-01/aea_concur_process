@@ -1,0 +1,303 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/RT: JFK-SLC/Strategy
+Vendor: Delta
+Amount: $-4027.97
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"refund","formatted_description":"Refund/RT:JFK-SLC/Strategy","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Added required RT format under Refund; preserved route and purpose.","flags":["Prepaid project - review G/L 14000 at posting"],"is_refund":true,"error":""},{"index":2,"transaction_type":"refund","formatted_description":"Refund/LGA-RDU/BOD Mtg/Pave America","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.98,"reasoning":"Refund format compliant; purpose and deal preserved.","flags":[],"is_refund":true,"error":""},{"index":3,"transaction_type":"other","formatted_description":"Deposit/BOD Dinner/Nations Roof","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.72,"reasoning":"Looks like a meal/deposit item; retained as provided since context is limited.","flags":["Description may be incomplete for meal classification","Low confidence descriptions"],"is_refund":false,"error":""},{"index":4,"transaction_type":"flight","formatted_description":"RT:LGA-ORD/Mgmt Mtg/Tangent","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.99,"reasoning":"Compliant round-trip flight format; Mgmt abbreviation valid.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"refund","formatted_description":"Refund/EWR-SLC/2026 Strategy Mtg","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.9,"reasoning":"Refund format compliant; retained as entered.","flags":["Prepaid project - review G/L 14000 at posting"],"is_refund":true,"error":""},{"index":6,"transaction_type":"refund","formatted_description":"Refund/SLC-JFK/2026","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.78,"reasoning":"Refund format present, but purpose/deal missing.","flags":["Description missing business purpose or deal name","Prepaid project - review G/L 14000 at posting"],"is_refund":true,"error":""},{"index":7,"transaction_type":"other","formatted_description":"Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent","description_changed":false,"expense_code":"Airline","expense_code_changed":true,"confidence":0.99,"reasoning":"Ticketing fee remapped from Other Travel to Airline per rule.","flags":[],"is_refund":false,"error":""},{"index":8,"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/Pave America","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.99,"reasoning":"Travel meal format compliant; amount within limits.","flags":[],"is_refund":false,"error":""},{"index":9,"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/Numotion","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.99,"reasoning":"Travel meal format compliant; amount over limit not applicable to travel meals.","flags":[],"is_refund":false,"error":""},{"index":10,"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/Numotion","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.99,"reasoning":"Travel meal format compliant; amount over limit not applicable to travel meals.","flags":[],"is_refund":false,"error":""},{"index":11,"transaction_type":"lodging","formatted_description":"Lodging/BOD Mtg/Numotion","description_changed":true,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.98,"reasoning":"Removed duplicate purpose text; kept lodging context and deal.","flags":[],"is_refund":false,"error":""},{"index":12,"transaction_type":"lodging","formatted_description":"Lodging/BOD Mtg/Pave America","description_changed":false,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.99,"reasoning":"Lodging format compliant; deal preserved.","flags":[],"is_refund":false,"error":""},{"index":13,"transaction_type":"car_service","formatted_description":"NYC-Home/BOD Dinner/HUGE","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.86,"reasoning":"Car service route kept as provided; appears to be drop-off to home.","flags":[],"is_refund":false,"error":""},{"index":14,"transaction_type":"car_service","formatted_description":"Hotel-lunch/Strategy","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.6,"reasoning":"Description unclear for car service; unable to normalize confidently.","flags":["Description missing business purpose or deal name","Low confidence descriptions"],"is_refund":false,"error":""},{"index":15,"transaction_type":"meal_business","formatted_description":"Lunch/Strategy","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.55,"reasoning":"Meal description lacks business-meal format and attendee initials.","flags":["Description missing business purpose or deal name","Low confidence descriptions","Meal likely missing attendee initials / Bus.Lunch format"],"is_refund":false,"error":""},{"index":16,"transaction_type":"car_service","formatted_description":"NYC-Home/Mgmt Dinner/NES","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.83,"reasoning":"Normalized Management to Mgmt; kept route and deal context.","flags":[],"is_refund":false,"error":""},{"index":17,"transaction_type":"car_service","formatted_description":"NYC-Home/BOD Dinner/Redwood","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.86,"reasoning":"Car service format acceptable; route and deal preserved.","flags":[],"is_refund":false,"error":""},{"index":18,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/Management Team/NES","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.62,"reasoning":"Converted Bus Dinner to Bus.Dinner; attendee text still not initials-only.","flags":["Attendee names must be initials only","Low confidence descriptions","Potential length review if combined with vendor"],"is_refund":false,"error":""},{"index":19,"transaction_type":"flight","formatted_description":"ASE-DFW-LGA/Strategy","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.92,"reasoning":"Flight route/purpose acceptable; one-way format inferred.","flags":["Description missing deal/company after purpose"],"is_refund":false,"error":""},{"index":20,"transaction_type":"other","formatted_description":"Tkt fee/JFK-SLC-LGA/Strategy","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Ticketing fee correctly coded to Airline; route and purpose preserved.","flags":[],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:JFK-SLC/Strategy",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Added required RT format under Refund; preserved route and purpose.",
+      "flags": [
+        "Prepaid project - review G/L 14000 at posting"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/LGA-RDU/BOD Mtg/Pave America",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Refund format compliant; purpose and deal preserved.",
+      "flags": [],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Deposit/BOD Dinner/Nations Roof",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.72,
+      "reasoning": "Looks like a meal/deposit item; retained as provided since context is limited.",
+      "flags": [
+        "Description may be incomplete for meal classification",
+        "Low confidence descriptions"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "flight",
+      "formatted_description": "RT:LGA-ORD/Mgmt Mtg/Tangent",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Compliant round-trip flight format; Mgmt abbreviation valid.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/EWR-SLC/2026 Strategy Mtg",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Refund format compliant; retained as entered.",
+      "flags": [
+        "Prepaid project - review G/L 14000 at posting"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/SLC-JFK/2026",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.78,
+      "reasoning": "Refund format present, but purpose/deal missing.",
+      "flags": [
+        "Description missing business purpose or deal name",
+        "Prepaid project - review G/L 14000 at posting"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "other",
+      "formatted_description": "Tkt Fee/RT:LGA-ORD/Mgmt Mtg/Tangent",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": true,
+      "confidence": 0.99,
+      "reasoning": "Ticketing fee remapped from Other Travel to Airline per rule.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Pave America",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Travel meal format compliant; amount within limits.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Numotion",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Travel meal format compliant; amount over limit not applicable to travel meals.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Numotion",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Travel meal format compliant; amount over limit not applicable to travel meals.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/BOD Mtg/Numotion",
+      "description_changed": true,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.98,
+      "reasoning": "Removed duplicate purpose text; kept lodging context and deal.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/BOD Mtg/Pave America",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Lodging format compliant; deal preserved.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "car_service",
+      "formatted_description": "NYC-Home/BOD Dinner/HUGE",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Car service route kept as provided; appears to be drop-off to home.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-lunch/Strategy",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.6,
+      "reasoning": "Description unclear for car service; unable to normalize confidently.",
+      "flags": [
+        "Description missing business purpose or deal name",
+        "Low confidence descriptions"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_business",
+      "formatted_description": "Lunch/Strategy",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.55,
+      "reasoning": "Meal description lacks business-meal format and attendee initials.",
+      "flags": [
+        "Description missing business purpose or deal name",
+        "Low confidence descriptions",
+        "Meal likely missing attendee initials / Bus.Lunch format"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "car_service",
+      "formatted_description": "NYC-Home/Mgmt Dinner/NES",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.83,
+      "reasoning": "Normalized Management to Mgmt; kept route and deal context.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "car_service",
+      "formatted_description": "NYC-Home/BOD Dinner/Redwood",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Car service format acceptable; route and deal preserved.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/Management Team/NES",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.62,
+      "reasoning": "Converted Bus Dinner to Bus.Dinner; attendee text still not initials-only.",
+      "flags": [
+        "Attendee names must be initials only",
+        "Low confidence descriptions",
+        "Potential length review if combined with vendor"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "flight",
+      "formatted_description": "ASE-DFW-LGA/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "Flight route/purpose acceptable; one-way format inferred.",
+      "flags": [
+        "Description missing deal/company after purpose"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "other",
+      "formatted_description": "Tkt fee/JFK-SLC-LGA/Strategy",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Ticketing fee correctly coded to Airline; route and purpose preserved.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

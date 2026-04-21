@@ -1458,3 +1458,102 @@
 2026-04-20 16:26:03,408 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 5
 2026-04-20 16:26:03,439 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
 2026-04-20 16:26:05,874 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:23:45,489 - llm_formatter - INFO - [OK] Azure OpenAI initialized (primary: gpt-5-mini)
+2026-04-20 18:23:45,491 - llm_formatter - INFO -      Model fallback list: gpt-5-mini -> gpt-5.4-mini -> gpt-4.1-mini-219211
+2026-04-20 18:25:03,108 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:25:03,121 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 5
+2026-04-20 18:25:03,123 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 18:25:06,091 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:26:00,245 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:26:00,247 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 5
+2026-04-20 18:26:00,249 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 18:26:03,105 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:26:59,358 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:26:59,360 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 5
+2026-04-20 18:26:59,362 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 18:27:01,325 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:32:28,930 - llm_formatter - INFO - [OK] Azure OpenAI initialized (primary: gpt-5-mini)
+2026-04-20 18:32:28,931 - llm_formatter - INFO -      Model fallback list: gpt-5-mini -> gpt-5.4-mini -> gpt-4.1-mini-219211
+2026-04-20 18:33:37,869 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:33:37,881 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 18:33:37,884 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 18:33:45,094 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:34:37,420 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:34:37,422 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 18:34:37,424 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 18:34:45,791 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:35:40,635 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:35:40,637 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 18:35:40,639 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 18:35:48,185 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:35:48,187 - llm_formatter - ERROR - [FAIL] Batch API Error: 'charmap' codec can't encode character '\u2265' in position 1349: character maps to <undefined> - Model: gpt-5.4-mini, Items: 20
+2026-04-20 18:35:48,189 - llm_formatter - ERROR -        Exception type: UnicodeEncodeError
+2026-04-20 18:35:48,191 - llm_formatter - WARNING - Switching to fallback model: gpt-4.1-mini-219211
+2026-04-20 18:36:15,871 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 18:36:15,875 - llm_formatter - ERROR - [FAIL] JSON parse error: Expecting value: line 221 column 19 (char 8121) - Model: gpt-4.1-mini-219211, Items: 20
+2026-04-20 18:36:15,879 - llm_formatter - ERROR -        Response text: {
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Workshop/SCIO",
+      "description_changed": false,
+      "expense_code": ...
+2026-04-20 18:54:36,148 - llm_formatter - INFO - [OK] Azure OpenAI initialized (primary: gpt-5-mini)
+2026-04-20 18:54:36,148 - llm_formatter - INFO -      Model fallback list: gpt-5-mini -> gpt-5.4-mini -> gpt-4.1-mini-219211
+2026-04-20 19:18:39,193 - llm_formatter - INFO - [OK] Azure OpenAI initialized (primary: gpt-5-mini)
+2026-04-20 19:18:39,193 - llm_formatter - INFO -      Model fallback list: gpt-5-mini -> gpt-5.4-mini -> gpt-4.1-mini-219211
+2026-04-20 19:19:49,316 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:19:49,326 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:19:49,328 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:19:49,330 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:19:57,954 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:19:57,958 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:20:53,079 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:20:53,079 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:20:53,081 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:20:53,083 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:21:00,922 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:21:00,924 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:22:03,394 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:22:03,396 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:22:03,398 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:22:03,398 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:22:10,932 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:22:10,936 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:23:07,790 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:23:07,792 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:23:07,794 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:23:07,794 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:23:15,316 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:23:15,320 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:24:07,443 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:24:07,443 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:24:07,445 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:24:07,447 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:24:14,395 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:24:14,397 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:25:07,083 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:25:07,086 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:25:07,088 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:25:07,089 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:25:14,633 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:25:14,637 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:26:09,538 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:26:09,540 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:26:09,542 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:26:09,542 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:26:17,309 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:26:17,314 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:27:12,481 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:27:12,483 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-20 19:27:12,485 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:27:12,485 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:27:20,112 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:27:20,116 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:28:15,805 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:28:15,807 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 6
+2026-04-20 19:28:15,809 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-20 19:28:15,811 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-20 19:28:18,687 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20 19:28:18,689 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.

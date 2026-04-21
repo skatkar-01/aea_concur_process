@@ -1,34 +1,121 @@
-version: "1.0"
-last_updated: "2026-04-15"
+version: "1.1"
+last_updated: "2026-04-20"
+# ─────────────────────────────────────────────────────────────────────────────
+# VENDOR RULES
+# Source: Amex_Checklist_2025, vendor_rules.yaml v1.0, Quick_Reference_Guide
+#
+# IMPORTANT: The LLM prompt says "NEVER MODIFY VENDOR".
+# normalize_vendor() in rules_engine.py is currently NOT called by the
+# scrubber pipeline (_prepare_transaction does not invoke it).
+# These rules are kept as a reference / future opt-in normalisation pass.
+# The pay_type cleanup (AmEx CBCP → AmEx) IS active and IS called.
+# ─────────────────────────────────────────────────────────────────────────────
 
-# Pay type cleanup
+# ── Pay type field cleanup (ACTIVE — called by scrubber) ─────────────────────
 pay_type:
   find: "American Express Corporate Card CBCP"
   replace: "American Express"
 
-# Vendor title() corrections
+# ── Vendor name corrections after title() casing ─────────────────────────────
+# Keys are the (wrong) title-cased form; values are the canonical form.
 title_fixes:
+  # AmEx
+  "American Express": "American Express"
+
+  # Airlines
+  "American Airlines": "American"
+  "American Airlines Inc": "American"
+  "United Airlines": "United"
+  "United Airlines Inc": "United"
+  "Delta Air Lines": "Delta"
+  "Delta Onboard": "Delta"
+  "Jetblue": "JetBlue"
+  "Jetblue Airways": "JetBlue"
+  "British Airways": "British Airways"
+  "Air France": "Air France"
+  "Lufthansa": "Lufthansa"
+  "Intelsat (Inflight)": "Intelsat"
+
+  # Car services
+  "Uber Technologies": "Uber"
+  "Uber Technologies Inc": "Uber"
+  "Uber Eats": "Uber"
+  "Lyft Inc": "Lyft"
+  "Curb Mobility": "Curb"
+  "Nyc Taxi": "NYC Taxi"
+  "Nyc Yellow Cab": "NYC Taxi"
+
+  # Hotels / Lodging
+  "Omni Berkshire Place": "Omni Berkshire Pl."
+  "Marriott": "Marriott"
+  "Hyatt": "Hyatt"
+  "Hilton": "Hilton"
+  "Westin": "Westin"
+  "Sheraton": "Sheraton"
+  "Four Seasons": "Four Seasons"
+
+  # Coffee / Food
+  "Starbucks": "Starbucks"
+  "Dunkin Donuts": "Dunkin Donuts"
+  "Dunkin'": "Dunkin Donuts"
+  "Chick Fil A": "Chick-fil-A"
+  "Shake Shack": "Shake Shack"
+  "Chipotle Mexican Grill": "Chipotle"
+  "Qdoba Mexican Eats": "Qdoba"
+  "Ezcater": "Ezcater"
+  "Ezcater Inc": "Ezcater"
+  "Blue Bottle": "Blu"
+  "Blue Bottle Coffee": "Blu"
+  "Devocion": "Devocion"
+  "Pret A Manger": "Pret A Manger"
+  "Pret A Manger #0016": "Pret A Manger #0016"
+
+  # Portfolio companies (canonical casing)
   "Americet": "AmeriVet"
   "Americvet": "AmeriVet"
-  "Numotion": "Numotion"
+  "Numotion": "Numotion"        # lowercase 'm' — do NOT change to NuMotion
   "Tricorbraun": "TricorBraun"
   "Trikorbraun": "TricorBraun"
-  "Ezcater": "Ezcater"
-  "EzCater": "Ezcater"
-  "Blue Bottle": "Blu"
-  "Uber Eats": "Uber"
-  "Chick Fil A": "Chick-fil-A"
-  "Nyc Taxi": "NYC Taxi"
-  "Jetblue": "JetBlue"
+  "Tricor Braun": "TricorBraun"
+  "Verdesian Life Sciences": "Verdesian"
+  "Verdesian": "Verdesian"
+  "Commonwealth Dairy": "Commonwealth"
+  "Window Nation Llc": "Window Nation"
+  "Redwood Logistics": "Redwood"
 
-# Vendor abbreviations
+  # Tech / Software vendors
+  "Jetbrains": "JetBrains"
+  "Jetbrains S.R.O": "JetBrains"
+  "Godaddy": "GoDaddy"
+  "Github": "GitHub"
+  "Github Inc": "GitHub"
+  "Wasabi Technologies": "Wasabi Technologies"
+  "Duo Security": "Duo Security"
+  "Cloudflare": "Cloudflare"
+  "Zoom Video": "Zoom"
+  "Zoom Video Communications": "Zoom"
+
+  # Other recurring
+  "Melanoma Research Alliance": "Melanoma Research Alliance"
+  "Spencer Stuart": "Spencer Stuart"
+  "Goldman Sachs": "Goldman Sachs"
+  "Smbc": "SMBC"
+  "Golub Capital": "Golub"
+  "Midocean Partners": "MidOcean"
+  "Amazon Web Services": "AWS"
+  "Amazon": "Amazon"
+  "Delta Dental": "Delta Dental"
+
+# ── Canonical name abbreviations (applied after title_fixes) ─────────────────
 abbreviations:
   "Uber Technologies": "Uber"
   "Uber Technologies Inc": "Uber"
   "Lyft Inc": "Lyft"
   "Curb Mobility": "Curb"
 
-# Keyword-based vendor mapping (case-insensitive substring match)
+# ── Keyword-based vendor mapping (case-insensitive substring) ────────────────
+# Applied before title() casing.  First match wins.
+# Use sparingly — prefer exact fixes in title_fixes above.
 keyword_mapping:
   "starbucks": "Starbucks"
   "dunkin": "Dunkin Donuts"
@@ -37,11 +124,12 @@ keyword_mapping:
   "qdoba": "Qdoba"
   "cater lady": "Cater Lady"
   "cafe boulud": "Cafe Boulud"
-  "jetbrains": "Jetbrains"
+  "jetbrains": "JetBrains"
   "intelsat": "Intelsat"
   "delta onboard": "Delta"
-  "blue bottle": "Blu"
-  "devocion": "Devocion"
+  "delta air": "Delta"
   "united airlines": "United"
   "american airlines": "American"
-  "delta air": "Delta"
+  "blue bottle": "Blu"
+  "devocion": "Devocion"
+  "melanoma research": "Melanoma Research Alliance"

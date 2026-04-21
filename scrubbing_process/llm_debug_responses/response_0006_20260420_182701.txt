@@ -1,0 +1,90 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Working Lunch
+Vendor: Made Mad
+Amount: $22.84
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.99,"reasoning":"Office lunch fits Working Lunch; amount within $25 limit.","flags":[],"is_refund":false,"error":""},{"index":2,"transaction_type":"flight","formatted_description":"RT:SAV-ATL-SLC/AEA Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.93,"reasoning":"Converted Meeting to Mtg and preserved route/purpose; round-trip flight context from route.","flags":["Prepaid project - review G/L 14000 at posting"],"is_refund":false,"error":""},{"index":3,"transaction_type":"other","formatted_description":"Travel Insurance/Residence Inn by Marriott SLC Airport","description_changed":false,"expense_code":"Other Travel","expense_code_changed":false,"confidence":0.96,"reasoning":"Travel insurance matches Other Travel; hotel name preserved in description.","flags":[],"is_refund":false,"error":""},{"index":4,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.99,"reasoning":"Office lunch fits Working Lunch; amount within $25 limit.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/C.Grove & B.Udland/Incline Equity Partners","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.82,"reasoning":"Reformatted business meal to Bus.Dinner with initials only; kept company context.","flags":["Description length may require human review","Potential business meal attendee formatting verification recommended"],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Office lunch fits Working Lunch; amount within $25 limit.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "flight",
+      "formatted_description": "RT:SAV-ATL-SLC/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.93,
+      "reasoning": "Converted Meeting to Mtg and preserved route/purpose; round-trip flight context from route.",
+      "flags": [
+        "Prepaid project - review G/L 14000 at posting"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "other",
+      "formatted_description": "Travel Insurance/Residence Inn by Marriott SLC Airport",
+      "description_changed": false,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Travel insurance matches Other Travel; hotel name preserved in description.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.99,
+      "reasoning": "Office lunch fits Working Lunch; amount within $25 limit.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/C.Grove & B.Udland/Incline Equity Partners",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.82,
+      "reasoning": "Reformatted business meal to Bus.Dinner with initials only; kept company context.",
+      "flags": [
+        "Description length may require human review",
+        "Potential business meal attendee formatting verification recommended"
+      ],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

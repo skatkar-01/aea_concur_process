@@ -1,115 +1,178 @@
-version: "1.0"
-last_updated: "2026-04-15"
+version: "1.1"
+last_updated: "2026-04-20"
+# ─────────────────────────────────────────────────────────────────────────────
+# DESCRIPTION FORMATTING RULES
+# Source: Amex_Checklist_2025, AEA_Data_Scrubbing_Analysis, Quick_Reference_Guide
+# Priority 1-19 = global pre-processing; 20-39 = expense-type scoped;
+# 40+ = cleanup / post-processing
+# ─────────────────────────────────────────────────────────────────────────────
 
-# Description formatting rules
 rules:
+  # ── Global abbreviations ──────────────────────────────────────────────────
   - id: DESC_001
-    name: "Business abbreviation"
+    name: "Business abbreviation (with trailing space)"
     find: "Business "
     replace: "Bus."
     scope: "all"
     enabled: true
     priority: 1
 
+  - id: DESC_001B
+    name: "Business abbreviation (no trailing space, e.g. Bus.Lunch)"
+    find: "Business."
+    replace: "Bus."
+    scope: "all"
+    enabled: true
+    priority: 2
+
+  # ── Lodging cleanup ──────────────────────────────────────────────────────
   - id: DESC_002
-    name: "Remove Bus from Lodging"
+    name: "Remove Bus. prefix from Lodging (space variant)"
     find: "Bus. Lodging"
     replace: "Lodging"
     scope: "lodging"
     enabled: true
-    priority: 2
+    priority: 10
 
   - id: DESC_003
-    name: "Remove Bus from Lodging (no space)"
+    name: "Remove Bus. prefix from Lodging (no-space variant)"
     find: "Bus.Lodging"
     replace: "Lodging"
     scope: "lodging"
     enabled: true
-    priority: 3
+    priority: 11
 
+  # ── Car Service cleanup ───────────────────────────────────────────────────
   - id: DESC_004
-    name: "Remove Transportation from Car Service"
+    name: "Remove Transportation from car service"
     find: "Transportation"
     replace: ""
-    scope: "all"
+    scope: "car_service"
     enabled: true
-    priority: 4
+    priority: 20
 
   - id: DESC_005
-    name: "Car service route separator"
+    name: "Car service route separator (lowercase 'to')"
     find: " to "
     replace: "-"
     scope: "car_service"
     enabled: true
-    priority: 5
+    priority: 21
 
   - id: DESC_006
-    name: "Home to Office format"
+    name: "Standardise Home-Office format"
     find: "Home to Office"
     replace: "Home-Office"
     scope: "car_service"
     enabled: true
-    priority: 6
+    priority: 22
 
   - id: DESC_007
-    name: "Office to Home format"
+    name: "Standardise Office-Home format"
     find: "Office to Home"
     replace: "Office-Home"
     scope: "car_service"
     enabled: true
-    priority: 7
+    priority: 23
 
-  # Inflight Wifi casing variations
+  - id: DESC_007B
+    name: "Standardise Work Late label (remove 'from' variant)"
+    find: "Work Late from Office"
+    replace: "Work Late/Office-Home"
+    scope: "car_service"
+    enabled: true
+    priority: 24
+
+  - id: DESC_007C
+    name: "Early Arrival home-to-office label"
+    find: "Early Arrival to Office"
+    replace: "Early Arrival/Home-Office"
+    scope: "car_service"
+    enabled: true
+    priority: 25
+
+  # FIX: spaces around dashes are NOT handled by a find-replace rule here;
+  # they are cleaned by the regex in rules_engine.scrub_description()
+  # (re.sub(r'\s*-\s*', '-', result) for car_service)
+
+  # ── Inflight Wifi casing (all variants → exact canonical form) ────────────
   - id: DESC_008
-    name: "Inflight WiFi casing 1"
+    name: "Inflight WiFi → Inflight Wifi"
     find: "Inflight WiFi"
     replace: "Inflight Wifi"
     scope: "info_services"
     enabled: true
-    priority: 8
+    priority: 30
 
   - id: DESC_009
-    name: "Inflight WiFi casing 2"
+    name: "inflight wifi → Inflight Wifi"
     find: "inflight wifi"
     replace: "Inflight Wifi"
     scope: "info_services"
     enabled: true
-    priority: 9
+    priority: 31
 
   - id: DESC_010
-    name: "Inflight WiFI casing 3"
+    name: "Inflight WIFI → Inflight Wifi"
     find: "Inflight WIFI"
     replace: "Inflight Wifi"
     scope: "info_services"
     enabled: true
-    priority: 10
+    priority: 32
 
   - id: DESC_011
-    name: "Inflight WiFi hyphen"
+    name: "In-flight Wifi → Inflight Wifi"
     find: "In-flight Wifi"
     replace: "Inflight Wifi"
     scope: "info_services"
     enabled: true
-    priority: 11
+    priority: 33
 
-  # Personal expense cleanup
+  - id: DESC_011B
+    name: "In-Flight WiFi → Inflight Wifi"
+    find: "In-Flight WiFi"
+    replace: "Inflight Wifi"
+    scope: "info_services"
+    enabled: true
+    priority: 34
+
+  # ── Personal expense cleanup ──────────────────────────────────────────────
   - id: DESC_012
-    name: "Personal expense cleanup 1"
+    name: "Personal expense → Personal (lowercase e)"
     find: "Personal expense"
     replace: "Personal"
     scope: "personal"
     enabled: true
-    priority: 12
+    priority: 40
 
   - id: DESC_013
-    name: "Personal expense cleanup 2"
+    name: "Personal Expense → Personal (uppercase E)"
     find: "Personal Expense"
     replace: "Personal"
     scope: "personal"
     enabled: true
-    priority: 13
+    priority: 41
 
-# Word abbreviations (whole word replacement)
+  # ── Seminars / Conferences ─────────────────────────────────────────────────
+  # NOTE: expense code remap is handled in expense_rules.yaml.
+  # Description label standardisation:
+  - id: DESC_014
+    name: "Seminars and Conferences → Conferences in description"
+    find: "Seminars and Conferences"
+    replace: "Conferences"
+    scope: "all"
+    enabled: true
+    priority: 50
+
+  - id: DESC_014B
+    name: "Seminar(s) label normalisation"
+    find: "Seminar/"
+    replace: "Conferences/"
+    scope: "all"
+    enabled: true
+    priority: 51
+
+# ── Word abbreviations (whole-word, boundary-aware regex) ────────────────────
 abbreviations:
   - id: ABBR_001
     long: "Ticketing Fee"
@@ -126,8 +189,72 @@ abbreviations:
     short: "Mtgs"
     priority: 3
 
-# Prefix abbreviations (not word boundary)
+  - id: ABBR_004
+    long: "Management"
+    short: "Mgmt"
+    priority: 4
+
+  - id: ABBR_005
+    long: "Conference"
+    short: "Conf"
+    priority: 5
+
+  - id: ABBR_006
+    long: "Department"
+    short: "Dept"
+    priority: 6
+
+  - id: ABBR_007
+    long: "International"
+    short: "Intl"
+    priority: 7
+
+# ── Prefix abbreviations (not word-boundary, used for slash-separated tokens) ─
 prefix_abbreviations:
   - id: PREFIX_001
     long: "Ticket/"
     short: "Tkt/"
+
+  - id: PREFIX_002
+    long: "Roundtrip/"
+    short: "RT/"
+
+  - id: PREFIX_003
+    long: "Round Trip/"
+    short: "RT/"
+
+# ── Car service standard format templates (used by validator, not replacer) ──
+# These define the ONLY acceptable formats for Work Late / Early Arrival /
+# Weekend car service.  The validator in rules_engine compares against these.
+car_service_standard_formats:
+  work_late: "Work Late/Office-Home"
+  early_arrival: "Early Arrival/Home-Office"
+  weekend_to_office: "Weekend/Home-Office"
+  weekend_from_office: "Weekend/Office-Home"
+
+# ── Flight description templates (reference only – enforced by LLM prompt) ───
+flight_templates:
+  one_way: "<FROM>-<TO>/<Purpose>/<Deal or Company>"
+  round_trip: "RT:<FROM>-<TO>/<Purpose>/<Deal or Company>"
+  ticketing_fee: "Tkt Fee/RT:<route>/<Purpose>/<Deal>"
+  seat_upgrade: "Seat Upgrade/<Purpose>/<Deal>"
+  exchange: "Exch Tkt/<route>/<Purpose>/<Deal>"
+  refund: "Refund/<original format>"
+
+# ── Meal description templates ────────────────────────────────────────────────
+meal_templates:
+  business_lunch: "Bus.Lunch/<Initials>/<Deal or Company>"
+  business_dinner: "Bus.Dinner/<Initials>/<Deal or Company>"
+  travel_meal: "Travel Meal/<Purpose>/<Deal or Company>"
+  working_lunch: "Working Lunch"
+  working_dinner: "Working Dinner"
+  working_overage: "Working Lunch/Overage/Personal"
+
+# ── Lodging / Info Services / Other Travel templates ─────────────────────────
+other_templates:
+  lodging: "Lodging/<Purpose>/<Deal or Company>"
+  inflight_wifi_mgmt: "Inflight Wifi"
+  inflight_wifi_portco: "Inflight Wifi/<BOD Mtg or event>/<Company>"
+  parking: "Bus.Parking/<Purpose>/<Deal>"
+  fuel: "Bus.Fuel/<Route>/<Event>"
+  train: "Train/<Route>/<Purpose>/<Company>"

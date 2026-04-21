@@ -1,40 +1,151 @@
-version: "1.0"
-last_updated: "2026-04-15"
+version: "1.1"
+last_updated: "2026-04-20"
+# ─────────────────────────────────────────────────────────────────────────────
+# EXPENSE CODE RULES
+# Source: Amex_Checklist_2025 (Step 3 pp.7-10), AEA_Data_Scrubbing_Analysis
+#
+# NOTE ON FURNITURE vs EQUIPMENT (effective 1 Jan 2025):
+#   "Furn & Equipment" is RETIRED.  The two codes are now distinct:
+#     FURNITURE  — office furniture items ≤ $2,500 threshold
+#     EQUIPMENT  — individual hardware/electronics items
+#   "Furn & Equip" and "Furn & Equipment" therefore remap to EQUIPMENT
+#   by default (most charges are hardware) but the reviewer should
+#   confirm and manually change to FURNITURE when appropriate.
+#   Flag is raised automatically (see disallowed_codes below).
+#
+# NOTE ON PHONES (effective 1 Jan 2025):
+#   "Cell Phone" and "Telephones" are RETIRED → use "Phones" only.
+# ─────────────────────────────────────────────────────────────────────────────
 
-# Expense code remapping rules
+# ── Simple one-to-one remapping ───────────────────────────────────────────────
 expense_code_remap:
+  # Disallowed / retired codes
   "Miscellaneous": "Other"
   "Cell Phone": "Phones"
   "Telephones": "Phones"
+  "Cell Phones": "Phones"
+  "Telephone": "Phones"
+
+  # Furniture / Equipment split (see note above)
   "Furn & Equip": "Equipment"
   "Furn & Equipment": "Equipment"
+  "Furniture & Equipment": "Equipment"
+  "Furn/Equip": "Equipment"
+
+  # Conferences / Seminars
   "Seminars": "Conferences"
   "Seminars and Conferences": "Conferences"
+  "Seminar": "Conferences"
+
+  # Info Services variants
   "Info Service": "Info Services"
   "Inflight Wifi": "Info Services"
+  "Information Services": "Info Services"
 
-# Disallowed expense codes (should be flagged)
+  # Other Travel variants
+  "Other Travel Expenses": "Other Travel"
+  "Travel Other": "Other Travel"
+
+  # Recruiting
+  "Recruiting": "Recruiting Expenses"
+  "Recruiting Expense": "Recruiting Expenses"
+
+# ── Codes that must NEVER appear in a finalised batch ─────────────────────────
+# The validator flags any row that still carries one of these after remapping.
 disallowed_codes:
   - "Miscellaneous"
   - "Cell Phone"
   - "Telephones"
+  - "Cell Phones"
+  - "Furn & Equip"
+  - "Furn & Equipment"
+  - "Furniture & Equipment"
+  - "Seminars and Conferences"
 
-# Smart expense code detection (based on description patterns)
+# ── Smart detection: reclassify based on description keywords ─────────────────
+# Rules are evaluated in order; first match wins.
 smart_detection:
-  - pattern: "inflight wifi"
+  - id: SD_001
+    pattern: "inflight wifi|in-flight wifi"
     correct_code: "Info Services"
-    description: "Inflight wifi should use Info Services"
+    description: "Inflight Wifi must use Info Services, not Airline"
 
-  - pattern: "tkt fee|ticketing fee|seat upgrade|checked bag fee"
+  - id: SD_002
+    pattern: "tkt fee|ticketing fee|seat upgrade|checked bag fee|bag fee|exchange fee|exch tkt"
     correct_code: "Airline"
-    exclude_patterns: "train|bus|boat"
-    description: "Flight-related fees should use Airline"
+    exclude_patterns: "train|bus|boat|ferry"
+    description: "Flight-related fees must use Airline, not Other Travel"
 
-  - pattern: "booking fee"
-    include_patterns: "lodging|hotel"
+  - id: SD_003
+    pattern: "booking fee|hotel fee|resort fee|cancellation fee"
+    include_patterns: "lodging|hotel|hotel|inn|suites|hyatt|marriott|hilton|westin|sheraton"
     correct_code: "Lodging"
-    description: "Hotel booking fees should use Lodging"
+    description: "Hotel-related fees must use Lodging"
 
-  - pattern: "train/|bus.parking|bus.fuel|bus.rental|travel insurance"
+  - id: SD_004
+    pattern: "bus\\.parking|bus\\.fuel|bus\\.rental|train/|travel insurance|baggage claim|transit"
     correct_code: "Other Travel"
-    description: "Other transportation should use Other Travel"
+    exclude_patterns: "airline|airfare|flight"
+    description: "Ground/other transportation must use Other Travel"
+
+  - id: SD_005
+    pattern: "working lunch|working dinner|bus\\.lunch|bus\\.dinner|travel meal|catered breakfast|catered lunch|catered dinner"
+    correct_code: "Meals"
+    description: "Food and beverage expenses must use Meals"
+
+  - id: SD_006
+    pattern: "research subscription|data subscription|database subscription|news subscription|due diligence"
+    correct_code: "Info Services"
+    exclude_patterns: "inflight|wifi"
+    description: "Subscription research services use Info Services"
+
+  - id: SD_007
+    pattern: "donation|charitable|charity"
+    correct_code: "Donations"
+    description: "Charitable contributions must use Donations expense code (G/L 58110)"
+
+  - id: SD_008
+    pattern: "furniture|desk|chair|filing cabinet|credenza"
+    correct_code: "Furniture"
+    description: "Office furniture items should use Furniture expense code"
+
+  - id: SD_009
+    pattern: "computer|laptop|monitor|keyboard|mouse|ipad|iphone|phone|tablet|peripheral|headphone|webcam|cable|adapter|charger|storage|hard drive"
+    correct_code: "Equipment"
+    exclude_patterns: "repair|service|subscription|software"
+    description: "IT hardware / electronics must use Equipment expense code"
+
+# ── Expense code → G/L account mapping (reference only; enforced at posting) ──
+# Used by validator to surface G/L notes in the Flags column.
+gl_mapping:
+  "Meals": "58100"
+  "Airline": "56000"
+  "Car Service": "56100"
+  "Other Travel": "56100"
+  "Lodging": "56200"
+  "Info Services": "56300"
+  "Conferences": "58120"
+  "Donations": "58110"
+  "Equipment": "56370"
+  "Furniture": "56370"
+  "Software": "56370"
+  "Phones": "56300"
+  "Computer Supplies": "56350"
+  "Recruiting Expenses": "58200"
+  "Other": "58350"   # NOTE: AEA Corporate events must be manually changed to 58120
+
+# ── Expense type → transaction type mapping (used by LLM prompt builder) ──────
+expense_to_transaction_type:
+  "Airline": "flight"
+  "Car Service": "car_service"
+  "Lodging": "lodging"
+  "Meals": "meal_business"
+  "Info Services": "info_services"
+  "Other Travel": "other_travel"
+  "Conferences": "conference"
+  "Equipment": "equipment"
+  "Furniture": "furniture"
+  "Software": "software"
+  "Donations": "donation"
+  "Recruiting Expenses": "recruiting"
+  "Other": "other"
