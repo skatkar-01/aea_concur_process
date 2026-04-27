@@ -1,0 +1,343 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/WWE
+Vendor: Naples Golf Club
+Amount: $46.64
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/WWE","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal format is compliant and purpose already includes BOD Mtg. No receipt provided, but vendor and amount are consistent with a meal charge.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":2,"transaction_type":"lodging","formatted_description":"Lodging/Conf/ACG M&A","description_changed":true,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.95,"reasoning":"Removed the unsupported hotel brand from the description structure; lodging format should be Lodging/purpose/deal. No receipt provided.","comment":"Standardized lodging description by removing extra vendor-style wording.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":3,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"Description is non-business and no supporting receipt is available. Kept unchanged pending review.","comment":"No receipt available to support this meal charge.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":4,"transaction_type":"refund","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.9,"reasoning":"Negative amount indicates a refund, but the description does not identify the original charge and no receipt is available to cross-reference.","comment":"Refund could not be matched to an original charge. Flag for review.","flags":["No receipt available","Refund where corresponding original charge cannot be identified from receipt or data"],"is_refund":true,"error":""},{"index":5,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"No compliant business description is present and no receipt is available. Kept as-is for review.","comment":"No receipt available to validate this meal charge.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":6,"transaction_type":"car_service","formatted_description":"Work Late/Office-Home","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.97,"reasoning":"Car service home/office rides must use the exact Work Late/Office-Home wording. Timing not available, so this is a format cleanup only.","comment":"Standardized car service description to required home/office format.","flags":["Early arrival or work late car (flag for timestamp verification — cannot confirm from data alone)"],"is_refund":false,"error":""},{"index":7,"transaction_type":"refund","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.9,"reasoning":"Negative amount suggests a refund, but there is no original charge reference or receipt detail to tie it back to the source transaction.","comment":"Refund could not be tied to an original charge. Flag for review.","flags":["No receipt available","Refund where corresponding original charge cannot be identified from receipt or data"],"is_refund":true,"error":""},{"index":8,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"No business meal description is provided and no receipt is available. Left unchanged for human review.","comment":"No receipt available to validate this meal charge.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":9,"transaction_type":"car_service","formatted_description":"Hotel-Dinner/Bus. Dinner w/B. Quintana","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.86,"reasoning":"Description appears to be a deal-related car ride to dinner, but the wording is not in the required car-service format and the guest name cannot be verified from receipt data.","comment":"Car service description is not in standard format. Guest name was left as entered because no receipt was provided.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":10,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal already uses the required Mgmt Mtg wording and is compliant. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":11,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal format is compliant as entered. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":12,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal format is compliant as entered. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":13,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal format is compliant as entered. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":14,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal format is compliant as entered. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":15,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal format is compliant as entered. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":16,"transaction_type":"flight","formatted_description":"JAX-PHL-CLT/CFO Interview Mtg/AmEx","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Multi-leg flight route is present and the purpose needs the required Mtg suffix. Receipt data was not provided, so no further validation was possible.","comment":"Standardized flight description and added Mtg to CFO Interview.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":17,"transaction_type":"refund","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.9,"reasoning":"Negative amount indicates a refund, but the original charge cannot be identified from the available data.","comment":"Refund could not be matched to an original charge. Flag for review.","flags":["No receipt available","Refund where corresponding original charge cannot be identified from receipt or data"],"is_refund":true,"error":""},{"index":18,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"No business meal description is available and no receipt is present. Left unchanged for review.","comment":"No receipt available to validate this meal charge.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":19,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Stifel T&L Conf","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal is already formatted correctly; Conf is an accepted shorthand in the business context. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""},{"index":20,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Stifel T&L Conf","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal is already compliant and requires no correction. No receipt available.","comment":"","flags":["No receipt available"],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/WWE",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal format is compliant and purpose already includes BOD Mtg. No receipt provided, but vendor and amount are consistent with a meal charge.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Conf/ACG M&A",
+      "description_changed": true,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Removed the unsupported hotel brand from the description structure; lodging format should be Lodging/purpose/deal. No receipt provided.",
+      "comment": "Standardized lodging description by removing extra vendor-style wording.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "Description is non-business and no supporting receipt is available. Kept unchanged pending review.",
+      "comment": "No receipt available to support this meal charge.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "refund",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Negative amount indicates a refund, but the description does not identify the original charge and no receipt is available to cross-reference.",
+      "comment": "Refund could not be matched to an original charge. Flag for review.",
+      "flags": [
+        "No receipt available",
+        "Refund where corresponding original charge cannot be identified from receipt or data"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "No compliant business description is present and no receipt is available. Kept as-is for review.",
+      "comment": "No receipt available to validate this meal charge.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "car_service",
+      "formatted_description": "Work Late/Office-Home",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Car service home/office rides must use the exact Work Late/Office-Home wording. Timing not available, so this is a format cleanup only.",
+      "comment": "Standardized car service description to required home/office format.",
+      "flags": [
+        "Early arrival or work late car (flag for timestamp verification \u2014 cannot confirm from data alone)"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "refund",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Negative amount suggests a refund, but there is no original charge reference or receipt detail to tie it back to the source transaction.",
+      "comment": "Refund could not be tied to an original charge. Flag for review.",
+      "flags": [
+        "No receipt available",
+        "Refund where corresponding original charge cannot be identified from receipt or data"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "No business meal description is provided and no receipt is available. Left unchanged for human review.",
+      "comment": "No receipt available to validate this meal charge.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-Dinner/Bus. Dinner w/B. Quintana",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Description appears to be a deal-related car ride to dinner, but the wording is not in the required car-service format and the guest name cannot be verified from receipt data.",
+      "comment": "Car service description is not in standard format. Guest name was left as entered because no receipt was provided.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal already uses the required Mgmt Mtg wording and is compliant. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal format is compliant as entered. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal format is compliant as entered. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal format is compliant as entered. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal format is compliant as entered. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal format is compliant as entered. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "flight",
+      "formatted_description": "JAX-PHL-CLT/CFO Interview Mtg/AmEx",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Multi-leg flight route is present and the purpose needs the required Mtg suffix. Receipt data was not provided, so no further validation was possible.",
+      "comment": "Standardized flight description and added Mtg to CFO Interview.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "refund",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Negative amount indicates a refund, but the original charge cannot be identified from the available data.",
+      "comment": "Refund could not be matched to an original charge. Flag for review.",
+      "flags": [
+        "No receipt available",
+        "Refund where corresponding original charge cannot be identified from receipt or data"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "No business meal description is available and no receipt is present. Left unchanged for review.",
+      "comment": "No receipt available to validate this meal charge.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Stifel T&L Conf",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal is already formatted correctly; Conf is an accepted shorthand in the business context. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Stifel T&L Conf",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal is already compliant and requires no correction. No receipt available.",
+      "comment": "",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

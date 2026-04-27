@@ -779,10 +779,10 @@ def _call_with_model_fallback(
     client: OpenAI,
     b64: str,
     pdf_filename: str,
-    pdf_size_kb: int,
-    timeout_s: float,
-    primary_model: str,
-    fallback_models: list[str],
+    pdf_size_kb: int = 0,
+    timeout_s: float = 180.0,
+    primary_model: str = "",
+    fallback_models: list[str] | None = None,
 ) -> dict[str, Any]:
     """
     Try extraction with primary model, then fallback to other models if retries fail.
@@ -811,6 +811,7 @@ def _call_with_model_fallback(
     Raises:
         Exception: All models failed after all retries and validation attempts
     """
+    fallback_models = fallback_models or []
     retry_decorator = _get_retry_decorator()
     settings = get_settings()
     
@@ -923,7 +924,6 @@ def _call_with_model_fallback(
     if last_exception:
         raise last_exception
     raise RuntimeError(f"Unexpected: no models provided to {pdf_filename!r}")
-
 
 # ── Public API ────────────────────────────────────────────────────────────────
 

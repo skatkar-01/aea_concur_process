@@ -1,0 +1,310 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Coffee Mtg w/ Cindy Li-Farewell
+Vendor: Blue Bottle
+Amount: $20.24
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/1 ppl/Blue Bottle","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.83,"reasoning":"Coffee mtg is a business meal, but attendee name is not verifiable from receipt data and only one named guest appears. Standardized to business lunch style with count placeholder.","flags":["No receipt available","Attendee names not verifiable from receipt; defaulted to count"],"is_refund":false,"error":""},{"index":2,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.96,"reasoning":"Working Lunch is already compliant as a 1-part office meal description. No receipt available, but no formatting change is required.","flags":[],"is_refund":false,"error":""},{"index":3,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/B.Gallagher & I.Wood/53 Restaurant","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.84,"reasoning":"Business dinner format required attendee initials and company/vendor at end. Converted full names to initials, but receipt is absent so attendee verification is limited.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":4,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/B.Gallagher/Blue Bottle","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.83,"reasoning":"Mentoring coffee with a named guest is a business meal; formatted to business lunch style. Receipt unavailable, so guest identity cannot be independently verified.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":5,"transaction_type":"refund","formatted_description":"Refund/EWR-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.88,"reasoning":"Negative amount indicates refund. Added Mtg to Strategy and normalized refund format; receipt is absent so original charge cannot be cross-referenced.","flags":["No receipt available — refund cannot be cross-referenced to original charge","Prepaid project – review G/L 14000 at posting"],"is_refund":true,"error":""},{"index":6,"transaction_type":"refund","formatted_description":"Refund/JFK-SLC-JFK/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.88,"reasoning":"Negative amount indicates refund. Standardized route and added Mtg to Strategy; no receipt available to confirm ticket or original charge.","flags":["No receipt available — refund cannot be cross-referenced to original charge","Prepaid project – review G/L 14000 at posting"],"is_refund":true,"error":""},{"index":7,"transaction_type":"flight","formatted_description":"EWR-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"One-way flight description needs Mtg appended to Strategy. Amount and vendor align with an outbound airline charge.","flags":["Prepaid project – review G/L 14000 at posting"],"is_refund":false,"error":""},{"index":8,"transaction_type":"flight","formatted_description":"SLC-JFK/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"One-way return flight description needs Mtg appended to Strategy. Vendor and route indicate a standard airline ticket charge.","flags":["Prepaid project – review G/L 14000 at posting"],"is_refund":false,"error":""},{"index":9,"transaction_type":"flight","formatted_description":"Tkt Fee/EWR-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Ticketing fee should use Tkt Fee and Airline expense code. Added Mtg to Strategy; vendor is a travel agency services charge consistent with ticketing.","flags":["Prepaid project – review G/L 14000 at posting"],"is_refund":false,"error":""},{"index":10,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.96,"reasoning":"Working Lunch is already compliant as a 1-part office meal description. Amount is within the limit.","flags":[],"is_refund":false,"error":""},{"index":11,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.96,"reasoning":"Working Lunch is already compliant and under the limit. No description or code change needed.","flags":[],"is_refund":false,"error":""},{"index":12,"transaction_type":"car_service","formatted_description":"Dinner-Home/Business dinner w/ BG & IW","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.78,"reasoning":"Car service description is nonstandard and appears to be a mixed purpose note, but it does not clearly match a required home/office or deal-related template. Receipt is absent.","flags":["No receipt available","Description does not match standard car service templates"],"is_refund":false,"error":""},{"index":13,"transaction_type":"flight","formatted_description":"EWR-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"One-way flight description needs Mtg appended to Strategy. Vendor and amount align with an airline ticket charge.","flags":["Prepaid project – review G/L 14000 at posting"],"is_refund":false,"error":""},{"index":14,"transaction_type":"car_service","formatted_description":"RDU-Mtg/Mgmt Mtg/Aqualis","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.76,"reasoning":"Car service entry references a meeting trip, but the description is not in a standard car service template. Receipt is absent, so no further correction is certain.","flags":["No receipt available","Description does not match standard car service templates"],"is_refund":false,"error":""},{"index":15,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Aqualis","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal description is already compliant with proper purpose completion. No change needed.","flags":[],"is_refund":false,"error":""},{"index":16,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Aqualis","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal description is already compliant with proper purpose completion. No change needed.","flags":[],"is_refund":false,"error":""},{"index":17,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Mgmt Mtg/Aqualis","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal description is already compliant and the vendor is a restaurant charge consistent with travel dining.","flags":[],"is_refund":false,"error":""},{"index":18,"transaction_type":"car_service","formatted_description":"Dinner-Hotel/Mgmt Mtg/Monroe","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.76,"reasoning":"Car service text is nonstandard and looks like a route note rather than a valid template. No receipt available to confirm whether it should be deal-related or home/office.","flags":["No receipt available","Description does not match standard car service templates"],"is_refund":false,"error":""},{"index":19,"transaction_type":"info_services","formatted_description":"Inflight Wifi","description_changed":true,"expense_code":"Info Services","expense_code_changed":false,"confidence":0.97,"reasoning":"Inflight wifi must be exact text only. Business purpose omitted, but the trip context/date is sufficient to infer management meeting travel.","flags":[],"is_refund":false,"error":""},{"index":20,"transaction_type":"lodging","formatted_description":"Lodging/Mgmt Mtg/Monroe","description_changed":false,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.95,"reasoning":"Lodging description is already in the correct format. Vendor and amount are consistent with a hotel stay.","flags":[],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/1 ppl/Blue Bottle",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.83,
+      "reasoning": "Coffee mtg is a business meal, but attendee name is not verifiable from receipt data and only one named guest appears. Standardized to business lunch style with count placeholder.",
+      "flags": [
+        "No receipt available",
+        "Attendee names not verifiable from receipt; defaulted to count"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Working Lunch is already compliant as a 1-part office meal description. No receipt available, but no formatting change is required.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/B.Gallagher & I.Wood/53 Restaurant",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.84,
+      "reasoning": "Business dinner format required attendee initials and company/vendor at end. Converted full names to initials, but receipt is absent so attendee verification is limited.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/B.Gallagher/Blue Bottle",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.83,
+      "reasoning": "Mentoring coffee with a named guest is a business meal; formatted to business lunch style. Receipt unavailable, so guest identity cannot be independently verified.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/EWR-SLC/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.88,
+      "reasoning": "Negative amount indicates refund. Added Mtg to Strategy and normalized refund format; receipt is absent so original charge cannot be cross-referenced.",
+      "flags": [
+        "No receipt available \u2014 refund cannot be cross-referenced to original charge",
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/JFK-SLC-JFK/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.88,
+      "reasoning": "Negative amount indicates refund. Standardized route and added Mtg to Strategy; no receipt available to confirm ticket or original charge.",
+      "flags": [
+        "No receipt available \u2014 refund cannot be cross-referenced to original charge",
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "flight",
+      "formatted_description": "EWR-SLC/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "One-way flight description needs Mtg appended to Strategy. Amount and vendor align with an outbound airline charge.",
+      "flags": [
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "SLC-JFK/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "One-way return flight description needs Mtg appended to Strategy. Vendor and route indicate a standard airline ticket charge.",
+      "flags": [
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/EWR-SLC/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Ticketing fee should use Tkt Fee and Airline expense code. Added Mtg to Strategy; vendor is a travel agency services charge consistent with ticketing.",
+      "flags": [
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Working Lunch is already compliant as a 1-part office meal description. Amount is within the limit.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Working Lunch is already compliant and under the limit. No description or code change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "car_service",
+      "formatted_description": "Dinner-Home/Business dinner w/ BG & IW",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.78,
+      "reasoning": "Car service description is nonstandard and appears to be a mixed purpose note, but it does not clearly match a required home/office or deal-related template. Receipt is absent.",
+      "flags": [
+        "No receipt available",
+        "Description does not match standard car service templates"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "flight",
+      "formatted_description": "EWR-SLC/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "One-way flight description needs Mtg appended to Strategy. Vendor and amount align with an airline ticket charge.",
+      "flags": [
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "car_service",
+      "formatted_description": "RDU-Mtg/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.76,
+      "reasoning": "Car service entry references a meeting trip, but the description is not in a standard car service template. Receipt is absent, so no further correction is certain.",
+      "flags": [
+        "No receipt available",
+        "Description does not match standard car service templates"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal description is already compliant with proper purpose completion. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal description is already compliant with proper purpose completion. No change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal description is already compliant and the vendor is a restaurant charge consistent with travel dining.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "car_service",
+      "formatted_description": "Dinner-Hotel/Mgmt Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.76,
+      "reasoning": "Car service text is nonstandard and looks like a route note rather than a valid template. No receipt available to confirm whether it should be deal-related or home/office.",
+      "flags": [
+        "No receipt available",
+        "Description does not match standard car service templates"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "info_services",
+      "formatted_description": "Inflight Wifi",
+      "description_changed": true,
+      "expense_code": "Info Services",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Inflight wifi must be exact text only. Business purpose omitted, but the trip context/date is sufficient to infer management meeting travel.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Mgmt Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Lodging description is already in the correct format. Vendor and amount are consistent with a hotel stay.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

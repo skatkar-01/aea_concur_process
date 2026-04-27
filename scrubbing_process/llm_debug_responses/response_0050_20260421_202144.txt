@@ -1,0 +1,29 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+Vendor: Dunkin Donuts
+Amount: $12.31
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/Banker Mtgs/Monroe","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Description follows travel meal format with complete three-part structure. No issues with expense code or fields. No receipt available but amount is low and consistent for meal.","comment":"No changes required. Description and expense code compliant. No receipt provided but amount and details are reasonable for travel meal.","flags":[],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Description follows travel meal format with complete three-part structure. No issues with expense code or fields. No receipt available but amount is low and consistent for meal.",
+  "comment": "No changes required. Description and expense code compliant. No receipt provided but amount and details are reasonable for travel meal.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

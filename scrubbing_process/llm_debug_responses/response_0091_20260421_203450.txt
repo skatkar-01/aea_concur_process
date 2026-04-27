@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/BOD Mtg/RED
+Vendor: United
+Amount: $1849.66
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-LHR-EWR/BOD Mtg/RED",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Transaction is a multi-leg round-trip flight with three airports in route; added RT: prefix per multi-leg round-trip rule. Description parts comply with 3-part structure. No receipt to cross-check route or amount but format correct for known policy.",
+  "comment": "Added RT: prefix for multi-leg round trip per route structure. Missing receipt prevents verification of ticket or routing. Confirm trip details if needed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-LHR-EWR/BOD Mtg/RED",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Transaction is a multi-leg round-trip flight with three airports in route; added RT: prefix per multi-leg round-trip rule. Description parts comply with 3-part structure. No receipt to cross-check route or amount but format correct for known policy.",
+  "comment": "Added RT: prefix for multi-leg round trip per route structure. Missing receipt prevents verification of ticket or routing. Confirm trip details if needed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

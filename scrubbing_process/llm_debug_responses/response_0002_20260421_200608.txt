@@ -1,0 +1,327 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/RT: JFK-SLC/Strategy
+Vendor: Delta
+Amount: $-4027.97
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"refund","formatted_description":"Refund/RT:JFK-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.97,"reasoning":"Refund flight description needed Mtg completion on Strategy. No receipt provided to cross-check the original charge, but the negative airline amount and route format are consistent with a refund.","comment":"Refund description corrected to standard format. No receipt available to verify the original ticket or charge details.","flags":["No receipt — refund cannot be cross-referenced to original charge","Prepaid project – review G/L 14000 at posting"],"is_refund":true,"error":""},{"index":2,"transaction_type":"refund","formatted_description":"Refund/LGA-RDU/BOD Mtg/Pave America","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.96,"reasoning":"Already in refund flight format and the purpose is complete. Negative airline amount supports refund classification; no receipt to further validate.","comment":"No changes required. Refund description is already in standard format.","flags":["No receipt — refund cannot be cross-referenced to original charge"],"is_refund":true,"error":""},{"index":3,"transaction_type":"meal_business","formatted_description":"Bus.Dinner/BOD Mtg/Nations Roof","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.9,"reasoning":"Deposit/BOD Dinner is a business meal and the attendee/company segment should end with the company name only. Removed the unsupported 'Deposit' wording from the description.","comment":"Updated to standard business dinner format. Removed unsupported 'Deposit' wording and kept the company name.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":4,"transaction_type":"meal_business","formatted_description":"Catering/BOD Mtg/Crane","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Catering for a board meeting is acceptable as entered and the deal/company name is present. No receipt available, but the description is already structurally compliant.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":5,"transaction_type":"meal_business","formatted_description":"Catering/BOD Mtg/Crane","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Duplicate of item 4 with the same compliant description structure and same vendor/date context. No receipt available.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":6,"transaction_type":"other","formatted_description":"Kitchen Supplies/Grocery","description_changed":false,"expense_code":"Equipment","expense_code_changed":true,"confidence":0.93,"reasoning":"Kitchen supplies are not a separate allowed code in the target schema and this is an equipment-style office supply purchase. Vendor and description support a non-travel office expense.","comment":"Expense code updated to Equipment for kitchen supply purchase.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":7,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Equipment","expense_code_changed":true,"confidence":0.97,"reasoning":"Office supplies should map to Equipment under the current code set. Description is otherwise clear and vendor supports an office supply purchase.","comment":"Expense code updated from Office Supplies to Equipment.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":8,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Equipment","expense_code_changed":true,"confidence":0.97,"reasoning":"Office supplies should map to Equipment under the current code set. Vendor indicates office supply purchase and description is clear.","comment":"Expense code updated from Office Supplies to Equipment.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":9,"transaction_type":"other","formatted_description":"Office Supplies for FL Office","description_changed":false,"expense_code":"Equipment","expense_code_changed":true,"confidence":0.97,"reasoning":"Office supplies should map to Equipment under the current code set. No other correction is needed.","comment":"Expense code updated from Office Supplies to Equipment.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":10,"transaction_type":"other","formatted_description":"Kitchen Supplies/Supplies","description_changed":false,"expense_code":"Equipment","expense_code_changed":true,"confidence":0.92,"reasoning":"Kitchen supplies are best mapped to Equipment per current coding rules. No receipt available to narrow further.","comment":"Expense code updated to Equipment for kitchen supplies.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":11,"transaction_type":"other","formatted_description":"Kitchen Supplies/Grocery","description_changed":false,"expense_code":"Equipment","expense_code_changed":true,"confidence":0.92,"reasoning":"Kitchen supplies are best mapped to Equipment per current coding rules. Vendor supports a grocery-style office supply purchase.","comment":"Expense code updated to Equipment for kitchen supplies.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":12,"transaction_type":"meal_business","formatted_description":"Catering/BOD Mtg/Monroe","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Business catering for board meeting with company name is already in standard structure. No receipt available.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":13,"transaction_type":"meal_business","formatted_description":"Catering/BOD Mtg/Monroe","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Business catering for board meeting with company name is already in standard structure. No receipt available.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":14,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""},{"index":15,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""},{"index":16,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""},{"index":17,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""},{"index":18,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""},{"index":19,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""},{"index":20,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.94,"reasoning":"Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.","comment":"Adjusted to standard Working Lunch format.","flags":[],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RT:JFK-SLC/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.97,
+      "reasoning": "Refund flight description needed Mtg completion on Strategy. No receipt provided to cross-check the original charge, but the negative airline amount and route format are consistent with a refund.",
+      "comment": "Refund description corrected to standard format. No receipt available to verify the original ticket or charge details.",
+      "flags": [
+        "No receipt \u2014 refund cannot be cross-referenced to original charge",
+        "Prepaid project \u2013 review G/L 14000 at posting"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/LGA-RDU/BOD Mtg/Pave America",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Already in refund flight format and the purpose is complete. Negative airline amount supports refund classification; no receipt to further validate.",
+      "comment": "No changes required. Refund description is already in standard format.",
+      "flags": [
+        "No receipt \u2014 refund cannot be cross-referenced to original charge"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/BOD Mtg/Nations Roof",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Deposit/BOD Dinner is a business meal and the attendee/company segment should end with the company name only. Removed the unsupported 'Deposit' wording from the description.",
+      "comment": "Updated to standard business dinner format. Removed unsupported 'Deposit' wording and kept the company name.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_business",
+      "formatted_description": "Catering/BOD Mtg/Crane",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Catering for a board meeting is acceptable as entered and the deal/company name is present. No receipt available, but the description is already structurally compliant.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "meal_business",
+      "formatted_description": "Catering/BOD Mtg/Crane",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Duplicate of item 4 with the same compliant description structure and same vendor/date context. No receipt available.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Grocery",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": true,
+      "confidence": 0.93,
+      "reasoning": "Kitchen supplies are not a separate allowed code in the target schema and this is an equipment-style office supply purchase. Vendor and description support a non-travel office expense.",
+      "comment": "Expense code updated to Equipment for kitchen supply purchase.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": true,
+      "confidence": 0.97,
+      "reasoning": "Office supplies should map to Equipment under the current code set. Description is otherwise clear and vendor supports an office supply purchase.",
+      "comment": "Expense code updated from Office Supplies to Equipment.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": true,
+      "confidence": 0.97,
+      "reasoning": "Office supplies should map to Equipment under the current code set. Vendor indicates office supply purchase and description is clear.",
+      "comment": "Expense code updated from Office Supplies to Equipment.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies for FL Office",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": true,
+      "confidence": 0.97,
+      "reasoning": "Office supplies should map to Equipment under the current code set. No other correction is needed.",
+      "comment": "Expense code updated from Office Supplies to Equipment.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Supplies",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": true,
+      "confidence": 0.92,
+      "reasoning": "Kitchen supplies are best mapped to Equipment per current coding rules. No receipt available to narrow further.",
+      "comment": "Expense code updated to Equipment for kitchen supplies.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "other",
+      "formatted_description": "Kitchen Supplies/Grocery",
+      "description_changed": false,
+      "expense_code": "Equipment",
+      "expense_code_changed": true,
+      "confidence": 0.92,
+      "reasoning": "Kitchen supplies are best mapped to Equipment per current coding rules. Vendor supports a grocery-style office supply purchase.",
+      "comment": "Expense code updated to Equipment for kitchen supplies.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "meal_business",
+      "formatted_description": "Catering/BOD Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Business catering for board meeting with company name is already in standard structure. No receipt available.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "meal_business",
+      "formatted_description": "Catering/BOD Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Business catering for board meeting with company name is already in standard structure. No receipt available.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Office meal should use the exact Working Lunch format only. Removed the attendee name from the description.",
+      "comment": "Adjusted to standard Working Lunch format.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

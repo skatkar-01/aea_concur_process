@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-JAX/CFO Interview/AmEx
+Vendor: Surfside
+Amount: $145.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JAX/CFO Interview Mtg/AmEx",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Car service transaction with deal-related trip format; 'CFO Interview' requires the Mtg suffix. No receipt data was provided to validate route or fare, so this is a formatting-only correction.",
+  "comment": "Adjusted description to standard format by adding Mtg to CFO Interview. No receipt details were available to cross-check the ride or amount.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JAX/CFO Interview Mtg/AmEx",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Car service transaction with deal-related trip format; 'CFO Interview' requires the Mtg suffix. No receipt data was provided to validate route or fare, so this is a formatting-only correction.",
+  "comment": "Adjusted description to standard format by adding Mtg to CFO Interview. No receipt details were available to cross-check the ride or amount.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

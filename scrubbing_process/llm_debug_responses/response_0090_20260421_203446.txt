@@ -1,0 +1,241 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/BOD Mtg/RED
+Vendor: United
+Amount: $1849.66
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "flight",
+      "formatted_description": "RT:EWR-FRA/LHR-EWR/BOD Mtg/RED",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Two-leg round trip route with 3 airports, added RT: prefix; description otherwise compliant.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "flight",
+      "formatted_description": "RT:EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Added RT: prefix for round trip; 'Essent' unchanged (assumed deal).",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "flight",
+      "formatted_description": "RT:EWR-FRA/LHR-EWR/IR Mtgs",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Added RT: prefix for round trip route, added Mtgs suffix per completion rules.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "flight",
+      "formatted_description": "DUS-LHR/Mgmt Mtg/Frissam Pumps/Essent",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Corrected deal name spelling from Essentic to Essent; description otherwise compliant.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "car_service",
+      "formatted_description": "Office-Dinner/BOD Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description matches car service format; no changes needed.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "flight",
+      "formatted_description": "DUS-LHR/Mgmt Mtg/Frissam Pumps/Essent",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Corrected deal name spelling from Essentic to Essent; description otherwise compliant.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "flight",
+      "formatted_description": "DUS-LHR/BOD Mtg/RED",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Description format correct and matches vendor flight, no changes needed.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "DUS-LHR/IR Mtgs",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Description format correct; added Mtgs suffix already present.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": true,
+      "confidence": 0.85,
+      "reasoning": "Corrected deal name spelling from Essentic to Essent; expense code forced to Airline per Tkt Fee rule.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": true,
+      "confidence": 0.85,
+      "reasoning": "Expense code corrected to Airline per Tkt Fee rule; description format correct.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": true,
+      "confidence": 0.85,
+      "reasoning": "Expense code corrected to Airline for Tkt Fee transaction; description format correct.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-Office/BOD Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description properly formatted for car service; no changes needed.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "meal_business",
+      "formatted_description": "Travel Meal/Banker Mtgs/Monroe",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Added Mtgs suffix to bare purpose word 'Banker' and formatted as Travel Meal.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "info_services",
+      "formatted_description": "Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe",
+      "description_changed": false,
+      "expense_code": "Info Services",
+      "expense_code_changed": true,
+      "confidence": 0.85,
+      "reasoning": "Expense code changed from Info Services (corrected spelling and plural), description matches format.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Description properly formatted with 'Banker Mtgs' & 'BOD Mtg', no change needed.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "No changes needed; description properly formatted with purpose suffixes.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "No change; consistent purpose words and format.",
+      "flags": ["No receipt available"],
+      "is_refund": false,
+      "error": ""
+    },
+   
+
+================================================================================
+PARSING ERROR
+================================================================================
+Batch API Error: Missing batch result for index 18
+

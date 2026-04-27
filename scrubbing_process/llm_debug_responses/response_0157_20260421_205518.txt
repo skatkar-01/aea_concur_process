@@ -1,0 +1,49 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-JAX/Strategy
+Vendor: Surfside
+Amount: $145.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JAX/Strategy",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Car service from home to airport, but the description is not in one of the exact allowed home/office formats and the receipt is missing, so the route cannot be validated. 'Strategy' is a bare purpose word that would normally require Mtg, but car service home/office formats are fixed strings and this is not a deal-related ride.",
+  "comment": "No receipt available to confirm the route or timing. Description is not in a standard home/office car service format, so please review for proper car-service coding and whether the trip was home-to-airport transportation.",
+  "flags": [
+    "No receipt available",
+    "Car service home/office descriptions must use an exact allowed format; this one is non-standard",
+    "Missing timestamp prevents validation of whether this should be Early Arrival, Work Late, or Weekend"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-JAX/Strategy",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Car service from home to airport, but the description is not in one of the exact allowed home/office formats and the receipt is missing, so the route cannot be validated. 'Strategy' is a bare purpose word that would normally require Mtg, but car service home/office formats are fixed strings and this is not a deal-related ride.",
+  "comment": "No receipt available to confirm the route or timing. Description is not in a standard home/office car service format, so please review for proper car-service coding and whether the trip was home-to-airport transportation.",
+  "flags": [
+    "No receipt available",
+    "Car service home/office descriptions must use an exact allowed format; this one is non-standard",
+    "Missing timestamp prevents validation of whether this should be Early Arrival, Work Late, or Weekend"
+  ],
+  "is_refund": false,
+  "error": ""
+}

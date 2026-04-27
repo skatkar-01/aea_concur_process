@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Jamba Juice
+Amount: $15.30
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/Strategy Mtg","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg' for travel meal formatting. Receipt data is absent, but the transaction details are sufficient to classify this as a travel meal.","comment":"Slightly adjusted description — added Mtg to Strategy. No receipt available.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg' for travel meal formatting. Receipt data is absent, but the transaction details are sufficient to classify this as a travel meal.",
+  "comment": "Slightly adjusted description \u2014 added Mtg to Strategy. No receipt available.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

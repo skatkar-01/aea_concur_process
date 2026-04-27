@@ -1,0 +1,246 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Cancellation Fee/Mtg-Dinner/Mgmt Mtg/Monroe
+Vendor: Uber
+Amount: $5.20
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "car_service",
+      "formatted_description": "Cancellation Fee/Mtg-Dinner/Mgmt Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Description is compliant and reasonable for a cancellation fee car service charge.",
+      "flags": ["Project 3369 not listed in dept rules, verify project/department alignment"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "info_services",
+      "formatted_description": "Inflight Wifi/Mgmt Mtg/Monroe",
+      "description_changed": true,
+      "expense_code": "Info Services",
+      "expense_code_changed": true,
+      "confidence": 0.9,
+      "reasoning": "Corrected 'InFlight Wifi' to 'Inflight Wifi' and updated expense code from Info Services to standard.",
+      "flags": ["Inflight Wifi business purpose should be verified if trip date available"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description well formatted and complete; no changes needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Mgmt Mtg/Monroe",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description and expense code correctly formatted.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "flight",
+      "formatted_description": "RDU-LGA/Agreement Mtg/LRB",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description appropriate; no format issues detected.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/Tkt Fee/RDU-EWR/Mgmt Mtg/Aqualis",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added Refund/ prefix and reordered description to match standard 'Refund/Tkt Fee/route/purpose/deal' format.",
+      "flags": ["No receipt to confirm original charge"],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RDU-LGA/Agreement Mtg/LRB",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description and expense code are consistent with rules.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/RDU-EWR/Mgmt Mtg/Aqualis",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Description already has Refund/ prefix and consistent format.",
+      "flags": ["No receipt to verify original charge"],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "flight",
+      "formatted_description": "RT:EWR-LHR/BOD Mtg/RED",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Removed space after RT: to conform with format 'RT:'.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "flight",
+      "formatted_description": "RT:EWR-LHR/IR Mtgs",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Removed space after RT: and corrected 'Mtgs' abbreviation and added proper slash separator.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-Mtg/Agreement Mtg/LRB",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description format acceptable for car service related to hotel and mtg.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "refund",
+      "formatted_description": "Refund/Exch Tkt/JAX-EWR/Banker Mtgs/Monroe",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Corrected description to refund of exchanged ticket format per rules.",
+      "flags": ["No receipt available to verify original ticket"],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/Exch Tkt/Refund/JAX-EWR/Banker Mtgs/Monroe",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.85,
+      "reasoning": "Reordered description for clarity, added /Exch Tkt to match exchange and ticket fee with refund context.",
+      "flags": ["Unusual combined exchange/refund in one line, verify with admin"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-Conf/Baird T&S Conf",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Description matches permitted format; no transportation text to remove.",
+      "flags": ["Verify timestamps to confirm Home-Office designation"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-Event/Vinson & Elkins Networking Event",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Description plausible for car service with event purpose; no changes necessary.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "info_services",
+      "formatted_description": "Inflight Wifi/Mgmt Mtg/Aqualis",
+      "description_changed": true,
+      "expense_code": "Info Services",
+      "expense_code_changed": true,
+      "confidence": 0.9,
+      "reasoning": "Standardised Inflight Wifi text and updated expense code for info services.",
+      "flags": ["Inflight Wifi business purpose inferred from description; confirm with trip dates if possible"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:EWR-LHR/BOD Mtg/RED",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Corrected space after RT: prefix to align with standards.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:EWR-LHR/IR Mtgs",
+      "description_changed": true,
+      "expense_code":
+
+================================================================================
+PARSING ERROR
+================================================================================
+Batch API Error: Batch JSON unrecoverable after repair attempt
+

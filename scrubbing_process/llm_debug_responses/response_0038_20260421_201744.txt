@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: InFlight Wifi/Mgmt Mtg/Aqualis
+Vendor: United
+Amount: $8.00
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"info_services","formatted_description":"Inflight Wifi","description_changed":true,"expense_code":"Info Services","expense_code_changed":false,"confidence":0.93,"reasoning":"This is an inflight wifi charge, so the exact description should be 'Inflight Wifi'. Receipt data is blank, but the trip date and vendor support the classification; business purpose was present as Mgmt Mtg and no further inference was needed.","comment":"Updated to exact Inflight Wifi format. No receipt details were provided to cross-check the charge amount or trip, but the description clearly indicates inflight wifi.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an inflight wifi charge, so the exact description should be 'Inflight Wifi'. Receipt data is blank, but the trip date and vendor support the classification; business purpose was present as Mgmt Mtg and no further inference was needed.",
+  "comment": "Updated to exact Inflight Wifi format. No receipt details were provided to cross-check the charge amount or trip, but the description clearly indicates inflight wifi.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

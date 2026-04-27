@@ -19,6 +19,7 @@ Excel theme:
   - Color-coded reconciliation status (matched=green, unmatched=red)
 """
 
+import json
 from datetime import datetime
 from pathlib import Path
 
@@ -149,6 +150,8 @@ def _data_row(ws, row: int, values: list, alt: bool = False,
     for i, val in enumerate(values):
         col = col_start + i
         v   = val if val not in (None, "null", "NULL", "") else "—"
+        if isinstance(v, (list, dict)):
+            v = json.dumps(v, ensure_ascii=False)
         c   = ws.cell(row=row, column=col, value=v)
         c.fill      = _fill(row_fills.get(col, bg) if row_fills else bg)
         c.font      = _body_font()
@@ -314,13 +317,13 @@ def _build_transactions(wb: Workbook, concur_record) -> None:
 def _build_receipts(wb: Workbook, concur_record) -> None:
     """
     Build Receipts sheet with all extracted receipts/invoices.
-    Columns: receipt_id, order_id, date, vendor, amount, detailed summary.
+    Columns: receipt_id, order_id, date, vendor, amount, details, detailed summary.
     """
     rcps = concur_record.receipts
     ws = wb.create_sheet("Receipts")
     _sheet_banner(ws, f"Receipts  ({len(rcps)} records)")
     
-    cols = ["receipt_id", "order_id", "date", "vendor", "amount", "summary"]
+    cols = ["receipt_id", "order_id", "date", "vendor", "amount", "line_items", "details"]
     _col_headers(ws, 3, cols)
     
     for i, rcp in enumerate(rcps, 1):
@@ -329,6 +332,7 @@ def _build_receipts(wb: Workbook, concur_record) -> None:
     
     _autofit(ws, mx=35)
     ws.column_dimensions[get_column_letter(6)].width = 58
+    ws.column_dimensions[get_column_letter(7)].width = 80
     ws.freeze_panes = ws.cell(row=4, column=1)
 
 
@@ -345,7 +349,7 @@ def _build_reconciliation(wb: Workbook, concur_record) -> None:
     _sheet_banner(ws, 
         f"Reconciliation  —  Matched: {matched_ct}   Unmatched: {unmatched_ct}")
     
-    cols = ["transaction_id", "receipt_id", "match_status", "confidence"]
+    cols = ["transaction_id", "receipt_id", "match_status", "confidence", "comment"]
     _col_headers(ws, 3, cols)
     
     # Color mapping: (status, confidence) → background color
@@ -360,7 +364,7 @@ def _build_reconciliation(wb: Workbook, concur_record) -> None:
         cf = (rec.confidence or "").lower()
         bg = status_map.get((ms, cf), UNMATCHED_BG if ms == "unmatched" else MATCHED_BG)
         
-        _data_row(ws, 3 + i, [rec.transaction_id, rec.receipt_id, rec.match_status, rec.confidence],
+        _data_row(ws, 3 + i, [rec.transaction_id, rec.receipt_id, rec.match_status, rec.confidence, rec.comment],
                   row_fills={1: bg, 2: bg, 3: bg, 4: bg})
     
     _autofit(ws)

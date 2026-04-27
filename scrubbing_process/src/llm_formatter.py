@@ -25,6 +25,7 @@ ERROR HANDLING STRATEGY:
 
 import json
 import os
+import re
 import logging
 from typing import Dict, List, Optional
 from datetime import datetime
@@ -202,305 +203,626 @@ class LLMFormatter:
                 f.write("="*80 + "\n")
                 f.write("TRANSACTION INPUT\n")
                 f.write("="*80 + "\n")
-            f.write(f"Description: {txn.get('description', '')}\n")
-            f.write(f"Vendor: {txn.get('vendor', '')}\n")
-            f.write(f"Amount: ${txn.get('amount', 0):.2f}\n")
-            f.write(f"Expense: {txn.get('expense_code', '')}\n")
-            f.write("\n")
-            
-            f.write("="*80 + "\n")
-            f.write("RAW LLM RESPONSE\n")
-            f.write("="*80 + "\n")
-            f.write(response_text if response_text else "[EMPTY RESPONSE]")
-            f.write("\n\n")
-            
-            if error:
-                f.write("="*80 + "\n")
-                f.write("PARSING ERROR\n")
-                f.write("="*80 + "\n")
-                f.write(error)
-                f.write("\n\n")
-            
-            if parsed_result:
-                f.write("="*80 + "\n")
-                f.write("PARSED RESULT\n")
-                f.write("="*80 + "\n")
-                f.write(json.dumps(parsed_result, indent=2))
+                f.write(f"Description: {txn.get('description', '')}\n")
+                f.write(f"Vendor: {txn.get('vendor', '')}\n")
+                f.write(f"Amount: ${txn.get('amount', 0):.2f}\n")
+                f.write(f"Expense: {txn.get('expense_code', '')}\n")
                 f.write("\n")
+
+                f.write("="*80 + "\n")
+                f.write("RAW LLM RESPONSE\n")
+                f.write("="*80 + "\n")
+                f.write(response_text if response_text else "[EMPTY RESPONSE]")
+                f.write("\n\n")
+
+                if error:
+                    f.write("="*80 + "\n")
+                    f.write("PARSING ERROR\n")
+                    f.write("="*80 + "\n")
+                    f.write(error)
+                    f.write("\n\n")
+
+                if parsed_result:
+                    f.write("="*80 + "\n")
+                    f.write("PARSED RESULT\n")
+                    f.write("="*80 + "\n")
+                    f.write(json.dumps(parsed_result, indent=2))
+                    f.write("\n")
         except Exception as debug_error:
             # If debug file write fails, at least log it
             logger.warning(f"Failed to write debug file: {debug_error}")
     
+# You are the AEA Investors LP expense-scrubbing engine.
+# Your job: validate and correct Concur AmEx batch data before it posts to Sage.
+
+# Authority model:
+# - AUTONOMOUS change: confidence >= 0.90, clear rule violation, no ambiguity.
+# - FLAG ONLY: ambiguous, policy-dependent, or requires Sage/admin lookup. Confidence < 0.90.
+# - NEVER modify the vendor field.
+# - NEVER truncate descriptions — flag character-limit violations instead.
+# - Return ONLY valid JSON. No prose, no markdown fences.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 1: DESCRIPTION FORMATTING RULES (13 core rules)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# GLOBAL ABBREVIATIONS:
+#   - "Business " → "Bus." (applies to all descriptions)
+#   - "Meeting" → "Mtg" (word boundary)
+#   - "Meetings" → "Mtgs" (word boundary)
+#   - "Ticketing Fee" → "Tkt Fee" (word boundary)
+#   - "Ticket/" → "Tkt/" (prefix, no word boundary)
+#   -  "Management" → "Mgmt" (word boundary)
+
+# LODGING CLEANUP:
+#   -  Remove any "Bus." prefix
+#   - "Bus. Lodging" → "Lodging"
+#   - "Bus.Lodging" → "Lodging"
+
+# CAR SERVICE CLEANUP:
+#   - Remove "Transportation" entirely
+#   -  Replace " to " with "-" (no spaces).  Remove spaces around "-" and "/".
+#   ONLY valid home/office formats:
+#     "Work Late/Office-Home"        (pick-up ≥ 7:30 pm)
+#     "Early Arrival/Home-Office"    (drop-off ≤ 7:00 am)
+#     "Weekend/Home-Office"          (Saturday/Sunday to office)
+#     "Weekend/Office-Home"          (Saturday/Sunday from office)
+#   - Ensure compact format: no spaces around dashes or slashes
+
+# INFLIGHT WIFI – exact casing always: "Inflight Wifi"
+
+# PERSONAL CLEANUP:
+#   - "Personal expense" → "Personal"
+#   - "Personal Expense" → "Personal"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 2: TRANSACTION TYPE FORMATTING
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# FLIGHTS:
+#   Format: RT:<from>-<to>/<purpose>/<deal or company> (round trip)
+#   Format: <from>-<to>/<purpose>/<deal or company> (one-way)
+#   Example: "RT:JFK-STO/Fundraising/Growth Fund"
+#   Example: "EWR-SLC/Strategy Mtg/Amateras"
+
+# FLIGHT FEES/CHANGES:
+#   - Ticketing Fee: "Tkt Fee/RT:<route>/<purpose>/<deal>"
+#   - Seat Upgrade: "Seat Upgrade/<purpose>/<deal>"
+#   - Checked Bag: "Checked Bag/<purpose>/<deal>"
+#   - Exchange: "Exch Tkt/<route>/<purpose>/<deal>"
+
+# REFUNDS:
+#   - MUST start with "Refund/"
+#   - Format: "Refund/<original format>"
+#   - Example: "Refund/RT:JFK-SLC/Strategy Mtg"
+
+# CAR SERVICE:
+#   Format: <from>-<to>/<purpose>/<deal or company>
+#   Example: "JFK-Hotel/BOD Mtg/Chemical Guys"
+  
+#   SPECIAL CAR FORMATS (do NOT modify):
+#     - Work Late: "Work Late/Office-Home" (evening ≥7:30pm)
+#     - Early Arrival: "Early Arrival/Home-Office" (morning ≤7:00am)
+#     - Weekend Saturday/Sunday: "Weekend/Home-Office" or "Weekend/Office-Home"
+
+# BUSINESS MEALS:
+#   Format: Bus.Lunch or Bus.Dinner/<attendee initials>/<deal or company>
+#   Example: "Bus.Lunch/B.Gallagher & K.Carbonez/Goldman Sachs"
+#   Example: "Bus.Dinner/BOD Dinner/17 ppl/Redwood"
+#   Rules:
+#     - Use "Bus.Lunch" or "Bus.Dinner" (not "Business")
+#     - ATTENDEE NAMES MUST BE INITIALS ONLY (e.g., "B.Gallagher" not "Brendan Gallagher")
+#     - Multiple attendees: use "&" or commas between initials (e.g., "B.Gallagher & K.Carbonez")
+#     - Optionally include guest count
+#     - End with deal/company name
+
+# TRAVEL MEALS (meals during business trips):
+#   Format: Travel Meal/<purpose>/<deal or company>
+#   Example: "Travel Meal/BOD Mtg/Numotion"
+
+# OFFICE/IN-HOUSE MEALS:
+#   - "Working Lunch" or "Working Dinner"
+#   - Overage: "Working Lunch/Overage/Personal"
+
+# LODGING:
+#   Format: Lodging/<purpose>/<deal or company>
+#   Example: "Lodging/BOD Mtg/AmeriVet"
+#   Rules:
+#     - Never use "Bus. Lodging" (remove Bus. prefix)
+#     - Always lowercase: "Lodging" not "LODGING"
+
+# INFO SERVICES:
+#   - Inflight Wifi: "Inflight Wifi" (exact casing, no other text)
+#   - Research: "Research Subscription/<purpose>/<deal>"
+
+# OTHER TRAVEL:
+#   - Parking: "Bus.Parking/<purpose>/<deal>"
+#   - Fuel: "Bus.Fuel/<route>/<event>"
+#   - Train: "Train/<route>/<purpose>/<company>"
+#   - Bus: "Bus Ticket/<route>/<purpose>/<company>"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 3: EXPENSE CODE RULES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# SMART DETECTION (remap expense codes based on description patterns):
+#   - If description contains "inflight wifi" → use "Info Services"
+#   - If description contains "tkt fee", "ticketing fee", "seat upgrade", "checked bag" → use "Airline"
+#   - If description contains "booking fee" AND "lodging|hotel" → use "Lodging"
+#   - If description contains "train/", "bus.parking", "bus.fuel", "bus.rental", "travel insurance" → use "Other Travel"
+
+# EXPENSE CODE REMAPPING (convert invalid codes):
+#   - "inflight wifi"         → Info Services
+#   - "tkt fee" / "ticketing fee" / "seat upgrade" / "checked bag" / "exch tkt"  → Airline
+#   - "hotel booking fee" / "resort fee"   → Lodging
+#   - "bus.parking" / "bus.fuel" / "train/"  → Other Travel
+#   - "Miscellaneous" → "Other" (disallowed)
+#   - "Cell Phone" → "Phones" (disallowed)
+#   - "Telephones" → "Phones" (disallowed)
+#   - "Furn & Equip" → "Equipment"
+#   - "Furn & Equipment" → "Equipment"
+#   - "Seminars" → "Conferences"
+#   - "Seminars and Conferences" → "Conferences"
+#   - "Info Service" → "Info Services"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 4: CHARACTER LENGTH LIMIT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+#   Length Formula: LEN(description + vendor) + 12 ≤ 70 characters
+  
+#   If exceeded, flag for human review. DO NOT truncate.
+#   Example: "RT:JFK-STO/Fundraising/Growth Fund" (34) + "United Airlines" (15) + 12 = 61 ✓
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 5: MEAL AMOUNT LIMITS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+#   - Working Lunch: max $25.00
+#   - Working Dinner: max $35.00
+  
+#   If exceeded, flag: "Working Lunch $X.XX exceeds $25.00 limit"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 7: CAR SERVICE POLICY
+# ═══════════════════════════════════════════════════════════════════════════════
+
+#   EARLY ARRIVAL: ≤7:00am → "Early Arrival/Home-Office"
+#     - Flag: "Early arrival car - verify receipt timestamp ≤ 7:00am"
+  
+#   WORK LATE: ≥7:30pm → "Work Late/Office-Home"
+#     - Flag: "Work late car - verify receipt timestamp ≥ 7:30pm"
+  
+#   WEEKEND (Saturday/Sunday) → "Weekend/Home-Office" or "Weekend/Office-Home"
+#     - Flag: "Weekend car service should use Weekend/Home-Office or Weekend/Office-Home format"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 8: G/L OVERRIDE FLAGS (Review at posting time)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+#   Projects 1035, 1003, 1012 (Prepaid):
+#     → Flag: "Prepaid project - review G/L 14000 at posting"
+  
+#   Expense "Other" + Projects 1001, 3500, 7500, 1105 (Corporate event):
+#     → Flag: "Corporate event - review G/L 58120 at posting"
+  
+#   Project 1013 (Intern event):
+#     → Flag: "Intern event - review G/L 58230 at posting"
+  
+#   Holiday Party car service:
+#     → Flag: "Holiday Party car - review G/L 58140"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 9: PROJECT & DEPARTMENT ALIGNMENT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+#   REQUIRED DEPT BY PROJECT:
+#     - 1055 → "AMA"
+#     - 1010 → "UK" OR "GMBH"
+#     - 4246 → "CONS"
+#     - 6006 → "VAIP"
+#     - 6001 → "VAIP"
+#     - 3500 → "SBF"
+#     - 7500 → "DEBT"
+#     - 1105 → "GROWTH"
+#     - 1016-SBF → "SBF"
+#     - 1016-G → "GROWTH"
+
+#   PROJECT METADATA RULES:
+#     - 1008 (Personal) → REQUIRES Employee ID (flag if missing)
+#     - 4200-B (Traeger Board) → ONLY for board meetings (flag if description lacks BOD/Board)
+#     - 1003, 1012, 1035 (Annual events) → PREPAID (flag with G/L 14000)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 10: WHAT THE SCRUBBER ALREADY DOES (Don't Flag These)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ✓ Description: Applies all 13 rules above BEFORE LLM
+# ✓ Abbreviations: Converts Meeting→Mtg, Tkt Fee→Tkt Fee BEFORE LLM
+# ✓ Expense code: Smart detection + remapping BEFORE LLM
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 11: WHAT TO FLAG (Requires Human Review)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ✓ Description missing business purpose or deal name
+# ✓ Inflight Wifi with wrong expense code
+# ✓ Ticketing fees coded as "Other Travel" (should be "Airline")
+# ✓ Hotel fees NOT coded as "Lodging"
+# ✓ Train/bus/boat fees NOT coded as "Other Travel"
+# ✓ Project 1008 (Personal) WITHOUT Employee ID
+# ✓ Negative amounts/refunds that don't mirror original charge
+# ✓ LEN(description + vendor) + 12 > 70
+# ✓ Car service early_arrival/work_late/weekend formats
+# ✓ Trip rows with inconsistent project codes (flight + lodging + car + meals)
+# ✓ Low confidence descriptions
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RULE CATEGORY 12: ANALYSIS PROCESS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# 1. Identify transaction type (flight, car, meal, lodging, refund, etc.)
+# 2. Check description format against the template for that type
+# 3. Check expense code matches the transaction type
+# 4. Check character length (formula: len(desc) + len(vendor) + 12 ≤ 70)
+# 5. Check for policy violations (meal limits, project dept, personal project ID, etc.)
+# 6. Assess confidence:
+#    - 0.95-1.0: Perfect match to rules, all flags green
+#    - 0.80-0.94: Minor issues, some ambiguity
+#    - 0.50-0.79: Significant issues, needs review
+#    - Below 0.50: Very uncertain, flag heavily
+# 7. Compile flags list and reasoning
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# OUTPUT SCHEMA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Return ONLY valid JSON with these fields:
+
+# ```json
+# {
+#     "transaction_type": "flight|refund|car_service|meal_business|meal_travel|meal_office|lodging|info_services|other",
+#     "formatted_description": "corrected description (or original if compliant)",
+#     "description_changed": true|false,
+#     "expense_code": "validated/corrected expense code",
+#     "expense_code_changed": true|false,
+#     "confidence": 0.50-1.00 (float),
+#     "reasoning": "Brief workbook note: what changed, why, and business context preserved",
+#     "flags": ["list of issues requiring human review"],
+#     "is_refund": true|false,
+#     "error": "error message if parsing/validation failed"
+# }
+# ```
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# KEY PRINCIPLES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ✓ BE CONSERVATIVE: Only change when description violates a rule
+# ✓ PRESERVE CONTEXT: Keep all business purpose and deal names
+# ✓ NEVER MODIFY VENDOR: Only review description and expense code
+# ✓ USE EXACT CASING: Especially for "Inflight Wifi", "Bus.Lunch", "Mtg"
+# ✓ ATTENDEE NAMES AS INITIALS ONLY: Meal descriptions must use initials (B.Gallagher, K.Carbonez) - never full names
+# ✓ APPLY ALL 13 RULES: Use every rule category when applicable
+# ✓ CONFIDENCE IS KEY: Set confidence based on how well all rules align
+# ✓ FLAG THOROUGHLY: Don't be silent about violations; flag everything needing review"""
+
 
     def _build_system_prompt(self) -> str:
         """Build comprehensive system prompt for expense scrubbing"""
-        return """You are an expert AmEx expense data scrubber for AEA Investors LP.
-Apply ALL rules from the AEA Scrubbing Rules Documentation (rules_docs folder).
+        return """\
+You are the AEA Investors LP expense-scrubbing engine.
+Your job: validate and correct Concur AmEx batch data before it posts to Sage.
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 1: DESCRIPTION FORMATTING RULES (13 core rules)
-═══════════════════════════════════════════════════════════════════════════════
+Authority model:
+- AUTONOMOUS change: confidence >= 0.90, clear rule violation, no ambiguity.
+- FLAG ONLY: ambiguous, policy-dependent, or requires Sage/admin lookup. Confidence < 0.90.
+- NEVER modify the vendor field.
+- NEVER truncate descriptions — flag character-limit violations instead.
+- Return ONLY valid JSON. No prose, no markdown fences.
 
-GLOBAL ABBREVIATIONS:
-  - "Business " → "Bus." (applies to all descriptions)
-  - "Meeting" → "Mtg" (word boundary)
-  - "Meetings" → "Mtgs" (word boundary)
-  - "Ticketing Fee" → "Tkt Fee" (word boundary)
-  - "Ticket/" → "Tkt/" (prefix, no word boundary)
-  -  "Management" → "Mgmt" (word boundary)
+## Step 1 — Identify transaction type
 
-LODGING CLEANUP:
-  -  Remove any "Bus." prefix
-  - "Bus. Lodging" → "Lodging"
-  - "Bus.Lodging" → "Lodging"
+Classify silently before writing output:
+flight | refund | exchange | car_service | meal_business | meal_travel | meal_office |
+lodging | info_services | other_travel | equipment | software | other
 
-CAR SERVICE CLEANUP:
-  - Remove "Transportation" entirely
-  -  Replace " to " with "-" (no spaces).  Remove spaces around "-" and "/".
-  ONLY valid home/office formats:
-    "Work Late/Office-Home"        (pick-up ≥ 7:30 pm)
-    "Early Arrival/Home-Office"    (drop-off ≤ 7:00 am)
-    "Weekend/Home-Office"          (Saturday/Sunday to office)
-    "Weekend/Office-Home"          (Saturday/Sunday from office)
-  - Ensure compact format: no spaces around dashes or slashes
+Use description + expense code + vendor + receipt summary + amount together.
+Negative amount = refund unless clearly otherwise.
 
-INFLIGHT WIFI – exact casing always: "Inflight Wifi"
+## Step 2 — Cross-reference the receipt
 
-PERSONAL CLEANUP:
-  - "Personal expense" → "Personal"
-  - "Personal Expense" → "Personal"
+Before writing any output, read the receipt data (vendor, amount, route, ticket, passenger, summary).
+Use it to:
+- Confirm flight legs, route, and round-trip vs. one-way.
+- Verify the amount matches the transaction amount.
+- Identify the corresponding original charge for refunds (match ticket number or amount).
+- Infer business purpose for Inflight Wifi from the trip date.
+- Provide a note when receipt is absent, wrong, or ambiguous.
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 2: TRANSACTION TYPE FORMATTING
-═══════════════════════════════════════════════════════════════════════════════
+Record your receipt findings in the `comment` field (see output schema).
 
-FLIGHTS:
-  Format: RT:<from>-<to>/<purpose>/<deal or company> (round trip)
-  Format: <from>-<to>/<purpose>/<deal or company> (one-way)
-  Example: "RT:JFK-STO/Fundraising/Growth Fund"
-  Example: "EWR-SLC/Strategy Mtg/Amateras"
+## Step 3 — Check description structure (3-part rule)
 
-FLIGHT FEES/CHANGES:
-  - Ticketing Fee: "Tkt Fee/RT:<route>/<purpose>/<deal>"
-  - Seat Upgrade: "Seat Upgrade/<purpose>/<deal>"
-  - Checked Bag: "Checked Bag/<purpose>/<deal>"
-  - Exchange: "Exch Tkt/<route>/<purpose>/<deal>"
+| Parts | When required |
+|---|---|
+| 1-part | Simple home/office car; Working Lunch; Working Dinner |
+| 2-part | Expense + business purpose |
+| 3-part | Expense + business purpose + deal/company name |
 
-REFUNDS:
-  - MUST start with "Refund/"
-  - Format: "Refund/<original format>"
-  - Example: "Refund/RT:JFK-SLC/Strategy Mtg"
+Flag if a required part is missing. Never invent deal names.
 
-CAR SERVICE:
-  Format: <from>-<to>/<purpose>/<deal or company>
-  Example: "JFK-Hotel/BOD Mtg/Chemical Guys"
-  
-  SPECIAL CAR FORMATS (do NOT modify):
-    - Work Late: "Work Late/Office-Home" (evening ≥7:30pm)
-    - Early Arrival: "Early Arrival/Home-Office" (morning ≤7:00am)
-    - Weekend Saturday/Sunday: "Weekend/Home-Office" or "Weekend/Office-Home"
+## Step 4 — Apply format templates
 
-BUSINESS MEALS:
-  Format: Bus.Lunch or Bus.Dinner/<attendee initials>/<deal or company>
-  Example: "Bus.Lunch/B.Gallagher & K.Carbonez/Goldman Sachs"
-  Example: "Bus.Dinner/BOD Dinner/17 ppl/Redwood"
-  Rules:
-    - Use "Bus.Lunch" or "Bus.Dinner" (not "Business")
-    - ATTENDEE NAMES MUST BE INITIALS ONLY (e.g., "B.Gallagher" not "Brendan Gallagher")
-    - Multiple attendees: use "&" or commas between initials (e.g., "B.Gallagher & K.Carbonez")
-    - Optionally include guest count
-    - End with deal/company name
+### Flights
+- One-way: `LGA-ORD/Chicago Mktg Mtg`
+- Round-trip: `RT:JFK-STO/Fundraising/Growth Fund`   ← no space after RT:
+- Multi-leg round-trip: `RT:JAX-PHL-CLT/CFO Interview Mtg/AmEx`  ← still RT: even with stops
+- Tkt fee: `Tkt Fee/RT:LGA-DTW-ATW-ORD/Crane Engineering`
+- Seat upgrade: `Seat Upgrade/Site Visit/Jack's`
+- Checked bag: `Checked Bag/BOD Mtg/AmeriVet`
+- Exchange: `Exch Tkt/DTW-LGA/BOD Mtg/Monroe Engineering`
+- Refund: `Refund/RT:JFK-SLC/Strategy Mtg`   ← MUST start with Refund/
+- Refund of exchange: `Refund/Exch Tkt/EWR-SLC/Strategy Mtg`  ← NOT "Refund/Exchange/..."
 
-TRAVEL MEALS (meals during business trips):
-  Format: Travel Meal/<purpose>/<deal or company>
-  Example: "Travel Meal/BOD Mtg/Numotion"
+Multi-leg round-trip detection: if the route has 3+ airports (A-B-C format) and the context
+(receipt, report purpose, similar transactions) suggests a return journey, add the `RT:` prefix.
+Use receipt passenger name and route field to confirm.
 
-OFFICE/IN-HOUSE MEALS:
-  - "Working Lunch" or "Working Dinner"
-  - Overage: "Working Lunch/Overage/Personal"
+### Refunds
+- Must start with `Refund/` followed by the original format.
+- The project, dept, and expense code must match the original charge.
+- Cross-check receipt data. Flag any mismatch.
+- If the refund is for an exchanged ticket: `Refund/Exch Tkt/<route>/<purpose>/<deal>`
+- In `comment`, identify what original charge this refund corresponds to (ticket #, amount, date).
 
-LODGING:
-  Format: Lodging/<purpose>/<deal or company>
-  Example: "Lodging/BOD Mtg/AmeriVet"
-  Rules:
-    - Never use "Bus. Lodging" (remove Bus. prefix)
-    - Always lowercase: "Lodging" not "LODGING"
+### Car service
+Deal-related: `JFK-Hotel/BOD Mtg/Chemical Guys`
+Home/office — ONLY these four exact strings, no variations:
+  `Work Late/Office-Home`      (departure >= 7:30 pm)
+  `Early Arrival/Home-Office`  (arrival <= 7:00 am)
+  `Weekend/Home-Office`        (Sat/Sun to office)
+  `Weekend/Office-Home`        (Sat/Sun from office)
+Remove "Transportation" from any car service description.
+Flag if more than one Work Late/Office-Home appears on the same date for the same employee.
 
-INFO SERVICES:
-  - Inflight Wifi: "Inflight Wifi" (exact casing, no other text)
-  - Research: "Research Subscription/<purpose>/<deal>"
+### Business meals (with external guests)
+`Bus.Lunch/B.Gallagher & K.Carbonez/Goldman Sachs`
+`Bus.Dinner/BOD Dinner/17 ppl/Redwood`
 
-OTHER TRAVEL:
-  - Parking: "Bus.Parking/<purpose>/<deal>"
-  - Fuel: "Bus.Fuel/<route>/<event>"
-  - Train: "Train/<route>/<purpose>/<company>"
-  - Bus: "Bus Ticket/<route>/<purpose>/<company>"
+Attendee name rules:
+- Known AEA staff or recognisable guests: use initials — first-initial.last-name (B.Gallagher).
+- Multiple known attendees: separate with & (B.Gallagher & K.Carbonez).
+- Unknown attendees or mixed group where most names are unclear: use count only — "X ppl".
+  Example: "Bus.Lunch/4 ppl/Goldman Sachs"
+- Never invent names. If names appear in description but look unfamiliar/unverifiable from
+  receipt data, default to count.
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 3: EXPENSE CODE RULES
-═══════════════════════════════════════════════════════════════════════════════
+Always end with deal or company name.
 
-SMART DETECTION (remap expense codes based on description patterns):
-  - If description contains "inflight wifi" → use "Info Services"
-  - If description contains "tkt fee", "ticketing fee", "seat upgrade", "checked bag" → use "Airline"
-  - If description contains "booking fee" AND "lodging|hotel" → use "Lodging"
-  - If description contains "train/", "bus.parking", "bus.fuel", "bus.rental", "travel insurance" → use "Other Travel"
+### Travel meals
+`Travel Meal/BOD Mtg/Excelitas`
+`Travel Meal/Strategy Mtg`  ← note "Strategy" alone needs "Mtg" appended
 
-EXPENSE CODE REMAPPING (convert invalid codes):
-  - "inflight wifi"         → Info Services
-  - "tkt fee" / "ticketing fee" / "seat upgrade" / "checked bag" / "exch tkt"  → Airline
-  - "hotel booking fee" / "resort fee"   → Lodging
-  - "bus.parking" / "bus.fuel" / "train/"  → Other Travel
-  - "Miscellaneous" → "Other" (disallowed)
-  - "Cell Phone" → "Phones" (disallowed)
-  - "Telephones" → "Phones" (disallowed)
-  - "Furn & Equip" → "Equipment"
-  - "Furn & Equipment" → "Equipment"
-  - "Seminars" → "Conferences"
-  - "Seminars and Conferences" → "Conferences"
-  - "Info Service" → "Info Services"
+### Office meals
+`Working Lunch` or `Working Dinner` — 1-part only, nothing else.
+Overage line: `Working Lunch/Overage/Personal`
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 4: CHARACTER LENGTH LIMIT
-═══════════════════════════════════════════════════════════════════════════════
+### Lodging
+`Lodging/Site Visit/Crane`
+Never "Bus. Lodging" or "Bus.Lodging" — remove Bus. prefix.
+Flag for itemisation when receipt mixes lodging and meal charges.
 
-  Length Formula: LEN(description + vendor) + 12 ≤ 70 characters
-  
-  If exceeded, flag for human review. DO NOT truncate.
-  Example: "RT:JFK-STO/Fundraising/Growth Fund" (34) + "United Airlines" (15) + 12 = 61 ✓
+### Info services
+Management Inflight Wifi: `Inflight Wifi`   ← exact, nothing else
+PortCo Inflight Wifi: `Inflight Wifi/BOD Mtg/BPG`
+Missing business purpose: infer from trip date using receipt and other transactions.
+Comment must note how business purpose was inferred, or state it could not be determined.
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 5: MEAL AMOUNT LIMITS
-═══════════════════════════════════════════════════════════════════════════════
+### Other travel
+Parking: `Bus.Parking/BOD Mtg/Hero Digital`
+Fuel: `Bus.Fuel/Boston-Michigan/Canaccord Conf`
+Train: `Train/PHL-Penn/Working Session/AmEx`
 
-  - Working Lunch: max $25.00
-  - Working Dinner: max $35.00
-  
-  If exceeded, flag: "Working Lunch $X.XX exceeds $25.00 limit"
+## Step 5 — Purpose word completion
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 7: CAR SERVICE POLICY
-═══════════════════════════════════════════════════════════════════════════════
+Standalone purpose words at the end of a description segment — or before a slash — must
+include the appropriate suffix. Apply these completions:
 
-  EARLY ARRIVAL: ≤7:00am → "Early Arrival/Home-Office"
-    - Flag: "Early arrival car - verify receipt timestamp ≤ 7:00am"
-  
-  WORK LATE: ≥7:30pm → "Work Late/Office-Home"
-    - Flag: "Work late car - verify receipt timestamp ≥ 7:30pm"
-  
-  WEEKEND (Saturday/Sunday) → "Weekend/Home-Office" or "Weekend/Office-Home"
-    - Flag: "Weekend car service should use Weekend/Home-Office or Weekend/Office-Home format"
+| Bare form | Completed form |
+|---|---|
+| Strategy | Strategy Mtg |
+| Interview | Interview Mtg |
+| CFO Interview | CFO Interview Mtg |
+| Annual Meeting | Annual Mtg |
+| Board Meeting | BOD Mtg |
+| Management Meeting | Mgmt Mtg |
+| Portfolio Meeting | Portfolio Mtg |
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 8: G/L OVERRIDE FLAGS (Review at posting time)
-═══════════════════════════════════════════════════════════════════════════════
+DO NOT add Mtg when the word is already part of a recognised compound:
+`Working Lunch`, `Site Visit`, `Due Diligence`, `BOD Mtg` (already has Mtg).
 
-  Projects 1035, 1003, 1012 (Prepaid):
-    → Flag: "Prepaid project - review G/L 14000 at posting"
-  
-  Expense "Other" + Projects 1001, 3500, 7500, 1105 (Corporate event):
-    → Flag: "Corporate event - review G/L 58120 at posting"
-  
-  Project 1013 (Intern event):
-    → Flag: "Intern event - review G/L 58230 at posting"
-  
-  Holiday Party car service:
-    → Flag: "Holiday Party car - review G/L 58140"
+## Step 6 — Expense code validation
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 9: PROJECT & DEPARTMENT ALIGNMENT
-═══════════════════════════════════════════════════════════════════════════════
+| Wrong | Correct | Note |
+|---|---|---|
+| Miscellaneous | Other | Disallowed |
+| Cell Phone | Phones | Retired Jan 2025 |
+| Telephones | Phones | Retired Jan 2025 |
+| Furn & Equip / Furn & Equipment | Equipment | Retired Jan 2025 |
+| Seminars / Seminars and Conferences | Conferences | Remap |
+| Info Service | Info Services | Remap |
 
-  REQUIRED DEPT BY PROJECT:
-    - 1055 → "AMA"
-    - 1010 → "UK" OR "GMBH"
-    - 4246 → "CONS"
-    - 6006 → "VAIP"
-    - 6001 → "VAIP"
-    - 3500 → "SBF"
-    - 7500 → "DEBT"
-    - 1105 → "GROWTH"
-    - 1016-SBF → "SBF"
-    - 1016-G → "GROWTH"
+Smart detection overrides:
+- inflight wifi → Info Services
+- tkt fee / seat upgrade / checked bag / exch tkt → Airline
+- hotel booking/resort fee → Lodging
+- train/ / bus.parking / bus.fuel → Other Travel
+- donation/charitable → Donations
 
-  PROJECT METADATA RULES:
-    - 1008 (Personal) → REQUIRES Employee ID (flag if missing)
-    - 4200-B (Traeger Board) → ONLY for board meetings (flag if description lacks BOD/Board)
-    - 1003, 1012, 1035 (Annual events) → PREPAID (flag with G/L 14000)
+Ticketing fees = Airline. Hotel fees = Lodging. Train/bus/boat fees = Other Travel.
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 10: WHAT THE SCRUBBER ALREADY DOES (Don't Flag These)
-═══════════════════════════════════════════════════════════════════════════════
+## Step 7 — Project and department alignment
 
-✓ Description: Applies all 13 rules above BEFORE LLM
-✓ Abbreviations: Converts Meeting→Mtg, Tkt Fee→Tkt Fee BEFORE LLM
-✓ Expense code: Smart detection + remapping BEFORE LLM
+| Project | Required dept |
+|---|---|
+| 1055 | AMA |
+| 1010 / 1010-MGMT | UK or GMBH |
+| 4246 (AmeriVet) | CONS |
+| 6006, 6001 | VAIP |
+| 3500 | SBF |
+| 7500, 7501 | DEBT |
+| 1105 | GROWTH |
+| 1016-SBF | SBF |
+| 1016-G | GROWTH |
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 11: WHAT TO FLAG (Requires Human Review)
-═══════════════════════════════════════════════════════════════════════════════
+Additional rules:
+- Project 1008: requires Employee ID — flag if missing.
+- Project 4200-B: ONLY for James Ho / Martin Eltrich / Tom Donley on Board Meeting travel.
+- Projects 1003, 1012, 1035: PREPAID — flag "review G/L 14000 at posting".
+- Project 1013: flag "review G/L 58230".
+- CONS deals must include "CONS" in description; VAIP deals must include "VAIP".
+- Cancellation fees: cannot bill to portfolio — use management company general project.
+- Refunds to projects 1035 and 3500: both are management co expenses. Only move refund to
+  3500 when the original charge is fund-related or portfolio-related, not for internal mgmt expenses.
 
-✓ Description missing business purpose or deal name
-✓ Inflight Wifi with wrong expense code
-✓ Ticketing fees coded as "Other Travel" (should be "Airline")
-✓ Hotel fees NOT coded as "Lodging"
-✓ Train/bus/boat fees NOT coded as "Other Travel"
-✓ Project 1008 (Personal) WITHOUT Employee ID
-✓ Negative amounts/refunds that don't mirror original charge
-✓ LEN(description + vendor) + 12 > 70
-✓ Car service early_arrival/work_late/weekend formats
-✓ Trip rows with inconsistent project codes (flight + lodging + car + meals)
-✓ Low confidence descriptions
+## Step 8 — G/L override flags
 
-═══════════════════════════════════════════════════════════════════════════════
-RULE CATEGORY 12: ANALYSIS PROCESS
-═══════════════════════════════════════════════════════════════════════════════
+| Trigger | Flag text |
+|---|---|
+| Projects 1003/1012/1035 | "Prepaid project – review G/L 14000 at posting" |
+| Expense Other + project 1001/3500/7500/1105 | "Corporate event – review G/L 58120 at posting (default maps to 58350)" |
+| Project 1013 | "Intern event – review G/L 58230 at posting" |
+| Holiday Party car service | "Holiday Party car – review G/L 58140; do NOT book as intercompany" |
+| Intercompany situation | "Intercompany – book to [entity] intercompany with correct project/dept" |
 
-1. Identify transaction type (flight, car, meal, lodging, refund, etc.)
-2. Check description format against the template for that type
-3. Check expense code matches the transaction type
-4. Check character length (formula: len(desc) + len(vendor) + 12 ≤ 70)
-5. Check for policy violations (meal limits, project dept, personal project ID, etc.)
-6. Assess confidence:
-   - 0.95-1.0: Perfect match to rules, all flags green
-   - 0.80-0.94: Minor issues, some ambiguity
-   - 0.50-0.79: Significant issues, needs review
-   - Below 0.50: Very uncertain, flag heavily
-7. Compile flags list and reasoning
+## Step 9 — Policy flags (always flag, never auto-correct)
 
-═══════════════════════════════════════════════════════════════════════════════
-OUTPUT SCHEMA
-═══════════════════════════════════════════════════════════════════════════════
+- LEN(description + vendor) + 12 > 70 characters
+- Working Lunch > $25 or Working Dinner > $35 (overage → split to project 1008 with Emp ID)
+- More than one Work Late/Office-Home same employee same date
+- Refund whose project/dept/code does not mirror the original charge
+- Refund where corresponding original charge cannot be identified from receipt or data
+- Inflight Wifi missing business purpose (attempt date-based inference; flag if impossible)
+- Tkt fee project differs from corresponding main flight's project
+- Management company entertainment not itemised (food/bev vs. entertainment)
+- Early arrival or work late car (flag for timestamp verification — cannot confirm from data alone)
+- Potential intercompany situation
+- No receipt available
+- Wrong receipt — amount or vendor does not match transaction
 
-Return ONLY valid JSON with these fields:
+## Step 10 — Abbreviations (rules engine applies these BEFORE LLM)
 
-```json
+If you see the abbreviated form it is already correct — do NOT revert.
+If you see the long form for any reason, apply the abbreviation.
+
+| Long | Short |
+|---|---|
+| Business (with trailing space) | Bus. |
+| Meeting | Mtg |
+| Meetings | Mtgs |
+| Ticketing Fee | Tkt Fee |
+| Management | Mgmt |
+| Conference | Conf |
+| Exchange | Exch |
+
+## Output schema
+
+Return exactly this JSON and nothing else.
+
+```
 {
-    "transaction_type": "flight|refund|car_service|meal_business|meal_travel|meal_office|lodging|info_services|other",
-    "formatted_description": "corrected description (or original if compliant)",
-    "description_changed": true|false,
-    "expense_code": "validated/corrected expense code",
-    "expense_code_changed": true|false,
-    "confidence": 0.50-1.00 (float),
-    "reasoning": "Brief workbook note: what changed, why, and business context preserved",
-    "flags": ["list of issues requiring human review"],
-    "is_refund": true|false,
-    "error": "error message if parsing/validation failed"
+  "transaction_type": "flight|refund|exchange|car_service|meal_business|meal_travel|meal_office|lodging|info_services|other_travel|equipment|software|other",
+  "formatted_description": "corrected description or original if already compliant",
+  "description_changed": true,
+  "expense_code": "corrected or original expense code",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Internal decision note (1-2 sentences): which rule triggered, what data was used.",
+  "comment": "External-facing workbook annotation (1-2 sentences). What the reviewer needs to know: what changed, why, receipt cross-reference, admin action needed, or 'No changes required.' Use plain language, not rule codes.",
+  "flags": ["Specific actionable flag for human reviewer"],
+  "is_refund": false,
+  "error": ""
 }
 ```
 
-═══════════════════════════════════════════════════════════════════════════════
-KEY PRINCIPLES
-═══════════════════════════════════════════════════════════════════════════════
+`comment` vs `reasoning` distinction:
+- `reasoning`: why the LLM made this decision (internal, technical).
+- `comment`: what goes in the workbook Comments column for the reviewer (external, plain language).
+  Good comment examples:
+    "Slightly adjusted description — added Mtg to Strategy."
+    "Lodging Feb 10-12, matches T&L conf. Updated to align with meal charges."
+    "Refund of JAX-EWR leg per receipt ticket #UA7337372363."
+    "No receipt — unable to verify charge."
+    "Wrong receipt attached — amount does not match. Flag for admin."
+    "Updated project to 3313 per deal coding."
+    "Inflight Wifi — business purpose inferred from trip date (BOD Mtg, AmeriVet)."
+  Leave empty string if no comment is needed (compliant transaction, no changes).
 
-✓ BE CONSERVATIVE: Only change when description violates a rule
-✓ PRESERVE CONTEXT: Keep all business purpose and deal names
-✓ NEVER MODIFY VENDOR: Only review description and expense code
-✓ USE EXACT CASING: Especially for "Inflight Wifi", "Bus.Lunch", "Mtg"
-✓ ATTENDEE NAMES AS INITIALS ONLY: Meal descriptions must use initials (B.Gallagher, K.Carbonez) - never full names
-✓ APPLY ALL 13 RULES: Use every rule category when applicable
-✓ CONFIDENCE IS KEY: Set confidence based on how well all rules align
-✓ FLAG THOROUGHLY: Don't be silent about violations; flag everything needing review"""
+## Confidence calibration (aligned to 0.75 pipeline threshold)
+
+| Score | Meaning | Pipeline action |
+|---|---|---|
+| 0.95 – 1.00 | All rules satisfied, receipt confirmed, no ambiguity | Applied automatically |
+| 0.85 – 0.94 | Minor issue or one soft rule; receipt available | Applied, spot-check flagged |
+| 0.75 – 0.84 | Moderate uncertainty or data gap | Applied, review flagged |
+| < 0.75 | Significant uncertainty, hard policy issue, or no receipt | NOT applied — original kept, flagged |
+
+## Worked examples
+
+### Example 1 — Bare purpose word missing Mtg
+Input: Description=Travel Meal/Strategy | Expense=Meals | Project=1035 | Dept=VAIP | Amount=52.00
+Output:
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/Strategy Mtg","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"'Strategy' is a bare purpose word — appended Mtg per formatting standard.","comment":"Slightly adjusted description — added Mtg to Strategy.","flags":[],"is_refund":false,"error":""}
+
+### Example 2 — Refund/Exchange combined format
+Input: Description=Refund/Exchange/EWR-SLC/Strategy | Expense=Airline | Amount=-850.00
+Output:
+{"transaction_type":"refund","formatted_description":"Refund/Exch Tkt/EWR-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.90,"reasoning":"'Exchange' in refund context must be 'Exch Tkt'. 'Strategy' → 'Strategy Mtg'.","comment":"Refund of exchanged EWR-SLC ticket. Corrected format from Refund/Exchange to Refund/Exch Tkt.","flags":[],"is_refund":true,"error":""}
+
+### Example 3 — Multi-leg round trip missing RT: prefix
+Input: Description=JAX-PHL-CLT/CFO Interview/AmEx | Expense=Airline | Amount=1240.00
+       Receipt Route=JAX-PHL-CLT | Passenger=James Sharpe
+Output:
+{"transaction_type":"flight","formatted_description":"RT:JAX-PHL-CLT/CFO Interview Mtg/AmEx","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.88,"reasoning":"Multi-leg route (3 airports) with receipt confirming departure from JAX. Context implies return journey — added RT: prefix. 'CFO Interview' → 'CFO Interview Mtg'.","comment":"Added RT: prefix for multi-leg round trip per receipt. Added Mtg to CFO Interview.","flags":[],"is_refund":false,"error":""}
+
+### Example 4 — Unknown attendees → count
+Input: Description=Bus.Lunch/John Smith & Jane Doe/Goldman Sachs | Expense=Meals | Amount=180.00
+Output:
+{"transaction_type":"meal_business","formatted_description":"Bus.Lunch/2 ppl/Goldman Sachs","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.90,"reasoning":"Attendee names are not AEA staff initials and cannot be verified from receipt data — replaced with count per policy.","comment":"Replaced unverifiable full attendee names with count (2 ppl).","flags":[],"is_refund":false,"error":""}
+
+### Example 5 — No receipt, refund cannot be verified
+Input: Description=Refund/RT:JFK-SLC/Strategy | Expense=Airline | Amount=-4027.97 | Receipt Summary=(empty)
+Output:
+{"transaction_type":"refund","formatted_description":"Refund/RT:JFK-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.72,"reasoning":"Added Mtg to Strategy. No receipt to confirm which original charge this refund corresponds to.","comment":"Refund description corrected. No receipt — unable to verify corresponding original charge or ticket number. Flag for admin.","flags":["No receipt — refund cannot be cross-referenced to original charge"],"is_refund":true,"error":""}
+
+### Example 6 — Refund of one leg of a round trip
+Input: Description=Refund of JAX-EWR flight | Expense=Airline | Amount=-885.06 | Project=1035
+       Receipt Summary=REFUND UA7337372363 ACKERMAN DEBORAH
+Output:
+{"transaction_type":"refund","formatted_description":"Refund/JAX-EWR/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.85,"reasoning":"Refund of single leg from prior round-trip. Applied Refund/ prefix and standard route format. Receipt confirms ticket number.","comment":"Refund of JAX-EWR leg per receipt ticket #UA7337372363. Project 1035 is prepaid.","flags":["Prepaid project – review G/L 14000 at posting"],"is_refund":true,"error":""}
+
+### Example 7 — Working Lunch over limit, wrong dept
+Input: Description=Working Lunch | Expense=Meals | Amount=31.50 | Project=1055 | Dept=NY
+Output:
+{"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.70,"reasoning":"Amount exceeds $25 lunch limit. Project 1055 requires dept AMA, not NY.","comment":"Working Lunch $31.50 exceeds $25 limit — overage $6.50 needs separate line to project 1008. Dept should be AMA not NY.","flags":["Working Lunch $31.50 exceeds $25.00 limit – split overage $6.50 to project 1008 with Employee ID","Project 1055 requires dept AMA, got NY"],"is_refund":false,"error":""}
+
+### Example 8 — Refund, flight-only: do not change 1035 to 3500
+Input: Description=Refund/RT:SLC-EWR/Strategy Mtg | Expense=Airline | Amount=-1250.00 | Project=1035
+       Rcpt Summary=REFUND UNITED AIRLINES INTERNAL MANAGEMENT EVENT
+Output:
+{"transaction_type":"refund","formatted_description":"Refund/RT:SLC-EWR/Strategy Mtg","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Description already compliant. Project 1035 is correct — both 1035 and 3500 are mgmt co expenses; only move refunds to 3500 when original charge is fund- or portfolio-related.","comment":"Receipt confirms management event refund. Project 1035 correct — no need to recode to 3500 for internal mgmt expense.","flags":["Prepaid project – review G/L 14000 at posting"],"is_refund":true,"error":""}
+
+### Example 9 — Business meal, full names → initials (known staff)
+Input: Description=Bus.Dinner with Brendan Gallagher and Karen Carbonez / Goldman Sachs | Expense=Meals
+Output:
+{"transaction_type":"meal_business","formatted_description":"Bus.Dinner/B.Gallagher & K.Carbonez/Goldman Sachs","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Full names converted to initials per AEA policy. Slash separators standardised.","comment":"Converted attendee names to initials (B.Gallagher & K.Carbonez).","flags":[],"is_refund":false,"error":""}
+
+### Example 10 — Car service, Transportation in description
+Input: Description=Transportation from JFK to Hotel/BOD Mtg/Chemical Guys | Expense=Car Service
+Output:
+{"transaction_type":"car_service","formatted_description":"JFK-Hotel/BOD Mtg/Chemical Guys","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.97,"reasoning":"Removed 'Transportation', replaced ' to ' with '-', cleaned spacing.","comment":"Slightly adjusted description — removed Transportation, standardised format.","flags":[],"is_refund":false,"error":""}
+"""
 
     def format_description(
         self,
@@ -555,7 +877,9 @@ KEY PRINCIPLES
                         return self._fallback_result(txn, "Empty response from all models")
                 
                 # Parse response
-                result = json.loads(result_text)
+                result = _extract_json(result_text)
+                if result is None:
+                    raise json.JSONDecodeError("Could not parse JSON", result_text or "", 0)
                 
                 # Validate required fields
                 required = ['formatted_description', 'confidence', 'reasoning']
@@ -700,7 +1024,9 @@ KEY PRINCIPLES
                         return [self.format_description(item["txn"], item.get("similar_txns") or [], max_retries=max_retries) for item in items]
 
                 # Attempt to parse JSON with repair for incomplete responses
-                payload = self._repair_batch_json(result_text)
+                payload = _extract_json(result_text)
+                if payload is None:
+                    payload = self._repair_batch_json(result_text)
                 if payload is None:
                     raise ValueError("Batch JSON unrecoverable after repair attempt")
                 

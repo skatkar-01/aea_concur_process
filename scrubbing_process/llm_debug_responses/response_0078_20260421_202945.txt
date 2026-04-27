@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: PHL-SLC/Strategy
+Vendor: Delta
+Amount: $728.40
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "PHL-SLC/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline charge with a route-style description indicates a flight. 'Strategy' is a bare purpose word and must be expanded to 'Strategy Mtg'; no receipt was provided to further validate route or ticket data.",
+  "comment": "Added Mtg to Strategy. No receipt available to confirm ticket or route details.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "PHL-SLC/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline charge with a route-style description indicates a flight. 'Strategy' is a bare purpose word and must be expanded to 'Strategy Mtg'; no receipt was provided to further validate route or ticket data.",
+  "comment": "Added Mtg to Strategy. No receipt available to confirm ticket or route details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

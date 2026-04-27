@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an airline ticketing fee, and the description already matches the required Tkt Fee format. Receipt data is absent, so route and ticket details could not be cross-checked.",
+  "comment": "No changes required. Receipt data is missing, so the ticket fee could not be cross-verified.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an airline ticketing fee, and the description already matches the required Tkt Fee format. Receipt data is absent, so route and ticket details could not be cross-checked.",
+  "comment": "No changes required. Receipt data is missing, so the ticket fee could not be cross-verified.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

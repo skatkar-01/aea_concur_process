@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Banker Mtgs/Monroe
+Vendor: Angie's Subs
+Amount: $35.53
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Description is a travel meal and already follows the 2-part format with purpose and company name. No receipt is present to cross-check, but the transaction details are internally consistent.",
+  "comment": "No changes required. No receipt available to verify the charge, so please retain supporting documentation if needed.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Description is a travel meal and already follows the 2-part format with purpose and company name. No receipt is present to cross-check, but the transaction details are internally consistent.",
+  "comment": "No changes required. No receipt available to verify the charge, so please retain supporting documentation if needed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

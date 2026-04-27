@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: InFlight Wifi/Mgmt Mtg/Monroe
+Vendor: United
+Amount: $8.00
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"info_services","formatted_description":"Inflight Wifi","description_changed":true,"expense_code":"Info Services","expense_code_changed":false,"confidence":0.92,"reasoning":"This is an inflight wifi charge based on the vendor and info services code. The description needed standardization to the exact Inflight Wifi format; no receipt was provided to confirm the trip purpose, so business purpose was inferred from the report context only as far as possible.","comment":"Standardized to Inflight Wifi. No receipt details were provided to verify the trip context or business purpose, so please confirm if needed.","flags":["No receipt available","Inflight Wifi business purpose could not be fully verified from receipt data"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is an inflight wifi charge based on the vendor and info services code. The description needed standardization to the exact Inflight Wifi format; no receipt was provided to confirm the trip purpose, so business purpose was inferred from the report context only as far as possible.",
+  "comment": "Standardized to Inflight Wifi. No receipt details were provided to verify the trip context or business purpose, so please confirm if needed.",
+  "flags": [
+    "No receipt available",
+    "Inflight Wifi business purpose could not be fully verified from receipt data"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,342 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $5.73
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"No receipt and transaction is a personal meal charge. Description remains unchanged; project 1008 requires Employee ID if any overage were present, but amount is below limit.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":2,"transaction_type":"refund","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Negative amount indicates refund/reversal. No receipt or original charge details to cross-reference, so no formatting change can be validated.","comment":"No receipt — unable to verify corresponding original charge.","flags":["No receipt available","Refund where corresponding original charge cannot be identified from receipt or data"],"is_refund":true,"error":""},{"index":3,"transaction_type":"refund","formatted_description":"Personal","description_changed":false,"expense_code":"Other","expense_code_changed":true,"confidence":0.95,"reasoning":"Negative amount indicates refund/reversal. Expense code Miscellaneous is disallowed and must be remapped to Other.","comment":"Expense code updated from Miscellaneous to Other.","flags":["No receipt available"],"is_refund":true,"error":""},{"index":4,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"No receipt and description is unchanged. Grubhub meal charge is consistent with Meals coding.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":5,"transaction_type":"lodging","formatted_description":"Lodging/ACG M&A South Conf","description_changed":false,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.95,"reasoning":"Lodging description is already in acceptable format and vendor/expense code align. Conference wording is complete enough as written.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":6,"transaction_type":"flight","formatted_description":"LGA-CHS/William Blair T&L Conf","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Flight route and purpose are already clear and properly formatted. No receipt was provided, but no correction is required from the available data.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":7,"transaction_type":"flight","formatted_description":"RT:JAX-LGA/NY Office Visit","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Round-trip prefix is correctly present and route/purpose are formatted consistently. No receipt to further validate, but no issue is evident.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":8,"transaction_type":"flight","formatted_description":"Tkt Fee/RT:JAX-LGA/NY Office Visit","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.96,"reasoning":"Ticketing fee is correctly identified and route/purpose are already in standard form. Removed extra spacing after the colon to match template.","comment":"Slightly adjusted formatting — removed extra space in RT route.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":9,"transaction_type":"flight","formatted_description":"JAX-LGA/Catch up Mtg/OAPC","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Flight description already follows the required structure, and Catch up Mtg is acceptable as written. No receipt data to challenge it.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":10,"transaction_type":"refund","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Negative amount indicates refund/reversal. No receipt or original charge information available to reformat or cross-reference.","comment":"No receipt — unable to verify corresponding original charge.","flags":["No receipt available","Refund where corresponding original charge cannot be identified from receipt or data"],"is_refund":true,"error":""},{"index":11,"transaction_type":"meal_office","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"No receipt provided, and the Grubhub meal charge is otherwise consistent with Meals coding. No correction is needed from available data.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":12,"transaction_type":"flight","formatted_description":"Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Ticket fee description is already in the correct form for a multi-leg itinerary. No receipt data is available, but no formatting change is required.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":13,"transaction_type":"flight","formatted_description":"Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Ticket fee format is correct and purpose is acceptable. No receipt provided, but nothing requires correction in the submitted data.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":14,"transaction_type":"meal_travel","formatted_description":"Travel Meal/Stifel T&L Conf","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal is properly labeled and the conference name is present. Amount is within normal range for a travel meal.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":15,"transaction_type":"lodging","formatted_description":"Lodging/Catch up Mtg/OAPC","description_changed":false,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.95,"reasoning":"Lodging description is already in acceptable format. No receipt was attached, but the transaction details do not indicate a correction.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":16,"transaction_type":"lodging","formatted_description":"Lodging/NY Office Visit","description_changed":false,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.95,"reasoning":"Lodging and purpose are already properly stated. No receipt available, but no format or coding issue is evident.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":17,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Working Lunch is a valid one-part office meal description. Amount is below the overage threshold.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":18,"transaction_type":"flight","formatted_description":"SAV-ATL-SLC/AEA Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.94,"reasoning":"Bare purpose word Strategy was expanded to Strategy Mtg. No receipt was provided, but the route and trip purpose are otherwise formatted correctly.","comment":"Added Mtg to Strategy.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":19,"transaction_type":"other_travel","formatted_description":"Travel Insurance/Residence Inn by Marriott SLC Airport","description_changed":false,"expense_code":"Other Travel","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel insurance is properly coded as Other Travel and the description is clear as submitted. No receipt available to require changes.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":20,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Working Lunch is correctly formatted and amount is under the $25 limit. No receipt was provided, but no issue is apparent.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "No receipt and transaction is a personal meal charge. Description remains unchanged; project 1008 requires Employee ID if any overage were present, but amount is below limit.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "refund",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Negative amount indicates refund/reversal. No receipt or original charge details to cross-reference, so no formatting change can be validated.",
+      "comment": "No receipt \u2014 unable to verify corresponding original charge.",
+      "flags": [
+        "No receipt available",
+        "Refund where corresponding original charge cannot be identified from receipt or data"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "refund",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Other",
+      "expense_code_changed": true,
+      "confidence": 0.95,
+      "reasoning": "Negative amount indicates refund/reversal. Expense code Miscellaneous is disallowed and must be remapped to Other.",
+      "comment": "Expense code updated from Miscellaneous to Other.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "No receipt and description is unchanged. Grubhub meal charge is consistent with Meals coding.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/ACG M&A South Conf",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Lodging description is already in acceptable format and vendor/expense code align. Conference wording is complete enough as written.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "flight",
+      "formatted_description": "LGA-CHS/William Blair T&L Conf",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Flight route and purpose are already clear and properly formatted. No receipt was provided, but no correction is required from the available data.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "flight",
+      "formatted_description": "RT:JAX-LGA/NY Office Visit",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Round-trip prefix is correctly present and route/purpose are formatted consistently. No receipt to further validate, but no issue is evident.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:JAX-LGA/NY Office Visit",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.96,
+      "reasoning": "Ticketing fee is correctly identified and route/purpose are already in standard form. Removed extra spacing after the colon to match template.",
+      "comment": "Slightly adjusted formatting \u2014 removed extra space in RT route.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "flight",
+      "formatted_description": "JAX-LGA/Catch up Mtg/OAPC",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Flight description already follows the required structure, and Catch up Mtg is acceptable as written. No receipt data to challenge it.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "refund",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Negative amount indicates refund/reversal. No receipt or original charge information available to reformat or cross-reference.",
+      "comment": "No receipt \u2014 unable to verify corresponding original charge.",
+      "flags": [
+        "No receipt available",
+        "Refund where corresponding original charge cannot be identified from receipt or data"
+      ],
+      "is_refund": true,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "meal_office",
+      "formatted_description": "Personal",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "No receipt provided, and the Grubhub meal charge is otherwise consistent with Meals coding. No correction is needed from available data.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/JAX-LGA-CHS/William Blair T&L Conf",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Ticket fee description is already in the correct form for a multi-leg itinerary. No receipt data is available, but no formatting change is required.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/JAX-LGA-CHS/Catch up Mtg/OAPC",
+      "description_changed": false,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Ticket fee format is correct and purpose is acceptable. No receipt provided, but nothing requires correction in the submitted data.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Stifel T&L Conf",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel meal is properly labeled and the conference name is present. Amount is within normal range for a travel meal.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/Catch up Mtg/OAPC",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Lodging description is already in acceptable format. No receipt was attached, but the transaction details do not indicate a correction.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "lodging",
+      "formatted_description": "Lodging/NY Office Visit",
+      "description_changed": false,
+      "expense_code": "Lodging",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Lodging and purpose are already properly stated. No receipt available, but no format or coding issue is evident.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Working Lunch is a valid one-part office meal description. Amount is below the overage threshold.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 18,
+      "transaction_type": "flight",
+      "formatted_description": "SAV-ATL-SLC/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.94,
+      "reasoning": "Bare purpose word Strategy was expanded to Strategy Mtg. No receipt was provided, but the route and trip purpose are otherwise formatted correctly.",
+      "comment": "Added Mtg to Strategy.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 19,
+      "transaction_type": "other_travel",
+      "formatted_description": "Travel Insurance/Residence Inn by Marriott SLC Airport",
+      "description_changed": false,
+      "expense_code": "Other Travel",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Travel insurance is properly coded as Other Travel and the description is clear as submitted. No receipt available to require changes.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 20,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Working Lunch is correctly formatted and amount is under the $25 limit. No receipt was provided, but no issue is apparent.",
+      "comment": "No changes required.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

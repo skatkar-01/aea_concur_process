@@ -1557,3 +1557,474 @@
 2026-04-20 19:28:15,811 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
 2026-04-20 19:28:18,687 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-04-20 19:28:18,689 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:51:31,115 - llm_formatter - INFO - [OK] Azure OpenAI initialized (primary: gpt-5-mini)
+2026-04-21 19:51:31,116 - llm_formatter - INFO -      Model fallback list: gpt-5-mini -> gpt-5.4-mini -> gpt-4.1-mini-219211
+2026-04-21 19:53:07,523 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:53:07,538 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 19:53:07,542 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:53:07,545 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:53:17,581 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:53:17,585 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:54:26,223 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:54:26,225 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 19:54:26,227 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:54:26,227 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:54:37,671 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:54:37,676 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:55:35,822 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:55:35,824 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 19:55:35,826 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:55:35,826 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:55:49,064 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:55:49,064 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5.4-mini, Items: 20
+2026-04-21 19:55:49,066 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:55:49,068 - llm_formatter - WARNING - Switching to fallback model: gpt-4.1-mini-219211
+2026-04-21 19:56:25,768 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:56:25,770 - llm_formatter - WARNING - Batch JSON parse failed. Attempting repair: Expecting property name enclosed in double quotes: line 212 column 6 (char 8217)
+2026-04-21 19:56:25,770 - llm_formatter - ERROR - Could not repair batch JSON. Returning None.
+2026-04-21 19:56:25,772 - llm_formatter - ERROR - [FAIL] Batch API Error: Batch JSON unrecoverable after repair attempt - Model: gpt-4.1-mini-219211, Items: 20
+2026-04-21 19:56:25,774 - llm_formatter - ERROR -        Exception type: ValueError
+2026-04-21 19:56:25,776 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:56:25,778 - llm_formatter - WARNING - [WARN] Batch API error after 3 attempts. Processing 20 items individually.
+2026-04-21 19:56:29,357 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:56:29,362 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:57:03,548 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:57:03,812 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: InFlight Wifi/Mgmt Mtg/Monroe
+2026-04-21 19:57:03,837 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:57:03,842 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:57:05,841 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:57:05,891 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:57:33,253 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:57:33,255 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Mgmt Mtg/Monroe
+2026-04-21 19:57:33,258 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:57:33,258 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:57:35,222 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:57:35,226 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:58:04,211 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:58:04,213 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Mgmt Mtg/Monroe
+2026-04-21 19:58:04,215 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:58:04,215 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:58:05,945 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:58:05,950 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:58:41,470 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:58:41,489 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: RDU-LGA/Agreement Mtg/LRB
+2026-04-21 19:58:41,491 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:58:41,494 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:58:43,045 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:58:43,051 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:59:17,561 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:59:17,562 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/Refund/RDU-EWR/Mgmt Mtg/Aqualis
+2026-04-21 19:59:17,565 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:59:17,565 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:59:19,683 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:59:19,688 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:59:52,913 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:59:52,915 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/RDU-LGA/Agreement Mtg/LRB
+2026-04-21 19:59:52,917 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 19:59:52,917 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 19:59:54,573 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 19:59:54,577 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:00:31,484 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:00:31,492 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Refund/RDU-EWR/Mgmt Mtg/Aqualis
+2026-04-21 20:00:31,512 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:00:31,531 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:00:34,230 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:00:34,236 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:01:05,293 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:01:05,294 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: RT: EWR-LHR/BOD Mtg/RED
+2026-04-21 20:01:05,296 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:01:05,297 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:01:07,171 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:01:07,175 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:01:33,243 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:01:33,253 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: RT: EWR-LHR/Mtgs/IR
+2026-04-21 20:01:33,265 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:01:33,268 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:01:35,725 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:01:35,729 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:02:04,903 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:02:04,905 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Hotel-Mtg/Agreement Mtg/LRB
+2026-04-21 20:02:04,907 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:02:04,909 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:02:06,823 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:02:06,849 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:02:50,258 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:02:50,260 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe
+2026-04-21 20:02:50,262 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:02:50,264 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:02:52,514 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:02:52,518 - llm_formatter - WARNING - Failed to write debug file: I/O operation on closed file.
+2026-04-21 20:04:11,606 - llm_formatter - INFO - [OK] Azure OpenAI initialized (primary: gpt-5-mini)
+2026-04-21 20:04:11,608 - llm_formatter - INFO -      Model fallback list: gpt-5-mini -> gpt-5.4-mini -> gpt-4.1-mini-219211
+2026-04-21 20:05:56,349 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:05:56,362 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:05:56,373 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:06:08,691 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:07:09,413 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:07:09,415 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:07:09,417 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:07:21,436 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:08:30,944 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:08:30,946 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:08:30,950 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:08:42,851 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:08:42,853 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5.4-mini, Items: 20
+2026-04-21 20:08:42,855 - llm_formatter - WARNING - Switching to fallback model: gpt-4.1-mini-219211
+2026-04-21 20:09:25,106 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:09:25,108 - llm_formatter - WARNING - Batch JSON parse failed. Attempting repair: Expecting value: line 229 column 22 (char 7952)
+2026-04-21 20:09:25,111 - llm_formatter - ERROR - Could not repair batch JSON. Returning None.
+2026-04-21 20:09:25,111 - llm_formatter - ERROR - [FAIL] Batch API Error: Batch JSON unrecoverable after repair attempt - Model: gpt-4.1-mini-219211, Items: 20
+2026-04-21 20:09:25,112 - llm_formatter - ERROR -        Exception type: ValueError
+2026-04-21 20:09:25,117 - llm_formatter - WARNING - [WARN] Batch API error after 3 attempts. Processing 20 items individually.
+2026-04-21 20:09:30,190 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:09:58,022 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:09:58,023 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: InFlight Wifi/Mgmt Mtg/Monroe
+2026-04-21 20:09:58,025 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:10:00,153 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:10:37,478 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:10:37,480 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Mgmt Mtg/Monroe
+2026-04-21 20:10:37,482 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:10:39,245 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:11:08,582 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:11:08,584 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Mgmt Mtg/Monroe
+2026-04-21 20:11:08,586 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:11:10,222 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:11:38,619 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:11:38,621 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: RDU-LGA/Agreement Mtg/LRB
+2026-04-21 20:11:38,624 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:11:41,071 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:12:17,868 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:12:17,870 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/Refund/RDU-EWR/Mgmt Mtg/Aqualis
+2026-04-21 20:12:17,874 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:12:19,800 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:12:49,276 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:12:49,278 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/RDU-LGA/Agreement Mtg/LRB
+2026-04-21 20:12:49,280 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:12:50,936 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:13:23,842 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:13:23,844 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Refund/RDU-EWR/Mgmt Mtg/Aqualis
+2026-04-21 20:13:23,846 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:13:25,914 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:13:56,513 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:13:56,513 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: RT: EWR-LHR/BOD Mtg/RED
+2026-04-21 20:13:56,515 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:13:58,082 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:14:30,855 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:14:30,857 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: RT: EWR-LHR/Mtgs/IR
+2026-04-21 20:14:30,859 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:14:32,522 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:15:02,036 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:15:02,038 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Hotel-Mtg/Agreement Mtg/LRB
+2026-04-21 20:15:02,040 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:15:03,974 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:15:27,783 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:15:27,785 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe
+2026-04-21 20:15:27,787 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:15:29,853 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:15:56,833 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:15:56,835 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe
+2026-04-21 20:15:56,837 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:15:58,769 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:16:32,653 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:16:32,654 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Home-Conf/Baird T&S Conf
+2026-04-21 20:16:32,656 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:16:34,396 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:17:04,559 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:17:04,598 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Home-Event/Vinson & Elkins Networking Event
+2026-04-21 20:17:04,697 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:17:06,716 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:17:42,886 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:17:42,886 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: InFlight Wifi/Mgmt Mtg/Aqualis
+2026-04-21 20:17:42,890 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:17:44,610 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:18:10,193 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:18:10,195 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/RT: EWR-LHR/BOD Mtg/RED
+2026-04-21 20:18:10,197 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:18:12,207 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:18:51,570 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:18:51,572 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/RT: EWR-LHR/IR Mtgs
+2026-04-21 20:18:51,574 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:18:53,443 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:19:19,450 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:19:19,532 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Mgmt Mtg/Aqualis
+2026-04-21 20:19:19,747 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:19:21,358 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:19:47,200 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:19:47,202 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Lodging/Mgmt Mtg/Aqualis
+2026-04-21 20:19:47,206 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:19:48,981 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:20:45,787 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:20:45,816 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:20:45,826 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:20:57,300 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:20:57,316 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5.4-mini, Items: 20
+2026-04-21 20:20:57,326 - llm_formatter - WARNING - Switching to fallback model: gpt-4.1-mini-219211
+2026-04-21 20:21:41,068 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:21:41,070 - llm_formatter - WARNING - Batch JSON parse failed. Attempting repair: Unterminated string starting at: line 232 column 7 (char 7654)
+2026-04-21 20:21:41,072 - llm_formatter - ERROR - Could not repair batch JSON. Returning None.
+2026-04-21 20:21:41,072 - llm_formatter - ERROR - [FAIL] Batch API Error: Batch JSON unrecoverable after repair attempt - Model: gpt-4.1-mini-219211, Items: 20
+2026-04-21 20:21:41,072 - llm_formatter - ERROR -        Exception type: ValueError
+2026-04-21 20:21:41,078 - llm_formatter - WARNING - [WARN] Batch API error after 3 attempts. Processing 20 items individually.
+2026-04-21 20:21:44,386 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:22:15,071 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:22:15,077 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic
+2026-04-21 20:22:15,084 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:22:16,968 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:22:54,297 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:22:54,307 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:22:54,319 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:22:55,896 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:23:33,392 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:23:33,394 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic
+2026-04-21 20:23:33,397 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:23:35,925 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:24:12,080 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:24:12,080 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:24:12,084 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:24:14,307 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:24:44,798 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:24:44,811 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: InFlight Wifi/Strategy
+2026-04-21 20:24:44,831 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:24:46,881 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:25:21,059 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:25:21,062 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic
+2026-04-21 20:25:21,065 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:25:22,847 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:25:54,004 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:25:54,026 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:25:54,029 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:25:55,742 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:26:24,791 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:26:24,793 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:26:24,797 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:26:26,632 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:27:06,652 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:27:06,676 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Refund/EWR-SLC/Strategy
+2026-04-21 20:27:06,707 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:27:08,520 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:27:42,833 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:27:42,880 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:27:42,950 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:27:44,778 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:28:12,327 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:28:12,329 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:28:12,331 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:28:13,845 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:28:42,087 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:28:42,104 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Lodging/Strategy
+2026-04-21 20:28:42,110 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:28:43,694 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:29:12,222 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:29:12,222 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/Exchange/JAX-EWR/Banker Mtgs/Monroe
+2026-04-21 20:29:12,226 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:29:14,095 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:29:43,976 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:29:43,978 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: PHL-SLC/Strategy
+2026-04-21 20:29:43,980 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:29:45,606 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:30:15,844 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:30:50,837 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:30:50,839 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/PHL-SLC/Strategy
+2026-04-21 20:30:50,841 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:30:53,029 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:31:26,426 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:31:26,428 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:31:26,430 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:31:28,332 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:31:58,583 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:31:58,585 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:31:58,587 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:32:00,562 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:32:29,741 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:32:29,748 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Refund/Exchange/EWR-SLC/Strategy
+2026-04-21 20:32:29,759 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:32:31,684 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:33:56,174 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:33:56,176 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:33:56,180 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:34:07,746 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:34:07,748 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5.4-mini, Items: 20
+2026-04-21 20:34:07,750 - llm_formatter - WARNING - Switching to fallback model: gpt-4.1-mini-219211
+2026-04-21 20:34:46,438 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:34:46,440 - llm_formatter - WARNING - Batch JSON parse failed. Attempting repair: Expecting value: line 224 column 4 (char 7768)
+2026-04-21 20:34:46,440 - llm_formatter - ERROR - [FAIL] Batch API Error: Missing batch result for index 18 - Model: gpt-4.1-mini-219211, Items: 20
+2026-04-21 20:34:46,440 - llm_formatter - ERROR -        Exception type: ValueError
+2026-04-21 20:34:46,446 - llm_formatter - WARNING - [WARN] Batch API error after 3 attempts. Processing 20 items individually.
+2026-04-21 20:34:50,398 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:35:21,462 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:35:21,464 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent
+2026-04-21 20:35:21,466 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:35:23,273 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:35:59,777 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:35:59,779 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: EWR-FRA/LHR-EWR/IR Mtgs
+2026-04-21 20:35:59,781 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:36:01,746 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:36:31,190 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:36:31,192 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic
+2026-04-21 20:36:31,195 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:36:33,131 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:37:07,664 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:37:07,668 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Office-Dinner/BOD Mtg/Monroe
+2026-04-21 20:37:07,670 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:37:09,412 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:37:41,776 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:37:41,778 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic
+2026-04-21 20:37:41,780 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:37:43,549 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:38:21,694 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:38:21,696 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: DUS-LHR/BOD Mtg/RED
+2026-04-21 20:38:21,698 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:38:23,787 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:38:53,476 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:38:53,478 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: DUS-LHR/IR Mtgs
+2026-04-21 20:38:53,484 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:38:55,344 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:39:22,853 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:39:22,855 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essentic
+2026-04-21 20:39:22,857 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:39:24,689 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:39:51,423 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:39:51,425 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/EWR-FRA/DUS-LHR-EWR/BOD Mtg/RED
+2026-04-21 20:39:51,428 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:39:53,152 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:40:25,198 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:40:25,200 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs
+2026-04-21 20:40:25,206 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:40:27,090 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:41:02,055 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:41:02,059 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Hotel-Office/BOD Mtg/Monroe
+2026-04-21 20:41:02,061 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:41:04,042 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:41:39,168 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:41:39,172 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Banker Mtgs/Monroe
+2026-04-21 20:41:39,174 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:41:40,753 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:42:22,466 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:42:22,466 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: InFlight Wifi/BOD Mtg/Banker Mtgs/Monroe
+2026-04-21 20:42:22,470 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:42:24,288 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:42:54,752 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:42:54,754 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+2026-04-21 20:42:54,756 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:42:56,532 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:43:36,491 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:43:36,493 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+2026-04-21 20:43:36,495 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:43:38,221 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:44:07,281 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:44:07,283 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+2026-04-21 20:44:07,287 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:44:08,975 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:44:39,542 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:44:39,542 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+2026-04-21 20:44:39,546 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:44:41,035 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:45:16,820 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:45:16,822 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Lodging/BOD Mtg/Banker Mtgs/Monroe
+2026-04-21 20:45:16,824 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:45:18,599 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:45:51,485 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:45:51,487 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/WWE
+2026-04-21 20:45:51,491 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:45:53,330 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:46:53,317 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:46:53,319 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:46:53,324 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:47:03,685 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:48:16,002 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:48:16,004 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 20:48:16,006 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:48:27,241 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:48:27,243 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5.4-mini, Items: 20
+2026-04-21 20:48:27,245 - llm_formatter - WARNING - Switching to fallback model: gpt-4.1-mini-219211
+2026-04-21 20:49:00,393 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:49:00,399 - llm_formatter - WARNING - Batch JSON parse failed. Attempting repair: Expecting property name enclosed in double quotes: line 220 column 1 (char 8135)
+2026-04-21 20:49:00,403 - llm_formatter - ERROR - Could not repair batch JSON. Returning None.
+2026-04-21 20:49:00,407 - llm_formatter - ERROR - [FAIL] Batch API Error: Batch JSON unrecoverable after repair attempt - Model: gpt-4.1-mini-219211, Items: 20
+2026-04-21 20:49:00,410 - llm_formatter - ERROR -        Exception type: ValueError
+2026-04-21 20:49:00,481 - llm_formatter - WARNING - [WARN] Batch API error after 3 attempts. Processing 20 items individually.
+2026-04-21 20:49:03,740 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:49:33,187 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:49:33,197 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Hotel-Conf/Stifel T&L Conf
+2026-04-21 20:49:33,213 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:49:36,365 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:50:12,539 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:50:12,545 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/WWE
+2026-04-21 20:50:12,553 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:50:14,245 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:50:44,133 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:50:44,135 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/BOD Mtg/WWE
+2026-04-21 20:50:44,137 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:50:45,719 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:51:18,398 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:51:18,400 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Mtg-CLT/Mgmt Mtg/Armstrong Transport
+2026-04-21 20:51:18,402 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:51:20,760 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:51:57,272 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:51:57,274 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: CLT-Mtg/Mgmt Mtg/Armstrong Transport
+2026-04-21 20:51:57,278 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:51:59,744 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:52:30,538 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:52:30,540 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Home-JAX/CFO Interview/AmEx
+2026-04-21 20:52:30,544 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:52:32,253 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:53:12,436 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:53:12,438 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Tkt Fee/JAX-PHL-CLT/CFO Interview/AmEx
+2026-04-21 20:53:12,442 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:53:14,339 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:53:40,434 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:53:40,436 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Personal
+2026-04-21 20:53:40,438 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:53:42,324 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:54:09,465 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:54:09,467 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Personal
+2026-04-21 20:54:09,469 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:54:11,323 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:54:39,182 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:54:39,183 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: JAX-Home/Strategy
+2026-04-21 20:54:39,185 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:54:40,973 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:55:16,582 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:55:16,584 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Home-JAX/Strategy
+2026-04-21 20:55:16,586 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:55:18,965 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:55:44,280 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:55:44,282 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:55:44,286 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:55:45,894 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:56:14,175 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:56:14,177 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Stifel T&L Conf
+2026-04-21 20:56:14,179 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:56:15,671 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:56:47,174 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:56:47,176 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:56:47,179 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:56:49,179 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:57:16,613 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:57:16,615 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Travel Meal/Strategy
+2026-04-21 20:57:16,619 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:57:18,229 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:57:45,880 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:57:45,882 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: JAX-Home/Mgmt Mtg/Armstrong Transport
+2026-04-21 20:57:45,886 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:57:47,720 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:58:25,425 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:58:25,427 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Lodging/CFO Interview/AMX
+2026-04-21 20:58:25,429 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:58:27,057 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:58:49,958 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:58:49,960 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Personal
+2026-04-21 20:58:49,964 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:58:51,977 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:59:17,434 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 20:59:17,437 - llm_formatter - ERROR - [FAIL] Empty response from API - Model: gpt-5-mini, Txn: Personal
+2026-04-21 20:59:17,440 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 20:59:19,017 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 21:00:15,524 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 21:00:15,528 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 20
+2026-04-21 21:00:15,530 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 21:00:27,044 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 21:01:15,632 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-21 21:01:15,634 - llm_formatter - ERROR - [FAIL] Empty response from batch API - Model: gpt-5-mini, Items: 6
+2026-04-21 21:01:15,640 - llm_formatter - WARNING - Switching to fallback model: gpt-5.4-mini
+2026-04-21 21:01:20,525 - httpx - INFO - HTTP Request: POST https://aea-concur-scrubbing-resource.openai.azure.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

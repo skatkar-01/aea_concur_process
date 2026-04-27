@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Office/BOD Mtg/Monroe
+Vendor: Uber
+Amount: $18.99
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"car_service","formatted_description":"JFK-Hotel/BOD Mtg/Monroe","description_changed":true,"expense_code":"Other Travel","expense_code_changed":true,"confidence":0.97,"reasoning":"Expense type is car service and the description is a deal-related ride, but 'Hotel-Office' is not a valid car service template. Standardized to the required JFK-Hotel format and kept the deal name. Expense code remaps to Other Travel for car service/transportation.","comment":"Standardized car service description to the required format. Expense code updated to Other Travel for transportation; no receipt available to further validate the ride details.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Hotel/BOD Mtg/Monroe",
+  "description_changed": true,
+  "expense_code": "Other Travel",
+  "expense_code_changed": true,
+  "confidence": 0.97,
+  "reasoning": "Expense type is car service and the description is a deal-related ride, but 'Hotel-Office' is not a valid car service template. Standardized to the required JFK-Hotel format and kept the deal name. Expense code remaps to Other Travel for car service/transportation.",
+  "comment": "Standardized car service description to the required format. Expense code updated to Other Travel for transportation; no receipt available to further validate the ride details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

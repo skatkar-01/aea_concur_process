@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: CMF Vending
+Amount: $2.60
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.80,
+  "reasoning": "Appended 'Mtg' to bare purpose 'Strategy' per formatting rules; receipt is missing so business purpose cannot be independently verified.",
+  "comment": "Slightly adjusted description — added Mtg to Strategy. No receipt attached so unable to verify the charge details or business attendees. Project 1035 is a prepaid project — review G/L 14000 at posting.",
+  "flags": [
+    "No receipt — unable to verify charge",
+    "Prepaid project – review G/L 14000 at posting"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.8,
+  "reasoning": "Appended 'Mtg' to bare purpose 'Strategy' per formatting rules; receipt is missing so business purpose cannot be independently verified.",
+  "comment": "Slightly adjusted description \u2014 added Mtg to Strategy. No receipt attached so unable to verify the charge details or business attendees. Project 1035 is a prepaid project \u2014 review G/L 14000 at posting.",
+  "flags": [
+    "No receipt \u2014 unable to verify charge",
+    "Prepaid project \u2013 review G/L 14000 at posting"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: JAX-Home/Mgmt Mtg/Armstrong Transport
+Vendor: Surfside
+Amount: $145.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"car_service","formatted_description":"JAX-Home/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.88,"reasoning":"Car service from airport to home appears to fit a deal-related transfer, but the receipt data is missing so the route cannot be validated. Description already follows the car service deal-related format.","comment":"No changes required. Receipt is missing, so the route and amount could not be cross-checked.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JAX-Home/Mgmt Mtg/Armstrong Transport",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Car service from airport to home appears to fit a deal-related transfer, but the receipt data is missing so the route cannot be validated. Description already follows the car service deal-related format.",
+  "comment": "No changes required. Receipt is missing, so the route and amount could not be cross-checked.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

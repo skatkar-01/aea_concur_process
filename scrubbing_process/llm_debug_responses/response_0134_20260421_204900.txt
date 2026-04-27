@@ -1,0 +1,237 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus. Dinner w/J. Franklin, Pot EP
+Vendor: Midtown Table
+Amount: $158.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Dinner/3 ppl/Pot EP",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Original description used 'w/J. Franklin' which doesn't match initials style; replaced with attendee count (3 ppl) per policy; added Bus. abbreviation. Project 3501 requires dept SBF - consistent.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-Conf/Stifel T&L Conf",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description matches car service format with deal and business purpose. No transportation word to remove. Project aligned with SBF dept.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/WWE",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description fully compliant with three parts and Mtg suffix on BOD. Project 3354 with SBF dept is consistent.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/BOD Mtg/WWE",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Same as prior travel meal: description correctly formatted with Mtg, project and dept align.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "car_service",
+      "formatted_description": "CLT-Hotel/Mgmt Mtg/Armstrong Transport",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Description missing standardized route format; 'Mtg-CLT' changed to route 'CLT-Hotel' to reflect travel direction. Ensured Mtg suffix. Corrected format for business purpose.",
+      "flags": ["Timestamp verification recommended for car service"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "car_service",
+      "formatted_description": "Hotel-CLT/Mgmt Mtg/Armstrong Transport",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Corrected route to standard format Hotel-CLT removing 'CLT-Mtg' shorthand. Confirmed Mtg suffix for business purpose.",
+      "flags": ["Timestamp verification recommended for car service"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 7,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-JAX/CFO Interview Mtg/AmEx",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'Mtg' suffix to CFO Interview to comply with purpose suffix policy. Other parts correct.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 8,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/RT:JAX-PHL-CLT/CFO Interview Mtg/AmEx",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added RT: prefix for multi-leg route (>2 airports) with CFO Interview suffixed Mtg per policy.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 9,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch/Overage/Personal",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Description 'Personal' not compliant for meals; converted to Working Lunch/Overage/Personal for personal meal overage with project 1008 which needs employee ID.",
+      "flags": ["Working Lunch with amount exceeding typical limit flagged for overage processing","Verify Employee ID for project 1008"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 10,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch/Overage/Personal",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.8,
+      "reasoning": "Same as prior item: description corrected to proper overage format.",
+      "flags": ["Working Lunch with amount exceeding typical limit flagged for overage processing","Verify Employee ID for project 1008"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 11,
+      "transaction_type": "car_service",
+      "formatted_description": "JAX-Home/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added Mtg suffix to Strategy; adjusted description to standardized route format with proper business purpose suffix.",
+      "flags": ["Timestamp verification recommended for car service"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 12,
+      "transaction_type": "car_service",
+      "formatted_description": "Home-JAX/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.9,
+      "reasoning": "Added Mtg suffix to Strategy; description standardized for consistent route format.",
+      "flags": ["Timestamp verification recommended for car service"],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 13,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'Mtg' suffix to Strategy to comply with bare purpose word policy.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 14,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Stifel T&L Conf",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description matches format with business purpose and deal name; no change needed.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 15,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'Mtg' suffix to Strategy per policy.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 16,
+      "transaction_type": "meal_travel",
+      "formatted_description": "Travel Meal/Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Added 'Mtg' suffix to Strategy.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 17,
+      "transaction_type": "car_service",
+      "formatted_description": "JAX-Home/Mgmt Mtg/Armstrong Transport",
+      "description_changed": false,
+      "expense_code": "Car Service",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Description properly formatted with route and business purpose suffix Mtg.",
+
+
+================================================================================
+PARSING ERROR
+================================================================================
+Batch API Error: Batch JSON unrecoverable after repair attempt
+

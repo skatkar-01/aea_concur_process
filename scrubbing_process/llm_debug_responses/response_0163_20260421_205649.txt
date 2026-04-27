@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Paradies Lagardere
+Amount: $5.29
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg'. Receipt data is absent, but the transaction/vendor context supports a travel meal and there is no conflicting receipt information.",
+  "comment": "Slightly adjusted description — added Mtg to Strategy. No receipt data available to cross-check, but no mismatch is indicated.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg'. Receipt data is absent, but the transaction/vendor context supports a travel meal and there is no conflicting receipt information.",
+  "comment": "Slightly adjusted description \u2014 added Mtg to Strategy. No receipt data available to cross-check, but no mismatch is indicated.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+Vendor: Vanguard Market
+Amount: $6.67
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is a travel meal based on the description and meal expense type. The description already follows the 3-part travel meal format and the purpose terms are properly abbreviated; no receipt data was available to validate further.",
+  "comment": "No changes required. No receipt available to cross-check the charge.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is a travel meal based on the description and meal expense type. The description already follows the 3-part travel meal format and the purpose terms are properly abbreviated; no receipt data was available to validate further.",
+  "comment": "No changes required. No receipt available to cross-check the charge.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

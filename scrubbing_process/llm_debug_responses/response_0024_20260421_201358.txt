@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: RT: EWR-LHR/BOD Mtg/RED
+Vendor: United
+Amount: $2746.26
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"RT:EWR-LHR/BOD Mtg/RED","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.92,"reasoning":"This is a flight transaction. The description had an extra space after RT:, which should be removed; BOD Mtg is already compliant. Receipt data is absent, so route and amount could not be cross-checked.","comment":"Standardized flight format by removing the space after RT:. No receipt available to verify route, ticket, or amount — flag for review.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-LHR/BOD Mtg/RED",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is a flight transaction. The description had an extra space after RT:, which should be removed; BOD Mtg is already compliant. Receipt data is absent, so route and amount could not be cross-checked.",
+  "comment": "Standardized flight format by removing the space after RT:. No receipt available to verify route, ticket, or amount \u2014 flag for review.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

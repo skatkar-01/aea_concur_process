@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: JAX-Home/Strategy
+Vendor: Surfside
+Amount: $145.00
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JAX-Home/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Car service to home/office format, but 'Strategy' requires the Mtg suffix. No receipt data was provided to verify route or timing, so this is not fully confirmed.",
+  "comment": "Adjusted description to JAX-Home/Strategy Mtg. No receipt available to verify the trip details, so route/timing could not be cross-checked.",
+  "flags": [
+    "No receipt available",
+    "Potential intercompany situation"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JAX-Home/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Car service to home/office format, but 'Strategy' requires the Mtg suffix. No receipt data was provided to verify route or timing, so this is not fully confirmed.",
+  "comment": "Adjusted description to JAX-Home/Strategy Mtg. No receipt available to verify the trip details, so route/timing could not be cross-checked.",
+  "flags": [
+    "No receipt available",
+    "Potential intercompany situation"
+  ],
+  "is_refund": false,
+  "error": ""
+}

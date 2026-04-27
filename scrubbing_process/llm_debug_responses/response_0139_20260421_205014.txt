@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/WWE
+Vendor: Jersey Mike's
+Amount: $24.38
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/WWE","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.88,"reasoning":"This is a travel meal based on the description and meal expense code. Receipt data is absent, so the transaction cannot be cross-verified against supporting details.","comment":"No changes required. No receipt provided, so the charge could not be cross-checked.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/WWE",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "This is a travel meal based on the description and meal expense code. Receipt data is absent, so the transaction cannot be cross-verified against supporting details.",
+  "comment": "No changes required. No receipt provided, so the charge could not be cross-checked.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

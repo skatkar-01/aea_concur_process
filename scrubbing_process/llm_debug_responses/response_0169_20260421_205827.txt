@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/CFO Interview/AMX
+Vendor: Marriott
+Amount: $410.13
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"lodging","formatted_description":"Lodging/CFO Interview Mtg/AMX","description_changed":true,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.96,"reasoning":"This is a lodging charge based on the expense type and Marriott vendor. 'CFO Interview' requires the Mtg suffix per format rules; no receipt detail is available to refine the stay further.","comment":"Slightly adjusted description — added Mtg to CFO Interview. No receipt available to further verify the lodging details.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/CFO Interview Mtg/AMX",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "This is a lodging charge based on the expense type and Marriott vendor. 'CFO Interview' requires the Mtg suffix per format rules; no receipt detail is available to refine the stay further.",
+  "comment": "Slightly adjusted description \u2014 added Mtg to CFO Interview. No receipt available to further verify the lodging details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

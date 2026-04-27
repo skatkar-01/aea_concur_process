@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: CLT-Mtg/Mgmt Mtg/Armstrong Transport
+Vendor: Uber
+Amount: $48.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"car_service","formatted_description":"CLT-Mtg/Mgmt Mtg/Armstrong Transport","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.93,"reasoning":"Car service transaction with deal/company name present. Description already follows the deal-related car service pattern and does not contain prohibited 'Transportation' wording.","comment":"No changes required.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "CLT-Mtg/Mgmt Mtg/Armstrong Transport",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Car service transaction with deal/company name present. Description already follows the deal-related car service pattern and does not contain prohibited 'Transportation' wording.",
+  "comment": "No changes required.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

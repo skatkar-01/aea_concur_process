@@ -9,7 +9,7 @@ from __future__ import annotations
 import pytest
 from pydantic import ValidationError
 
-from src.models import Statement, Cardholder, Transaction
+from src.models import Statement, Cardholder, Transaction, ConcurReceipt
 
 
 # ── Transaction ───────────────────────────────────────────────────────────────
@@ -132,3 +132,25 @@ class TestStatement:
         stmt = Statement.model_validate(raw)
         assert stmt.company_name == "TEST CO"
         assert stmt.cardholders[0].transactions[0].charges == pytest.approx(19.99)
+
+
+class TestConcurReceipt:
+    def test_details_is_preserved(self):
+        receipt = ConcurReceipt(
+            receipt_id="rcp_1",
+            details="Line 1\nLine 2",
+            summary="Two lines",
+        )
+        assert receipt.details == "Line 1\nLine 2"
+
+    def test_stringified_line_items_are_coerced(self):
+        receipt = ConcurReceipt.model_validate(
+            {
+                "receipt_id": "rcp_1",
+                "details": "Receipt text",
+                "line_items": "[{'name': 'Room Charge', 'amount': '$100.00'}]",
+            }
+        )
+
+        assert isinstance(receipt.line_items, list)
+        assert receipt.line_items == [{"name": "Room Charge", "amount": "$100.00"}]

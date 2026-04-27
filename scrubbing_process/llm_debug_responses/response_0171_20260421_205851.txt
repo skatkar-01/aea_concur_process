@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-2.39
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"other","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.86,"reasoning":"This appears to be a charitable donation/payment rather than a meal charge based on the vendor description 'JUSTGIVING.COM PURCHASE WITH MR POINTS' and negative amount. No receipt details are available to validate any alternate classification.","comment":"No receipt available. Transaction appears to be a JustGiving charitable payment, not a meal expense; flag for reviewer to confirm coding and whether it should be reclassified.","flags":["No receipt available","Potential charitable donation — review expense coding"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "This appears to be a charitable donation/payment rather than a meal charge based on the vendor description 'JUSTGIVING.COM PURCHASE WITH MR POINTS' and negative amount. No receipt details are available to validate any alternate classification.",
+  "comment": "No receipt available. Transaction appears to be a JustGiving charitable payment, not a meal expense; flag for reviewer to confirm coding and whether it should be reclassified.",
+  "flags": [
+    "No receipt available",
+    "Potential charitable donation \u2014 review expense coding"
+  ],
+  "is_refund": false,
+  "error": ""
+}

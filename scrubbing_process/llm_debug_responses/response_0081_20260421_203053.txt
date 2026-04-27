@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/PHL-SLC/Strategy
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/PHL-SLC/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Airline ticketing fee identified from description and expense type. 'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg'; receipt data is absent so route could not be cross-checked.",
+  "comment": "Updated description to add Mtg to Strategy. No receipt available to verify the ticket fee details or route.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/PHL-SLC/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.96,
+  "reasoning": "Airline ticketing fee identified from description and expense type. 'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg'; receipt data is absent so route could not be cross-checked.",
+  "comment": "Updated description to add Mtg to Strategy. No receipt available to verify the ticket fee details or route.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

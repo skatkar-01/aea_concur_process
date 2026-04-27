@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Conf/Stifel T&L Conf
+Vendor: Uber
+Amount: $25.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Hotel/BOD Mtg/Stifel T&L Conf",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Vendor and expense type indicate car service, and the description appears to be a deal-related transfer rather than lodging. However, the receipt data is empty, so the route and trip purpose cannot be validated from source documents.",
+  "comment": "Adjusted to car service format and removed the lodging-style wording. No receipt available to confirm route or trip details.",
+  "flags": [
+    "No receipt available",
+    "Possible car service description mismatch — verify route/purpose before posting"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Hotel/BOD Mtg/Stifel T&L Conf",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Vendor and expense type indicate car service, and the description appears to be a deal-related transfer rather than lodging. However, the receipt data is empty, so the route and trip purpose cannot be validated from source documents.",
+  "comment": "Adjusted to car service format and removed the lodging-style wording. No receipt available to confirm route or trip details.",
+  "flags": [
+    "No receipt available",
+    "Possible car service description mismatch \u2014 verify route/purpose before posting"
+  ],
+  "is_refund": false,
+  "error": ""
+}

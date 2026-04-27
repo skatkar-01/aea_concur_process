@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: InFlight Wifi/BOD Mtg/Banker Mtgs/Monroe
+Vendor: United
+Amount: $8.00
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"info_services","formatted_description":"Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe","description_changed":true,"expense_code":"Info Services","expense_code_changed":false,"confidence":0.92,"reasoning":"This is an inflight wifi charge, so the description must use the exact Inflight Wifi format. Receipt data is absent, so business purpose cannot be independently verified, but the trip date and BOD/Banker Mtgs context support the purpose already shown.","comment":"Updated to Inflight Wifi format. No receipt available to verify the charge; business purpose appears to be BOD Mtg/Banker Mtgs based on the trip context.","flags":["No receipt available","Inflight Wifi business purpose should be confirmed if possible"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "This is an inflight wifi charge, so the description must use the exact Inflight Wifi format. Receipt data is absent, so business purpose cannot be independently verified, but the trip date and BOD/Banker Mtgs context support the purpose already shown.",
+  "comment": "Updated to Inflight Wifi format. No receipt available to verify the charge; business purpose appears to be BOD Mtg/Banker Mtgs based on the trip context.",
+  "flags": [
+    "No receipt available",
+    "Inflight Wifi business purpose should be confirmed if possible"
+  ],
+  "is_refund": false,
+  "error": ""
+}

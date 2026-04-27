@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Office-Dinner/BOD Mtg/Monroe
+Vendor: Uber
+Amount: $39.97
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"car_service","formatted_description":"JFK-Hotel/BOD Mtg/Monroe","description_changed":true,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.91,"reasoning":"Description is a car service entry and the existing text 'Office-Dinner' does not match the car service format. Recast to the standard deal-related car service template using the apparent route-style form and preserved the deal/company name.","comment":"Adjusted to car service format. Receipt was not available, so route/details could not be cross-checked.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "JFK-Hotel/BOD Mtg/Monroe",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Description is a car service entry and the existing text 'Office-Dinner' does not match the car service format. Recast to the standard deal-related car service template using the apparent route-style form and preserved the deal/company name.",
+  "comment": "Adjusted to car service format. Receipt was not available, so route/details could not be cross-checked.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

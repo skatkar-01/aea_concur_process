@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: Frosch
+Amount: $135.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.78,"reasoning":"This is an airline ticketing fee based on the 'Tkt Fee' prefix and Airline expense type. Receipt data is absent, so the route and business purpose cannot be independently verified.","comment":"No changes required. No receipt was provided, so the route and ticket details could not be cross-checked.","flags":["No receipt available","No receipt — flight/ticket fee cannot be cross-referenced to route or ticket number"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/BOS-FRA-DUS-LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "This is an airline ticketing fee based on the 'Tkt Fee' prefix and Airline expense type. Receipt data is absent, so the route and business purpose cannot be independently verified.",
+  "comment": "No changes required. No receipt was provided, so the route and ticket details could not be cross-checked.",
+  "flags": [
+    "No receipt available",
+    "No receipt \u2014 flight/ticket fee cannot be cross-referenced to route or ticket number"
+  ],
+  "is_refund": false,
+  "error": ""
+}

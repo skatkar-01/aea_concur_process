@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/Exchange/JAX-EWR/Banker Mtgs/Monroe
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/Exch/JAX-EWR/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee on an airline transaction; 'Exchange' must be abbreviated to 'Exch' per formatting rules. Receipt data is absent, so route/ticket confirmation was not possible.",
+  "comment": "Updated description to standard ticket fee format and abbreviated Exchange to Exch. No receipt provided, so the fee could not be cross-checked.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Tkt Fee/Exch/JAX-EWR/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.98,
+  "reasoning": "Ticketing fee on an airline transaction; 'Exchange' must be abbreviated to 'Exch' per formatting rules. Receipt data is absent, so route/ticket confirmation was not possible.",
+  "comment": "Updated description to standard ticket fee format and abbreviated Exchange to Exch. No receipt provided, so the fee could not be cross-checked.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

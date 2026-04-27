@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Strategy
+Vendor: Holiday Inn
+Amount: $194.54
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a lodging charge, and 'Strategy' is a bare purpose word that must be expanded to 'Strategy Mtg'. No receipt was provided to cross-check the stay details.",
+  "comment": "Adjusted description to Lodging/Strategy Mtg. No receipt available to verify the stay or dates.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a lodging charge, and 'Strategy' is a bare purpose word that must be expanded to 'Strategy Mtg'. No receipt was provided to cross-check the stay details.",
+  "comment": "Adjusted description to Lodging/Strategy Mtg. No receipt available to verify the stay or dates.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

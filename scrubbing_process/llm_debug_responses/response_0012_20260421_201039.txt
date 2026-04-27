@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Mgmt Mtg/Monroe
+Vendor: Cibo
+Amount: $6.67
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Mgmt Mtg/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Description is a travel meal with a business purpose and company name; 'Mgmt Mtg' is already compliant. No receipt data was provided to cross-check the charge.",
+  "comment": "No changes required. No receipt available to verify the meal charge.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Mgmt Mtg/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Description is a travel meal with a business purpose and company name; 'Mgmt Mtg' is already compliant. No receipt data was provided to cross-check the charge.",
+  "comment": "No changes required. No receipt available to verify the meal charge.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

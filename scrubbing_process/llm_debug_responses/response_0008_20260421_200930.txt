@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Cancellation Fee/Mtg-Dinner/Mgmt Mtg/Monroe
+Vendor: Uber
+Amount: $5.20
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Cancellation Fee/Mgmt Mtg/Monroe",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Corrected description by removing invalid '/Mtg-Dinner/' segment which is non-standard and redundant since 'Mgmt Mtg' is present; 'Cancellation Fee' allowed as-is. Project 3369 requires SBF dept, which is correct. No receipt data to verify amount.",
+  "comment": "Adjusted description to remove invalid '/Mtg-Dinner/' segment; formatted as Cancellation Fee/Mgmt Mtg/Monroe per AEA standards. No receipt to verify amount.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Cancellation Fee/Mgmt Mtg/Monroe",
+  "description_changed": true,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Corrected description by removing invalid '/Mtg-Dinner/' segment which is non-standard and redundant since 'Mgmt Mtg' is present; 'Cancellation Fee' allowed as-is. Project 3369 requires SBF dept, which is correct. No receipt data to verify amount.",
+  "comment": "Adjusted description to remove invalid '/Mtg-Dinner/' segment; formatted as Cancellation Fee/Mgmt Mtg/Monroe per AEA standards. No receipt to verify amount.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

@@ -1090,12 +1090,7 @@ def main():
     AmExScrubber(
         input_path     = args.input,
         output_path    = args.output,
-        reference_path = args.reference,
-        statement_date = args.statement_date,
         llm_batch_size = args.llm_batch_size,
-        azure_api_key  = args.azure_api_key,
-        azure_endpoint = args.azure_endpoint,
-        azure_model    = args.azure_model,
     ).run()
 
 

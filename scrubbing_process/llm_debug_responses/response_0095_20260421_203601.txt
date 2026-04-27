@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/IR Mtgs
+Vendor: United
+Amount: $1849.68
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-LHR-EWR/IR Mtgs",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an airline transaction with a 3-airport route shown in the description, which suggests a round trip with a stopover. 'IR Mtgs' is already acceptable as a plural meeting abbreviation and no receipt data is available to contradict the route.",
+  "comment": "Updated to round-trip flight format for the multi-leg EWR-FRA-LHR-EWR itinerary. No receipt was provided to cross-check ticket number or passenger.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-LHR-EWR/IR Mtgs",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an airline transaction with a 3-airport route shown in the description, which suggests a round trip with a stopover. 'IR Mtgs' is already acceptable as a plural meeting abbreviation and no receipt data is available to contradict the route.",
+  "comment": "Updated to round-trip flight format for the multi-leg EWR-FRA-LHR-EWR itinerary. No receipt was provided to cross-check ticket number or passenger.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

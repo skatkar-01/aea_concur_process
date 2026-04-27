@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+Vendor: Paradies Lagardere
+Amount: $6.76
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Description matches the travel meal template and already includes a purpose plus deal/company name. Receipt data is absent, so no cross-check was possible.",
+  "comment": "No changes required. Receipt data is missing, so the charge could not be independently verified.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.94,
+  "reasoning": "Description matches the travel meal template and already includes a purpose plus deal/company name. Receipt data is absent, so no cross-check was possible.",
+  "comment": "No changes required. Receipt data is missing, so the charge could not be independently verified.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

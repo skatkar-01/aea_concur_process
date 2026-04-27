@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: British Air
+Amount: $299.54
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Route/airline description indicates a flight and the 3-part structure is present. 'Mgmt Mtg' is already a valid purpose form, and the deal/company names are included; receipt data is absent so no further validation was possible.",
+  "comment": "No changes required. No receipt available to cross-check route, fare, or ticket details.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "DUS-LHR/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Route/airline description indicates a flight and the 3-part structure is present. 'Mgmt Mtg' is already a valid purpose form, and the deal/company names are included; receipt data is absent so no further validation was possible.",
+  "comment": "No changes required. No receipt available to cross-check route, fare, or ticket details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

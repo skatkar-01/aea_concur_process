@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: EWR-FRA/LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent
+Vendor: United
+Amount: $1849.66
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"RT:EWR-FRA-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.82,"reasoning":"This is an airline transaction and the route shows a multi-leg round trip pattern. The description needed the RT: prefix and the purpose standardised to Mgmt Mtg; receipt data was absent so the route could not be independently verified.","comment":"Formatted as a round-trip flight with the route standardised. No receipt details were provided, so the itinerary could not be cross-checked against a ticket or passenger record.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-FRA-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essent",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.82,
+  "reasoning": "This is an airline transaction and the route shows a multi-leg round trip pattern. The description needed the RT: prefix and the purpose standardised to Mgmt Mtg; receipt data was absent so the route could not be independently verified.",
+  "comment": "Formatted as a round-trip flight with the route standardised. No receipt details were provided, so the itinerary could not be cross-checked against a ticket or passenger record.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

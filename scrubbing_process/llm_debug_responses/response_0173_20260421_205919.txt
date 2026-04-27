@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: American Express
+Amount: $-16.17
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"other","formatted_description":"Personal","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.91,"reasoning":"Negative amount with vendor JUSTGIVING.COM PURCHASE WITH MR POINTS indicates a charitable donation rather than a meal. Receipt data is absent, so no cross-reference is possible.","comment":"No changes required to the description. Treat as a donation/other transaction; no receipt was provided to verify details.","flags":["No receipt available","Donation/charitable charge should be coded as Donations rather than Meals"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "other",
+  "formatted_description": "Personal",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "Negative amount with vendor JUSTGIVING.COM PURCHASE WITH MR POINTS indicates a charitable donation rather than a meal. Receipt data is absent, so no cross-reference is possible.",
+  "comment": "No changes required to the description. Treat as a donation/other transaction; no receipt was provided to verify details.",
+  "flags": [
+    "No receipt available",
+    "Donation/charitable charge should be coded as Donations rather than Meals"
+  ],
+  "is_refund": false,
+  "error": ""
+}

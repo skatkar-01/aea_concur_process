@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RDU-LGA/Agreement Mtg/LRB
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"Tkt Fee/RDU-LGA/Agreement Mtg/LRB","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.88,"reasoning":"Ticketing fee on an airline transaction; description already uses the correct Tkt Fee format and includes route, purpose, and deal/company. No receipt data was provided to cross-check ticket details, so the charge cannot be fully validated.","comment":"No changes required. No receipt available to verify the ticket fee against route or ticket number.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RDU-LGA/Agreement Mtg/LRB",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "Ticketing fee on an airline transaction; description already uses the correct Tkt Fee format and includes route, purpose, and deal/company. No receipt data was provided to cross-check ticket details, so the charge cannot be fully validated.",
+  "comment": "No changes required. No receipt available to verify the ticket fee against route or ticket number.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

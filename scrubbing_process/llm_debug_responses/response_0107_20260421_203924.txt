@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Ticketing fee on an airline transaction; description already uses the correct Tkt Fee format and includes the multi-leg route and purpose/company names. Receipt data is absent, so route/ticket cannot be cross-checked.",
+  "comment": "No changes required. Receipt is missing, so the route and ticket details could not be verified.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/EWR-FRA/DUS-LHR-EWR/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.9,
+  "reasoning": "Ticketing fee on an airline transaction; description already uses the correct Tkt Fee format and includes the multi-leg route and purpose/company names. Receipt data is absent, so route/ticket cannot be cross-checked.",
+  "comment": "No changes required. Receipt is missing, so the route and ticket details could not be verified.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

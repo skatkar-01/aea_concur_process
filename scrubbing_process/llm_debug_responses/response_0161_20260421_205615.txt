@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Stifel T&L Conf
+Vendor: Shell Oil
+Amount: $12.81
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/Stifel T&L Conf","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.78,"reasoning":"Description is already in travel-meal format and no receipt data is available to cross-check the meal context. Vendor/amount suggest no rule-based reclassification.","comment":"No receipt available to verify the charge or business purpose. Description left as-is.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Stifel T&L Conf",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "Description is already in travel-meal format and no receipt data is available to cross-check the meal context. Vendor/amount suggest no rule-based reclassification.",
+  "comment": "No receipt available to verify the charge or business purpose. Description left as-is.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

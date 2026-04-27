@@ -12,6 +12,7 @@ Concur models: ConcurTransactionRow, ConcurEmployeeReport, ConcurApprovalEntry,
 """
 from __future__ import annotations
 
+import ast
 import re
 from typing import Optional
 
@@ -133,6 +134,29 @@ def _clean_str(v: object) -> Optional[str]:
     return str(v).strip() or None
 
 
+# def _coerce_line_items(v: object) -> Optional[list]:
+#     """
+#     Accept a real list or a model-produced stringified Python/JSON list.
+#     """
+#     if v is None or v == "" or str(v).lower() in {"null", "none"}:
+#         return None
+#     if isinstance(v, list):
+#         return v
+#     if isinstance(v, tuple):
+#         return list(v)
+#     if isinstance(v, str):
+#         s = v.strip()
+#         if not s:
+#             return None
+#         try:
+#             parsed = ast.literal_eval(s)
+#         except (ValueError, SyntaxError):
+#             return None
+#         if isinstance(parsed, list):
+#             return parsed
+#     return None
+
+
 class ConcurTransactionRow(BaseModel):
     """TABLE 1: transactions — one expense line item from the Concur report."""
     transaction_id:     Optional[str]   = None   # e.g. "txn_1"
@@ -226,15 +250,28 @@ class ConcurReceipt(BaseModel):
     date:       Optional[str]   = None
     vendor:     Optional[str]   = None
     amount:     Optional[float] = None
-    summary:    Optional[str]   = None   # detailed line-item summary
+    line_items: Optional[str]  = None   # raw text of all line items (if available)
+    details:    Optional[str]   = None   # full receipt text exactly as seen
 
     @field_validator("amount", mode="before")
     @classmethod
     def _amt(cls, v): return _parse_amount(v)
 
-    @field_validator("receipt_id", "order_id", "date", "vendor", "summary", mode="before")
+    @field_validator("receipt_id", "order_id", "date", "vendor",'line_items', "details", mode="before")
     @classmethod
     def _clean(cls, v): return _clean_str(v)
+
+    # @field_validator("line_items", mode="before")
+    # @classmethod
+    # def _line_items(cls, v): return _coerce_line_items(v)
+
+    @model_validator(mode="before")
+    @classmethod
+    def _accept_legacy_raw_text(cls, data):
+        if isinstance(data, dict) and "details" not in data and "raw_text" in data:
+            data = dict(data)
+            data["details"] = data.pop("raw_text")
+        return data
 
 
 class ConcurReconEntry(BaseModel):

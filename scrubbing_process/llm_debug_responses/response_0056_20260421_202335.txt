@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: Virgin Airways
+Amount: $10242.43
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "This is an airline charge with a route-style description, so it classifies as a flight. Description already follows the expected 3-part format, and no receipt data is available to verify the fare or route details.",
+  "comment": "No changes required. No receipt available to confirm the ticket, route, or amount, so this should be reviewed if needed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "LHR-TPA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.88,
+  "reasoning": "This is an airline charge with a route-style description, so it classifies as a flight. Description already follows the expected 3-part format, and no receipt data is available to verify the fare or route details.",
+  "comment": "No changes required. No receipt available to confirm the ticket, route, or amount, so this should be reviewed if needed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

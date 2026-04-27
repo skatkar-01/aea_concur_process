@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RT: EWR-LHR/IR Mtgs
+Vendor: Frosch
+Amount: $22.50
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"Tkt Fee/RT:EWR-LHR/IR Mtgs","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.83,"reasoning":"This is a ticketing fee on an airline transaction. Removed the space after RT: to match flight formatting rules; receipt data is absent so the route could not be cross-checked.","comment":"Corrected flight fee format to Tkt Fee/RT:EWR-LHR/IR Mtgs. No receipt available to verify route, ticket number, or passenger.","flags":["No receipt available","Ticketing fee route and original flight cannot be cross-verified from receipt data"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-LHR/IR Mtgs",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.83,
+  "reasoning": "This is a ticketing fee on an airline transaction. Removed the space after RT: to match flight formatting rules; receipt data is absent so the route could not be cross-checked.",
+  "comment": "Corrected flight fee format to Tkt Fee/RT:EWR-LHR/IR Mtgs. No receipt available to verify route, ticket number, or passenger.",
+  "flags": [
+    "No receipt available",
+    "Ticketing fee route and original flight cannot be cross-verified from receipt data"
+  ],
+  "is_refund": false,
+  "error": ""
+}

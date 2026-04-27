@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/WWE
+Vendor: Versailles
+Amount: $96.87
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/WWE",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Travel meal with a clear purpose and company name; 'BOD Mtg' is already compliant and matches the report purpose/context. No receipt data was provided to cross-check, so no receipt-based correction was needed.",
+  "comment": "",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/WWE",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Travel meal with a clear purpose and company name; 'BOD Mtg' is already compliant and matches the report purpose/context. No receipt data was provided to cross-check, so no receipt-based correction was needed.",
+  "comment": "",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

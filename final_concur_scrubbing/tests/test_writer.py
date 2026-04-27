@@ -8,10 +8,19 @@ from __future__ import annotations
 
 import pytest
 from pathlib import Path
+from types import SimpleNamespace
 
 from openpyxl import load_workbook
 
-from src.models import Cardholder, Statement, Transaction
+from src.models import (
+    Cardholder,
+    ConcurEmployeeReport,
+    ConcurRecord,
+    ConcurReceipt,
+    Statement,
+    Transaction,
+)
+from src.concur_writer import write_concur_excel
 from src.writer import write_xlsx
 
 
@@ -89,3 +98,32 @@ class TestWriteXlsx:
         nested = tmp_path / "deep" / "nested" / "dir"
         out    = write_xlsx(stmt, nested / "test.xlsx")
         assert out.exists()
+
+
+class TestConcurWriter:
+    def test_receipt_details_written_to_excel(self, tmp_path: Path):
+        record = ConcurRecord(
+            employee_report=ConcurEmployeeReport(employee_name="Jane Doe", report_id="R-1"),
+            receipts=[
+                ConcurReceipt(
+                    receipt_id="rcp_1",
+                    order_id="ORD-1",
+                    date="01/15/2026",
+                    vendor="Demo Vendor",
+                    amount=12.34,
+                    line_items=[{"name": "Item", "amount": "$12.34"}],
+                    details="Header line\nItem line",
+                    summary="Header line; Item line",
+                )
+            ],
+        )
+        month_info = SimpleNamespace(month=1, year=2026)
+        out = write_concur_excel(record, tmp_path, month_info, "demo.pdf")
+
+        wb = load_workbook(out)
+        ws = wb["Receipts"]
+
+        assert ws.cell(row=3, column=6).value == "Line Items"
+        assert ws.cell(row=4, column=6).value == '[{"name": "Item", "amount": "$12.34"}]'
+        assert ws.cell(row=3, column=7).value == "Details"
+        assert ws.cell(row=4, column=7).value == "Header line\nItem line"

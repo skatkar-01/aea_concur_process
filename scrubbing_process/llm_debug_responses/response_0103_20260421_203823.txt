@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: DUS-LHR/BOD Mtg/RED
+Vendor: British Air
+Amount: $299.53
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "DUS-LHR/BOD Mtg/RED",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.87,
+  "reasoning": "Airline transaction with a route/purpose/deal structure that already matches flight formatting. Receipt data is absent, so the route and amount cannot be cross-checked.",
+  "comment": "No changes required. No receipt was provided, so the flight details could not be verified against ticket or route data.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "DUS-LHR/BOD Mtg/RED",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.87,
+  "reasoning": "Airline transaction with a route/purpose/deal structure that already matches flight formatting. Receipt data is absent, so the route and amount cannot be cross-checked.",
+  "comment": "No changes required. No receipt was provided, so the flight details could not be verified against ticket or route data.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

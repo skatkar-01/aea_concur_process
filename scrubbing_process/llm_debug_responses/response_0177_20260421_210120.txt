@@ -1,0 +1,102 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus.Outing w/ Incline Equity Partners (Cale Grove, Blake Udland)
+Vendor: Bergamo's
+Amount: $83.01
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"results":[{"index":1,"transaction_type":"meal_business","formatted_description":"Bus.Lunch/2 ppl/Incline Equity Partners","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.92,"reasoning":"Business outing meal with external guests; converted to business lunch format and used count since guest names are not verifiable from receipt data. Vendor and amount are consistent with a meal charge.","flags":[],"is_refund":false,"error":""},{"index":2,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.86,"reasoning":"Office meal already in compliant 1-part form. Amount exceeds the $25 lunch limit, so overage review is required.","flags":["Working Lunch $44.55 exceeds $25.00 limit – split overage to project 1008 with Employee ID"],"is_refund":false,"error":""},{"index":3,"transaction_type":"flight","formatted_description":"SLC-JFK/AEA Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Flight route is clear from description; changed bare purpose word 'Strategy' to 'Strategy Mtg' per standard. No receipt was provided to further validate the itinerary.","flags":["No receipt available"],"is_refund":false,"error":""},{"index":4,"transaction_type":"meal_office","formatted_description":"Working Lunch","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Working Lunch is already compliant as a 1-part office meal description. Amount is within limit.","flags":[],"is_refund":false,"error":""},{"index":5,"transaction_type":"other","formatted_description":"Office Supplies/CT Office","description_changed":false,"expense_code":"Office Supplies","expense_code_changed":false,"confidence":0.95,"reasoning":"Expense is an office supply purchase and the description is acceptable as provided. No format change required.","flags":[],"is_refund":false,"error":""},{"index":6,"transaction_type":"flight","formatted_description":"Tkt Fee/SLC-JFK/AEA Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.95,"reasoning":"Ticketing fee format required for airline ancillary charges; added 'Mtg' to Strategy per standard. Description otherwise matches a fee tied to the SLC-JFK flight.","flags":[],"is_refund":false,"error":""}]}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "results": [
+    {
+      "index": 1,
+      "transaction_type": "meal_business",
+      "formatted_description": "Bus.Lunch/2 ppl/Incline Equity Partners",
+      "description_changed": true,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.92,
+      "reasoning": "Business outing meal with external guests; converted to business lunch format and used count since guest names are not verifiable from receipt data. Vendor and amount are consistent with a meal charge.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 2,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.86,
+      "reasoning": "Office meal already in compliant 1-part form. Amount exceeds the $25 lunch limit, so overage review is required.",
+      "flags": [
+        "Working Lunch $44.55 exceeds $25.00 limit \u2013 split overage to project 1008 with Employee ID"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 3,
+      "transaction_type": "flight",
+      "formatted_description": "SLC-JFK/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Flight route is clear from description; changed bare purpose word 'Strategy' to 'Strategy Mtg' per standard. No receipt was provided to further validate the itinerary.",
+      "flags": [
+        "No receipt available"
+      ],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 4,
+      "transaction_type": "meal_office",
+      "formatted_description": "Working Lunch",
+      "description_changed": false,
+      "expense_code": "Meals",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Working Lunch is already compliant as a 1-part office meal description. Amount is within limit.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 5,
+      "transaction_type": "other",
+      "formatted_description": "Office Supplies/CT Office",
+      "description_changed": false,
+      "expense_code": "Office Supplies",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Expense is an office supply purchase and the description is acceptable as provided. No format change required.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    },
+    {
+      "index": 6,
+      "transaction_type": "flight",
+      "formatted_description": "Tkt Fee/SLC-JFK/AEA Strategy Mtg",
+      "description_changed": true,
+      "expense_code": "Airline",
+      "expense_code_changed": false,
+      "confidence": 0.95,
+      "reasoning": "Ticketing fee format required for airline ancillary charges; added 'Mtg' to Strategy per standard. Description otherwise matches a fee tied to the SLC-JFK flight.",
+      "flags": [],
+      "is_refund": false,
+      "error": ""
+    }
+  ]
+}

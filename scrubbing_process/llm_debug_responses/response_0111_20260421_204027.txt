@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/EWR-FRA/DUS-LHR-EWR/IR Mtgs
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-FRA-DUS-LHR-EWR/IR Mtgs",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "This is a ticketing fee on an airline expense. The route has multiple legs and returns to EWR, so RT: is appropriate; 'IR Mtgs' is already a valid purpose abbreviation.",
+  "comment": "Updated to ticketing fee format and added RT: for the multi-leg round trip. No receipt was provided to cross-check the ticket or fare.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-FRA-DUS-LHR-EWR/IR Mtgs",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.91,
+  "reasoning": "This is a ticketing fee on an airline expense. The route has multiple legs and returns to EWR, so RT: is appropriate; 'IR Mtgs' is already a valid purpose abbreviation.",
+  "comment": "Updated to ticketing fee format and added RT: for the multi-leg round trip. No receipt was provided to cross-check the ticket or fare.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

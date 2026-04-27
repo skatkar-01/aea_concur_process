@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/Exchange/Refund/JAX-EWR/Banker Mtgs/Monroe
+Vendor: Frosch
+Amount: $30.00
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"refund","formatted_description":"Refund/Exch Tkt/JAX-EWR/Banker Mtgs/Monroe","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.86,"reasoning":"Description indicates an airline exchange refund; 'Exchange/Refund' must be normalized to 'Refund/Exch Tkt'. Receipt data is blank, so the original charge cannot be cross-referenced.","comment":"Corrected to refund of exchanged JAX-EWR ticket. No receipt available to verify ticket number or match to the original charge, so this needs review.","flags":["No receipt — refund cannot be cross-referenced to original charge"],"is_refund":true,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Exch Tkt/JAX-EWR/Banker Mtgs/Monroe",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.86,
+  "reasoning": "Description indicates an airline exchange refund; 'Exchange/Refund' must be normalized to 'Refund/Exch Tkt'. Receipt data is blank, so the original charge cannot be cross-referenced.",
+  "comment": "Corrected to refund of exchanged JAX-EWR ticket. No receipt available to verify ticket number or match to the original charge, so this needs review.",
+  "flags": [
+    "No receipt \u2014 refund cannot be cross-referenced to original charge"
+  ],
+  "is_refund": true,
+  "error": ""
+}

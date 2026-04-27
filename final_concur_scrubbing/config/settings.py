@@ -48,6 +48,18 @@ class Settings(BaseSettings):
     azure_openai_model: str    = Field("gpt-4o")
     azure_openai_model1: str   = Field(default="", description="First fallback model to try if primary fails")
     azure_openai_model2: str   = Field(default="", description="Second fallback model to try if model_1 fails")
+    azure_openai_concur_transaction_model: str = Field(
+        default="",
+        description="Optional Concur transactions/report/approval extraction model",
+    )
+    azure_openai_concur_receipt_model: str = Field(
+        default="",
+        description="Optional Concur receipt extraction model",
+    )
+    azure_openai_concur_reconciliation_model: str = Field(
+        default="",
+        description="Optional Concur reconciliation model",
+    )
 
     # ── Box API ───────────────────────────────────────────────────────────────
     box_client_id: str       = Field(..., description="Box OAuth2 client ID")

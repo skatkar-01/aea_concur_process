@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: RT: EWR-LHR/Mtgs/IR
+Vendor: United
+Amount: $2746.27
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"RT:EWR-LHR/Mtgs/IR","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.93,"reasoning":"Airline transaction with round-trip route pattern; removed the extra space after RT: to match flight formatting. Receipt data is absent, so route could not be cross-checked.","comment":"Standardized flight description to RT:EWR-LHR/Mtgs/IR. No receipt was provided to verify the ticket or route details.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "RT:EWR-LHR/Mtgs/IR",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "Airline transaction with round-trip route pattern; removed the extra space after RT: to match flight formatting. Receipt data is absent, so route could not be cross-checked.",
+  "comment": "Standardized flight description to RT:EWR-LHR/Mtgs/IR. No receipt was provided to verify the ticket or route details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

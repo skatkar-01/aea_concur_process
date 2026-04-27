@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Personal
+Vendor: Grubhub
+Amount: $2.39
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Payment",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.82,
+  "reasoning": "Grubhub meal charge with report purpose 'Payment' fits a travel meal style entry, but the description is too generic and receipt data is absent. Used the provided report purpose as the business-purpose segment and flagged missing receipt support.",
+  "comment": "Updated description to include the business purpose. No receipt was available to verify the charge details, so please review if a different meal category or purpose applies.",
+  "flags": [
+    "No receipt available",
+    "Transaction description is too generic for review"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Payment",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.82,
+  "reasoning": "Grubhub meal charge with report purpose 'Payment' fits a travel meal style entry, but the description is too generic and receipt data is absent. Used the provided report purpose as the business-purpose segment and flagged missing receipt support.",
+  "comment": "Updated description to include the business purpose. No receipt was available to verify the charge details, so please review if a different meal category or purpose applies.",
+  "flags": [
+    "No receipt available",
+    "Transaction description is too generic for review"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,32 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Refund/Exchange/EWR-SLC/Strategy
+Vendor: United
+Amount: $-961.36
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"refund","formatted_description":"Refund/Exch Tkt/EWR-SLC/Strategy Mtg","description_changed":true,"expense_code":"Airline","expense_code_changed":false,"confidence":0.79,"reasoning":"This is a flight refund based on the negative amount and refund/exchange wording. 'Exchange' must be abbreviated to 'Exch Tkt' and 'Strategy' needs 'Strategy Mtg'; no receipt data is available to confirm the original charge.","comment":"Formatted as an exchange-ticket refund and added Mtg to Strategy. No receipt was provided, so the original charge could not be cross-checked.","flags":["No receipt — refund cannot be cross-referenced to original charge","Prepaid project – review G/L 14000 at posting"],"is_refund":true,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "refund",
+  "formatted_description": "Refund/Exch Tkt/EWR-SLC/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.79,
+  "reasoning": "This is a flight refund based on the negative amount and refund/exchange wording. 'Exchange' must be abbreviated to 'Exch Tkt' and 'Strategy' needs 'Strategy Mtg'; no receipt data is available to confirm the original charge.",
+  "comment": "Formatted as an exchange-ticket refund and added Mtg to Strategy. No receipt was provided, so the original charge could not be cross-checked.",
+  "flags": [
+    "No receipt \u2014 refund cannot be cross-referenced to original charge",
+    "Prepaid project \u2013 review G/L 14000 at posting"
+  ],
+  "is_refund": true,
+  "error": ""
+}

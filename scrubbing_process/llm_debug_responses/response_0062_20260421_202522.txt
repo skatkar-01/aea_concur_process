@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic
+Vendor: Lufthansa
+Amount: $6898.50
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"flight","formatted_description":"BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic","description_changed":false,"expense_code":"Airline","expense_code_changed":false,"confidence":0.77,"reasoning":"This is a flight transaction based on the airline vendor and BOS-FRA route. The description already follows the 3-part flight format, but there is no receipt data to cross-check the ticket, route, or amount.","comment":"No changes required. No receipt available to confirm the ticket/route or match the amount, so this should be reviewed.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "BOS-FRA/Mgmt Mtg/Frissam Pumps/Essentic",
+  "description_changed": false,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.77,
+  "reasoning": "This is a flight transaction based on the airline vendor and BOS-FRA route. The description already follows the 3-part flight format, but there is no receipt data to cross-check the ticket, route, or amount.",
+  "comment": "No changes required. No receipt available to confirm the ticket/route or match the amount, so this should be reviewed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

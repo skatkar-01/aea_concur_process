@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Dunkin
+Amount: $11.52
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/Strategy Mtg","description_changed":true,"expense_code":"Meals","expense_code_changed":false,"confidence":0.95,"reasoning":"Travel meal with no receipt data to cross-reference. 'Strategy' is a bare purpose word, so it requires 'Mtg' per formatting rules.","comment":"Slightly adjusted description — added Mtg to Strategy. No receipt available to verify business purpose beyond the report details.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Travel meal with no receipt data to cross-reference. 'Strategy' is a bare purpose word, so it requires 'Mtg' per formatting rules.",
+  "comment": "Slightly adjusted description \u2014 added Mtg to Strategy. No receipt available to verify business purpose beyond the report details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/WWE
+Vendor: Shell Oil
+Amount: $13.21
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"meal_travel","formatted_description":"Travel Meal/BOD Mtg/WWE","description_changed":false,"expense_code":"Meals","expense_code_changed":false,"confidence":0.8,"reasoning":"Description is already in the correct travel meal format. Receipt data is absent, so the meal purpose cannot be independently verified from receipt details.","comment":"No changes required. No receipt available to verify the meal against transaction details; flag for review if needed.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/WWE",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.8,
+  "reasoning": "Description is already in the correct travel meal format. Receipt data is absent, so the meal purpose cannot be independently verified from receipt details.",
+  "comment": "No changes required. No receipt available to verify the meal against transaction details; flag for review if needed.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

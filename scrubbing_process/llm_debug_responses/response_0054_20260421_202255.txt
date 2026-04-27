@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/Strategy
+Vendor: Coffee Bean & Tea Leaf
+Amount: $10.90
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a travel meal transaction based on the expense type and description. 'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg'; no receipt data was available to contradict the transaction details.",
+  "comment": "Slightly adjusted description — added Mtg to Strategy. No receipt available to further validate the charge.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/Strategy Mtg",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a travel meal transaction based on the expense type and description. 'Strategy' is a bare purpose word and must be completed to 'Strategy Mtg'; no receipt data was available to contradict the transaction details.",
+  "comment": "Slightly adjusted description \u2014 added Mtg to Strategy. No receipt available to further validate the charge.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

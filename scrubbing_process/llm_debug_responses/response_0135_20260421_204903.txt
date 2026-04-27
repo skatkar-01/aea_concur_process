@@ -1,0 +1,41 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Bus. Dinner w/J. Franklin, Pot EP
+Vendor: Midtown Table
+Amount: $158.00
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/B.Franklin & Pot EP/SBF",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Standardized business dinner description: converted 'w/' to slash separator, replaced full name with initial-last name per policy, appended department as deal/company name as SBF project.",
+  "comment": "Description adjusted to format Bus.Dinner/B.Franklin & Pot EP/SBF to comply with policy on attendees and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_business",
+  "formatted_description": "Bus.Dinner/B.Franklin & Pot EP/SBF",
+  "description_changed": true,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "Standardized business dinner description: converted 'w/' to slash separator, replaced full name with initial-last name per policy, appended department as deal/company name as SBF project.",
+  "comment": "Description adjusted to format Bus.Dinner/B.Franklin & Pot EP/SBF to comply with policy on attendees and deal name.",
+  "flags": [],
+  "is_refund": false,
+  "error": ""
+}

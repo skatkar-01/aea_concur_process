@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Home-Conf/Baird T&S Conf
+Vendor: Uber
+Amount: $55.36
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"car_service","formatted_description":"Home-Conf/Baird T&S Conf","description_changed":false,"expense_code":"Car Service","expense_code_changed":false,"confidence":0.92,"reasoning":"Car service from home to a conference location; description already fits the deal-related car service pattern and no receipt data is available to contradict it. Expense type is consistent with the transaction.","comment":"No changes required. No receipt provided to further validate the ride or route.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Home-Conf/Baird T&S Conf",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.92,
+  "reasoning": "Car service from home to a conference location; description already fits the deal-related car service pattern and no receipt data is available to contradict it. Expense type is consistent with the transaction.",
+  "comment": "No changes required. No receipt provided to further validate the ride or route.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

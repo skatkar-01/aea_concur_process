@@ -1,0 +1,45 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Travel Meal/BOD Mtg/Banker Mtgs/Monroe
+Vendor: Verdi Market
+Amount: $11.72
+Expense: Meals
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "This is a travel meal, and the description already follows the required 3-part format. Receipt data is absent, so it cannot be cross-checked against the charge.",
+  "comment": "No changes required. No receipt was provided, so the meal could not be verified against supporting details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "meal_travel",
+  "formatted_description": "Travel Meal/BOD Mtg/Banker Mtgs/Monroe",
+  "description_changed": false,
+  "expense_code": "Meals",
+  "expense_code_changed": false,
+  "confidence": 0.78,
+  "reasoning": "This is a travel meal, and the description already follows the required 3-part format. Receipt data is absent, so it cannot be cross-checked against the charge.",
+  "comment": "No changes required. No receipt was provided, so the meal could not be verified against supporting details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

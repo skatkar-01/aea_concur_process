@@ -1,0 +1,43 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Tkt Fee/RT: EWR-LHR/BOD Mtg/RED
+Vendor: Frosch
+Amount: $22.50
+Expense: Airline
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-LHR/BOD Mtg/RED",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an airline ticketing fee, so the transaction type is flight and the description should use the Tkt Fee template. Added the required no-space RT: format after Tkt Fee; receipt data is absent, so route/receipt validation could not be performed.",
+  "comment": "Adjusted to standard ticketing-fee format and removed the space after RT:. No receipt available to verify the route or ticket details.",
+  "flags": ["No receipt available"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "flight",
+  "formatted_description": "Tkt Fee/RT:EWR-LHR/BOD Mtg/RED",
+  "description_changed": true,
+  "expense_code": "Airline",
+  "expense_code_changed": false,
+  "confidence": 0.93,
+  "reasoning": "This is an airline ticketing fee, so the transaction type is flight and the description should use the Tkt Fee template. Added the required no-space RT: format after Tkt Fee; receipt data is absent, so route/receipt validation could not be performed.",
+  "comment": "Adjusted to standard ticketing-fee format and removed the space after RT:. No receipt available to verify the route or ticket details.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

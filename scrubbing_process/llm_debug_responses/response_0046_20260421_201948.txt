@@ -1,0 +1,31 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Lodging/Mgmt Mtg/Aqualis
+Vendor: Westin
+Amount: $451.87
+Expense: Lodging
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"lodging","formatted_description":"Lodging/Mgmt Mtg/Aqualis","description_changed":false,"expense_code":"Lodging","expense_code_changed":false,"confidence":0.95,"reasoning":"This is a lodging charge and the description already matches the lodging template with expense + purpose + deal/company name. Receipt data is absent, so no cross-check was possible.","comment":"No changes required. No receipt available to verify the stay details or amount.","flags":["No receipt available"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "lodging",
+  "formatted_description": "Lodging/Mgmt Mtg/Aqualis",
+  "description_changed": false,
+  "expense_code": "Lodging",
+  "expense_code_changed": false,
+  "confidence": 0.95,
+  "reasoning": "This is a lodging charge and the description already matches the lodging template with expense + purpose + deal/company name. Receipt data is absent, so no cross-check was possible.",
+  "comment": "No changes required. No receipt available to verify the stay details or amount.",
+  "flags": [
+    "No receipt available"
+  ],
+  "is_refund": false,
+  "error": ""
+}

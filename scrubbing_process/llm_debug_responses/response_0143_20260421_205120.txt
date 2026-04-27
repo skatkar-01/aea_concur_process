@@ -1,0 +1,44 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Mtg-CLT/Mgmt Mtg/Armstrong Transport
+Vendor: Uber
+Amount: $50.98
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Mtg-CLT/Mgmt Mtg/Armstrong Transport",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.76,
+  "reasoning": "This is a car service transaction, but the description does not match any approved car service template. Receipt data is missing, so the route and trip type cannot be verified.",
+  "comment": "No receipt available to verify the ride details. Description does not match a standard car service format, so please review manually.",
+  "flags": ["No receipt available", "Car service description does not match an approved template"],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Mtg-CLT/Mgmt Mtg/Armstrong Transport",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.76,
+  "reasoning": "This is a car service transaction, but the description does not match any approved car service template. Receipt data is missing, so the route and trip type cannot be verified.",
+  "comment": "No receipt available to verify the ride details. Description does not match a standard car service format, so please review manually.",
+  "flags": [
+    "No receipt available",
+    "Car service description does not match an approved template"
+  ],
+  "is_refund": false,
+  "error": ""
+}

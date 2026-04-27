@@ -1,0 +1,33 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: InFlight Wifi/Strategy
+Vendor: United
+Amount: $8.00
+Expense: Info Services
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{"transaction_type":"info_services","formatted_description":"Inflight Wifi","description_changed":true,"expense_code":"Info Services","expense_code_changed":false,"confidence":0.85,"reasoning":"'InFlight Wifi' is a smart-detected Info Services item and should be exactly 'Inflight Wifi'. Receipt data is absent, so business purpose could not be cross-checked; the trip date was used to infer purpose from the related report context as Strategy Mtg.","comment":"Updated to Inflight Wifi. No receipt was provided; business purpose was inferred from the trip context as Strategy Mtg, but this should be reviewed.","flags":["No receipt available","Inflight Wifi missing business purpose — date-based inference used; review if trip context is unclear","Project 1035 is prepaid – review G/L 14000 at posting"],"is_refund":false,"error":""}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "info_services",
+  "formatted_description": "Inflight Wifi",
+  "description_changed": true,
+  "expense_code": "Info Services",
+  "expense_code_changed": false,
+  "confidence": 0.85,
+  "reasoning": "'InFlight Wifi' is a smart-detected Info Services item and should be exactly 'Inflight Wifi'. Receipt data is absent, so business purpose could not be cross-checked; the trip date was used to infer purpose from the related report context as Strategy Mtg.",
+  "comment": "Updated to Inflight Wifi. No receipt was provided; business purpose was inferred from the trip context as Strategy Mtg, but this should be reviewed.",
+  "flags": [
+    "No receipt available",
+    "Inflight Wifi missing business purpose \u2014 date-based inference used; review if trip context is unclear",
+    "Project 1035 is prepaid \u2013 review G/L 14000 at posting"
+  ],
+  "is_refund": false,
+  "error": ""
+}

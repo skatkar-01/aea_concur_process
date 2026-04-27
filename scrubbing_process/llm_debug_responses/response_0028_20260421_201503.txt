@@ -1,0 +1,47 @@
+================================================================================
+TRANSACTION INPUT
+================================================================================
+Description: Hotel-Mtg/Agreement Mtg/LRB
+Vendor: Uber
+Amount: $40.97
+Expense: Car Service
+
+================================================================================
+RAW LLM RESPONSE
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Mtg/Agreement Mtg/LRB",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.82,
+  "reasoning": "Description looks like a car service/deal-related ride, but the exact route/location format required for car service is not present. No receipt data is available to confirm the ride details.",
+  "comment": "No receipt available to verify the car service route or purpose. Description left as-is pending human review.",
+  "flags": [
+    "No receipt available",
+    "Car service description does not match a standard approved format"
+  ],
+  "is_refund": false,
+  "error": ""
+}
+
+================================================================================
+PARSED RESULT
+================================================================================
+{
+  "transaction_type": "car_service",
+  "formatted_description": "Hotel-Mtg/Agreement Mtg/LRB",
+  "description_changed": false,
+  "expense_code": "Car Service",
+  "expense_code_changed": false,
+  "confidence": 0.82,
+  "reasoning": "Description looks like a car service/deal-related ride, but the exact route/location format required for car service is not present. No receipt data is available to confirm the ride details.",
+  "comment": "No receipt available to verify the car service route or purpose. Description left as-is pending human review.",
+  "flags": [
+    "No receipt available",
+    "Car service description does not match a standard approved format"
+  ],
+  "is_refund": false,
+  "error": ""
+}
